@@ -1,8 +1,8 @@
 # SO Clean Up WP SEO
 
-###### Last updated on 2015.04.27
+###### Last updated on 2015.04.30
 ###### requires at least WordPress 4.0
-###### tested up to WordPress 4.2
+###### tested up to WordPress 4.2.1
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Clean up several unwanted things that the WordPress SEO plugin adds to your WordPress Dashboard.
@@ -55,6 +55,10 @@ This repo is open to _any_ kind of contributions.
 
 
 ## Changelog
+
+### 1.2
+
+* Release on WP.org Repo (2015.04.30)
 
 ### 1.1
 
