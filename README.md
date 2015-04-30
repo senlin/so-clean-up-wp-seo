@@ -60,7 +60,7 @@ This repo is open to _any_ kind of contributions.
 ### 1.3
 
 * date: 2015.04.30
-* Added function to remove WordPress SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3)
+* Added function to remove WordPress SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3) [issue #1](https://github.com/senlin/so-clean-up-wp-seo/issues/1)
 * put code actions/filters in order
 
 ### 1.2
