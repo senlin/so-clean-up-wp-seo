@@ -5,7 +5,7 @@
  * Description: Clean up several things that the WordPress SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.2
+ * Version:     1.3
  * License:     GPL3+
  */
 
@@ -100,23 +100,55 @@ function so_cuws_warning() {
 }
 
 /**
- * if the WordPress SEO plugin has been installed, add the filters and actions that clean up the entire WP SEO experience
+ * if the WordPress SEO plugin has been installed, add the actions and filters that clean up the entire WP SEO experience
  *
  * @since 1.0
  */
-
-
 if ( in_array( $required_plugin , $plugins ) ) {
 	
-	add_filter( 'option_wpseo', 'so_cuws_remove_about_tour' );
-
 	add_action( 'admin_head', 'so_cuws_hide_sidebar_ads' );	
 	
 	add_action( 'admin_menu', 'so_cuws_remove_dashboard_widget' );
 	
+	add_action( 'admin_bar_menu', 'so_cuws_remove_adminbar_settings', 999 ); // since 1.3
+	
+	add_filter( 'option_wpseo', 'so_cuws_remove_about_tour' );
+
 	if ( function_exists( 'wpseo_use_page_analysis' ) ) {
 		add_filter( 'wpseo_use_page_analysis', '__return_false' );
 	}
+
+}
+
+// Remove irritating adds sidebar
+function so_cuws_hide_sidebar_ads() {
+	echo '<style type="text/css">
+	#sidebar-container.wpseo_content_cell {display:none;}
+	</style>';
+}
+
+// remove WordPress SEO dashboard widget
+function so_cuws_remove_dashboard_widget() {
+
+	remove_meta_box( 'yoast_db_widget', 'dashboard', 'normal' ); // Yoast's WordPress SEO Plugin Widget
+
+}
+
+// Remove Settings submenu in admin bar
+// also shows how to remove other menus
+// @since 1.3 - inspired by [Lee Rickler](https://profiles.wordpress.org/lee-rickler/)
+function so_cuws_remove_adminbar_settings() {
+	
+	global $wp_admin_bar;   
+	
+	// remove the entire menu
+	//$wp_admin_bar->remove_node( 'wpseo-menu' );
+	
+	// remove WordPress SEO Settings
+	$wp_admin_bar->remove_node( 'wpseo-settings' );
+	
+	// remove keyword research information
+	//$wp_admin_bar->remove_node( 'wpseo-kwresearch' );
 
 }
 
@@ -141,18 +173,4 @@ function so_cuws_remove_about_tour( $option ) {
 
 	return $option;
 
-}
-
-// remove WordPress SEO dashboard widget
-function so_cuws_remove_dashboard_widget() {
-
-	remove_meta_box( 'yoast_db_widget', 'dashboard', 'normal' ); // Yoast's WordPress SEO Plugin Widget
-
-}
-
-// Remove irritating adds sidebar
-function so_cuws_hide_sidebar_ads() {
-	echo '<style type="text/css">
-	#sidebar-container.wpseo_content_cell {display:none;}
-	</style>';
 }

@@ -15,9 +15,10 @@ The purpose of the SO Clean Up WP SEO is to clean up all those unwanted things.
 
 As per the current release, the plugin removes and/or disables the following unwanted items:
 
-* globally sets plugin-tour to done and plugin about-page as seen
 * removes sidebar ads on all WordPress SEO settings pages
 * removes the WordPress SEO dashboard widget
+* removes the WordPress SEO settings from the Admin Bar
+* globally sets plugin-tour to done and plugin about-page as seen
 * removes the keyword/description columns on edit Posts/Pages pages
 
 ## Frequently Asked Questions
@@ -55,6 +56,11 @@ This repo is open to _any_ kind of contributions.
 
 
 ## Changelog
+
+### 1.3
+
+* Added function to remove WordPress SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3)
+* put code actions/filters in order
 
 ### 1.2
 
