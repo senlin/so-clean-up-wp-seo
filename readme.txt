@@ -1,10 +1,10 @@
 === SO Clean Up WP SEO ===
 Contributors: senlin
 Donate link: http://so-wp.com/donations
-Tags: wordpress seo, yoast, seo, remove, disable, about, tour, sidebar, ads, dashboard, widget, columns 
+Tags: wordpress seo, yoast, seo, remove, disable, about, tour, sidebar, ads, columns 
 Requires at least: 4.0
 Tested up to: 4.2.1
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,9 +19,10 @@ The purpose of the SO Clean Up WP SEO is to clean up all those unwanted things.
 As per the current release, the plugin removes and/or disables the following unwanted items:
 
 * removes sidebar ads on all WordPress SEO settings pages
-* removes the WordPress SEO dashboard widget
+* removes tour-intro and button to start tour (it's globally disabled so cannot be started)
 * removes the WordPress SEO settings from the Admin Bar
-* globally sets plugin-tour to done and plugin about-page as seen
+* globally sets plugin-tour to done
+* globally sets plugin about-page as seen
 * removes the keyword/description columns on edit Posts/Pages pages
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
@@ -64,9 +65,18 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Screenshots ==
 
-N/A
+1. before/after sidebar ads
+2. before/after intro tour
+3. before/after admin bar
 
 == Changelog ==
+
+= 1.3.1 =
+
+* date: 2015.05.01
+* Added styling to remove Tour Intro and button to start tour
+* Added screenshots
+* Removed redundant dashboard widget function 
 
 = 1.3 =
 

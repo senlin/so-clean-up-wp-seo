@@ -1,6 +1,6 @@
 # SO Clean Up WP SEO
 
-###### Last updated on 2015.04.30
+###### Last updated on 2015.05.01
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.2.1
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -16,9 +16,10 @@ The purpose of the SO Clean Up WP SEO is to clean up all those unwanted things.
 As per the current release, the plugin removes and/or disables the following unwanted items:
 
 * removes sidebar ads on all WordPress SEO settings pages
-* removes the WordPress SEO dashboard widget
+* removes tour-intro and button to start tour (it's globally disabled so cannot be started)
 * removes the WordPress SEO settings from the Admin Bar
-* globally sets plugin-tour to done and plugin about-page as seen
+* globally sets plugin-tour to done
+* globally sets plugin about-page as seen
 * removes the keyword/description columns on edit Posts/Pages pages
 
 ## Frequently Asked Questions
@@ -56,6 +57,13 @@ This repo is open to _any_ kind of contributions.
 
 
 ## Changelog
+
+### 1.3.1
+
+* date: 2015.05.01
+* Added styling to remove Tour Intro and button to start tour
+* Added screenshots (wp.org version)
+* Removed redundant dashboard widget function 
 
 ### 1.3
 

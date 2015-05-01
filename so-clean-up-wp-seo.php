@@ -5,7 +5,7 @@
  * Description: Clean up several things that the WordPress SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.3
+ * Version:     1.3.1
  * License:     GPL3+
  */
 
@@ -108,8 +108,6 @@ if ( in_array( $required_plugin , $plugins ) ) {
 	
 	add_action( 'admin_head', 'so_cuws_hide_sidebar_ads' );	
 	
-	add_action( 'admin_menu', 'so_cuws_remove_dashboard_widget' );
-	
 	add_action( 'admin_bar_menu', 'so_cuws_remove_adminbar_settings', 999 ); // since 1.3
 	
 	add_filter( 'option_wpseo', 'so_cuws_remove_about_tour' );
@@ -121,17 +119,11 @@ if ( in_array( $required_plugin , $plugins ) ) {
 }
 
 // Remove irritating adds sidebar
+// @since 1.3.1 remove tour option/introduction
 function so_cuws_hide_sidebar_ads() {
 	echo '<style type="text/css">
-	#sidebar-container.wpseo_content_cell {display:none;}
+	#sidebar-container.wpseo_content_cell, .wpseotab.active > p:nth-child(6), .wpseotab.active > p:nth-child(7) {display:none;}
 	</style>';
-}
-
-// remove WordPress SEO dashboard widget
-function so_cuws_remove_dashboard_widget() {
-
-	remove_meta_box( 'yoast_db_widget', 'dashboard', 'normal' ); // Yoast's WordPress SEO Plugin Widget
-
 }
 
 // Remove Settings submenu in admin bar
@@ -160,9 +152,6 @@ function so_cuws_remove_adminbar_settings() {
  * with many users that have the Administrator Role.
  *
  * This filter globally sets the "see about page" setting and the "ignore tour" setting to true
- *
- * Drop this file into the wp-content/mu-plugins folder (create it if it doesn't exist) and you and your fellow Admins
- * will not be disturbed anymore by this nonsense.
  *
  * @source: github.com/Yoast/wordpress-seo/pull/2235#issuecomment-95059096
  */
