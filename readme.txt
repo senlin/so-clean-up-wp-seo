@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: wordpress seo, yoast, seo, remove, disable, about, tour, sidebar, ads, columns 
 Requires at least: 4.0
-Tested up to: 4.2.1
-Stable tag: 1.3.1
+Tested up to: 4.2.2
+Stable tag: 1.3.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -70,6 +70,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 3. before/after admin bar
 
 == Changelog ==
+
+= 1.3.2 =
+
+* date: 2015.05.14
+* Fix issue that WP SEO columns were still showing on Edit Posts/Pages pages 
 
 = 1.3.1 =
 

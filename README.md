@@ -1,8 +1,8 @@
 # SO Clean Up WP SEO
 
-###### Last updated on 2015.05.01
+###### Last updated on 2015.05.15
 ###### requires at least WordPress 4.0
-###### tested up to WordPress 4.2.1
+###### tested up to WordPress 4.2.2
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Clean up several unwanted things that the WordPress SEO plugin adds to your WordPress Dashboard.
@@ -57,6 +57,11 @@ This repo is open to _any_ kind of contributions.
 
 
 ## Changelog
+
+### 1.3.2
+
+* date: 2015.05.14
+* Fix issue that WP SEO columns were still showing on Edit Posts/Pages pages 
 
 ### 1.3.1
 

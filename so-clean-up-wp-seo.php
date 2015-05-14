@@ -5,7 +5,7 @@
  * Description: Clean up several things that the WordPress SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.3.1
+ * Version:     1.3.2
  * License:     GPL3+
  */
 
@@ -112,9 +112,7 @@ if ( in_array( $required_plugin , $plugins ) ) {
 	
 	add_filter( 'option_wpseo', 'so_cuws_remove_about_tour' );
 
-	if ( function_exists( 'wpseo_use_page_analysis' ) ) {
-		add_filter( 'wpseo_use_page_analysis', '__return_false' );
-	}
+	add_filter( 'wpseo_use_page_analysis', '__return_false' );
 
 }
 
