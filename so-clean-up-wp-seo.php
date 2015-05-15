@@ -5,7 +5,7 @@
  * Description: Clean up several things that the WordPress SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.3.2
+ * Version:     1.3.2.1
  * License:     GPL3+
  */
 
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 //Only do this when on the Plugins page.
 if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] )
-	
+
 	/* so_cuws_ prefix is derived from [so] [c]lean [u]p [w]p [s]eo. */
 	add_action( 'admin_notices', 'so_cuws_check_admin_notices', 0 );
 
@@ -37,11 +37,11 @@ function so_cuws_min_wp_version() {
 
 	$errors = array();
 
-	if ( version_compare( $wp_version, $require_wp, '<' ) ) 
+	if ( version_compare( $wp_version, $require_wp, '<' ) )
 
 		$errors[] = "You have WordPress version $wp_version installed, but <b>this plugin requires at least WordPress $require_wp</b>. Please <a href='$update_url'>update your WordPress version</a>.";
 
-	return $errors; 
+	return $errors;
 }
 
 function so_cuws_check_admin_notices() {
@@ -89,14 +89,14 @@ if ( ! in_array( $required_plugin , $plugins ) && ! is_multisite() ) {
  */
 
 function so_cuws_warning() {
-    
+
     // display the warning message
-    echo '<div class="message error"><p>';
-    
-    _e( 'The <strong>SO Clean Up WP SEO plugin</strong> only works if you have the WordPress SEO plugin installed.', 'so-clean-up-wp-seo' );
-    
-    echo '</p></div>';
-    
+	echo '<div class="message error"><p>';
+
+	_e( 'The <strong>SO Clean Up WP SEO plugin</strong> only works if you have the WordPress SEO plugin installed.', 'so-clean-up-wp-seo' );
+
+	echo '</p></div>';
+
 }
 
 /**
@@ -105,11 +105,11 @@ function so_cuws_warning() {
  * @since 1.0
  */
 if ( in_array( $required_plugin , $plugins ) ) {
-	
-	add_action( 'admin_head', 'so_cuws_hide_sidebar_ads' );	
-	
+
+	add_action( 'admin_head', 'so_cuws_hide_sidebar_ads' );
+
 	add_action( 'admin_bar_menu', 'so_cuws_remove_adminbar_settings', 999 ); // since 1.3
-	
+
 	add_filter( 'option_wpseo', 'so_cuws_remove_about_tour' );
 
 	add_filter( 'wpseo_use_page_analysis', '__return_false' );
@@ -128,15 +128,15 @@ function so_cuws_hide_sidebar_ads() {
 // also shows how to remove other menus
 // @since 1.3 - inspired by [Lee Rickler](https://profiles.wordpress.org/lee-rickler/)
 function so_cuws_remove_adminbar_settings() {
-	
-	global $wp_admin_bar;   
-	
+
+	global $wp_admin_bar;
+
 	// remove the entire menu
 	//$wp_admin_bar->remove_node( 'wpseo-menu' );
-	
+
 	// remove WordPress SEO Settings
 	$wp_admin_bar->remove_node( 'wpseo-settings' );
-	
+
 	// remove keyword research information
 	//$wp_admin_bar->remove_node( 'wpseo-kwresearch' );
 

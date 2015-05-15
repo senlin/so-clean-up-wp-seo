@@ -58,6 +58,11 @@ This repo is open to _any_ kind of contributions.
 
 ## Changelog
 
+### 1.3.2.1
+
+* date: 2015.05.15
+* Clean up white space
+
 ### 1.3.2
 
 * date: 2015.05.14
