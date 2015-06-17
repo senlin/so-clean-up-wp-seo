@@ -5,7 +5,7 @@
  * Description: Clean up several things that the WordPress SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.3.2.1
+ * Version:     1.4
  * License:     GPL3+
  */
 
@@ -108,20 +108,26 @@ if ( in_array( $required_plugin , $plugins ) ) {
 
 	add_action( 'admin_head', 'so_cuws_hide_sidebar_ads' );
 
-	add_action( 'admin_bar_menu', 'so_cuws_remove_adminbar_settings', 999 ); // since 1.3
+	add_action( 'admin_init', 'so_cuws_ignore_tour', 999 ); // since 1.4
 
-	add_filter( 'option_wpseo', 'so_cuws_remove_about_tour' );
+	add_action( 'admin_bar_menu', 'so_cuws_remove_adminbar_settings', 999 ); // since 1.3
 
 	add_filter( 'wpseo_use_page_analysis', '__return_false' );
 
 }
 
-// Remove irritating adds sidebar
+// Remove irritating ads sidebar
 // @since 1.3.1 remove tour option/introduction
+// @since 1.4 remove updated nag (introduced with WordPress SEO version 2.2.1)
 function so_cuws_hide_sidebar_ads() {
 	echo '<style type="text/css">
-	#sidebar-container.wpseo_content_cell, .wpseotab.active > p:nth-child(6), .wpseotab.active > p:nth-child(7) {display:none;}
+	#wpseo-dismiss-about, #sidebar-container.wpseo_content_cell, .wpseotab.active > p:nth-child(6), .wpseotab.active > p:nth-child(7) {display:none;}
 	</style>';
+}
+
+// @since 1.4 replaces previous so_cuws_remove_about_tour() function that has become redundant from WordPress SEO 2.2.1 onwards
+function so_cuws_ignore_tour() {
+	update_user_meta( get_current_user_id(), 'wpseo_ignore_tour', true );
 }
 
 // Remove Settings submenu in admin bar
@@ -142,22 +148,3 @@ function so_cuws_remove_adminbar_settings() {
 
 }
 
-/**
- * After each update of the Yoast WordPress SEO plugin, the user is redirected
- * to the About page of the plugin (admin.php?page=wpseo_dashboard&intro=1#top#new)
- *
- * This is irritating at best and very unprofessional on websites of (large) companies and organisations
- * with many users that have the Administrator Role.
- *
- * This filter globally sets the "see about page" setting and the "ignore tour" setting to true
- *
- * @source: github.com/Yoast/wordpress-seo/pull/2235#issuecomment-95059096
- */
-function so_cuws_remove_about_tour( $option ) {
-
-	$option['seen_about'] = true;
-	$option['ignore_tour'] = true;
-
-	return $option;
-
-}

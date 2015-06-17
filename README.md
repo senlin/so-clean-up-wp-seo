@@ -16,10 +16,9 @@ The purpose of the SO Clean Up WP SEO is to clean up all those unwanted things.
 As per the current release, the plugin removes and/or disables the following unwanted items:
 
 * removes sidebar ads on all WordPress SEO settings pages
-* removes tour-intro and button to start tour (it's globally disabled so cannot be started)
 * removes the WordPress SEO settings from the Admin Bar
-* globally sets plugin-tour to done
-* globally sets plugin about-page as seen
+* removes updated nag
+* sets plugin-intro-tour user_meta to true (means done)
 * removes the keyword/description columns on edit Posts/Pages pages
 
 ## Frequently Asked Questions
@@ -58,6 +57,12 @@ This repo is open to _any_ kind of contributions.
 
 ## Changelog
 
+### 1.4
+
+* date: 2015.06.17
+* remove updated nag (introduced with WordPress SEO version 2.2.1)
+* remove previous so_cuws_remove_about_tour() function that has become redundant from WordPress SEO 2.2.1 onwards; replaced with with so_cuws_ignore_tour() function
+
 ### 1.3.2.1
 
 * date: 2015.05.15
@@ -93,3 +98,9 @@ This repo is open to _any_ kind of contributions.
 ### 1.0
 
 * Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php) (2015.04.24)
+
+## Update Notice
+
+### 1.4
+
+* Version 2.2.1 of the WordPress SEO plugin changes a lot of things around. The automatic redirect to the plugin's About page is no longer, so we have removed the function that disables it. The new version introduced an updated nag that doesn't let itself be dismissed easily, so we have simply hidden it altogether. The super irritating balloon to follow the intro tour was back again too, we have countered that with a functiobn that sets the user_meta of that intro tour to true, which means "seen".
