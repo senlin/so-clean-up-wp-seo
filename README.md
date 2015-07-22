@@ -1,25 +1,28 @@
-# SO Clean Up WP SEO
+# SO Clean Up Yoast SEO
 
-###### Last updated on 2015.06.17
+[![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
+
+###### Last updated on 2015.07.22
 ###### requires at least WordPress 4.0
-###### tested up to WordPress 4.3-alpha
+###### tested up to WordPress 4.3-beta
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Clean up several unwanted things that the WordPress SEO plugin adds to your WordPress Dashboard.
 
 ## Description
 
-Almost anyone that uses WordPress SEO by Team Yoast will agree that it is *the* SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
+Almost anyone that uses Yoast SEO by Team Yoast will agree that it is *the* SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
 
-The purpose of the SO Clean Up WP SEO is to clean up all those unwanted things.
+The purpose of the SO Clean Up Yoast SEO is to clean up all those unwanted things.
 
 As per the current release, the plugin removes and/or disables the following unwanted items:
 
-* removes sidebar ads on all WordPress SEO settings pages
-* removes the WordPress SEO settings from the Admin Bar
+* removes sidebar ads on all Yoast SEO settings pages
+* removes the Yoast SEO settings from the Admin Bar
 * removes updated nag
 * sets plugin-intro-tour user_meta to true (means done)
 * removes the keyword/description columns on edit Posts/Pages pages
+* removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin 
 
 ## Frequently Asked Questions
 
@@ -57,11 +60,17 @@ This repo is open to _any_ kind of contributions.
 
 ## Changelog
 
+### 1.5
+
+* date: 2015.07.22
+* remove overview dashboard widget that was introduced in Yoast SEO 2.3
+* change plugin name to reflect the name-change of the plugin it cleans up for ([WordPress SEO became Yoast SEO](https://yoast.com/yoast-seo-2-3/)) 
+
 ### 1.4
 
 * date: 2015.06.17
-* remove updated nag (introduced with WordPress SEO version 2.2.1)
-* remove previous so_cuws_remove_about_tour() function that has become redundant from WordPress SEO 2.2.1 onwards; replaced with with so_cuws_ignore_tour() function
+* remove updated nag (introduced with Yoast SEO version 2.2.1)
+* remove previous so_cuws_remove_about_tour() function that has become redundant from Yoast SEO 2.2.1 onwards; replaced with with so_cuws_ignore_tour() function
 
 ### 1.3.2.1
 
@@ -83,7 +92,7 @@ This repo is open to _any_ kind of contributions.
 ### 1.3
 
 * date: 2015.04.30
-* Added function to remove WordPress SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3) [issue #1](https://github.com/senlin/so-clean-up-wp-seo/issues/1)
+* Added function to remove Yoast SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3) [issue #1](https://github.com/senlin/so-clean-up-wp-seo/issues/1)
 * put code actions/filters in order
 
 ### 1.2
@@ -101,6 +110,10 @@ This repo is open to _any_ kind of contributions.
 
 ## Update Notice
 
+### 1.5
+
+* We have changed the name of our plugin to reflect the name change of the plugin it cleans up after
+
 ### 1.4
 
-* Version 2.2.1 of the WordPress SEO plugin changes a lot of things around. The automatic redirect to the plugin's About page is no longer, so we have removed the function that disables it. The new version introduced an updated nag that doesn't let itself be dismissed easily, so we have simply hidden it altogether. The super irritating balloon to follow the intro tour was back again too, we have countered that with a functiobn that sets the user_meta of that intro tour to true, which means "seen".
+* Version 2.2.1 of the Yoast SEO plugin changes a lot of things around. The automatic redirect to the plugin's About page is no longer, so we have removed the function that disables it. The new version introduced an updated nag that doesn't let itself be dismissed easily, so we have simply hidden it altogether. The super irritating balloon to follow the intro tour was back again too, we have countered that with a functiobn that sets the user_meta of that intro tour to true, which means "seen".

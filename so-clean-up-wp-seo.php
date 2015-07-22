@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: SO Clean Up WP SEO
+ * Plugin Name: SO Clean Up Yoast SEO
  * Plugin URI:  http://so-wp.com/plugin/so-clean-up-wp-seo/
- * Description: Clean up several things that the WordPress SEO plugin adds to your WordPress Dashboard
+ * Description: Clean up several things that the Yoast SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.4
+ * Version:     1.5
  * License:     GPL3+
  */
 
@@ -111,6 +111,8 @@ if ( in_array( $required_plugin , $plugins ) ) {
 	add_action( 'admin_init', 'so_cuws_ignore_tour', 999 ); // since 1.4
 
 	add_action( 'admin_bar_menu', 'so_cuws_remove_adminbar_settings', 999 ); // since 1.3
+	
+	add_action( 'wp_dashboard_setup', 'so_cuws_remove_wpseo_dashboard_overview_widget' ); // since 1.5
 
 	add_filter( 'wpseo_use_page_analysis', '__return_false' );
 
@@ -147,4 +149,12 @@ function so_cuws_remove_adminbar_settings() {
 	//$wp_admin_bar->remove_node( 'wpseo-kwresearch' );
 
 }
+
+// Version 2.3 of Yoast SEO (formerly WordPress SEO) introduced a dashboard widget
+// This function removes this widget
+// @since v1.5
+function so_cuws_remove_wpseo_dashboard_overview_widget() {
+ 	remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'side' );
+}
+
 

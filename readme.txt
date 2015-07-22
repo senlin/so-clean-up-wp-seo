@@ -1,28 +1,29 @@
-=== SO Clean Up WP SEO ===
+=== SO Clean Up Yoast SEO ===
 Contributors: senlin
 Donate link: http://so-wp.com/donations
-Tags: wordpress seo, yoast, seo, remove, disable, about, tour, sidebar, ads, columns 
+Tags: yoast seo, wordpress seo, yoast, seo, remove, disable, about, tour, sidebar, ads, columns 
 Requires at least: 4.0
-Tested up to: 4.3-alpha
-Stable tag: 1.4
+Tested up to: 4.3-beta
+Stable tag: 1.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Clean up several things that the WordPress SEO plugin adds to your WordPress Dashboard
+Clean up several things that the Yoast SEO plugin adds to your WordPress Dashboard
 
 == Description ==
 
-Almost anyone that uses WordPress SEO by Team Yoast will agree that it is *the* SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
+Almost anyone that uses Yoast SEO by Team Yoast will agree that it is *the* SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
 
-The purpose of the SO Clean Up WP SEO is to clean up all those unwanted things.
+The purpose of the SO Clean Up Yoast SEO is to clean up all those unwanted things.
 
 As per the current release, the plugin removes and/or disables the following unwanted items:
 
-* removes sidebar ads on all WordPress SEO settings pages
-* removes the WordPress SEO settings from the Admin Bar
+* removes sidebar ads on all Yoast SEO settings pages
+* removes the Yoast SEO settings from the Admin Bar
 * removes updated nag
 * sets plugin-intro-tour user_meta to true (means done)
 * removes the keyword/description columns on edit Posts/Pages pages
+* removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin 
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -30,14 +31,14 @@ We support this plugin exclusively through [Github](https://github.com/senlin/so
 
 Thanks for your understanding and cooperation.
 
-If you like the SO Clean Up WP SEO plugin, please consider leaving a [review](http://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo#postform) or making a [donation](http://so-wp.com/donations/). Thanks!
+If you like the SO Clean Up Yoast SEO plugin, please consider leaving a [review](http://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo#postform) or making a [donation](http://so-wp.com/donations/). Thanks!
 
 
 == Installation ==
 
 = Wordpress =
 
-Search for "so clean up wp seo" and install with the **Plugins > Add New** back-end page.
+Search for "SO Clean Up Yoast SEO" and install with the **Plugins > Add New** back-end page.
 
  &hellip; OR &hellip;
 
@@ -70,11 +71,17 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Changelog ==
 
+= 1.5 =
+
+* date: 2015.07.22
+* remove overview dashboard widget that was introduced in Yoast SEO 2.3
+* change plugin name to reflect the name-change of the plugin it cleans up for ([WordPress SEO became Yoast SEO](https://yoast.com/yoast-seo-2-3/)) 
+
 = 1.4 =
 
 * date: 2015.06.17
-* remove updated nag (introduced with WordPress SEO version 2.2.1)
-* remove previous so_cuws_remove_about_tour() function that has become redundant from WordPress SEO 2.2.1 onwards; replaced with with so_cuws_ignore_tour() function
+* remove updated nag (introduced with Yoast SEO version 2.2.1)
+* remove previous so_cuws_remove_about_tour() function that has become redundant from Yoast SEO 2.2.1 onwards; replaced with with so_cuws_ignore_tour() function
 
 = 1.3.2.1 =
 
@@ -96,7 +103,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 = 1.3 =
 
 * date: 2015.04.30
-* Added function to remove WordPress SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3)
+* Added function to remove Yoast SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3)
 * put code actions/filters in order
 
 = 1.2 =
@@ -114,7 +121,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Upgrade Notice ==
 
+= 1.5 =
+
+* We have changed the name of our plugin to reflect the name change of the plugin it cleans up after
+
 = 1.4 =
 
-* Version 2.2.1 of the WordPress SEO plugin changes a lot of things around. The automatic redirect to the plugin's About page is no longer, so we have removed the function that disables it. The new version introduced an updated nag that doesn't let itself be dismissed easily, so we have simply hidden it altogether. The super irritating balloon to follow the intro tour was back again too, we have countered that with a functiobn that sets the user_meta of that intro tour to true, which means "seen".
+* Version 2.2.1 of the Yoast SEO plugin changes a lot of things around. The automatic redirect to the plugin's About page is no longer, so we have removed the function that disables it. The new version introduced an updated nag that doesn't let itself be dismissed easily, so we have simply hidden it altogether. The super irritating balloon to follow the intro tour was back again too, we have countered that with a functiobn that sets the user_meta of that intro tour to true, which means "seen".
 
