@@ -82,7 +82,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 = 1.6 (2015.08.07) =
 
-* remove GSC (Google Search Console) nag that was most likely introduced in Yoast SEO 2.3.4
+* remove GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
 
 = 1.5 (2015.07.22) =
 
