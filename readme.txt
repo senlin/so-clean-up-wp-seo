@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: yoast seo, wordpress seo, yoast, seo, remove, disable, about, tour, sidebar, ads, columns 
 Requires at least: 4.0
-Tested up to: 4.3-beta
-Stable tag: 1.5
+Tested up to: 4.3
+Stable tag: 1.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -59,6 +59,15 @@ Done!
 
 You can stop looking, there is none. Activate the plugin to clean up your WordPress dashboard.
 
+= You have only one rating/review; why should I install this plugin? =
+
+Yes, you are correct and many people say that it is important for a plugin to have a good rating. Some plugin developers rate their own plugins to get that first 5 star rating going, but I think that is not playing fair.
+Fortunately there are already quite a few people that have downloaded the plugin, installed it, activated it and keep it activated, as you can see from the Active Installs in the sidebar. There must be something good that the plugin does then, right?
+
+So if you decide to install it and you're happy about the plugin, then please help the next person (and me) by [leaving a 5-star review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). 
+
+Thank you very much!
+
 = I have an issue with this plugin, where can I get support? =
 
 Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/issues)
@@ -71,53 +80,52 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Changelog ==
 
-= 1.5 =
+= 1.6 (2015.08.07) =
 
-* date: 2015.07.22
+* remove GSC (Google Search Console) nag that was most likely introduced in Yoast SEO 2.3.4
+
+= 1.5 (2015.07.22) =
+
 * remove overview dashboard widget that was introduced in Yoast SEO 2.3
 * change plugin name to reflect the name-change of the plugin it cleans up for ([WordPress SEO became Yoast SEO](https://yoast.com/yoast-seo-2-3/)) 
 
-= 1.4 =
+= 1.4 (2015.06.17) =
 
-* date: 2015.06.17
 * remove updated nag (introduced with Yoast SEO version 2.2.1)
 * remove previous so_cuws_remove_about_tour() function that has become redundant from Yoast SEO 2.2.1 onwards; replaced with with so_cuws_ignore_tour() function
 
-= 1.3.2.1 =
+= 1.3.2.1 (2015.05.15) =
 
-* date: 2015.05.15
+* date: 
 * Clean up white space
 
-= 1.3.2 =
+= 1.3.2 (2015.05.14) =
 
-* date: 2015.05.14
 * Fix issue that WP SEO columns were still showing on Edit Posts/Pages pages 
 
-= 1.3.1 =
+= 1.3.1 (2015.05.01) =
 
-* date: 2015.05.01
 * Added styling to remove Tour Intro and button to start tour
 * Added screenshots
 * Removed redundant dashboard widget function 
 
-= 1.3 =
+= 1.3 (2015.04.30) =
 
-* date: 2015.04.30
 * Added function to remove Yoast SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3)
 * put code actions/filters in order
 
-= 1.2 =
+= 1.2 (2015.04.30) =
 
-* Release on WP.org Repo (2015.04.30)
+* Release on wordpress.org Repo
 
-= 1.1 =
+= 1.1 (2015.04.27) =
 
-* Release version (2015.04.27)
+* Release version 
 * banner image (in assets folder) by [Leigh Kendell](https://unsplash.com/leighkendell)
 
-= 1.0 =
+= 1.0 (2015.04.24) =
 
-* Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php) (2015.04.24)
+* Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php)
 
 == Upgrade Notice ==
 

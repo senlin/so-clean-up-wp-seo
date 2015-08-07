@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2015.07.22
+###### Last updated on 2015.08.07
 ###### requires at least WordPress 4.0
-###### tested up to WordPress 4.3-beta
+###### tested up to WordPress 4.3
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Clean up several unwanted things that the WordPress SEO plugin adds to your WordPress Dashboard.
@@ -60,53 +60,52 @@ This repo is open to _any_ kind of contributions.
 
 ## Changelog
 
-### 1.5
+### 1.6 (2015.08.07)
 
-* date: 2015.07.22
+* remove GSC (Google Search Console) nag that was most likely introduced in Yoast SEO 2.3.4
+
+### 1.5 (2015.07.22)
+
 * remove overview dashboard widget that was introduced in Yoast SEO 2.3
 * change plugin name to reflect the name-change of the plugin it cleans up for ([WordPress SEO became Yoast SEO](https://yoast.com/yoast-seo-2-3/)) 
 
-### 1.4
+### 1.4 (2015.06.17)
 
-* date: 2015.06.17
 * remove updated nag (introduced with Yoast SEO version 2.2.1)
 * remove previous so_cuws_remove_about_tour() function that has become redundant from Yoast SEO 2.2.1 onwards; replaced with with so_cuws_ignore_tour() function
 
-### 1.3.2.1
+### 1.3.2.1 (2015.05.15)
 
-* date: 2015.05.15
+* date: 
 * Clean up white space
 
-### 1.3.2
+### 1.3.2 (2015.05.14)
 
-* date: 2015.05.14
 * Fix issue that WP SEO columns were still showing on Edit Posts/Pages pages 
 
-### 1.3.1
+### 1.3.1 (2015.05.01)
 
-* date: 2015.05.01
 * Added styling to remove Tour Intro and button to start tour
-* Added screenshots (wp.org version)
+* Added screenshots
 * Removed redundant dashboard widget function 
 
-### 1.3
+### 1.3 (2015.04.30)
 
-* date: 2015.04.30
-* Added function to remove Yoast SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3) [issue #1](https://github.com/senlin/so-clean-up-wp-seo/issues/1)
+* Added function to remove Yoast SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3)
 * put code actions/filters in order
 
-### 1.2
+### 1.2 (2015.04.30)
 
-* Release on WP.org Repo (2015.04.30)
+* Release on wordpress.org Repo
 
-### 1.1
+### 1.1 (2015.04.27)
 
-* Release version (2015.04.27)
+* Release version 
 * banner image (in assets folder) by [Leigh Kendell](https://unsplash.com/leighkendell)
 
-### 1.0
+### 1.0 (2015.04.24)
 
-* Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php) (2015.04.24)
+* Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php)
 
 ## Update Notice
 

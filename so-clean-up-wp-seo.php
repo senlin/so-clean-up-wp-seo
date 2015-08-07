@@ -5,7 +5,7 @@
  * Description: Clean up several things that the Yoast SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.5
+ * Version:     1.6
  * License:     GPL3+
  */
 
@@ -121,9 +121,12 @@ if ( in_array( $required_plugin , $plugins ) ) {
 // Remove irritating ads sidebar
 // @since 1.3.1 remove tour option/introduction
 // @since 1.4 remove updated nag (introduced with WordPress SEO version 2.2.1)
+// @since 1.6 remove GSC nag
+
+/* On a Dutch language site I noticed an irritating box begging for help with translations. The ID of the box is "#i18n_promo_box", the irritating thing about that box is that it says the current language is not yet a translated language, but Dutch obviously is, so this box should not even show on a Dutch site. Once we change this plugin to have settings instead of blanket removal, we can add this in. But for now, let's leave it out. Clicking on the X to remove the box adds the following string to the URL: wp-admin/admin.php?page=wpseo_titles&remove_i18n_promo=1 */
 function so_cuws_hide_sidebar_ads() {
 	echo '<style type="text/css">
-	#wpseo-dismiss-about, #sidebar-container.wpseo_content_cell, .wpseotab.active > p:nth-child(6), .wpseotab.active > p:nth-child(7) {display:none;}
+	#wpseo-dismiss-about, #sidebar-container.wpseo_content_cell, .wpseotab.active > p:nth-child(6), .wpseotab.active > p:nth-child(7), #wpseo-dismiss-gsc {display:none;}
 	</style>';
 }
 
