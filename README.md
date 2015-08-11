@@ -22,13 +22,22 @@ As per the current release, the plugin removes and/or disables the following unw
 * removes updated nag
 * sets plugin-intro-tour user_meta to true (means done)
 * removes the keyword/description columns on edit Posts/Pages pages
-* removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin 
+* removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin
+* removes GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
+
+
 
 ## Frequently Asked Questions
 
 ### Where are the Settings?
 
-You can stop looking, there is none. Activate the plugin to clean up your WordPress dashboard.
+For [v2.0.0](https://github.com/senlin/so-clean-up-wp-seo/milestones/version%202.0.0) we have planned a complete rewrite of the SO Clean Up Yoast SEO plugin which includes a Settings page to enable the user to clean up individual items, instead of the current blanket rule.
+
+For now however you can stop looking, there is none yet. Activate the plugin to clean up your WordPress dashboard.
+
+### Can I use SO Clean Up Yoast SEO on Multisite?
+
+You can, but until further notice you need to activate the plugin on a per-site basis ([see this Github issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
 
 ### I have an issue with this plugin, where can I get support?
 
@@ -36,7 +45,8 @@ Please open an issue here on [Github](https://github.com/senlin/so-clean-up-wp-s
 
 ## Contributions
 
-This repo is open to _any_ kind of contributions.
+We are looking to release a [new version](https://github.com/senlin/so-clean-up-wp-seo/milestones/version%202.0.0) that has a Settings page to enable the user to clean up individual items. For that version we want a complete rewrite of the plugin, preferably using one of the boilerplates.
+**If you're interested in becoming involved, please [let us know](http://so-wp.com/info-contact/) or simply send a PR with your proposed improvement.** 
 
 ## License
 
@@ -76,7 +86,6 @@ This repo is open to _any_ kind of contributions.
 
 ### 1.3.2.1 (2015.05.15)
 
-* date: 
 * Clean up white space
 
 ### 1.3.2 (2015.05.14)

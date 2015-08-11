@@ -23,7 +23,8 @@ As per the current release, the plugin removes and/or disables the following unw
 * removes updated nag
 * sets plugin-intro-tour user_meta to true (means done)
 * removes the keyword/description columns on edit Posts/Pages pages
-* removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin 
+* removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin
+* remove GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -57,7 +58,13 @@ Done!
 
 = Where is the settings page? =
 
-You can stop looking, there is none. Activate the plugin to clean up your WordPress dashboard.
+For [v2.0.0](https://github.com/senlin/so-clean-up-wp-seo/milestones/version%202.0.0) we have planned a complete rewrite of the SO Clean Up Yoast SEO plugin which includes a Settings page to enable the user to clean up individual items, instead of the current blanket rule.
+
+For now however you can stop looking, there is none yet. Activate the plugin to clean up your WordPress dashboard.
+
+= Can I use SO Clean Up Yoast SEO on Multisite? =
+
+You can, but until further notice you need to activate the plugin on a per-site basis ([see this Github issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
 
 = You have only one rating/review; why should I install this plugin? =
 
@@ -96,7 +103,6 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 = 1.3.2.1 (2015.05.15) =
 
-* date: 
 * Clean up white space
 
 = 1.3.2 (2015.05.14) =
