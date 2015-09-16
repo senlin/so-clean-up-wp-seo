@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: yoast seo, wordpress seo, yoast, seo, remove, disable, about, tour, sidebar, ads, columns 
 Requires at least: 4.0
-Tested up to: 4.3
-Stable tag: 1.6
+Tested up to: 4.3.1
+Stable tag: 1.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -25,6 +25,7 @@ As per the current release, the plugin removes and/or disables the following unw
 * removes the keyword/description columns on edit Posts/Pages pages
 * removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin
 * remove GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
+* remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -66,7 +67,7 @@ For now however you can stop looking, there is none yet. Activate the plugin to 
 
 You can, but until further notice you need to activate the plugin on a per-site basis ([see this Github issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
 
-= You have only one rating/review; why should I install this plugin? =
+= You have only two ratings/reviews; why should I install this plugin? =
 
 Yes, you are correct and many people say that it is important for a plugin to have a good rating. Some plugin developers rate their own plugins to get that first 5 star rating going, but I think that is not playing fair.
 Fortunately there are already quite a few people that have downloaded the plugin, installed it, activated it and keep it activated, as you can see from the Active Installs in the sidebar. There must be something good that the plugin does then, right?
@@ -84,8 +85,15 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 1. before/after sidebar ads
 2. before/after intro tour
 3. before/after admin bar
+4. before/after yst_opengraph_image_warning nag
 
 == Changelog ==
+
+= 1.7 (2015.09.16) =
+
+* remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog. The nag manifests itself by placing thick red borders around your Featured Image as well as a red-bordered warning message when your Featured Image is smaller than 200x200 pixels.
+* change function name
+* add screenshot of before/after yst_opengraph_image_warning nag
 
 = 1.6 (2015.08.07) =
 

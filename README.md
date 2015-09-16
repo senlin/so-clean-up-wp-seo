@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2015.08.07
+###### Last updated on 2015.09.16
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.3
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -24,8 +24,7 @@ As per the current release, the plugin removes and/or disables the following unw
 * removes the keyword/description columns on edit Posts/Pages pages
 * removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin
 * removes GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
-
-
+* remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog
 
 ## Frequently Asked Questions
 
@@ -69,6 +68,12 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 
 
 ## Changelog
+
+### 1.7 (2015.09.16)
+
+* remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog. The nag manifests itself by placing thick red borders around your Featured Image as well as a red-bordered warning message when your Featured Image is smaller than 200x200 pixels.
+* change function name
+* add screenshot of before/after yst_opengraph_image_warning nag
 
 ### 1.6 (2015.08.07)
 
