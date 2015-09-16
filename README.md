@@ -71,9 +71,10 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 
 ### 1.7 (2015.09.16)
 
-* remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog. The nag manifests itself by placing thick red borders around your Featured Image as well as a red-bordered warning message when your Featured Image is smaller than 200x200 pixels.
+* remove yst_opengraph_image_warning nag that was added to Yoast SEO 2.1, but we never noticed it before. In the changelog it has been described as "validation error", which of course is nonsense, because the world is larger than social media. The nag manifests itself by placing thick red borders around your Featured Image as well as a red-bordered warning message when your Featured Image is smaller than 200x200 pixels.
 * change function name
 * add screenshot of before/after yst_opengraph_image_warning nag
+* adjust readme files
 
 ### 1.6 (2015.08.07)
 
