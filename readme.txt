@@ -25,7 +25,7 @@ As per the current release, the plugin removes and/or disables the following unw
 * removes the keyword/description columns on edit Posts/Pages pages
 * removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin
 * remove GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
-* remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog
+* remove yst_opengraph_image_warning nag that was added to Yoast SEO 2.1, but we never noticed it before. In the changelog it has been described as "validation error", which of course is nonsense, because the world is larger than social media. The nag manifests itself by placing thick red borders around your Featured Image as well as a red-bordered warning message when your Featured Image is smaller than 200x200 pixels.
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
