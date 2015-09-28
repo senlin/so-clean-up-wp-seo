@@ -67,9 +67,9 @@ For now however you can stop looking, there is none yet. Activate the plugin to 
 
 You can, but until further notice you need to activate the plugin on a per-site basis ([see this Github issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
 
-= You have only two ratings/reviews; why should I install this plugin? =
+= You have only five ratings/reviews; why should I install this plugin? =
 
-Yes, you are correct and many people say that it is important for a plugin to have a good rating. Some plugin developers rate their own plugins to get that first 5 star rating going, but I think that is not playing fair.
+Yes, you are correct and many people say that it is important for a plugin to have a good rating.
 Fortunately there are already quite a few people that have downloaded the plugin, installed it, activated it and keep it activated, as you can see from the Active Installs in the sidebar. There must be something good that the plugin does then, right?
 
 So if you decide to install it and you're happy about the plugin, then please help the next person (and me) by [leaving a 5-star review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). 
