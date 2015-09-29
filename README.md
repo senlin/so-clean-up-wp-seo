@@ -75,6 +75,7 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 ### 1.7.1 (2015.09.30)
 
 * remove function that checks whether Yoast SEO has been installed; reason is to simplify things a bit.
+* adjust readme files
 
 ### 1.7 (2015.09.16)
 

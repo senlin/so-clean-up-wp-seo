@@ -93,6 +93,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 = 1.7.1 (2015.09.30) =
 
 * remove function that checks whether Yoast SEO has been installed; reason is to simplify things a bit.
+* adjust readme files
 
 = 1.7 (2015.09.16) =
 
