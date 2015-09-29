@@ -5,7 +5,7 @@
  * Description: Clean up several things that the Yoast SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.7
+ * Version:     1.7.1
  * License:     GPL3+
  */
 
@@ -62,40 +62,6 @@ function so_cuws_check_admin_notices() {
 		$name[0]
 	);
 	deactivate_plugins( plugin_basename( __FILE__ ) );
-
-}
-
-/**
- * This function checks whether the WordPress SEO plugin is active (it needs to be active for SO Clean Up WP SEO to have any use)
- *
- * @since 1.1
- */
-
-$plugins = get_option( 'active_plugins' );
-
-$required_plugin = 'wordpress-seo/wp-seo.php';
-
-// multisite throws the error message by default, because the plugin is installed on the network site, therefore check for multisite
-if ( ! in_array( $required_plugin , $plugins ) && ! is_multisite() ) {
-
-	add_action( 'admin_notices', 'so_cuws_warning' );
-
-}
-
-/**
- * Show warning if the WordPress SEO plugin has not been installed
- *
- * @since 1.1
- */
-
-function so_cuws_warning() {
-
-    // display the warning message
-	echo '<div class="message error"><p>';
-
-	_e( 'The <strong>SO Clean Up WP SEO plugin</strong> only works if you have the WordPress SEO plugin installed.', 'so-clean-up-wp-seo' );
-
-	echo '</p></div>';
 
 }
 

@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2015.09.16
+###### Last updated on 2015.09.30
 ###### requires at least WordPress 4.0
-###### tested up to WordPress 4.3
+###### tested up to WordPress 4.3.1
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Clean up several unwanted things that the WordPress SEO plugin adds to your WordPress Dashboard.
@@ -25,6 +25,9 @@ As per the current release, the plugin removes and/or disables the following unw
 * removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin
 * removes GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
 * remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog
+
+If you like the SO Clean Up Yoast SEO plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform).
+Alternatively you are welcome to make a [donation](http://so-wp.com/donations/). Thanks!
 
 ## Frequently Asked Questions
 
@@ -68,6 +71,10 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 
 
 ## Changelog
+
+### 1.7.1 (2015.09.30)
+
+* remove function that checks whether Yoast SEO has been installed; reason is to simplify things a bit.
 
 ### 1.7 (2015.09.16)
 

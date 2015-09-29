@@ -4,7 +4,7 @@ Donate link: http://so-wp.com/donations
 Tags: yoast seo, wordpress seo, yoast, seo, remove, disable, about, tour, sidebar, ads, columns 
 Requires at least: 4.0
 Tested up to: 4.3.1
-Stable tag: 1.7
+Stable tag: 1.7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,7 +33,8 @@ We support this plugin exclusively through [Github](https://github.com/senlin/so
 
 Thanks for your understanding and cooperation.
 
-If you like the SO Clean Up Yoast SEO plugin, please consider leaving a [review](http://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo#postform) or making a [donation](http://so-wp.com/donations/). Thanks!
+If you like the SO Clean Up Yoast SEO plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform).
+Alternatively you are welcome to make a [donation](http://so-wp.com/donations/). Thanks!
 
 
 == Installation ==
@@ -88,6 +89,10 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 4. before/after yst_opengraph_image_warning nag
 
 == Changelog ==
+
+= 1.7.1 (2015.09.30) =
+
+* remove function that checks whether Yoast SEO has been installed; reason is to simplify things a bit.
 
 = 1.7 (2015.09.16) =
 
