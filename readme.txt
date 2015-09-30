@@ -90,6 +90,10 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Changelog ==
 
+= 1.7.2 (2015.09.30) =
+
+* [BUG FIX] fix bug that slipped in (forgot to remove) 1.7.1 release, thanks for the [report](https://wordpress.org/support/topic/171-update-problem) [@stansbury](https://wordpress.org/support/profile/stansbury)
+
 = 1.7.1 (2015.09.30) =
 
 * remove function that checks whether Yoast SEO has been installed; reason is to simplify things a bit.

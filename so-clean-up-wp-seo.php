@@ -5,7 +5,7 @@
  * Description: Clean up several things that the Yoast SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.7.1
+ * Version:     1.7.2
  * License:     GPL3+
  */
 
@@ -66,23 +66,20 @@ function so_cuws_check_admin_notices() {
 }
 
 /**
- * if the WordPress SEO plugin has been installed, add the actions and filters that clean up the entire WP SEO experience
+ * Add the actions and filters that clean up the entire Yoast SEO experience
  *
  * @since 1.0
+ * @modified 1.7.2 (take out the conditional that checked for required plugin)
  */
-if ( in_array( $required_plugin , $plugins ) ) {
+add_action( 'admin_head', 'so_cuws_display_none_the_lot' );
 
-	add_action( 'admin_head', 'so_cuws_display_none_the_lot' );
+add_action( 'admin_init', 'so_cuws_ignore_tour', 999 ); // since 1.4
 
-	add_action( 'admin_init', 'so_cuws_ignore_tour', 999 ); // since 1.4
+add_action( 'admin_bar_menu', 'so_cuws_remove_adminbar_settings', 999 ); // since 1.3
 
-	add_action( 'admin_bar_menu', 'so_cuws_remove_adminbar_settings', 999 ); // since 1.3
-	
-	add_action( 'wp_dashboard_setup', 'so_cuws_remove_wpseo_dashboard_overview_widget' ); // since 1.5
+add_action( 'wp_dashboard_setup', 'so_cuws_remove_wpseo_dashboard_overview_widget' ); // since 1.5
 
-	add_filter( 'wpseo_use_page_analysis', '__return_false' );
-
-}
+add_filter( 'wpseo_use_page_analysis', '__return_false' );
 
 // Remove irritating ads sidebar
 // @since 1.3.1 remove tour option/introduction
