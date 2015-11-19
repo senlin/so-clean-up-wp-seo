@@ -26,6 +26,7 @@ As per the current release, the plugin removes and/or disables the following unw
 * removes GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
 * remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog
 * remove + icon from new Edit screen UI as it serves only to show an ad for the premium version of Yoast SEO
+* remove wpseo-score traffic light next to Move to trash on Edit Post/Page screen
 
 If you like the SO Clean Up Yoast SEO plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform).
 Alternatively you are welcome to make a [donation](http://so-wp.com/donations/). Thanks!
@@ -72,6 +73,10 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 
 
 ## Changelog
+
+### 1.7.4 (2015.11.19)
+
+* remove wpseo-score traffic light next to Move to trash on Edit Post/Page screen
 
 ### 1.7.3 (2015.11.19)
 
