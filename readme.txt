@@ -89,6 +89,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 2. before/after intro tour
 3. before/after admin bar
 4. before/after yst_opengraph_image_warning nag
+5. before/after wpseo-score trafficlight in Publish metabox (Yoast SEO 3.0+)
 
 == Changelog ==
 
