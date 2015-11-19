@@ -4,7 +4,7 @@
 
 ###### Last updated on 2015.09.30
 ###### requires at least WordPress 4.0
-###### tested up to WordPress 4.3.1
+###### tested up to WordPress 4.4
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Clean up several unwanted things that the WordPress SEO plugin adds to your WordPress Dashboard.
