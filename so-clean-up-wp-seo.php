@@ -5,7 +5,7 @@
  * Description: Clean up several things that the Yoast SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.7.2
+ * Version:     1.7.3
  * License:     GPL3+
  */
 
