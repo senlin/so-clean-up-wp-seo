@@ -86,11 +86,12 @@ add_filter( 'wpseo_use_page_analysis', '__return_false' );
 // @since 1.4 remove updated nag (introduced with WordPress SEO version 2.2.1)
 // @since 1.6 remove GSC nag
 // @since 1.7 remove yst_opengraph_image_warning nag
+// @since 1.7.3 remove + icon from new Edit screen UI as it serves only to show an ad for the premium version of Yoast SEO
 
 /* On a Dutch language site I noticed an irritating box begging for help with translations. The ID of the box is "#i18n_promo_box", the irritating thing about that box is that it says the current language is not yet a translated language, but Dutch obviously is, so this box should not even show on a Dutch site. Once we change this plugin to have settings instead of blanket removal, we can add this in. But for now, let's leave it out. Clicking on the X to remove the box adds the following string to the URL: wp-admin/admin.php?page=wpseo_titles&remove_i18n_promo=1 */
 function so_cuws_display_none_the_lot() {
 	echo '<style type="text/css">
-	#wpseo-dismiss-about, #sidebar-container.wpseo_content_cell, .wpseotab.active > p:nth-child(6), .wpseotab.active > p:nth-child(7), #wpseo-dismiss-gsc, #yst_opengraph_image_warning {display:none;} .postbox {border:1px solid #e5e5e5!important;}
+	#wpseo-dismiss-about, #sidebar-container.wpseo_content_cell, .wpseotab.active > p:nth-child(6), .wpseotab.active > p:nth-child(7), #wpseo-dismiss-gsc, #yst_opengraph_image_warning, .wpseo-add-keyword {display:none;} .postbox {border:1px solid #e5e5e5!important;}
 	</style>';
 }
 
