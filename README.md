@@ -2,12 +2,12 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2015.09.30
+###### Last updated on 2015.12.26
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.4
 ###### Author: [Piet Bos](https://github.com/senlin)
 
-Clean up several unwanted things that the WordPress SEO plugin adds to your WordPress Dashboard.
+Clean up several unwanted things that the Yoast SEO plugin adds to your WordPress Dashboard.
 
 ## Description
 
@@ -27,6 +27,7 @@ As per the current release, the plugin removes and/or disables the following unw
 * remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog
 * remove + icon from new Edit screen UI as it serves only to show an ad for the premium version of Yoast SEO
 * remove wpseo-score traffic light next to Move to trash on Edit Post/Page screen
+* remove SEO score algorithm recalculate nag
 
 If you like the SO Clean Up Yoast SEO plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform).
 Alternatively you are welcome to make a [donation](http://so-wp.com/donations/). Thanks!
@@ -73,6 +74,10 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 
 
 ## Changelog
+
+### 1.7.5 (2015.12.26)
+
+* remove SEO score algorithm recalculate nag
 
 ### 1.7.4 (2015.11.19)
 
