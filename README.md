@@ -11,7 +11,7 @@ Clean up several unwanted things that the Yoast SEO plugin adds to your WordPres
 
 ## Description
 
-Almost anyone that uses Yoast SEO by Team Yoast will agree that it is *the* SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
+Almost anyone that uses Yoast SEO by Team Yoast will agree that it is a great SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
 
 The purpose of the SO Clean Up Yoast SEO is to clean up all those unwanted things.
 

@@ -1,7 +1,7 @@
 === SO Clean Up Yoast SEO ===
 Contributors: senlin
 Donate link: http://so-wp.com/donations
-Tags: yoast seo, wordpress seo, yoast, seo, remove, disable, about, tour, sidebar, ads, columns 
+Tags: clean up, disable, remove, sidebar ads, cartoon, ads, keyword column, description column, nags, tour, yoast seo, traffic light  
 Requires at least: 4.0
 Tested up to: 4.4
 Stable tag: 1.7.5
@@ -12,7 +12,7 @@ Clean up several things that the Yoast SEO plugin adds to your WordPress Dashboa
 
 == Description ==
 
-Almost anyone that uses Yoast SEO by Team Yoast will agree that it is *the* SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
+Almost anyone that uses Yoast SEO by Team Yoast will agree that it is a great SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
 
 The purpose of the SO Clean Up Yoast SEO plugin is to clean up all those unwanted things.
 
