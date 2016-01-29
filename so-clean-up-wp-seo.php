@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: SO Clean Up Yoast SEO
+ * Plugin Name: SO Hide SEO Bloat
  * Plugin URI:  http://so-wp.com/plugin/so-clean-up-wp-seo/
- * Description: Clean up several things that the Yoast SEO plugin adds to your WordPress Dashboard
+ * Description: Hide most of the bloat that the Yoast SEO plugin adds to your WordPress Dashboard
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
- * Version:     1.7.5
+ * Version:     1.8.0
  * License:     GPL3+
  */
 
@@ -83,7 +83,7 @@ add_filter( 'wpseo_use_page_analysis', '__return_false' );
 
 // Remove irritating ads sidebar
 // @since 1.3.1 remove tour option/introduction
-// @since 1.4 remove updated nag (introduced with WordPress SEO version 2.2.1)
+// @since 1.4 remove updated nag (introduced with Yoast SEO version 2.2.1)
 // @since 1.6 remove GSC nag
 // @since 1.7 remove yst_opengraph_image_warning nag
 // @since 1.7.3 remove + icon from new Edit screen UI as it serves only to show an ad for the premium version of Yoast SEO
@@ -97,7 +97,7 @@ function so_cuws_display_none_the_lot() {
 	</style>';
 }
 
-// @since 1.4 replaces previous so_cuws_remove_about_tour() function that has become redundant from WordPress SEO 2.2.1 onwards
+// @since 1.4 replaces previous so_cuws_remove_about_tour() function that has become redundant from Yoast SEO 2.2.1 onwards
 function so_cuws_ignore_tour() {
 	update_user_meta( get_current_user_id(), 'wpseo_ignore_tour', true );
 }
@@ -112,7 +112,7 @@ function so_cuws_remove_adminbar_settings() {
 	// remove the entire menu
 	//$wp_admin_bar->remove_node( 'wpseo-menu' );
 
-	// remove WordPress SEO Settings
+	// remove Yoast SEO Settings
 	$wp_admin_bar->remove_node( 'wpseo-settings' );
 
 	// remove keyword research information
@@ -120,7 +120,7 @@ function so_cuws_remove_adminbar_settings() {
 
 }
 
-// Version 2.3 of Yoast SEO (formerly WordPress SEO) introduced a dashboard widget
+// Version 2.3 of Yoast SEO introduced a dashboard widget
 // This function removes this widget
 // @since v1.5
 function so_cuws_remove_wpseo_dashboard_overview_widget() {

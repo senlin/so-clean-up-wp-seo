@@ -1,19 +1,19 @@
-# SO Clean Up Yoast SEO
+# SO Hide SEO Bloat
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
 ###### Last updated on 2015.12.26
 ###### requires at least WordPress 4.0
-###### tested up to WordPress 4.4
+###### tested up to WordPress 4.4.1
 ###### Author: [Piet Bos](https://github.com/senlin)
 
-Clean up several unwanted things that the Yoast SEO plugin adds to your WordPress Dashboard.
+Hide most of the bloat that the Yoast SEO plugin adds to your WordPress Dashboard
 
 ## Description
 
 Almost anyone that uses Yoast SEO by Team Yoast will agree that it is a great SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
 
-The purpose of the SO Clean Up Yoast SEO is to clean up all those unwanted things.
+The purpose of the SO Hide SEO Bloat plugin is to clean up all those unwanted things.
 
 As per the current release, the plugin removes and/or disables the following unwanted items:
 
@@ -23,24 +23,24 @@ As per the current release, the plugin removes and/or disables the following unw
 * sets plugin-intro-tour user_meta to true (means done)
 * removes the keyword/description columns on edit Posts/Pages pages
 * removes the overview dashboard widget that was introduced in version 2.3 of the Yoast SEO plugin
-* removes GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
-* remove yst_opengraph_image_warning nag that was sneakily added to the Yoast SEO plugin without adding anything to the changelog
+* remove GSC (Google Search Console) nag that was introduced in Yoast SEO 2.3.3
+* remove yst_opengraph_image_warning nag that was added to Yoast SEO 2.1, but we never noticed it before. In the changelog it has been described as "validation error", which of course is nonsense, because the world is larger than social media. The nag manifests itself by placing thick red borders around your Featured Image as well as a red-bordered warning message when your Featured Image is smaller than 200x200 pixels.
 * remove + icon from new Edit screen UI as it serves only to show an ad for the premium version of Yoast SEO
 * remove wpseo-score traffic light next to Move to trash on Edit Post/Page screen
 * remove SEO score algorithm recalculate nag
 
-If you like the SO Clean Up Yoast SEO plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform).
+If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform).
 Alternatively you are welcome to make a [donation](http://so-wp.com/donations/). Thanks!
 
 ## Frequently Asked Questions
 
 ### Where are the Settings?
 
-For [v2.0.0](https://github.com/senlin/so-clean-up-wp-seo/milestones/version%202.0.0) we have planned a complete rewrite of the SO Clean Up Yoast SEO plugin which includes a Settings page to enable the user to clean up individual items, instead of the current blanket rule.
+For [v2.0.0](https://github.com/senlin/so-clean-up-wp-seo/milestones/version%202.0.0) we have planned a complete rewrite of the SO Hide SEO Bloat plugin which includes a Settings page to enable the user to clean up individual items, instead of the current blanket rule.
 
 For now however you can stop looking, there is none yet. Activate the plugin to clean up your WordPress dashboard.
 
-### Can I use SO Clean Up Yoast SEO on Multisite?
+### Can I use SO Hide SEO Bloat on Multisite?
 
 You can, but until further notice you need to activate the plugin on a per-site basis ([see this Github issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
 
@@ -68,12 +68,16 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 
 [Github](https://github.com/senlin) 
 
-[LinkedIn](https://cn.linkedin.com/in/pietbos) 
+[LinkedIn](https://www.linkedin.com/in/pietbos) 
 
 [WordPress](https://profiles.wordpress.org/senlin/) 
 
 
 ## Changelog
+
+### 1.8.0 (2016.01.28)
+
+* name change to avoid "Yoast" trademark violation
 
 ### 1.7.5 (2015.12.26)
 
@@ -152,6 +156,10 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 * Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php)
 
 ## Update Notice
+
+### 1.8.0
+
+* name change to avoid "Yoast" trademark violation
 
 ### 1.5
 

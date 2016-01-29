@@ -1,20 +1,20 @@
-=== SO Clean Up Yoast SEO ===
+=== SO Hide SEO Bloat ===
 Contributors: senlin
 Donate link: http://so-wp.com/donations
-Tags: clean up, disable, remove, sidebar ads, cartoon, ads, keyword column, description column, nags, tour, yoast seo, traffic light  
+Tags: clean up, disable, remove, sidebar ads, cartoon, ads, keyword column, description column, nags, tour, traffic light  
 Requires at least: 4.0
-Tested up to: 4.4
-Stable tag: 1.7.5
+Tested up to: 4.4.1
+Stable tag: 1.8.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Clean up several things that the Yoast SEO plugin adds to your WordPress Dashboard
+Hide most of the bloat that the Yoast SEO plugin adds to your WordPress Dashboard
 
 == Description ==
 
 Almost anyone that uses Yoast SEO by Team Yoast will agree that it is a great SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
 
-The purpose of the SO Clean Up Yoast SEO plugin is to clean up all those unwanted things.
+The purpose of the SO Hide SEO Bloat plugin is to clean up all those unwanted things.
 
 As per the current release, the plugin removes and/or disables the following unwanted items:
 
@@ -36,7 +36,7 @@ We support this plugin exclusively through [Github](https://github.com/senlin/so
 
 Thanks for your understanding and cooperation.
 
-If you like the SO Clean Up Yoast SEO plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform).
+If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform).
 Alternatively you are welcome to make a [donation](http://so-wp.com/donations/). Thanks!
 
 
@@ -44,7 +44,7 @@ Alternatively you are welcome to make a [donation](http://so-wp.com/donations/).
 
 = WordPress =
 
-Search for "SO Clean Up Yoast SEO" and install with the **Plugins > Add New** back-end page.
+Search for "SO Hide SEO Bloat" and install with the **Plugins > Add New** back-end page.
 
  &hellip; OR &hellip;
 
@@ -63,15 +63,15 @@ Done!
 
 = Where is the settings page? =
 
-For [v2.0.0](https://github.com/senlin/so-clean-up-wp-seo/milestones/version%202.0.0) we have planned a complete rewrite of the SO Clean Up Yoast SEO plugin which includes a Settings page to enable the user to clean up individual items, instead of the current blanket rule.
+For [v2.0.0](https://github.com/senlin/so-clean-up-wp-seo/milestones/version%202.0.0) we have planned a complete rewrite of the SO Hide SEO Bloat plugin which includes a Settings page to enable the user to clean up individual items, instead of the current blanket rule.
 
 For now however you can stop looking, there is none yet. Activate the plugin to clean up your WordPress dashboard.
 
-= Can I use SO Clean Up Yoast SEO on Multisite? =
+= Can I use SO Hide SEO Bloat on Multisite? =
 
 You can, but until further notice you need to activate the plugin on a per-site basis ([see this Github issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
 
-= You have only five ratings/reviews; why should I install this plugin? =
+= You have only a handful ratings/reviews; why should I install this plugin? =
 
 Yes, you are correct and many people say that it is important for a plugin to have a good rating.
 Fortunately there are already quite a few people that have downloaded the plugin, installed it, activated it and keep it activated, as you can see from the Active Installs in the sidebar. There must be something good that the plugin does then, right?
@@ -93,6 +93,10 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. before/after wpseo-score trafficlight in Publish metabox (Yoast SEO 3.0+)
 
 == Changelog ==
+
+= 1.8.0 (2016.01.28) =
+
+* name change to avoid "Yoast" trademark violation
 
 = 1.7.5 (2015.12.26) =
 
@@ -171,6 +175,10 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 * Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php)
 
 == Upgrade Notice ==
+
+= 1.8.0 =
+
+* name change to avoid "Yoast" trademark violation
 
 = 1.5 =
 
