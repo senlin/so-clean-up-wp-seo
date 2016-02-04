@@ -1,15 +1,15 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: SO Hide SEO Bloat\n"
-"POT-Creation-Date: 2016-02-04 16:15+0800\n"
-"PO-Revision-Date: 2016-02-04 14:55+0800\n"
+"POT-Creation-Date: 2016-02-04 16:16+0800\n"
+"PO-Revision-Date: 2016-02-04 16:18+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: so-clean-up-wp-seo.php\n"
@@ -23,124 +23,145 @@ msgstr ""
 #: includes/class-so-clean-up-wp-seo-settings.php:75
 #: includes/class-so-clean-up-wp-seo-settings.php:267
 msgid "SO Hide SEO Bloat Settings"
-msgstr ""
+msgstr "SO Hide SEO Bloat Instellingen"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:76
 msgid "Hide Bloat"
-msgstr ""
+msgstr "Verberg Bloat (onnodige ballast)"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:90
 msgid "Settings"
-msgstr ""
+msgstr "Instellingen"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:103
 msgid "Without further ado: Hide the bloat"
-msgstr ""
+msgstr "Zonder omhaal: verberg de bloot (onnodige ballast)"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:108
 msgid "Sidebar Ads"
-msgstr ""
+msgstr "sidebar advertenties"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:109
 msgid ""
 "Hide the cartoon-style sidebar ads on almost all settings pages of the Yoast "
 "SEO plugin."
 msgstr ""
+"Verberg de cartooneske sidebar advertenties op bijna alle instellingen "
+"pagina's van de Yoast SEO plugin."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:115
 msgid "About nag"
-msgstr ""
+msgstr "About nag"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:116
 msgid "Hide about nag that shows on every update of the plugin."
-msgstr ""
+msgstr "Verberg de about nag die bij elke update van de plugin wordt getoond."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:122
 msgid "Recalculate nag"
-msgstr ""
+msgstr "Opnieuw berekenen SEO-scores nag"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:123
 msgid ""
 "Hide recalculate nag that alerts user that SEO score algorithm has been "
 "updated."
 msgstr ""
+"Verberg de nag die aangeeft dat de SEO-scores opnieuw berekent kunnen worden."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:129
 msgid "Tagline nag"
-msgstr ""
+msgstr "Ondertitel nag"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:130
 msgid ""
 "Hide tagline nag that shows when your site uses the default WordPress "
 "tagline."
 msgstr ""
+"Verberg de ondertitel nag die wordt getoond wanneer je site de standaard "
+"Wordpress ondertitel gebruikt."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:136
 msgid "Robots nag"
-msgstr ""
+msgstr "Robots nag"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:137
 msgid ""
 "Hide robots nag that shows when your site is blocking access to robots, for "
 "example on dev and staging sites."
 msgstr ""
+"Verberg de robots nag die wordt getoond wanneer je site toegang voor robots "
+"blokkeert, bijvoorbeeld voor sites die nog in de ontwikkelingsfase zijn."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:137
 msgid ""
 " It also hides the warning in the advanced tab of Yoast SEO UI in edit Post/"
 "Page screen."
 msgstr ""
+" Het verbergt ook de waarschuwing in het geavanceerde deel van de Yoast SEO-"
+"metabox."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:143
 msgid "GSC nag"
-msgstr ""
+msgstr "GSC nag"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:144
 msgid ""
 "Hide Google Search Console nag that warns about not missing any crawl errors "
 "by connecting the Yoast SEO plugin to it."
 msgstr ""
+"Verberg de Google Search Console nag die waarschuwt over het niet missen van "
+"crawl-fouten door de Yoast SEO plugin ermee verbinding te laten maken."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:150
 msgid "Featured image nag"
-msgstr ""
+msgstr "Uitgelichte afbeelding nag"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:151
 msgid ""
 "Hide image warning nag that shows in edit Post/Page screen when featured "
 "image is smaller than 200x200 pixels."
 msgstr ""
+"Verberg de afbeelding waarschuwing die getoond wordt op het bewerk Bericht/"
+"Pagina scherm wanneer de uitgelichte afbeelding kleiner is dan 200x200 "
+"pixels."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:157
 msgid "Add keyword button"
-msgstr ""
+msgstr "Voeg zoekwoord knop toe"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:158
 msgid ""
 "Hide add keyword button that shows in edit Post/Page and only serves to show "
 "an ad for the premium version."
 msgstr ""
+"Verberg de knop met het plusje (voeg hoofdzoekwoord) die getoond op het "
+"bewerk Bericht/Pagina scherm en alleen maar een advertentie voor de premium "
+"versie laat zien."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:164
 msgid "Trafficlight"
-msgstr ""
+msgstr "Stoplicht"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:165
 msgid "Hide seoscore traffic light in publish/update box on edit Post/Page."
 msgstr ""
+"Verberg het neoscore stoplicht in de publiceer/bijwerk box op bewerk Bericht/"
+"Pagina."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:171
 msgid "Content analysis"
-msgstr ""
+msgstr "Tekstanalyse"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:172
 msgid ""
 "Hide content analysis that adds colored balls to the edit Post/Page screens"
 msgstr ""
+"Verberg de tekstanalyse die gekleurde ballen toevoegt aan de bewerk Bericht/"
+"Pagina schermen."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:178
 msgid "Admin columns"
-msgstr ""
+msgstr "Admin kolommen"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:179
 msgid ""
@@ -148,95 +169,109 @@ msgid ""
 "here which ones to hide (possible to select multiple, ticking minimum one "
 "box is <strong>required</strong>)."
 msgstr ""
+"De Yoast SEO plugin voegt 4 admin kolommen toe aan het bewerk Bericht/Pagina "
+"scherm, kies hier welke u wilt verbergen (meerdere selecteren is mogelijk, 1 "
+"box aanvinken is <strong>verplicht</strong>)."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:181
 msgid "Hide all columns"
-msgstr ""
+msgstr "Verberg alle kolommen"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:181
 msgid "Hide SEO score column"
-msgstr ""
+msgstr "Verberg de SEO-score kolom"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:181
 msgid "Hide title column"
-msgstr ""
+msgstr "Verberg de titel kolom"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:181
 msgid "Hide meta description column"
-msgstr ""
+msgstr "Verberg de meta omschrijving kolom"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:181
 msgid "Hide focus keyword column"
-msgstr ""
+msgstr "Verberg de hoofdzoekwoord kolom"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:181
 msgid "Show all columns"
-msgstr ""
+msgstr "Toon alle kolommen"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:186
 msgid "SEO menu admin bar"
-msgstr ""
+msgstr "SEO menu admin bar"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:187
 msgid ""
 "The adminbar contains an SEO menu with 2 options; select here what to remove."
 msgstr ""
+"De adminbar bevat een SEO menu met 2 opties; kies hier wat te verwijderen."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:189
 msgid "SEO Settings"
-msgstr ""
+msgstr "SEO-Instellingen"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:189
 msgid "Keyword Research"
-msgstr ""
+msgstr "Zoekwoordenonderzoek"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:189
 msgid "Both"
-msgstr ""
+msgstr "Beiden"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:189
 msgid "None"
-msgstr ""
+msgstr "Geen"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:194
 msgid "Dashboard widget"
-msgstr ""
+msgstr "Dashboard widget"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:195
 msgid "Remove the Yoast SEO widget from the WordPress Dashboard."
-msgstr ""
+msgstr "Verwijder de Yoast SEO widget van het Wordpress Dashboard."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:269
 msgid ""
 "With version 2.0.0 we have added this settings page, so you can adjust "
 "things here and there to your liking."
 msgstr ""
+"Met de komst van de versie 2.0.0 hebben we de instellingen pagina "
+"toegevoegd, zodat je hier en daar dingen kan aanpassen."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:271
 msgid ""
 "The default setting, when you activate the plugin, is that almost all boxes "
 "have been ticked; why else would you install our plugin?"
 msgstr ""
+"De standaard instelling, wanneer je de plugin activeert, is dat bijna alle "
+"vakjes zijn aangevinkt; waarom installeer je deze plugin anders?"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:273
 msgid ""
 "The intro tour pop up balloon is set to \"seen\" by default and there is no "
 "setting to show it as you can find it in the Yoast SEO Settings."
 msgstr ""
+"Het pop-up ballonnetje voor de introductie toer wordt standaard op “gezien” "
+"gezet en er is geen aparte instelling voor om het te tonen, omdat je die al "
+"kan vinden in de Yoast SEO Instellingen."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:275
 msgid ""
 "If you ever want to remove the SO Hide SEO Bloat plugin, then you can rest "
 "assured that it cleans up after itself:"
 msgstr ""
+"Wanneer je ooit de SO Hide SEO Bloat plugin wilt verwijderen, wees er dan "
+"gerust op dat de plugin zichzelf schoonmaakt."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:275
 msgid "upon deletion it removes all options automatically."
 msgstr ""
+"na verwijdering (van de plugin), verwijdert het automatisch alle opties."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:287
 msgid "Save Settings"
-msgstr ""
+msgstr "Bewaar Instellingen"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:294
 #, php-format
@@ -245,6 +280,9 @@ msgid ""
 "rating in the <a href=\"%s\" title=\"Rate this plugin!\">WordPress Plugin "
 "Repository</a>."
 msgstr ""
+"Wanneer je deze plugin handig vindt, geef het dan een gunstige waardering in "
+"de <a href=\"%s\" title=\"Geef deze plugin een waardering!\">Wordpress "
+"Plugin Repository</a>."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:297
 #, php-format
@@ -253,6 +291,8 @@ msgid ""
 "plugin into your own language\">translating the plugin</a> into your own "
 "language."
 msgstr ""
+"Je kan ook enorm helpen door <a href=\"%s\" title=\"vertaal de plugin in je "
+"eigen taal\">de plugin te vertalen</a> in je eigen taal."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:300
 #, php-format
@@ -261,10 +301,14 @@ msgid ""
 "please note that we give <a href=\"%s\" title=\"Support or Feature Requests "
 "via Github\">support via Github</a> only."
 msgstr ""
+"Wanneer je een probleem hebt met deze plugin of een feature request wilt "
+"doen, houd er dan rekening mee dat we de plugin alleen <a href=\"%s\" title="
+"\"Ondersteuning of Feature Requests alleen via Github\">ondersteunen via "
+"Github</a>."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:304
 msgid "About the Author"
-msgstr ""
+msgstr "Over de auteur"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:312
 #, php-format
@@ -273,55 +317,61 @@ msgid ""
 "of my other plugins on <a href=\"%s\" title=\"SO WP Plugins\">SO WP Plugins</"
 "a>. You can find out more information about me via the following links:"
 msgstr ""
+"Hoi, mijn naam is Piet Bos, hopelijk vind je dit een handige plugin! Kijk "
+"ook eens naar mijn andere plugins via <a href=“%s” title=“SO WP Plugins”>SO "
+"WP Plugins</a>. Je kan meer informatie over mij vinden via de onderstaande "
+"links:"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:317
 msgid "Senlin Online"
-msgstr ""
+msgstr "Senlin Online"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:318
 msgid "WP Tips"
-msgstr ""
+msgstr "WP Tips"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:319
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:320
 msgid "Github"
-msgstr ""
+msgstr "Github"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:321
 msgid "WordPress.org Profile"
-msgstr ""
+msgstr "WordPress.org Profiel"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:356
 #: includes/class-so-clean-up-wp-seo-settings.php:365
 msgid "Access denied"
-msgstr ""
+msgstr "Toegang geweigerd"
 
 #: includes/class-so-clean-up-wp-seo.php:331
 #: includes/class-so-clean-up-wp-seo.php:340
 msgid "No Access"
-msgstr ""
+msgstr "Geen Toegang"
 
 #. Plugin Name of the plugin/theme
 msgid "SO Hide SEO Bloat"
-msgstr ""
+msgstr "SO Hide SEO Bloat"
 
 #. Plugin URI of the plugin/theme
 msgid "http://so-wp.com/plugin/so-clean-up-wp-seo/"
-msgstr ""
+msgstr "http://so-wp.com/plugin/so-clean-up-wp-seo/"
 
 #. Description of the plugin/theme
 msgid ""
 "Hide most of the bloat that the Yoast SEO plugin adds to your WordPress "
 "Dashboard"
 msgstr ""
+"Verberg het grootste deel van de bloot dat de Yoast SEO plugin toevoegt aan "
+"je Wordpress Dashboard"
 
 #. Author of the plugin/theme
 msgid "SO WP"
-msgstr ""
+msgstr "SO WP"
 
 #. Author URI of the plugin/theme
 msgid "http://so-wp.com/plugins/"
-msgstr ""
+msgstr "http://so-wp.com/plugins/"
