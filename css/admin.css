@@ -3,7 +3,7 @@
  * @since   v2.0.0
  */
 
-.seo_page_cuws_settings .wrap > h2 {
+#cuws_settings.wrap > h2 {
     background-image: url("../images/so-icon.png");
     background-position: 0 0;
     background-repeat: no-repeat;
