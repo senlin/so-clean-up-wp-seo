@@ -1,0 +1,59 @@
+/**
+ * All of the CSS for the admin-specific functionality is included in this file.
+ * @since   v2.0.0
+ */
+
+.seo_page_cuws_settings .wrap > h2 {
+    background-image: url("../images/so-icon.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 32px auto;
+    display: block;
+    min-height: 32px;
+    padding-left: 40px !important;
+    padding-top: 2px !important;
+}
+.seo_page_cuws_settings .wrap > p {
+	font-size: 16px;
+}
+.seo_page_cuws_settings .wrap > form span.description {
+	font-size: 14px;
+}
+.rate-this-plugin {
+	color: #0074A2;
+	font-style: italic;
+	font-size: 16px;
+}
+.support,
+.translate {
+	font-size: 16px;
+}
+.author.postbox {
+	max-width: 500px;
+}
+.author.postbox .hndle {
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 0;
+    padding: 5px;
+}
+.author.postbox .inside {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+}
+.author.postbox .inside .top {
+    min-height: 90px;
+}
+.author.postbox .inside > .top > .author-image {
+	border: 1px solid #DFDFDF;
+	float: left;
+	margin-right: 10px;
+	padding: 3px;
+}
+.author.postbox .inside > ul {
+	clear: both;
+}
+.author.postbox .inside li {
+    float: left;
+    width: 50%;
+}
