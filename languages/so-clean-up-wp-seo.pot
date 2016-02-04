@@ -1,0 +1,319 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: SO Hide SEO Bloat\n"
+"POT-Creation-Date: 2016-02-04 14:56+0800\n"
+"PO-Revision-Date: 2016-02-04 14:55+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: so-clean-up-wp-seo.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/class-so-clean-up-wp-seo-settings.php:75
+#: includes/class-so-clean-up-wp-seo-settings.php:267
+msgid "SO Hide SEO Bloat Settings"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:76
+msgid "Hide Bloat"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:90
+msgid "Settings"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:103
+msgid "Without further ado: Hide the bloat"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:108
+msgid "Sidebar Ads"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:109
+msgid ""
+"Hide the cartoon-style sidebar ads on almost all settings pages of the Yoast "
+"SEO plugin."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:115
+msgid "About nag"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:116
+msgid "Hide about nag that shows on every update of the plugin."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:122
+msgid "Recalculate nag"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:123
+msgid ""
+"Hide recalculate nag that alerts user that SEO score algorithm has been "
+"updated."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:129
+msgid "Tagline nag"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:130
+msgid ""
+"Hide tagline nag that shows when your site uses the default WordPress "
+"tagline."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:136
+msgid "Robots nag"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:137
+msgid ""
+"Hide robots nag that shows when your site is blocking access to robots, for "
+"example on dev and staging sites."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:137
+msgid ""
+" It also hides the warning in the advanced tab of Yoast SEO UI in edit Post/"
+"Page screen."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:143
+msgid "GSC nag"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:144
+msgid ""
+"Hide Google Search Console nag that warns about not missing any crawl errors "
+"by connecting the Yoast SEO plugin to it."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:150
+msgid "Featured image nag"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:151
+msgid ""
+"Hide image warning nag that shows in edit Post/Page screen when featured "
+"image is smaller than 200x200 pixels."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:157
+msgid "Add keyword button"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:158
+msgid ""
+"Hide add keyword button that shows in edit Post/Page and only serves to show "
+"an ad for the premium version."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:164
+msgid "Trafficlight"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:165
+msgid "Hide seoscore traffic light in publish/update box on edit Post/Page."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:171
+msgid "Content analysis"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:172
+msgid ""
+"Hide content analysis that adds colored balls to the edit Post/Page screens"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:178
+msgid "Admin columns"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:179
+msgid ""
+"The Yoast SEO plugin adds 4 admin columns on the Posts/Pages screen, choose "
+"here which ones to hide (possible to select multiple, ticking minimum one "
+"box is <strong>required</strong>)."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:181
+msgid "Hide all columns"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:181
+msgid "Hide SEO score column"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:181
+msgid "Hide title column"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:181
+msgid "Hide meta description column"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:181
+msgid "Hide focus keyword column"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:181
+msgid "Show all columns"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:186
+msgid "SEO menu admin bar"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:187
+msgid ""
+"The adminbar contains an SEO menu with 2 options; select here what to remove."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:189
+msgid "SEO Settings"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:189
+msgid "Keyword Research"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:189
+msgid "Both"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:189
+msgid "None"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:194
+msgid "Dashboard widget"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:195
+msgid "Remove the Yoast SEO widget from the WordPress Dashboard."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:269
+msgid ""
+"With version 2.0.0 we have added this settings page, so you can adjust "
+"things here and there to your liking."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:271
+msgid ""
+"The default setting, when you activate the plugin, is that almost all boxes "
+"have been ticked; why else would you install our plugin?"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:273
+msgid ""
+"The intro tour pop up balloon is set to \"seen\" by default and there is no "
+"setting to show it as you can find it in the Yoast SEO Settings."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:275
+msgid ""
+"If you ever want to remove the SO Hide SEO Bloat plugin, then you can rest "
+"assured that it cleans up after itself:"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:275
+msgid "upon deletion it removes all options automatically."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:287
+msgid "Save Settings"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:294
+#, php-format
+msgid ""
+"If you have found this plugin at all useful, please give it a favourable "
+"rating in the <a href=\"%s\" title=\"Rate this plugin!\">WordPress Plugin "
+"Repository</a>."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:297
+#, php-format
+msgid ""
+"If you have an issue with this plugin or want to leave a feature request, "
+"please note that we give <a href=\"%s\" title=\"Support or Feature Requests "
+"via Github\">support via Github</a> only."
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:301
+msgid "About the Author"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:309
+#, php-format
+msgid ""
+"Hi, my name is Piet Bos, I hope you like this plugin! Please check out any "
+"of my other plugins on <a href=\"%s\" title=\"SO WP Plugins\">SO WP Plugins</"
+"a>. You can find out more information about me via the following links:"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:314
+msgid "Senlin Online"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:315
+msgid "WP Tips"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:316
+msgid "LinkedIn"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:317
+msgid "Github"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:318
+msgid "WordPress.org Profile"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo-settings.php:353
+#: includes/class-so-clean-up-wp-seo-settings.php:362
+msgid "Access denied"
+msgstr ""
+
+#: includes/class-so-clean-up-wp-seo.php:331
+#: includes/class-so-clean-up-wp-seo.php:340
+msgid "No Access"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "SO Hide SEO Bloat"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://so-wp.com/plugin/so-clean-up-wp-seo/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Hide most of the bloat that the Yoast SEO plugin adds to your WordPress "
+"Dashboard"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "SO WP"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://so-wp.com/plugins/"
+msgstr ""
