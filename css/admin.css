@@ -24,7 +24,8 @@
 	font-style: italic;
 	font-size: 16px;
 }
-.support {
+.support,
+.translate {
 	font-size: 16px;
 }
 .author.postbox {

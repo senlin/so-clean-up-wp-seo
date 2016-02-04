@@ -292,7 +292,10 @@ class CUWS_Settings {
 			// see //codex.wordpress.org/I18n_for_WordPress_Developers#HTML for instructions on i18n of $html
 			$rateurl = 'https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform';
 			$html .= '<p class="rate-this-plugin">' . sprintf( wp_kses( __( 'If you have found this plugin at all useful, please give it a favourable rating in the <a href="%s" title="Rate this plugin!">WordPress Plugin Repository</a>.', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $rateurl ) ) . '</p>' . "\n";
-
+			
+			$translateurl = 'https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo';
+			$html .= '<p class="translate">' . sprintf( wp_kses( __( 'You can also help a great deal by <a href="%s" title="translate the plugin into your own language">translating the plugin</a> into your own language.', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $translateurl ) ) . '</p>' . "\n";
+			
 			$supporturl = 'https://github.com/senlin/so-clean-up-wp-seo/issues';
 			$html .= '<p class="support">' . sprintf( wp_kses( __( 'If you have an issue with this plugin or want to leave a feature request, please note that we give <a href="%s" title="Support or Feature Requests via Github">support via Github</a> only.', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $supporturl ) ) . '</p>' . "\n";
 		
