@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2016.02.04
+###### Last updated on 2016.02.05
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.4.2
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -48,7 +48,7 @@ The link to the page has been added to the Yoast SEO menu and of course there is
 
 ### Can I use SO Hide SEO Bloat on Multisite?
 
-You can, but until further notice you need to activate the plugin on a per-site basis ([see this Github issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
+You can. If you network activate the plugin, you need to visit each site in the network and save the settings page. If you activate the plugin per individual site, you don't have to do anything anymore. ([related issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
 
 ### The name of the plugin is confusing, it hides bloat of which SEO plugin?
 
@@ -103,6 +103,10 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 
 
 ## Changelog
+
+### 2.0.1 (2016.02.05)
+
+* include text-domain in plugin header which I forgot to do in the 2.0.0 release; apologies
 
 ### 2.0.0 (2016.02.04)
 

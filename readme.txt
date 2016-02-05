@@ -4,7 +4,7 @@ Donate link: http://so-wp.com/donations
 Tags: clean up, disable, remove, sidebar ads, cartoon, ads, keyword column, description column, nags, tour, traffic light  
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -77,7 +77,7 @@ The link to the page has been added to the Yoast SEO menu and of course there is
 
 = Can I use SO Hide SEO Bloat on Multisite? =
 
-You can, but until further notice you need to activate the plugin on a per-site basis ([see this Github issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
+You can. If you network activate the plugin, you need to visit each site in the network and save the settings page. If you activate the plugin per individual site, you don't have to do anything anymore. ([related issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
 
 = The name of the plugin is confusing, it hides bloat of which SEO plugin? =
 
@@ -115,6 +115,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.0.1 =
+
+* release date 2016.02.05
+* include text-domain in plugin header which I forgot to do in the 2.0.0 release; apologies
 
 = 2.0.0 =
 
