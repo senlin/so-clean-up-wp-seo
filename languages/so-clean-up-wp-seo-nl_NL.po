@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SO Hide SEO Bloat\n"
 "POT-Creation-Date: 2016-02-04 16:16+0800\n"
-"PO-Revision-Date: 2016-02-04 16:18+0800\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2016-02-05 13:28+0800\n"
+"Last-Translator: Piet Bos <piethfbos@gmail.com\n"
+"Language-Team: SO WP\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -236,8 +236,8 @@ msgid ""
 "With version 2.0.0 we have added this settings page, so you can adjust "
 "things here and there to your liking."
 msgstr ""
-"Met de komst van de versie 2.0.0 hebben we de instellingen pagina "
-"toegevoegd, zodat je hier en daar dingen kan aanpassen."
+"Met de 2.0.0 versie hebben we de instellingen pagina toegevoegd, zodat je "
+"hier en daar dingen kan aanpassen."
 
 #: includes/class-so-clean-up-wp-seo-settings.php:271
 msgid ""
@@ -271,7 +271,7 @@ msgstr ""
 
 #: includes/class-so-clean-up-wp-seo-settings.php:287
 msgid "Save Settings"
-msgstr "Bewaar Instellingen"
+msgstr "Instellingen Opslaan"
 
 #: includes/class-so-clean-up-wp-seo-settings.php:294
 #, php-format
@@ -365,8 +365,8 @@ msgid ""
 "Hide most of the bloat that the Yoast SEO plugin adds to your WordPress "
 "Dashboard"
 msgstr ""
-"Verberg het grootste deel van de bloot dat de Yoast SEO plugin toevoegt aan "
-"je Wordpress Dashboard"
+"Verberg het grootste deel van de bloat (overbodige ballast) dat de Yoast SEO "
+"plugin toevoegt aan je Wordpress Dashboard"
 
 #. Author of the plugin/theme
 msgid "SO WP"
