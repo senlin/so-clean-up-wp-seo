@@ -1,10 +1,10 @@
 === SO Hide SEO Bloat ===
 Contributors: senlin
 Donate link: http://so-wp.com/donations
-Tags: clean up, disable, remove, sidebar ads, cartoon, ads, keyword column, description column, nags, tour, traffic light  
+Tags: clean up, hide, seo, bloat, remove, ads, cartoon, admin columns, nags, tour, traffic light, dashboard widget  
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -115,6 +115,12 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.0.2 =
+
+* release date 2016.
+* add translator details Dutch language file
+* update tags readme.txt
 
 = 2.0.1 =
 
