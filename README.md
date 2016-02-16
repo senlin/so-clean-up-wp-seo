@@ -7,17 +7,17 @@
 ###### tested up to WordPress 4.4.2
 ###### Author: [Piet Bos](https://github.com/senlin)
 
-Hide most of the bloat that the Yoast SEO plugin adds to your WordPress Dashboard, now with Settings Page!
+Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend; now with Settings Page!
 
 ## Description
 
-Almost anyone that uses Yoast SEO by Team Yoast will agree that it is a great SEO plugin, but the developers are adding more and more unwanted things to the WordPress Dashboard.
+Almost anyone who uses the Yoast SEO plugin will agree that it is a great SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
-The purpose of the SO Hide SEO Bloat plugin is to clean up all those unwanted things.
+The purpose of the SO Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
 Since v2.0.0 (released on February 4, 2016) we have a Settings page!
 
-The purpose of the settings page is that you can fine-tune what is hidden or removed to your liking. By default most of the bloat that the Yoast SEO plugin generates is hidden or removed, just like before when there were no settings yet.
+With the settings page is that you can fine-tune what is hidden or removed to your liking. By default most of the bloat that the Yoast SEO plugin generates is hidden or removed, just like before when there were no settings yet.
 
 It is a good idea to have a look at the Settings page if only to see what you can fine-tune. The link to the page has been added to the Yoast SEO menu and of course there is also a link to it from the Plugins page.
 
@@ -107,7 +107,7 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 ### 2.0.2 (pending release)
 
 * add translator details Dutch language file
-* update tags readme.txt
+* update readme files (text and tags)
 
 ### 2.0.1 (2016.02.05)
 
