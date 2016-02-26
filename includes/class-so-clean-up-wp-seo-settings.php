@@ -52,7 +52,7 @@ class CUWS_Settings {
 
 		// Add settings link to plugins page
 		add_filter( 'plugin_action_links_' . plugin_basename( $this->parent->file ) , array( $this, 'add_settings_link' ) );
-		
+
 	}
 
 	/**
@@ -287,32 +287,32 @@ class CUWS_Settings {
 					$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings' , 'so-clean-up-wp-seo' ) ) . '" />' . "\n";
 				$html .= '</p>' . "\n";
 			$html .= '</form>' . "\n";
-			
-						
+
+
 			// see //codex.wordpress.org/I18n_for_WordPress_Developers#HTML for instructions on i18n of $html
 			$rateurl = 'https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform';
 			$html .= '<p class="rate-this-plugin">' . sprintf( wp_kses( __( 'If you have found this plugin at all useful, please give it a favourable rating in the <a href="%s" title="Rate this plugin!">WordPress Plugin Repository</a>.', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $rateurl ) ) . '</p>' . "\n";
-			
+
 			$translateurl = 'https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo';
 			$html .= '<p class="translate">' . sprintf( wp_kses( __( 'You can also help a great deal by <a href="%s" title="translate the plugin into your own language">translating the plugin</a> into your own language.', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $translateurl ) ) . '</p>' . "\n";
-			
+
 			$supporturl = 'https://github.com/senlin/so-clean-up-wp-seo/issues';
 			$html .= '<p class="support">' . sprintf( wp_kses( __( 'If you have an issue with this plugin or want to leave a feature request, please note that we give <a href="%s" title="Support or Feature Requests via Github">support via Github</a> only.', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $supporturl ) ) . '</p>' . "\n";
-		
+
 			$html .= '<div class="author postbox">' . "\n";
-			
+
 			$html .= '<h3 class="hndle"><span>' . esc_attr( __( 'About the Author', 'so-clean-up-wp-seo' ) ) . '</span></h3>' . "\n";
-			
+
 			$html .= '<div class="inside">' . "\n";
 			$html .= '<div class="top">' . "\n";
-			
+
 			$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";			
-			
+
 			$sowpurl = 'http://so-wp.com';
 			$html .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP Plugins">SO WP Plugins</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
-			
+
 			$html .= '</div>' . "\n"; // end .top
-			
+
 			$html .= '<ul>' . "\n";
 			$html .= '<li><a href="http://senlinonline.com/" target="_blank" title="Senlin Online">' . esc_attr( __('Senlin Online', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="http://wpti.ps/" target="_blank" title="WP TIPS">' . esc_attr( __('WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
@@ -320,11 +320,11 @@ class CUWS_Settings {
 			$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '</ul>' . "\n";
-			
+
 			$html .= '</div>' . "\n"; // end .inside
-			
+
 			$html .= '</div>' . "\n"; // end .postbox
-			
+
 			$html .= '</div>' . "\n";
 
 		echo $html;

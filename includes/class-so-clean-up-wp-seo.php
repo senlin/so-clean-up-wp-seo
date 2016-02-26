@@ -74,7 +74,7 @@ class CUWS {
 	 * @since   v2.0.0
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.0.1' ) {
+	public function __construct ( $file = '', $version = '2.0.2' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
@@ -185,13 +185,12 @@ class CUWS {
 	 * @since v2.0.0
 	 */
 	// CSS needed to hide the various options ticked with checkboxes
-	public function so_cuws_hide_visibility_css(){
+	public function so_cuws_hide_visibility_css() {
 
 		echo '<style media="screen" id="so-hide-seo-bloat" type="text/css">';
 
 		// sidebar ads
 		$hide_ads = get_option( 'cuws_hide_ads' );
-
 		if ( !empty( $hide_ads ) ) {
 			echo '#sidebar-container.wpseo_content_cell{visibility:hidden;}'; // @since v1.0.0
 		}
@@ -252,12 +251,14 @@ class CUWS {
 
 		// admin columns
 		// @since v2.0.0 remove seo columns one by one
+		// @since 2.0.2 add empty array as default to avoid warnings form subsequent in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
 		$admincolumns = get_option( 'cuws_hide_admin_columns', array() );
 
-		// seo score column
+		// all columns
 		if ( in_array( 'all', $admincolumns ) ) {
 		    echo '.wp-list-table thead #wpseo-score,.wp-list-table tbody .wpseo-score,.wp-list-table tfoot .column-wpseo-score,.wp-list-table #wpseo-title,.wp-list-table tbody .wpseo-title,.wp-list-table tfoot .column-wpseo-title,.wp-list-table #wpseo-metadesc,.wp-list-table tbody .wpseo-metadesc,.wp-list-table tfoot .column-wpseo-metadesc,.wp-list-table #wpseo-focuskw,.wp-list-table tbody .wpseo-focuskw,.wp-list-table tfoot .column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
+
 		// seo score column
 		if ( in_array( 'seoscore', $admincolumns ) ) {
 		    echo '.wp-list-table thead #wpseo-score,.wp-list-table tbody .wpseo-score,.wp-list-table tfoot .column-wpseo-score   {display:none;}'; // @since v2.0.0 remove seo columns one by one
@@ -315,7 +316,7 @@ class CUWS {
 	 * @see CUWS()
 	 * @return Main CUWS instance
 	 */
-	public static function instance ( $file = '', $version = '2.0.1' ) {
+	public static function instance ( $file = '', $version = '2.0.2' ) {
 		if ( is_null( self::$_instance ) ) {
 			self::$_instance = new self( $file, $version );
 		}
