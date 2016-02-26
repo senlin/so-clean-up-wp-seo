@@ -108,7 +108,7 @@ We are looking to release a [new version](https://github.com/senlin/so-clean-up-
 
 * add translator details Dutch language file
 * update readme files (text and tags)
-* add empty array as default for `get_option cuws_hide_admin_columns` to avoid warnings form subsequent `in_array` checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
+* issue #11 add empty array as default for `get_option cuws_hide_admin_columns` to avoid warnings form subsequent `in_array` checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
 * remove whitespace
 
 ### 2.0.1 (2016.02.05)
