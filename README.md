@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2016.02.14
+###### Last updated on 2016.02.26
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.4.2
 ###### Author: [Piet Bos](https://github.com/senlin)
