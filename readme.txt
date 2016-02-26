@@ -1,7 +1,7 @@
 === SO Hide SEO Bloat ===
 Contributors: senlin
 Donate link: http://so-wp.com/donations
-Tags: yoast seo addon, hide, seo, bloat, remove, ads, cartoon, admin columns, nags, tour, traffic light, dashboard widget  
+Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, tour, traffic light, dashboard widget  
 Requires at least: 4.0
 Tested up to: 4.4.2
 Stable tag: 2.0.2
