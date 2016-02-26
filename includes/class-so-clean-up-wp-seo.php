@@ -88,14 +88,14 @@ class CUWS {
 
 		// Load admin CSS
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_styles' ), 10, 1 );
-		
+
 		// Handle localisation
 		add_action( 'plugins_loaded', array( $this, 'i18n' ), 0 );
 
 		/*** PLUGIN FUNCTIONS ***/
-		
+
 		// @since v1.3.0
-		add_action( 'admin_bar_menu', array( $this, 'so_cuws_remove_adminbar_settings' ), 999 ); 
+		add_action( 'admin_bar_menu', array( $this, 'so_cuws_remove_adminbar_settings' ), 999 );
 		// @since 1.4.0
 		add_action( 'admin_init', array( $this, 'so_cuws_ignore_tour' ), 999 );
 		// @since 1.5.0
@@ -111,44 +111,44 @@ class CUWS {
 
 
 	} // End __construct ()
-	
+
 	/**
 	 * Cleanup functions depending on each checkbox returned value in admin
 	 *
 	 * @since    v2.0.0
 	 */
-	
+
 	/**
 	 * Remove Settings submenu in admin bar
 	 *
 	 * inspired by [Lee Rickler](https://profiles.wordpress.org/lee-rickler/)
 	 * @since v1.3.0
 	 */
-	 
+
 	public function so_cuws_remove_adminbar_settings() {
-	
+
 		$adminbar = get_option( 'cuws_remove_adminbar' );
-		
+
 		global $wp_admin_bar;
-		
+
 		if ( 'seo' == $adminbar ) {
-		
+
 			$wp_admin_bar->remove_node( 'wpseo-settings' );
-		
+
 		}
-		
+
 		if ( 'keyword' == $adminbar ) {
-		
+
 			$wp_admin_bar->remove_node( 'wpseo-kwresearch' );
-		
+
 		}
-		
+
 		if ( 'both' == $adminbar ) {
-		
+
 			$wp_admin_bar->remove_node( 'wpseo-menu' );
-		
+
 		}
-	
+
 	}
 
 	/**
@@ -159,7 +159,7 @@ class CUWS {
 	public function so_cuws_ignore_tour() {
 
 		update_user_meta( get_current_user_id(), 'wpseo_ignore_tour', true );
-		
+
 	}
 
 	/**
@@ -169,7 +169,7 @@ class CUWS {
 	 * @since v1.5.0
 	 */
 	public function so_cuws_remove_dashboard_widget() {
-		
+
 		$remove_dbwidget = get_option( 'cuws_remove_dbwidget' );
 
 		if ( !empty( $remove_dbwidget ) ) {
@@ -186,12 +186,12 @@ class CUWS {
 	 */
 	// CSS needed to hide the various options ticked with checkboxes
 	public function so_cuws_hide_visibility_css(){
-		
+
 		echo '<style media="screen" id="so-hide-seo-bloat" type="text/css">';
-		
+
 		// sidebar ads
 		$hide_ads = get_option( 'cuws_hide_ads' );
-		
+
 		if ( !empty( $hide_ads ) ) {
 			echo '#sidebar-container.wpseo_content_cell{visibility:hidden;}'; // @since v1.0.0
 		}
@@ -213,19 +213,19 @@ class CUWS {
 		if ( !empty( $hide_tagline_nag ) ) {
 			echo '#wpseo-dismiss-tagline-notice{display:none;}'; // @since v2.0.0 hide default tagline nag
 		}
-					
+
 		// robots nag
 		$hide_robots_nag = get_option( 'cuws_hide_robots_nag' );
 		if ( !empty( $hide_robots_nag ) ) {
 			echo '#robotsmessage,#wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag
 		}
-					
+
 		// gsc nag
 		$hide_gsc_nag = get_option( 'cuws_hide_gsc_nag' );
 		if ( !empty( $hide_gsc_nag ) ) {
 			echo '#wpseo-dismiss-gsc{display:none;}'; // @since v2.0.0 hide gsc nag
 		}
-					
+
 		// image warning nag
 		$hide_imgwarning_nag = get_option( 'cuws_hide_imgwarning_nag' );
 		if ( !empty( $hide_imgwarning_nag ) ) {
@@ -249,11 +249,11 @@ class CUWS {
 		if ( !empty( $hide_wpseoanalysis ) ) {
 			echo '.wpseoanalysis{display:none;}'; // @since v2.0.0 hide_wpseoanalysis
 		}
-					
+
 		// admin columns
 		// @since v2.0.0 remove seo columns one by one
-		$admincolumns = get_option( 'cuws_hide_admin_columns' );
-		
+		$admincolumns = get_option( 'cuws_hide_admin_columns', array() );
+
 		// seo score column
 		if ( in_array( 'all', $admincolumns ) ) {
 		    echo '.wp-list-table thead #wpseo-score,.wp-list-table tbody .wpseo-score,.wp-list-table tfoot .column-wpseo-score,.wp-list-table #wpseo-title,.wp-list-table tbody .wpseo-title,.wp-list-table tfoot .column-wpseo-title,.wp-list-table #wpseo-metadesc,.wp-list-table tbody .wpseo-metadesc,.wp-list-table tfoot .column-wpseo-metadesc,.wp-list-table #wpseo-focuskw,.wp-list-table tbody .wpseo-focuskw,.wp-list-table tfoot .column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
@@ -262,22 +262,22 @@ class CUWS {
 		if ( in_array( 'seoscore', $admincolumns ) ) {
 		    echo '.wp-list-table thead #wpseo-score,.wp-list-table tbody .wpseo-score,.wp-list-table tfoot .column-wpseo-score   {display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
-		
+
 		// title column
 		if ( in_array( 'title', $admincolumns ) ) {
 			echo '.wp-list-table #wpseo-title,.wp-list-table tbody .wpseo-title,.wp-list-table tfoot .column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
-					
+
 		// meta description column
 		if ( in_array( 'metadescr', $admincolumns ) ) {
 			echo '.wp-list-table #wpseo-metadesc,.wp-list-table tbody .wpseo-metadesc,.wp-list-table tfoot .column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
-					
+
 		// focus keyword column
 		if ( in_array( 'focuskw', $admincolumns ) ) {
 			echo '.wp-list-table #wpseo-focuskw,.wp-list-table tbody .wpseo-focuskw,.wp-list-table tfoot .column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
-					
+
 		echo '</style>';
 
 	}
@@ -304,7 +304,7 @@ class CUWS {
 		/* Load the translation of the plugin. */
 		load_plugin_textdomain( 'so-clean-up-wp-seo', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 	}
-	
+
 	/**
 	 * Main CUWS Instance
 	 *
@@ -360,7 +360,7 @@ class CUWS {
 	private function _log_version_number () {
 		update_option( $this->_token . '_version', $this->_version );
 	} // End _log_version_number ()
-	
+
 	private function _set_defaults() {
 		update_option( 'cuws_hide_ads', 'on', true );
 		update_option( 'cuws_hide_about_nag', 'on', true );
