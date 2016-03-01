@@ -79,7 +79,7 @@ Please open an issue here on [Github](https://github.com/senlin/so-clean-up-wp-s
 
 ## Contributions
 
-We are looking to release a [new version](https://github.com/senlin/so-clean-up-wp-seo/milestones/version%202.0.0) that has a Settings page to enable the user to clean up individual items. For that version we want a complete rewrite of the plugin, preferably using one of the boilerplates.
+We welcome your contributions very much! PR's will be considered and of course bug reports and feature requests can also be seen as contributions!
 **If you're interested in becoming involved, please [let us know](http://so-wp.com/info-contact/) or simply send a PR with your proposed improvement.** 
 
 ## License
