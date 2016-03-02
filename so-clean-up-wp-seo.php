@@ -3,7 +3,7 @@
  * Plugin Name: SO Hide SEO Bloat
  * Plugin URI:  http://so-wp.com/plugin/so-clean-up-wp-seo/
  * Description: Hide most of the bloat that the Yoast SEO plugin adds to your WordPress Dashboard
- * Version:     2.0.2
+ * Version:     2.1.0
  * Author:      SO WP
  * Author URI:  http://so-wp.com/plugins/
  * Text Domain: so-clean-up-wp-seo
@@ -29,7 +29,7 @@ require_once( 'admin/class-so-clean-up-wp-seo-admin-api.php' );
  * @return object CUWS
  */
 function CUWS () {
-	$instance = CUWS::instance( __FILE__, '2.0.2' );
+	$instance = CUWS::instance( __FILE__, '2.1.0' );
 
 	if ( is_null( $instance->settings ) ) {
 		$instance->settings = CUWS_Settings::instance( $instance );

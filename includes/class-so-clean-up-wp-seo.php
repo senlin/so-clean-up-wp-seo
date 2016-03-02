@@ -74,7 +74,7 @@ class CUWS {
 	 * @since   v2.0.0
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.0.2' ) {
+	public function __construct ( $file = '', $version = '2.1.0' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
@@ -183,6 +183,7 @@ class CUWS {
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
 	 * @since v2.0.0
+	 * @modified v2.1.0 remove options for nags that have been temporarily disabled in v3.1 of Yoast SEO plugin
 	 */
 	// CSS needed to hide the various options ticked with checkboxes
 	public function so_cuws_hide_visibility_css() {
@@ -201,28 +202,10 @@ class CUWS {
 			echo '#wpseo-dismiss-about{display:none;}'; // @since v1.4.0 hide updated nag (introduced with Yoast SEO version 2.2.1)
 		}
 
-		// recalculate nag
-		$hide_recalc_nag = get_option( 'cuws_hide_recalc_nag' );
-		if ( !empty( $hide_recalc_nag ) ) {
-			echo '#wpseo-dismiss-recalculate{display:none;}'; // @since v1.7.5 hide SEO score algorithm recalculate nag
-		}
-
-		// tagline nag
-		$hide_tagline_nag = get_option( 'cuws_hide_tagline_nag' );
-		if ( !empty( $hide_tagline_nag ) ) {
-			echo '#wpseo-dismiss-tagline-notice{display:none;}'; // @since v2.0.0 hide default tagline nag
-		}
-
 		// robots nag
 		$hide_robots_nag = get_option( 'cuws_hide_robots_nag' );
 		if ( !empty( $hide_robots_nag ) ) {
-			echo '#robotsmessage,#wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag
-		}
-
-		// gsc nag
-		$hide_gsc_nag = get_option( 'cuws_hide_gsc_nag' );
-		if ( !empty( $hide_gsc_nag ) ) {
-			echo '#wpseo-dismiss-gsc{display:none;}'; // @since v2.0.0 hide gsc nag
+			echo '#wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag
 		}
 
 		// image warning nag
@@ -251,32 +234,33 @@ class CUWS {
 
 		// admin columns
 		// @since v2.0.0 remove seo columns one by one
-		// @since 2.0.2 add empty array as default to avoid warnings form subsequent in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
+		// @modified 2.0.2 add empty array as default to avoid warnings form subsequent in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
+		// @modified 2.1 simplyfy the CSS rules and add the rule to hide the seo-score column on taxonomies (added to v3.1 of Yoast SEO plugin)
 		$admincolumns = get_option( 'cuws_hide_admin_columns', array() );
 
 		// all columns
 		if ( in_array( 'all', $admincolumns ) ) {
-		    echo '.wp-list-table thead #wpseo-score,.wp-list-table tbody .wpseo-score,.wp-list-table tfoot .column-wpseo-score,.wp-list-table #wpseo-title,.wp-list-table tbody .wpseo-title,.wp-list-table tfoot .column-wpseo-title,.wp-list-table #wpseo-metadesc,.wp-list-table tbody .wpseo-metadesc,.wp-list-table tfoot .column-wpseo-metadesc,.wp-list-table #wpseo-focuskw,.wp-list-table tbody .wpseo-focuskw,.wp-list-table tfoot .column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+		    echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-title,.column-wpseo-metadesc,.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// seo score column
 		if ( in_array( 'seoscore', $admincolumns ) ) {
-		    echo '.wp-list-table thead #wpseo-score,.wp-list-table tbody .wpseo-score,.wp-list-table tfoot .column-wpseo-score   {display:none;}'; // @since v2.0.0 remove seo columns one by one
+		    echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// title column
 		if ( in_array( 'title', $admincolumns ) ) {
-			echo '.wp-list-table #wpseo-title,.wp-list-table tbody .wpseo-title,.wp-list-table tfoot .column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			echo '.column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// meta description column
 		if ( in_array( 'metadescr', $admincolumns ) ) {
-			echo '.wp-list-table #wpseo-metadesc,.wp-list-table tbody .wpseo-metadesc,.wp-list-table tfoot .column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			echo '.column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// focus keyword column
 		if ( in_array( 'focuskw', $admincolumns ) ) {
-			echo '.wp-list-table #wpseo-focuskw,.wp-list-table tbody .wpseo-focuskw,.wp-list-table tfoot .column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		echo '</style>';
@@ -365,10 +349,7 @@ class CUWS {
 	private function _set_defaults() {
 		update_option( 'cuws_hide_ads', 'on', true );
 		update_option( 'cuws_hide_about_nag', 'on', true );
-		update_option( 'cuws_hide_recalc_nag', 'on', true );
-		update_option( 'cuws_hide_tagline_nag', 'on', true );
 		update_option( 'cuws_hide_robots_nag', 'on', true );
-		update_option( 'cuws_hide_gsc_nag', 'on', true );
 		update_option( 'cuws_hide_imgwarning_nag', 'on', true );
 		update_option( 'cuws_hide_addkw_button', 'on', true );
 		update_option( 'cuws_hide_trafficlight', 'on', true );

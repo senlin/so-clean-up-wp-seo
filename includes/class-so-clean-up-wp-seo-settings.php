@@ -96,6 +96,7 @@ class CUWS_Settings {
 	 * Build settings fields
 	 * @return array Fields to be displayed on settings page
 	 * @since   v2.0.0
+	 * @modified v2.1.0 simplyfy the options to reflect changes to v3.1 of Yoast SEO plugin (temporarily removing non-vital notifications)
 	 */
 	private function settings_fields () {
 
@@ -118,30 +119,9 @@ class CUWS_Settings {
 					'default'		=> 'on'
 				),
 				array(
-					'id' 			=> 'hide_recalc_nag',
-					'label'			=> __( 'Recalculate nag', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide recalculate nag that alerts user that SEO score algorithm has been updated.', 'so-clean-up-wp-seo' ),
-					'type'			=> 'checkbox',
-					'default'		=> 'on'
-				),
-				array(
-					'id' 			=> 'hide_tagline_nag',
-					'label'			=> __( 'Tagline nag', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide tagline nag that shows when your site uses the default WordPress tagline.', 'so-clean-up-wp-seo' ),
-					'type'			=> 'checkbox',
-					'default'		=> 'on'
-				),
-				array(
 					'id' 			=> 'hide_robots_nag',
 					'label'			=> __( 'Robots nag', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide robots nag that shows when your site is blocking access to robots, for example on dev and staging sites.', 'so-clean-up-wp-seo' ) . '<br />' . __( ' It also hides the warning in the advanced tab of Yoast SEO UI in edit Post/Page screen.', 'so-clean-up-wp-seo' ),
-					'type'			=> 'checkbox',
-					'default'		=> 'on'
-				),
-				array(
-					'id' 			=> 'hide_gsc_nag',
-					'label'			=> __( 'GSC nag', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide Google Search Console nag that warns about not missing any crawl errors by connecting the Yoast SEO plugin to it.', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide robots nag that shows a warning in the advanced tab of Yoast SEO UI in edit Post/Page screen.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
 				),
@@ -176,7 +156,7 @@ class CUWS_Settings {
 				array(
 					'id' 			=> 'hide_admin_columns',
 					'label'			=> __( 'Admin columns', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'The Yoast SEO plugin adds 4 admin columns on the Posts/Pages screen, choose here which ones to hide (possible to select multiple, ticking minimum one box is <strong>required</strong>).', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'The Yoast SEO plugin adds 4 admin columns on the Posts/Pages screen and the SEO Score admin column to taxonomies (since Yoast SEO 3.1), choose here which ones to hide (possible to select multiple, ticking minimum one box is <strong>required</strong>).', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox_multi',
 					'options'		=> array( 'all' => __( 'Hide all columns', 'so-clean-up-wp-seo' ), 'seoscore' => __( 'Hide SEO score column', 'so-clean-up-wp-seo' ), 'title' => __( 'Hide title column', 'so-clean-up-wp-seo' ), 'metadescr' => __( 'Hide meta description column', 'so-clean-up-wp-seo' ), 'focuskw' => __( 'Hide focus keyword column', 'so-clean-up-wp-seo' ), 'none' => __( 'Show all columns', 'so-clean-up-wp-seo' ) ),
 					'default'		=> array( 'seoscore', 'title', 'metadescr'  )
