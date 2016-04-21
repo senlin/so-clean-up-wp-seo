@@ -74,7 +74,7 @@ class CUWS {
 	 * @since   v2.0.0
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.1.0' ) {
+	public function __construct ( $file = '', $version = '2.2.0' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
@@ -262,9 +262,17 @@ class CUWS {
 		if ( in_array( 'focuskw', $admincolumns ) ) {
 			echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
+		
+		// help center
+		$helpcenter = get_option( 'cuws_hide_helpcenter' );
+		if ( 'ad' == $helpcenter ) {
+			echo '.wpseo-tab-video__panel--text > div:first-child{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
+		}
+		if ( 'helpcenter' == $helpcenter ) {
+			echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
+		}
 
 		echo '</style>';
-
 	}
 
 
@@ -354,6 +362,7 @@ class CUWS {
 		update_option( 'cuws_hide_addkw_button', 'on', true );
 		update_option( 'cuws_hide_trafficlight', 'on', true );
 		update_option( 'cuws_hide_wpseoanalysis', 'on', true );
+		update_option( 'cuws_hide_helpcenter', 'ad', true );
 		update_option( 'cuws_hide_admin_columns', array( 'seoscore', 'title', 'metadescr' ), true );
 		update_option( 'cuws_remove_adminbar', 'seo', true );
 		update_option( 'cuws_remove_dbwidget', 'on', true );

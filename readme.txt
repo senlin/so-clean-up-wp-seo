@@ -1,10 +1,10 @@
 === SO Hide SEO Bloat ===
 Contributors: senlin
-Donate link: http://so-wp.com/donations
+Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, tour, traffic light, dashboard widget  
 Requires at least: 4.0
-Tested up to: 4.4.2
-Stable tag: 2.1.0
+Tested up to: 4.5
+Stable tag: 2.2.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -33,6 +33,7 @@ The default settings of the current release are as follows:
 * hide seoscore traffic light in publish/update box on edit Post/Page
 * hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
+* hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
 * remove SEO Settings sub menu of SEO menu in admin bar; additional option is to remove the Keyword Research sub menu
 * remove the Yoast SEO widget from the WordPress Dashboard
 * the tour is set to seen (there is no setting for this as the tour can be seen at any moment by going to the General settings of the Yoast SEO plugin)
@@ -44,7 +45,7 @@ We support this plugin exclusively through [Github](https://github.com/senlin/so
 Thanks for your understanding and cooperation.
 
 If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
-Alternatively you are welcome to make a [donation](http://so-wp.com/donations/). Thanks!
+Alternatively you are welcome to make a [donation](https://so-wp.com/donations/). Thanks!
 
 
 == Installation ==
@@ -114,6 +115,12 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.2.0 =
+
+* release date 2016.04.21 triggered by changes made with version 3.2 of the Yoast SEO plugin
+* hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
+* tested up to WP 4.5
 
 = 2.1.0 =
 
@@ -260,5 +267,5 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 = 1.4.0 =
 
-* Version 2.2.1 of the Yoast SEO plugin changes a lot of things around. The automatic redirect to the plugin's About page is no longer, so we have removed the function that disables it. The new version introduced an updated nag that doesn't let itself be dismissed easily, so we have simply hidden it altogether. The super irritating balloon to follow the intro tour was back again too, we have countered that with a functiobn that sets the user_meta of that intro tour to true, which means "seen".
+* Version 2.2.1 of the Yoast SEO plugin changes a lot of things around. The automatic redirect to the plugin's About page is no longer, so we have removed the function that disables it. The new version introduced an updated nag that doesn't let itself be dismissed easily, so we have simply hidden it altogether. The super irritating balloon to follow the intro tour was back again too, we have countered that with a function that sets the user_meta of that intro tour to true, which means "seen".
 

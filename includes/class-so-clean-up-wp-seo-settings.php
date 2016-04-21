@@ -154,6 +154,14 @@ class CUWS_Settings {
 					'default'		=> 'on'
 				),
 				array(
+					'id' 			=> 'hide_helpcenter',
+					'label'			=> __( 'Help center', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'The Yoast SEO plugin comes with a help center (since Yoast SEO 3.2) that shows introduction videos and (of course) an ad for the premium version of the plugin; select here what to hide (if anything).', 'so-clean-up-wp-seo' ),
+					'type'			=> 'radio',
+					'options'		=> array( 'ad' => __( 'Only hide ad for premium version', 'so-clean-up-wp-seo' ), 'helpcenter' => __( 'Hide the entire help center', 'so-clean-up-wp-seo' ), 'none' => __( 'None', 'so-clean-up-wp-seo' ) ),
+					'default'		=> 'ad'
+				),
+				array(
 					'id' 			=> 'hide_admin_columns',
 					'label'			=> __( 'Admin columns', 'so-clean-up-wp-seo' ),
 					'description'	=> __( 'The Yoast SEO plugin adds 4 admin columns on the Posts/Pages screen and the SEO Score admin column to taxonomies (since Yoast SEO 3.1), choose here which ones to hide (possible to select multiple, ticking minimum one box is <strong>required</strong>).', 'so-clean-up-wp-seo' ),
@@ -288,14 +296,14 @@ class CUWS_Settings {
 
 			$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";			
 
-			$sowpurl = 'http://so-wp.com';
+			$sowpurl = 'https://so-wp.com';
 			$html .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP Plugins">SO WP Plugins</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
 
 			$html .= '</div>' . "\n"; // end .top
 
 			$html .= '<ul>' . "\n";
-			$html .= '<li><a href="http://senlinonline.com/" target="_blank" title="Senlin Online">' . esc_attr( __('Senlin Online', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-			$html .= '<li><a href="http://wpti.ps/" target="_blank" title="WP TIPS">' . esc_attr( __('WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+			$html .= '<li><a href="https://senlinonline.com/" target="_blank" title="Senlin Online">' . esc_attr( __('Senlin Online', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+			$html .= '<li><a href="https://wpti.ps/" target="_blank" title="WP TIPS">' . esc_attr( __('WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
