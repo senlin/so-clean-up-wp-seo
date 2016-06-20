@@ -140,9 +140,9 @@ class CUWS_Settings {
 					'default'		=> 'on'
 				),
 				array(
-					'id' 			=> 'hide_trafficlight',
-					'label'			=> __( 'Trafficlight', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide seoscore traffic light in publish/update box on edit Post/Page.', 'so-clean-up-wp-seo' ),
+					'id' 			=> 'hide_seoscore',
+					'label'			=> __( 'Content and SEO score', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide seoscore in publish/update box on edit Post/Page.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
 				),
