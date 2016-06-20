@@ -140,18 +140,26 @@ class CUWS_Settings {
 					'default'		=> 'on'
 				),
 				array(
-					'id' 			=> 'hide_trafficlight',
-					'label'			=> __( 'Trafficlight', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide seoscore traffic light in publish/update box on edit Post/Page.', 'so-clean-up-wp-seo' ),
-					'type'			=> 'checkbox',
-					'default'		=> 'on'
-				),
-				array(
 					'id' 			=> 'hide_wpseoanalysis',
 					'label'			=> __( 'Content analysis', 'so-clean-up-wp-seo' ),
 					'description'	=> __( 'Hide content analysis that adds colored balls to the edit Post/Page screens', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
+				),
+				array(
+					'id' 			=> 'hide_issue_counter',
+					'label'			=> __( 'Issue Counter', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide issue counter from adminbar and sidebar.', 'so-clean-up-wp-seo' ),
+					'type'			=> 'checkbox',
+					'default'		=> 'on'
+				),
+				array(
+					'id' 			=> 'hide_content_keyword_score',
+					'label'			=> __( 'Content/Keyword Score', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide Content/Keyword Score (previously traffic light) in publish/update box on edit Post/Page.', 'so-clean-up-wp-seo' ),
+					'type'			=> 'radio',
+					'options'		=> array( 'both' => __( 'Hide both Keyword Score and Content Score', 'so-clean-up-wp-seo' ), 'keyword_score' => __( 'Only hide Keyword Score', 'so-clean-up-wp-seo' ), 'content_score' => __( 'Only hide Content Score', 'so-clean-up-wp-seo' ), 'none' => __( 'None', 'so-clean-up-wp-seo' ) ),
+					'default'		=> 'both'
 				),
 				array(
 					'id' 			=> 'hide_helpcenter',

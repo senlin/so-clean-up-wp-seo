@@ -74,7 +74,7 @@ class CUWS {
 	 * @since   v2.0.0
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.2.0' ) {
+	public function __construct ( $file = '', $version = '2.3.0' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
@@ -220,16 +220,28 @@ class CUWS {
 			echo '.wpseo-add-keyword{display:none;}'; // @since v1.7.3 hide add-keyword-button in UI which only serves ad in overlay
 		}
 
-		// trafficlight
-		$hide_trafficlight = get_option( 'cuws_hide_trafficlight' );
-		if ( !empty( $hide_trafficlight ) ) {
-			echo '.submitbox #wpseo-score{display:none;}'; // @since v1.7.4 hide wpseo-score traffic light in publish box
+		// hide issue counter
+		$hide_issue_counter = get_option( 'cuws_hide_issue_counter' );
+		if ( !empty( $hide_issue_counter ) ) {
+			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .update-plugins .plugin-count{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar
 		}
 
 		// content analysis
 		$hide_wpseoanalysis = get_option( 'cuws_hide_wpseoanalysis' );
 		if ( !empty( $hide_wpseoanalysis ) ) {
-			echo '.wpseoanalysis{display:none;}'; // @since v2.0.0 hide_wpseoanalysis
+			echo '.wpseoanalysis{display:none;}.wpseo-score-icon{display:none!important;}'; // @since v2.0.0 hide_wpseoanalysis; @modified v2.3.0 to remove the colored ball from the metabox tab too.
+		}
+
+		// keyword/content score
+		$content_keyword_score = get_option( 'cuws_hide_content_keyword_score' );
+		if ( 'both' == $content_keyword_score ) {
+			echo '.yoast-seo-score.content-score,.yoast-seo-score.keyword-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
+		}
+		if ( 'keyword_score' == $content_keyword_score ) {
+			echo '.yoast-seo-score.keyword-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
+		}
+		if ( 'content_score' == $content_keyword_score ) {
+			echo '.yoast-seo-score.content-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
 		}
 
 		// admin columns

@@ -2,9 +2,9 @@
 Contributors: senlin
 Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, tour, traffic light, dashboard widget  
-Requires at least: 4.0
-Tested up to: 4.5
-Stable tag: 2.2.0
+Requires at least: 4.3
+Tested up to: 4.6
+Stable tag: 2.3.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -30,7 +30,8 @@ The default settings of the current release are as follows:
 * hide warning in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
 * hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
-* hide seoscore traffic light in publish/update box on edit Post/Page
+* hide content/seoscore in publish/update box on edit Post/Page
+* hide the issue counter (added to v3.3 of Yoast SEO plugin)
 * hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
@@ -115,6 +116,14 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.3.0 =
+
+* release date 2016.06.20 triggered by changes made with version 3.3 of the Yoast SEO plugin
+* hide coloured ball of content analysis also from metabox tab (edit Post/Page screens)
+* substitute hide wpseo-score traffic light (v1.7.4) with hide content and SEO score (Yoast SEO 3.3.0), thanks to [Andrea Balzarini](https://github.com/andrebalza) [issue 15](https://github.com/senlin/so-clean-up-wp-seo/pull/15), because "a SEO plugin telling you that your content is poor while saving a new post, is not just nagging, but offensive too"
+* hide yoast-issue-counter "enhancement" introduced in Yoast SEO 3.3 from adminbar and sidebar
+* move minimum WordPress version up to 4.3
 
 = 2.2.0 =
 

@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2016.04.21
-###### requires at least WordPress 4.0
-###### tested up to WordPress 4.5
+###### Last updated on 2016.06.20
+###### requires at least WordPress 4.3
+###### tested up to WordPress 4.6
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend; now with Settings Page!
@@ -29,7 +29,8 @@ The default settings of the current release are as follows:
 * hide warning in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
 * hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
-* hide seoscore traffic light in publish/update box on edit Post/Page
+* hide content/seoscore in publish/update box on edit Post/Page
+* hide the issue counter (added to v3.3 of Yoast SEO plugin)
 * hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
@@ -103,6 +104,14 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 2.3.0 (2016.06.20)
+
+* release date 2016.06.20 triggered by changes made with version 3.3 of the Yoast SEO plugin
+* hide coloured ball of content analysis also from metabox tab (edit Post/Page screens)
+* substitute hide wpseo-score traffic light (v1.7.4) with hide content and SEO score (Yoast SEO 3.3.0), thanks to [Andrea Balzarini](https://github.com/andrebalza) [issue 15](https://github.com/senlin/so-clean-up-wp-seo/pull/15), because "a SEO plugin telling you that your content is poor while saving a new post, is not just nagging, but offensive too"
+* hide yoast-issue-counter "enhancement" introduced in Yoast SEO 3.3 from adminbar and sidebar
+* move minimum WordPress version up to 4.3
 
 ### 2.2.0 (2016.04.21)
 
