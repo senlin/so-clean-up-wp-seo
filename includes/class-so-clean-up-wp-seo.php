@@ -219,11 +219,11 @@ class CUWS {
 		if ( !empty( $hide_addkw_button ) ) {
 			echo '.wpseo-add-keyword{display:none;}'; // @since v1.7.3 hide add-keyword-button in UI which only serves ad in overlay
 		}
-
-		// trafficlight
-		$hide_trafficlight = get_option( 'cuws_hide_trafficlight' );
-		if ( !empty( $hide_trafficlight ) ) {
-			echo '.submitbox #wpseo-score{display:none;}'; // @since v1.7.4 hide wpseo-score traffic light in publish box
+		
+		// yoast-seo-score, previously trafficlight
+		$hide_seoscore = get_option( 'cuws_hide_seoscore' );
+		if ( !empty( $hide_seoscore ) ) {
+			echo '.yoast-seo-score{display:none;}'; // @since v3.3.0 hide yoast-seo-score in publish box
 		}
 
 		// content analysis
