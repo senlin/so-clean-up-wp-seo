@@ -53,9 +53,34 @@ class CUWS_Settings {
 		add_action( is_network_admin() ? 'network_admin_menu' : 'admin_menu', array( $this, 'add_menu_item' ), 15 );
 
 		// Add settings link to plugins page
-
 		add_filter( is_network_admin() ? 'network_admin_plugin_action_links_' . $plugin_slug : 'plugin_action_links_' . $plugin_slug, array( $this, 'add_settings_link', ) );
 
+		// Save setting in Multisite
+		add_action( 'network_admin_edit_' . $this->parent->_token . '_settings', array( $this, 'update_network_setting' ) );
+
+	}
+
+	/**
+	 * Save settings when on multisite network admin.
+	 *
+	 * @TODO Probably should sanitize settings before saving just as precaution.
+	 */
+	public function update_network_setting() {
+		$options = array( 'hide_ads', 'hide_about_nag', 'hide_robots_nag', 'hide_imgwarning_nag', 'hide_addkw_button', 'hide_wpseoanalysis', 'hide_issue_counter', 'hide_content_keyword_score', 'hide_helpcenter', 'hide_admin_columns', 'remove_adminbar', 'remove_dbwidget' );
+
+		if ( $this->parent->_token . '_settings' === $_POST['option_page'] && 'update' === $_POST['action'] ) {
+			foreach ( $options as $option ) {
+				$_1 =
+				update_option( $this->parent->_token . '_' . $option, $_POST[ 'cuws_' . $option ] );
+			}
+
+			$location = add_query_arg(
+				array( 'page' => $this->parent->_token . '_settings', ),
+				network_admin_url( 'admin.php' )
+			);
+			wp_redirect( $location );
+			exit;
+		}
 	}
 
 	/**
