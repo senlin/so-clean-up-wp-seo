@@ -264,13 +264,13 @@ class CUWS_Settings {
 		// Build page HTML
 		$html = '<div class="wrap" id="' . $this->parent->_token . '_settings">' . "\n";
 			$html .= '<h2>' . esc_attr( __( 'SO Hide SEO Bloat Settings' , 'so-clean-up-wp-seo' ) ) . '</h2>' . "\n";
-									
+
 			$html .= '<p>' . esc_attr( __( 'With version 2.0.0 we have added this settings page, so you can adjust things here and there to your liking.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
-			
+
 			$html .= '<p>' . esc_attr( __( 'The default setting, when you activate the plugin, is that almost all boxes have been ticked; why else would you install our plugin?', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
-			
+
 			$html .= '<p>' . esc_attr( __( 'The intro tour pop up balloon is set to "seen" by default and there is no setting to show it as you can find it in the Yoast SEO Settings.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
-			
+
 			$html .= '<p>' . esc_attr( __( 'If you ever want to remove the SO Hide SEO Bloat plugin, then you can rest assured that it cleans up after itself:', 'so-clean-up-wp-seo' ) ) . '<br />' . esc_attr( __( 'upon deletion it removes all options automatically.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
 
 			$html .= '<form method="post" action="options.php" enctype="multipart/form-data">' . "\n";
@@ -305,7 +305,7 @@ class CUWS_Settings {
 			$html .= '<div class="inside">' . "\n";
 			$html .= '<div class="top">' . "\n";
 
-			$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";			
+			$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";
 
 			$sowpurl = 'https://so-wp.com';
 			$html .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP Plugins">SO WP Plugins</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
