@@ -73,8 +73,8 @@ class CUWS_Settings {
 	 * @since   v2.0.0
 	 */
 	public function add_menu_item () {
-		$page =  add_submenu_page(
-			'wpseo_dashboard', 
+		add_submenu_page(
+			'wpseo_dashboard',
 			__( 'SO Hide SEO Bloat Settings', 'so-clean-up-wp-seo' ),
 			__( 'Hide Bloat', 'so-clean-up-wp-seo' ),
 			'manage_options',
