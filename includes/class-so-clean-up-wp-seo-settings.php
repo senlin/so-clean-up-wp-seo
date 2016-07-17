@@ -41,6 +41,8 @@ class CUWS_Settings {
 
 		$this->base = 'cuws_';
 
+		$plugin_slug = plugin_basename( $this->parent->file );
+
 		// Initialise settings
 		add_action( 'init', array( $this, 'init_settings' ), 11 );
 
@@ -48,10 +50,11 @@ class CUWS_Settings {
 		add_action( 'admin_init' , array( $this, 'register_settings' ) );
 
 		// Add settings page to menu
-		add_action( 'admin_menu' , array( $this, 'add_menu_item' ) );
+		add_action( is_network_admin() ? 'network_admin_menu' : 'admin_menu', array( $this, 'add_menu_item' ), 15 );
 
 		// Add settings link to plugins page
-		add_filter( 'plugin_action_links_' . plugin_basename( $this->parent->file ) , array( $this, 'add_settings_link' ) );
+
+		add_filter( is_network_admin() ? 'network_admin_plugin_action_links_' . $plugin_slug : 'plugin_action_links_' . $plugin_slug, array( $this, 'add_settings_link', ) );
 
 	}
 
