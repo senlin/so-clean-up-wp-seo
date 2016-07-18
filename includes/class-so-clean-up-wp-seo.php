@@ -6,14 +6,16 @@ class CUWS {
 
 	/**
 	 * The single instance of CUWS.
-	 * @var 	object
-	 * @access  private
-	 * @since 	v2.0.0
+	 *
+	 * @var    object
+	 * @access   private
+	 * @since    v2.0.0
 	 */
 	private static $_instance = null;
 
 	/**
 	 * Settings class object
+	 *
 	 * @var     object
 	 * @access  public
 	 * @since   v2.0.0
@@ -22,6 +24,7 @@ class CUWS {
 
 	/**
 	 * The version number.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -30,6 +33,7 @@ class CUWS {
 
 	/**
 	 * The token.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -38,6 +42,7 @@ class CUWS {
 
 	/**
 	 * The main plugin file.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -46,6 +51,7 @@ class CUWS {
 
 	/**
 	 * The main plugin directory.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -54,6 +60,7 @@ class CUWS {
 
 	/**
 	 * The plugin styles directory.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -62,6 +69,7 @@ class CUWS {
 
 	/**
 	 * The plugin assets URL.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -79,8 +87,13 @@ class CUWS {
 
 	/**
 	 * Constructor function.
+	 *
 	 * @access  public
 	 * @since   v2.0.0
+	 *
+	 * @param string $file
+	 * @param string $version Version number.
+	 *
 	 * @return  void
 	 */
 	public function __construct ( $file = '', $version = '2.3.0' ) {
@@ -132,9 +145,9 @@ class CUWS {
 	 * Remove Settings submenu in admin bar
 	 *
 	 * inspired by [Lee Rickler](https://profiles.wordpress.org/lee-rickler/)
+	 *
 	 * @since v1.3.0
 	 */
-
 	public function so_cuws_remove_adminbar_settings() {
 
 		global $wp_admin_bar;
@@ -188,7 +201,7 @@ class CUWS {
 	/**
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
-	 * @since v2.0.0
+	 * @since    v2.0.0
 	 * @modified v2.1.0 remove options for nags that have been temporarily disabled in v3.1 of Yoast SEO plugin
 	 */
 	// CSS needed to hide the various options ticked with checkboxes
@@ -286,6 +299,7 @@ class CUWS {
 
 	/**
 	 * Load admin CSS.
+	 *
 	 * @access  public
 	 * @since   v2.0.0
 	 * @return  void
@@ -348,6 +362,7 @@ class CUWS {
 
 	/**
 	 * Installation. Runs on activation.
+	 *
 	 * @access  public
 	 * @since   v2.0.0
 	 * @return  void
@@ -359,7 +374,8 @@ class CUWS {
 
 	/**
 	 * Log the plugin version number.
-	 * @access  public
+	 *
+	 * @access  private
 	 * @since   v2.0.0
 	 * @return  void
 	 */
@@ -367,6 +383,12 @@ class CUWS {
 		update_site_option( $this->_token . '_version', $this->_version );
 	} // End _log_version_number ()
 
+	/**
+	 * Set default values on activation.
+	 *
+	 * @access private
+	 * @return void
+	 */
 	private function _set_defaults() {
 		update_site_option( 'cuws_hide_ads', 'on' );
 		update_site_option( 'cuws_hide_about_nag', 'on' );
@@ -385,6 +407,7 @@ class CUWS {
 	/**
 	 * Get plugin settings as an array.
 	 *
+	 * @access public
 	 * @return array
 	 */
 	public function get_settings_as_array() {

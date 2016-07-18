@@ -6,22 +6,25 @@ class CUWS_Settings {
 
 	/**
 	 * The single instance of CUWS_Settings.
-	 * @var 	object
-	 * @access  private
-	 * @since 	v2.0.0
+	 *
+	 * @var    object
+	 * @access   private
+	 * @since    v2.0.0
 	 */
 	private static $_instance = null;
 
 	/**
 	 * The main plugin object.
-	 * @var 	object
-	 * @access  public
-	 * @since 	v2.0.0
+	 *
+	 * @var    object
+	 * @access   public
+	 * @since    v2.0.0
 	 */
 	public $parent = null;
 
 	/**
 	 * Prefix for plugin settings.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -30,6 +33,7 @@ class CUWS_Settings {
 
 	/**
 	 * Available settings for plugin.
+	 *
 	 * @var     array
 	 * @access  public
 	 * @since   v2.0.0
@@ -68,7 +72,9 @@ class CUWS_Settings {
 
 	/**
 	 * Save settings when on multisite network admin.
-	 * @since 2.x
+	 *
+	 * @access public
+	 * @since  2.x
 	 */
 	public function update_network_setting() {
 		$options = array(
@@ -106,6 +112,7 @@ class CUWS_Settings {
 
 	/**
 	 * Initialise settings
+	 *
 	 * @return void
 	 * @since   v2.0.0
 	 */
@@ -115,6 +122,7 @@ class CUWS_Settings {
 
 	/**
 	 * Add settings page to admin menu
+	 *
 	 * @return void
 	 * @since   v2.0.0
 	 */
@@ -131,8 +139,10 @@ class CUWS_Settings {
 
 	/**
 	 * Add settings link to plugin list table
+	 *
 	 * @param  array $links Existing links
-	 * @return array 		Modified links
+	 *
+	 * @return array        Modified links
 	 * @since   v2.0.0
 	 */
 	public function add_settings_link ( $links ) {
@@ -143,9 +153,11 @@ class CUWS_Settings {
 
 	/**
 	 * Build settings fields
+	 *
 	 * @return array Fields to be displayed on settings page
-	 * @since   v2.0.0
-	 * @modified v2.1.0 simplyfy the options to reflect changes to v3.1 of Yoast SEO plugin (temporarily removing non-vital notifications)
+	 * @since    v2.0.0
+	 * @modified v2.1.0 simplyfy the options to reflect changes to v3.1 of Yoast SEO plugin (temporarily removing
+	 *           non-vital notifications)
 	 */
 	private function settings_fields () {
 
@@ -251,6 +263,7 @@ class CUWS_Settings {
 
 	/**
 	 * Register plugin settings
+	 *
 	 * @return void
 	 * @since   v2.0.0
 	 */
@@ -295,13 +308,19 @@ class CUWS_Settings {
 		}
 	}
 
-	public function settings_section ( $section ) {
+	/**
+	 * @access public
+	 *
+	 * @param $section
+	 */
+	public function settings_section( $section ) {
 		$html = "\n";
 		echo $html;
 	}
 
 	/**
 	 * Load settings page content
+	 *
 	 * @return void
 	 * @since   v2.0.0
 	 */
@@ -385,7 +404,9 @@ class CUWS_Settings {
 	 * @since v2.0.0
 	 * @static
 	 * @see   CUWS()
+	 *
 	 * @param CUWS $parent Instance of main class.
+	 *
 	 * @return CUWS_Settings $_instance
 	 */
 	public static function instance( $parent ) {

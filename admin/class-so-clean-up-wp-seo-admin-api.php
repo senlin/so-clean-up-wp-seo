@@ -6,10 +6,13 @@ class CUWS_Admin_API {
 
 	/**
 	 * Generate HTML for displaying fields
-	 * @param  array   $field Field data
-	 * @param  boolean $echo  Whether to echo the field HTML or return it
-	 * @return void
-	 * @source: //github.com/hlashbrooke/WordPress-Plugin-Template/
+	 *
+	 * @param  array      $data Field data
+	 * @param object|bool $post WP_Post
+	 * @param  boolean    $echo Whether to echo the field HTML or return it
+	 *
+	 * @return void|string
+	 * @source  : //github.com/hlashbrooke/WordPress-Plugin-Template/
 	 * @since   v2.0.0
 	 */
 	public function display_field ( $data = array(), $post = false, $echo = true ) {
