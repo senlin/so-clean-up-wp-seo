@@ -54,13 +54,19 @@ class CUWS_Settings {
 		add_action( 'admin_init' , array( $this, 'register_settings' ) );
 
 		// Add settings page to menu
-		add_action( is_multisite() ? 'network_admin_menu' : 'admin_menu', array( $this, 'add_menu_item' ), 15 );
-
+		//add_action( is_multisite() ? 'network_admin_menu' : 'admin_menu', array( $this, 'add_menu_item' ), 15 );
+		if ( is_multisite() ) {
+			add_action( 'network_admin_menu', array( $this, 'add_menu_item' ), 15 );
+		} else {
+			add_action( 'admin_menu', array( $this, 'add_menu_item' ), 15 );
+		}
 		// Add settings link to plugins page
-		add_filter( is_multisite() ? 'network_admin_plugin_action_links_' . $plugin_slug : 'plugin_action_links_' . $plugin_slug, array(
-			$this,
-			'add_settings_link',
-		) );
+		//add_filter( is_multisite() ? 'network_admin_plugin_action_links_' . $plugin_slug : 'plugin_action_links_' . $plugin_slug, array( $this, 'add_settings_link' ) );
+		if ( is_multisite() ) {
+			add_filter( 'network_admin_plugin_action_links_' . $plugin_slug, array( $this, 'add_settings_link' ) );
+		} else {
+			add_filter( 'plugin_action_links_' . $plugin_slug, array( $this, 'add_settings_link' ) );
+		}
 
 		// Save setting in Multisite
 		add_action( 'network_admin_edit_' . $this->parent->_token . '_settings', array(
@@ -338,7 +344,12 @@ class CUWS_Settings {
 
 			$html .= '<p>' . esc_attr( __( 'If you ever want to remove the SO Hide SEO Bloat plugin, then you can rest assured that it cleans up after itself:', 'so-clean-up-wp-seo' ) ) . '<br />' . esc_attr( __( 'upon deletion it removes all options automatically.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
 
-		$action = is_network_admin() ? 'edit.php?action=' . $this->parent->_token . '_settings' : 'options.php';
+		//$action = is_network_admin() ? 'edit.php?action=' . $this->parent->_token . '_settings' : 'options.php';
+		if ( is_network_admin() ) {
+			$action = 'edit.php?action=' . $this->parent->_token . '_settings';
+		} else {
+			$action = 'options.php';
+		}
 
 			$html .= '<form method="post" action="' . $action . '" enctype="multipart/form-data">' . "\n";
 

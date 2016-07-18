@@ -23,10 +23,20 @@ class CUWS_Admin_API {
 		$options = CUWS::instance()->get_settings_as_array();
 
 		// Get field info
-		$field = isset( $data['field'] ) ? $data['field'] : $data;
+		//$field = isset( $data['field'] ) ? $data['field'] : $data;
+		if ( isset( $data['field'] ) ) {
+			$field = $data['field'];
+		} else {
+			$field = $data;
+		}
 
 		// Check for prefix on option name
-		$prefix = isset( $data['prefix'] ) ? $data['prefix'] : '';
+		//$prefix = isset( $data['prefix'] ) ? $data['prefix'] : '';
+		if ( isset( $data['prefix'] ) ) {
+			$prefix = $data['prefix'];
+		} else {
+			$prefix = '';
+		}
 
 		// Get saved data
 		$data        = '';
