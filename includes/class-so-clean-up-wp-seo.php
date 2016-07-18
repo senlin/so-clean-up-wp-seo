@@ -274,7 +274,7 @@ class CUWS {
 		if ( in_array( 'focuskw', $admincolumns ) ) {
 			echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
-		
+
 		// help center
 		$helpcenter = get_option( 'cuws_hide_helpcenter' );
 		if ( 'ad' == $helpcenter ) {
@@ -374,6 +374,7 @@ class CUWS {
 		update_option( 'cuws_hide_addkw_button', 'on', true );
 		update_option( 'cuws_hide_trafficlight', 'on', true );
 		update_option( 'cuws_hide_wpseoanalysis', 'on', true );
+		update_option( 'cuws_hide_content_keyword_score', 'both', true );
 		update_option( 'cuws_hide_helpcenter', 'ad', true );
 		update_option( 'cuws_hide_admin_columns', array( 'seoscore', 'title', 'metadescr' ), true );
 		update_option( 'cuws_remove_adminbar', 'seo', true );
