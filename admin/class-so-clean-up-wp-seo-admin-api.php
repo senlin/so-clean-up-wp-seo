@@ -1,6 +1,8 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 class CUWS_Admin_API {
 
@@ -15,7 +17,7 @@ class CUWS_Admin_API {
 	 * @source  : //github.com/hlashbrooke/WordPress-Plugin-Template/
 	 * @since   v2.0.0
 	 */
-	public function display_field ( $data = array(), $post = false, $echo = true ) {
+	public function display_field( $data = array(), $post = false, $echo = true ) {
 
 		// Get plugin settings
 		$options = CUWS::instance()->get_settings_as_array();
@@ -60,15 +62,15 @@ class CUWS_Admin_API {
 
 		$html = '';
 
-		switch( $field['type'] ) {
+		switch ( $field['type'] ) {
 
 			case 'checkbox':
 				$checked = '';
 				if ( $data && 'on' == $data ) {
 					$checked = 'checked="checked"';
 				}
-				$html .= '<input id="' . esc_attr( $field['id'] ) . '" type="' . esc_attr( $field['type'] ) . '" name="' . esc_attr( $option_name ) . '" ' . $checked . '/>' . "\n";
-			break;
+				$html .= '<input id="' . esc_attr( $field['id'] ) . '" type="' . esc_attr( $field['type'] ) . '" name="' . esc_attr( $prefix . $option_name ) . '" ' . $checked . '/>' . "\n";
+				break;
 
 			case 'checkbox_multi':
 				foreach ( $field['options'] as $k => $v ) {
@@ -76,9 +78,9 @@ class CUWS_Admin_API {
 					if ( in_array( $k, $data ) ) {
 						$checked = true;
 					}
-					$html .= '<label for="' . esc_attr( $field['id'] . '_' . $k ) . '" class="checkbox_multi"><input type="checkbox" ' . checked( $checked, true, false ) . ' name="' . esc_attr( $option_name ) . '[]" value="' . esc_attr( $k ) . '" id="' . esc_attr( $field['id'] . '_' . $k ) . '" /> ' . $v . '</label> ';
+					$html .= '<label for="' . esc_attr( $field['id'] . '_' . $k ) . '" class="checkbox_multi"><input type="checkbox" ' . checked( $checked, true, false ) . ' name="' . esc_attr( $prefix . $option_name ) . '[]" value="' . esc_attr( $k ) . '" id="' . esc_attr( $field['id'] . '_' . $k ) . '" /> ' . $v . '</label> ';
 				}
-			break;
+				break;
 
 			case 'radio':
 				foreach ( $field['options'] as $k => $v ) {
@@ -86,18 +88,18 @@ class CUWS_Admin_API {
 					if ( $k == $data ) {
 						$checked = true;
 					}
-					$html .= '<label for="' . esc_attr( $field['id'] . '_' . $k ) . '"><input type="radio" ' . checked( $checked, true, false ) . ' name="' . esc_attr( $option_name ) . '" value="' . esc_attr( $k ) . '" id="' . esc_attr( $field['id'] . '_' . $k ) . '" /> ' . $v . '</label> ';
+					$html .= '<label for="' . esc_attr( $field['id'] . '_' . $k ) . '"><input type="radio" ' . checked( $checked, true, false ) . ' name="' . esc_attr( $prefix . $option_name ) . '" value="' . esc_attr( $k ) . '" id="' . esc_attr( $field['id'] . '_' . $k ) . '" /> ' . $v . '</label> ';
 				}
-			break;
+				break;
 
 		}
 
-		switch( $field['type'] ) {
+		switch ( $field['type'] ) {
 
 			case 'checkbox_multi':
 			case 'radio':
 				$html .= '<br/><span class="description">' . $field['description'] . '</span>';
-			break;
+				break;
 
 			default:
 				if ( ! $post ) {
@@ -109,7 +111,7 @@ class CUWS_Admin_API {
 				if ( ! $post ) {
 					$html .= '</label>' . "\n";
 				}
-			break;
+				break;
 		}
 
 		if ( ! $echo ) {

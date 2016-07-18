@@ -95,8 +95,8 @@ class CUWS_Settings {
 
 		if ( $this->parent->_token . '_settings' === $_POST['option_page'] && 'update' === $_POST['action'] ) {
 			foreach ( $options as $option ) {
-				if ( ! isset( $_POST[$this->parent->_token . '_' . $option])) {
-					$_POST[$this->parent->_token . '_' . $option] = '';
+				if ( ! isset( $_POST[ $this->parent->_token . '_' . $option ] ) ) {
+					$_POST[ $this->parent->_token . '_' . $option ] = '';
 				}
 				update_site_option( $this->parent->_token . '_' . $option, $_POST[ $this->parent->_token . '_' . $option ] );
 			}
@@ -338,7 +338,7 @@ class CUWS_Settings {
 
 			$html .= '<p>' . esc_attr( __( 'If you ever want to remove the SO Hide SEO Bloat plugin, then you can rest assured that it cleans up after itself:', 'so-clean-up-wp-seo' ) ) . '<br />' . esc_attr( __( 'upon deletion it removes all options automatically.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
 
-			$action = is_network_admin() ? 'edit.php?action=' . $this->parent->_token . '_settings' : 'options.php';
+		$action = is_network_admin() ? 'edit.php?action=' . $this->parent->_token . '_settings' : 'options.php';
 
 			$html .= '<form method="post" action="' . $action . '" enctype="multipart/form-data">' . "\n";
 
