@@ -31,7 +31,7 @@ require_once( 'admin/class-so-clean-up-wp-seo-admin-api.php' );
 function CUWS () {
 	$instance = CUWS::instance( __FILE__, '2.3.0' );
 
-	if ( is_null( $instance->settings ) ) {
+	if ( null === $instance->settings ) {
 		$instance->settings = CUWS_Settings::instance( $instance );
 	}
 

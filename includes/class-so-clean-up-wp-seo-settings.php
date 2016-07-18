@@ -362,13 +362,15 @@ class CUWS_Settings {
 	 *
 	 * @since v2.0.0
 	 * @static
-	 * @see CUWS()
-	 * @return Main CUWS_Settings instance
+	 * @see   CUWS()
+	 * @param CUWS $parent Instance of main class.
+	 * @return CUWS_Settings $_instance
 	 */
-	public static function instance ( $parent ) {
-		if ( is_null( self::$_instance ) ) {
+	public static function instance( $parent ) {
+		if ( null === self::$_instance ) {
 			self::$_instance = new self( $parent );
 		}
+
 		return self::$_instance;
 	} // End instance()
 

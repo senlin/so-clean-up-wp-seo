@@ -317,13 +317,18 @@ class CUWS {
 	 *
 	 * @since v2.0.0
 	 * @static
-	 * @see CUWS()
-	 * @return Main CUWS instance
+	 * @see   CUWS()
+	 *
+	 * @param string $file
+	 * @param string $version Version number.
+	 *
+	 * @return CUWS $_instance
 	 */
-	public static function instance ( $file = '', $version = '2.0.2' ) {
-		if ( is_null( self::$_instance ) ) {
+	public static function instance( $file = '', $version = '2.0.2' ) {
+		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
+
 		return self::$_instance;
 	} // End instance ()
 
