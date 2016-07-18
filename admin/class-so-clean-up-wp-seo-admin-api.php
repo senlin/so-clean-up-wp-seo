@@ -14,25 +14,21 @@ class CUWS_Admin_API {
 	 */
 	public function display_field ( $data = array(), $post = false, $echo = true ) {
 
+		// Get plugin settings
+		$options = CUWS::instance()->get_settings_as_array();
+
 		// Get field info
-		if ( isset( $data['field'] ) ) {
-			$field = $data['field'];
-		} else {
-			$field = $data;
-		}
+		$field = isset( $data['field'] ) ? $data['field'] : $data;
 
 		// Check for prefix on option name
-		$option_name = '';
-		if ( isset( $data['prefix'] ) ) {
-			$option_name = $data['prefix'];
-		}
+		$prefix = isset( $data['prefix'] ) ? $data['prefix'] : '';
 
 		// Get saved data
-		$data = '';
+		$data        = '';
+		$option_name = $field['id'];
 		if ( $post ) {
 
 			// Get saved field data
-			$option_name .= $field['id'];
 			$option = get_post_meta( $post->ID, $field['id'], true );
 
 			// Get data to display in field
@@ -43,8 +39,7 @@ class CUWS_Admin_API {
 		} else {
 
 			// Get saved option
-			$option_name .= $field['id'];
-			$option = get_option( $option_name );
+			$option = $options[ $option_name ];
 
 			// Get data to display in field
 			if ( isset( $option ) ) {
