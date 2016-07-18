@@ -10,6 +10,7 @@
  * Domain Path: /languages
  * License:     GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+ * Network:     true
  */
 
 // don't load the plugin file directly
