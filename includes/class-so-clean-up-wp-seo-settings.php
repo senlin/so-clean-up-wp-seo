@@ -6,22 +6,25 @@ class CUWS_Settings {
 
 	/**
 	 * The single instance of CUWS_Settings.
-	 * @var 	object
-	 * @access  private
-	 * @since 	v2.0.0
+	 *
+	 * @var    object
+	 * @access   private
+	 * @since    v2.0.0
 	 */
 	private static $_instance = null;
 
 	/**
 	 * The main plugin object.
-	 * @var 	object
-	 * @access  public
-	 * @since 	v2.0.0
+	 *
+	 * @var    object
+	 * @access   public
+	 * @since    v2.0.0
 	 */
 	public $parent = null;
 
 	/**
 	 * Prefix for plugin settings.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -30,6 +33,7 @@ class CUWS_Settings {
 
 	/**
 	 * Available settings for plugin.
+	 *
 	 * @var     array
 	 * @access  public
 	 * @since   v2.0.0
@@ -41,6 +45,8 @@ class CUWS_Settings {
 
 		$this->base = 'cuws_';
 
+		$plugin_slug = plugin_basename( $this->parent->file );
+
 		// Initialise settings
 		add_action( 'init', array( $this, 'init_settings' ), 11 );
 
@@ -48,15 +54,71 @@ class CUWS_Settings {
 		add_action( 'admin_init' , array( $this, 'register_settings' ) );
 
 		// Add settings page to menu
-		add_action( 'admin_menu' , array( $this, 'add_menu_item' ) );
-
+		//add_action( is_multisite() ? 'network_admin_menu' : 'admin_menu', array( $this, 'add_menu_item' ), 15 );
+		if ( is_multisite() ) {
+			add_action( 'network_admin_menu', array( $this, 'add_menu_item' ), 15 );
+		} else {
+			add_action( 'admin_menu', array( $this, 'add_menu_item' ), 15 );
+		}
 		// Add settings link to plugins page
-		add_filter( 'plugin_action_links_' . plugin_basename( $this->parent->file ) , array( $this, 'add_settings_link' ) );
+		//add_filter( is_multisite() ? 'network_admin_plugin_action_links_' . $plugin_slug : 'plugin_action_links_' . $plugin_slug, array( $this, 'add_settings_link' ) );
+		if ( is_multisite() ) {
+			add_filter( 'network_admin_plugin_action_links_' . $plugin_slug, array( $this, 'add_settings_link' ) );
+		} else {
+			add_filter( 'plugin_action_links_' . $plugin_slug, array( $this, 'add_settings_link' ) );
+		}
+
+		// Save setting in Multisite
+		add_action( 'network_admin_edit_' . $this->parent->_token . '_settings', array(
+			$this,
+			'update_network_setting',
+		) );
 
 	}
 
 	/**
+	 * Save settings when on multisite network admin.
+	 *
+	 * @access public
+	 * @since  2.x
+	 */
+	public function update_network_setting() {
+		$options = array(
+			'hide_ads',
+			'hide_about_nag',
+			'hide_robots_nag',
+			'hide_imgwarning_nag',
+			'hide_addkw_button',
+			'hide_wpseoanalysis',
+			'hide_trafficlight',
+			'hide_issue_counter',
+			'hide_content_keyword_score',
+			'hide_helpcenter',
+			'hide_admin_columns',
+			'remove_adminbar',
+			'remove_dbwidget',
+		);
+
+		if ( $this->parent->_token . '_settings' === $_POST['option_page'] && 'update' === $_POST['action'] ) {
+			foreach ( $options as $option ) {
+				if ( ! isset( $_POST[ $this->parent->_token . '_' . $option ] ) ) {
+					$_POST[ $this->parent->_token . '_' . $option ] = '';
+				}
+				update_site_option( $this->parent->_token . '_' . $option, $_POST[ $this->parent->_token . '_' . $option ] );
+			}
+
+			$location = add_query_arg(
+				array( 'page' => $this->parent->_token . '_settings', ),
+				network_admin_url( 'admin.php' )
+			);
+			wp_redirect( $location );
+			exit;
+		}
+	}
+
+	/**
 	 * Initialise settings
+	 *
 	 * @return void
 	 * @since   v2.0.0
 	 */
@@ -66,12 +128,13 @@ class CUWS_Settings {
 
 	/**
 	 * Add settings page to admin menu
+	 *
 	 * @return void
 	 * @since   v2.0.0
 	 */
 	public function add_menu_item () {
-		$page =  add_submenu_page(
-			'wpseo_dashboard', 
+		add_submenu_page(
+			'wpseo_dashboard',
 			__( 'SO Hide SEO Bloat Settings', 'so-clean-up-wp-seo' ),
 			__( 'Hide Bloat', 'so-clean-up-wp-seo' ),
 			'manage_options',
@@ -82,8 +145,10 @@ class CUWS_Settings {
 
 	/**
 	 * Add settings link to plugin list table
+	 *
 	 * @param  array $links Existing links
-	 * @return array 		Modified links
+	 *
+	 * @return array        Modified links
 	 * @since   v2.0.0
 	 */
 	public function add_settings_link ( $links ) {
@@ -94,9 +159,11 @@ class CUWS_Settings {
 
 	/**
 	 * Build settings fields
+	 *
 	 * @return array Fields to be displayed on settings page
-	 * @since   v2.0.0
-	 * @modified v2.1.0 simplyfy the options to reflect changes to v3.1 of Yoast SEO plugin (temporarily removing non-vital notifications)
+	 * @since    v2.0.0
+	 * @modified v2.1.0 simplyfy the options to reflect changes to v3.1 of Yoast SEO plugin (temporarily removing
+	 *           non-vital notifications)
 	 */
 	private function settings_fields () {
 
@@ -202,6 +269,7 @@ class CUWS_Settings {
 
 	/**
 	 * Register plugin settings
+	 *
 	 * @return void
 	 * @since   v2.0.0
 	 */
@@ -246,13 +314,19 @@ class CUWS_Settings {
 		}
 	}
 
-	public function settings_section ( $section ) {
+	/**
+	 * @access public
+	 *
+	 * @param $section
+	 */
+	public function settings_section( $section ) {
 		$html = "\n";
 		echo $html;
 	}
 
 	/**
 	 * Load settings page content
+	 *
 	 * @return void
 	 * @since   v2.0.0
 	 */
@@ -261,16 +335,23 @@ class CUWS_Settings {
 		// Build page HTML
 		$html = '<div class="wrap" id="' . $this->parent->_token . '_settings">' . "\n";
 			$html .= '<h2>' . esc_attr( __( 'SO Hide SEO Bloat Settings' , 'so-clean-up-wp-seo' ) ) . '</h2>' . "\n";
-									
+
 			$html .= '<p>' . esc_attr( __( 'With version 2.0.0 we have added this settings page, so you can adjust things here and there to your liking.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
-			
+
 			$html .= '<p>' . esc_attr( __( 'The default setting, when you activate the plugin, is that almost all boxes have been ticked; why else would you install our plugin?', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
-			
+
 			$html .= '<p>' . esc_attr( __( 'The intro tour pop up balloon is set to "seen" by default and there is no setting to show it as you can find it in the Yoast SEO Settings.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
-			
+
 			$html .= '<p>' . esc_attr( __( 'If you ever want to remove the SO Hide SEO Bloat plugin, then you can rest assured that it cleans up after itself:', 'so-clean-up-wp-seo' ) ) . '<br />' . esc_attr( __( 'upon deletion it removes all options automatically.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
 
-			$html .= '<form method="post" action="options.php" enctype="multipart/form-data">' . "\n";
+		//$action = is_network_admin() ? 'edit.php?action=' . $this->parent->_token . '_settings' : 'options.php';
+		if ( is_network_admin() ) {
+			$action = 'edit.php?action=' . $this->parent->_token . '_settings';
+		} else {
+			$action = 'options.php';
+		}
+
+			$html .= '<form method="post" action="' . $action . '" enctype="multipart/form-data">' . "\n";
 
 				// Get settings fields
 				ob_start();
@@ -302,7 +383,7 @@ class CUWS_Settings {
 			$html .= '<div class="inside">' . "\n";
 			$html .= '<div class="top">' . "\n";
 
-			$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";			
+			$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";
 
 			$sowpurl = 'https://so-wp.com';
 			$html .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP Plugins">SO WP Plugins</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
@@ -333,13 +414,17 @@ class CUWS_Settings {
 	 *
 	 * @since v2.0.0
 	 * @static
-	 * @see CUWS()
-	 * @return Main CUWS_Settings instance
+	 * @see   CUWS()
+	 *
+	 * @param CUWS $parent Instance of main class.
+	 *
+	 * @return CUWS_Settings $_instance
 	 */
-	public static function instance ( $parent ) {
-		if ( is_null( self::$_instance ) ) {
+	public static function instance( $parent ) {
+		if ( null === self::$_instance ) {
 			self::$_instance = new self( $parent );
 		}
+
 		return self::$_instance;
 	} // End instance()
 

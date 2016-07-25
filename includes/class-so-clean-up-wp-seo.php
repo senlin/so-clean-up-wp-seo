@@ -6,14 +6,16 @@ class CUWS {
 
 	/**
 	 * The single instance of CUWS.
-	 * @var 	object
-	 * @access  private
-	 * @since 	v2.0.0
+	 *
+	 * @var    object
+	 * @access   private
+	 * @since    v2.0.0
 	 */
 	private static $_instance = null;
 
 	/**
 	 * Settings class object
+	 *
 	 * @var     object
 	 * @access  public
 	 * @since   v2.0.0
@@ -22,6 +24,7 @@ class CUWS {
 
 	/**
 	 * The version number.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -30,6 +33,7 @@ class CUWS {
 
 	/**
 	 * The token.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -38,6 +42,7 @@ class CUWS {
 
 	/**
 	 * The main plugin file.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -46,6 +51,7 @@ class CUWS {
 
 	/**
 	 * The main plugin directory.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -54,6 +60,7 @@ class CUWS {
 
 	/**
 	 * The plugin styles directory.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -62,6 +69,7 @@ class CUWS {
 
 	/**
 	 * The plugin assets URL.
+	 *
 	 * @var     string
 	 * @access  public
 	 * @since   v2.0.0
@@ -69,9 +77,23 @@ class CUWS {
 	public $styles_url;
 
 	/**
+	 * Holds an array of plugin options.
+	 *
+	 * @var array
+	 * @access public
+	 * @since  2.x
+	 */
+	public $options = array();
+
+	/**
 	 * Constructor function.
+	 *
 	 * @access  public
 	 * @since   v2.0.0
+	 *
+	 * @param string $file
+	 * @param string $version Version number.
+	 *
 	 * @return  void
 	 */
 	public function __construct ( $file = '', $version = '2.3.0' ) {
@@ -109,6 +131,7 @@ class CUWS {
 			$this->admin = new CUWS_Admin_API();
 		}
 
+		$this->options = $this->get_settings_as_array();
 
 	} // End __construct ()
 
@@ -122,28 +145,26 @@ class CUWS {
 	 * Remove Settings submenu in admin bar
 	 *
 	 * inspired by [Lee Rickler](https://profiles.wordpress.org/lee-rickler/)
+	 *
 	 * @since v1.3.0
 	 */
-
 	public function so_cuws_remove_adminbar_settings() {
-
-		$adminbar = get_option( 'cuws_remove_adminbar' );
 
 		global $wp_admin_bar;
 
-		if ( 'seo' == $adminbar ) {
+		if ( 'seo' == $this->options['remove_adminbar'] ) {
 
 			$wp_admin_bar->remove_node( 'wpseo-settings' );
 
 		}
 
-		if ( 'keyword' == $adminbar ) {
+		if ( 'keyword' == $this->options['remove_adminbar'] ) {
 
 			$wp_admin_bar->remove_node( 'wpseo-kwresearch' );
 
 		}
 
-		if ( 'both' == $adminbar ) {
+		if ( 'both' == $this->options['remove_adminbar'] ) {
 
 			$wp_admin_bar->remove_node( 'wpseo-menu' );
 
@@ -170,9 +191,7 @@ class CUWS {
 	 */
 	public function so_cuws_remove_dashboard_widget() {
 
-		$remove_dbwidget = get_option( 'cuws_remove_dbwidget' );
-
-		if ( !empty( $remove_dbwidget ) ) {
+		if ( ! empty( $this->options['remove_dbwidget'] ) ) {
 
 			remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'side' );
 
@@ -182,7 +201,7 @@ class CUWS {
 	/**
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
-	 * @since v2.0.0
+	 * @since    v2.0.0
 	 * @modified v2.1.0 remove options for nags that have been temporarily disabled in v3.1 of Yoast SEO plugin
 	 */
 	// CSS needed to hide the various options ticked with checkboxes
@@ -191,56 +210,48 @@ class CUWS {
 		echo '<style media="screen" id="so-hide-seo-bloat" type="text/css">';
 
 		// sidebar ads
-		$hide_ads = get_option( 'cuws_hide_ads' );
-		if ( !empty( $hide_ads ) ) {
+		if ( ! empty( $this->options['hide_ads'] ) ) {
 			echo '#sidebar-container.wpseo_content_cell{visibility:hidden;}'; // @since v1.0.0
 		}
 
 		// about nag
-		$hide_about_nag = get_option( 'cuws_hide_about_nag' );
-		if ( !empty( $hide_about_nag ) ) {
+		if ( ! empty( $this->options['hide_about_nag'] ) ) {
 			echo '#wpseo-dismiss-about{display:none;}'; // @since v1.4.0 hide updated nag (introduced with Yoast SEO version 2.2.1)
 		}
 
 		// robots nag
-		$hide_robots_nag = get_option( 'cuws_hide_robots_nag' );
-		if ( !empty( $hide_robots_nag ) ) {
+		if ( ! empty( $this->options['hide_robots_nag'] ) ) {
 			echo '#wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag
 		}
 
 		// image warning nag
-		$hide_imgwarning_nag = get_option( 'cuws_hide_imgwarning_nag' );
-		if ( !empty( $hide_imgwarning_nag ) ) {
+		if ( ! empty( $this->options['hide_imgwarning_nag'] ) ) {
 			echo '#yst_opengraph_image_warning{display:none;}#postimagediv.postbox{border:1px solid #e5e5e5!important;}'; // @since v1.7.0 hide yst opengraph image warning nag
 		}
 
 		// add keyword button
-		$hide_addkw_button = get_option( 'cuws_hide_addkw_button' );
-		if ( !empty( $hide_addkw_button ) ) {
+		if ( ! empty( $this->options['hide_addkw_button'] ) ) {
 			echo '.wpseo-add-keyword{display:none;}'; // @since v1.7.3 hide add-keyword-button in UI which only serves ad in overlay
 		}
 
 		// hide issue counter
-		$hide_issue_counter = get_option( 'cuws_hide_issue_counter' );
-		if ( !empty( $hide_issue_counter ) ) {
+		if ( ! empty( $this->options['hide_issue_counter'] ) ) {
 			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .update-plugins .plugin-count{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar
 		}
 
 		// content analysis
-		$hide_wpseoanalysis = get_option( 'cuws_hide_wpseoanalysis' );
-		if ( !empty( $hide_wpseoanalysis ) ) {
+		if ( ! empty( $this->options['hide_wpseoanalysis'] ) ) {
 			echo '.wpseoanalysis{display:none;}.wpseo-score-icon{display:none!important;}'; // @since v2.0.0 hide_wpseoanalysis; @modified v2.3.0 to remove the colored ball from the metabox tab too.
 		}
 
 		// keyword/content score
-		$content_keyword_score = get_option( 'cuws_hide_content_keyword_score' );
-		if ( 'both' == $content_keyword_score ) {
+		if ( 'both' == $this->options['hide_content_keyword_score'] ) {
 			echo '.yoast-seo-score.content-score,.yoast-seo-score.keyword-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
 		}
-		if ( 'keyword_score' == $content_keyword_score ) {
+		if ( 'keyword_score' == $this->options['hide_content_keyword_score'] ) {
 			echo '.yoast-seo-score.keyword-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
 		}
-		if ( 'content_score' == $content_keyword_score ) {
+		if ( 'content_score' == $this->options['hide_content_keyword_score'] ) {
 			echo '.yoast-seo-score.content-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
 		}
 
@@ -248,39 +259,37 @@ class CUWS {
 		// @since v2.0.0 remove seo columns one by one
 		// @modified 2.0.2 add empty array as default to avoid warnings form subsequent in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
 		// @modified 2.1 simplyfy the CSS rules and add the rule to hide the seo-score column on taxonomies (added to v3.1 of Yoast SEO plugin)
-		$admincolumns = get_option( 'cuws_hide_admin_columns', array() );
 
 		// all columns
-		if ( in_array( 'all', $admincolumns ) ) {
-		    echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-title,.column-wpseo-metadesc,.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+		if ( in_array( 'all', $this->options['hide_admin_columns'] ) ) {
+			echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-title,.column-wpseo-metadesc,.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// seo score column
-		if ( in_array( 'seoscore', $admincolumns ) ) {
-		    echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
+		if ( in_array( 'seoscore', $this->options['hide_admin_columns'] ) ) {
+			echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// title column
-		if ( in_array( 'title', $admincolumns ) ) {
+		if ( in_array( 'title', $this->options['hide_admin_columns'] ) ) {
 			echo '.column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// meta description column
-		if ( in_array( 'metadescr', $admincolumns ) ) {
+		if ( in_array( 'metadescr', $this->options['hide_admin_columns'] ) ) {
 			echo '.column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// focus keyword column
-		if ( in_array( 'focuskw', $admincolumns ) ) {
+		if ( in_array( 'focuskw', $this->options['hide_admin_columns'] ) ) {
 			echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
-		
+
 		// help center
-		$helpcenter = get_option( 'cuws_hide_helpcenter' );
-		if ( 'ad' == $helpcenter ) {
+		if ( 'ad' == $this->options['hide_helpcenter'] ) {
 			echo '.wpseo-tab-video__panel--text > div:first-child{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
 		}
-		if ( 'helpcenter' == $helpcenter ) {
+		if ( 'helpcenter' == $this->options['hide_helpcenter'] ) {
 			echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
 		}
 
@@ -290,6 +299,7 @@ class CUWS {
 
 	/**
 	 * Load admin CSS.
+	 *
 	 * @access  public
 	 * @since   v2.0.0
 	 * @return  void
@@ -317,13 +327,18 @@ class CUWS {
 	 *
 	 * @since v2.0.0
 	 * @static
-	 * @see CUWS()
-	 * @return Main CUWS instance
+	 * @see   CUWS()
+	 *
+	 * @param string $file
+	 * @param string $version Version number.
+	 *
+	 * @return CUWS $_instance
 	 */
-	public static function instance ( $file = '', $version = '2.0.2' ) {
-		if ( is_null( self::$_instance ) ) {
+	public static function instance( $file = '', $version = '2.0.2' ) {
+		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
+
 		return self::$_instance;
 	} // End instance ()
 
@@ -347,6 +362,7 @@ class CUWS {
 
 	/**
 	 * Installation. Runs on activation.
+	 *
 	 * @access  public
 	 * @since   v2.0.0
 	 * @return  void
@@ -358,26 +374,66 @@ class CUWS {
 
 	/**
 	 * Log the plugin version number.
-	 * @access  public
+	 *
+	 * @access  private
 	 * @since   v2.0.0
 	 * @return  void
 	 */
-	private function _log_version_number () {
-		update_option( $this->_token . '_version', $this->_version );
+	private function _log_version_number() {
+		update_site_option( $this->_token . '_version', $this->_version );
 	} // End _log_version_number ()
 
+	/**
+	 * Set default values on activation.
+	 *
+	 * @access private
+	 * @return void
+	 */
 	private function _set_defaults() {
-		update_option( 'cuws_hide_ads', 'on', true );
-		update_option( 'cuws_hide_about_nag', 'on', true );
-		update_option( 'cuws_hide_robots_nag', 'on', true );
-		update_option( 'cuws_hide_imgwarning_nag', 'on', true );
-		update_option( 'cuws_hide_addkw_button', 'on', true );
-		update_option( 'cuws_hide_trafficlight', 'on', true );
-		update_option( 'cuws_hide_wpseoanalysis', 'on', true );
-		update_option( 'cuws_hide_helpcenter', 'ad', true );
-		update_option( 'cuws_hide_admin_columns', array( 'seoscore', 'title', 'metadescr' ), true );
-		update_option( 'cuws_remove_adminbar', 'seo', true );
-		update_option( 'cuws_remove_dbwidget', 'on', true );
+		update_site_option( 'cuws_hide_ads', 'on' );
+		update_site_option( 'cuws_hide_about_nag', 'on' );
+		update_site_option( 'cuws_hide_robots_nag', 'on' );
+		update_site_option( 'cuws_hide_imgwarning_nag', 'on' );
+		update_site_option( 'cuws_hide_addkw_button', 'on' );
+		update_site_option( 'cuws_hide_trafficlight', 'on' );
+		update_site_option( 'cuws_hide_wpseoanalysis', 'on' );
+		update_site_option( 'cuws_hide_content_keyword_score', 'both' );
+		update_site_option( 'cuws_hide_helpcenter', 'ad' );
+		update_site_option( 'cuws_hide_admin_columns', array( 'seoscore', 'title', 'metadescr' ) );
+		update_site_option( 'cuws_remove_adminbar', 'seo' );
+		update_site_option( 'cuws_remove_dbwidget', 'on' );
 	} // End _set_defaults ()
+
+	/**
+	 * Get plugin settings as an array.
+	 *
+	 * @access public
+	 * @return array
+	 */
+	public function get_settings_as_array() {
+		$settings = array();
+		$options  = array(
+			'hide_ads',
+			'hide_about_nag',
+			'hide_robots_nag',
+			'hide_imgwarning_nag',
+			'hide_addkw_button',
+			'hide_trafficlight',
+			'hide_wpseoanalysis',
+			'hide_issue_counter',
+			'hide_content_keyword_score',
+			'hide_helpcenter',
+			'hide_admin_columns',
+			'remove_adminbar',
+			'remove_dbwidget',
+		);
+
+		foreach ( $options as $option ) {
+			$settings[ $option ] = get_site_option( $this->_token . '_' . $option );
+		}
+		$settings['version'] = $this->_version;
+
+		return $settings;
+	}
 
 }

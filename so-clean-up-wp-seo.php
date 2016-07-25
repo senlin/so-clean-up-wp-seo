@@ -10,6 +10,7 @@
  * Domain Path: /languages
  * License:     GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+ * Network:     true
  */
 
 // don't load the plugin file directly
@@ -31,7 +32,7 @@ require_once( 'admin/class-so-clean-up-wp-seo-admin-api.php' );
 function CUWS () {
 	$instance = CUWS::instance( __FILE__, '2.3.0' );
 
-	if ( is_null( $instance->settings ) ) {
+	if ( null === $instance->settings ) {
 		$instance->settings = CUWS_Settings::instance( $instance );
 	}
 

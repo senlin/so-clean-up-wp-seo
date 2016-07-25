@@ -1,20 +1,29 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 class CUWS_Admin_API {
 
 	/**
 	 * Generate HTML for displaying fields
-	 * @param  array   $field Field data
-	 * @param  boolean $echo  Whether to echo the field HTML or return it
-	 * @return void
-	 * @source: //github.com/hlashbrooke/WordPress-Plugin-Template/
+	 *
+	 * @param  array      $data Field data
+	 * @param object|bool $post WP_Post
+	 * @param  boolean    $echo Whether to echo the field HTML or return it
+	 *
+	 * @return void|string
+	 * @source  : //github.com/hlashbrooke/WordPress-Plugin-Template/
 	 * @since   v2.0.0
 	 */
-	public function display_field ( $data = array(), $post = false, $echo = true ) {
+	public function display_field( $data = array(), $post = false, $echo = true ) {
+
+		// Get plugin settings
+		$options = CUWS::instance()->get_settings_as_array();
 
 		// Get field info
+		//$field = isset( $data['field'] ) ? $data['field'] : $data;
 		if ( isset( $data['field'] ) ) {
 			$field = $data['field'];
 		} else {
@@ -22,17 +31,19 @@ class CUWS_Admin_API {
 		}
 
 		// Check for prefix on option name
-		$option_name = '';
+		//$prefix = isset( $data['prefix'] ) ? $data['prefix'] : '';
 		if ( isset( $data['prefix'] ) ) {
-			$option_name = $data['prefix'];
+			$prefix = $data['prefix'];
+		} else {
+			$prefix = '';
 		}
 
 		// Get saved data
-		$data = '';
+		$data        = '';
+		$option_name = $field['id'];
 		if ( $post ) {
 
 			// Get saved field data
-			$option_name .= $field['id'];
 			$option = get_post_meta( $post->ID, $field['id'], true );
 
 			// Get data to display in field
@@ -43,8 +54,7 @@ class CUWS_Admin_API {
 		} else {
 
 			// Get saved option
-			$option_name .= $field['id'];
-			$option = get_option( $option_name );
+			$option = $options[ $option_name ];
 
 			// Get data to display in field
 			if ( isset( $option ) ) {
@@ -62,15 +72,15 @@ class CUWS_Admin_API {
 
 		$html = '';
 
-		switch( $field['type'] ) {
+		switch ( $field['type'] ) {
 
 			case 'checkbox':
 				$checked = '';
 				if ( $data && 'on' == $data ) {
 					$checked = 'checked="checked"';
 				}
-				$html .= '<input id="' . esc_attr( $field['id'] ) . '" type="' . esc_attr( $field['type'] ) . '" name="' . esc_attr( $option_name ) . '" ' . $checked . '/>' . "\n";
-			break;
+				$html .= '<input id="' . esc_attr( $field['id'] ) . '" type="' . esc_attr( $field['type'] ) . '" name="' . esc_attr( $prefix . $option_name ) . '" ' . $checked . '/>' . "\n";
+				break;
 
 			case 'checkbox_multi':
 				foreach ( $field['options'] as $k => $v ) {
@@ -78,9 +88,9 @@ class CUWS_Admin_API {
 					if ( in_array( $k, $data ) ) {
 						$checked = true;
 					}
-					$html .= '<label for="' . esc_attr( $field['id'] . '_' . $k ) . '" class="checkbox_multi"><input type="checkbox" ' . checked( $checked, true, false ) . ' name="' . esc_attr( $option_name ) . '[]" value="' . esc_attr( $k ) . '" id="' . esc_attr( $field['id'] . '_' . $k ) . '" /> ' . $v . '</label> ';
+					$html .= '<label for="' . esc_attr( $field['id'] . '_' . $k ) . '" class="checkbox_multi"><input type="checkbox" ' . checked( $checked, true, false ) . ' name="' . esc_attr( $prefix . $option_name ) . '[]" value="' . esc_attr( $k ) . '" id="' . esc_attr( $field['id'] . '_' . $k ) . '" /> ' . $v . '</label> ';
 				}
-			break;
+				break;
 
 			case 'radio':
 				foreach ( $field['options'] as $k => $v ) {
@@ -88,18 +98,18 @@ class CUWS_Admin_API {
 					if ( $k == $data ) {
 						$checked = true;
 					}
-					$html .= '<label for="' . esc_attr( $field['id'] . '_' . $k ) . '"><input type="radio" ' . checked( $checked, true, false ) . ' name="' . esc_attr( $option_name ) . '" value="' . esc_attr( $k ) . '" id="' . esc_attr( $field['id'] . '_' . $k ) . '" /> ' . $v . '</label> ';
+					$html .= '<label for="' . esc_attr( $field['id'] . '_' . $k ) . '"><input type="radio" ' . checked( $checked, true, false ) . ' name="' . esc_attr( $prefix . $option_name ) . '" value="' . esc_attr( $k ) . '" id="' . esc_attr( $field['id'] . '_' . $k ) . '" /> ' . $v . '</label> ';
 				}
-			break;
+				break;
 
 		}
 
-		switch( $field['type'] ) {
+		switch ( $field['type'] ) {
 
 			case 'checkbox_multi':
 			case 'radio':
 				$html .= '<br/><span class="description">' . $field['description'] . '</span>';
-			break;
+				break;
 
 			default:
 				if ( ! $post ) {
@@ -111,7 +121,7 @@ class CUWS_Admin_API {
 				if ( ! $post ) {
 					$html .= '</label>' . "\n";
 				}
-			break;
+				break;
 		}
 
 		if ( ! $echo ) {
