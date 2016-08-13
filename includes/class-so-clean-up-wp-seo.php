@@ -231,7 +231,7 @@ class CUWS {
 
 		// add keyword button
 		if ( ! empty( $this->options['hide_addkw_button'] ) ) {
-			echo '.wpseo-add-keyword{display:none;}'; // @since v1.7.3 hide add-keyword-button in UI which only serves ad in overlay
+			echo '.wpseo-tab-add-keyword,.wpseo-add-keyword.button{display:none;}'; // @since v1.7.3 hide add-keyword-button in UI which only serves ad in overlay
 		}
 
 		// hide issue counter
@@ -287,7 +287,7 @@ class CUWS {
 
 		// help center
 		if ( 'ad' == $this->options['hide_helpcenter'] ) {
-			echo '.wpseo-tab-video__panel--text > div:first-child{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
+			echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
 		}
 		if ( 'helpcenter' == $this->options['hide_helpcenter'] ) {
 			echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
@@ -334,7 +334,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '2.0.2' ) {
+	public static function instance( $file = '', $version = '2.4.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -396,6 +396,7 @@ class CUWS {
 		update_site_option( 'cuws_hide_imgwarning_nag', 'on' );
 		update_site_option( 'cuws_hide_addkw_button', 'on' );
 		update_site_option( 'cuws_hide_trafficlight', 'on' );
+		update_site_option( 'cuws_hide_issue_counter', 'on' );
 		update_site_option( 'cuws_hide_wpseoanalysis', 'on' );
 		update_site_option( 'cuws_hide_content_keyword_score', 'both' );
 		update_site_option( 'cuws_hide_helpcenter', 'ad' );

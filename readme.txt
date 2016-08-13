@@ -4,7 +4,7 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, tour, traffic light, dashboard widget  
 Requires at least: 4.3
 Tested up to: 4.6
-Stable tag: 2.3.0
+Stable tag: 2.4.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -78,7 +78,8 @@ The link to the page has been added to the Yoast SEO menu and of course there is
 
 = Can I use SO Hide SEO Bloat on Multisite? =
 
-You can. If you network activate the plugin, you need to visit each site in the network and save the settings page. If you activate the plugin per individual site, you don't have to do anything anymore. ([related issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4))
+Yes, you can.
+For version 2.4.0 [Andy Fragen](https://github.com/afragen) has refactored that part of the plugin to make it fully Multisite compatible. The Settings screen only shows in Network Admin as we don't think it makes sense that individual sites override the Network Settings.
 
 = The name of the plugin is confusing, it hides bloat of which SEO plugin? =
 
@@ -116,6 +117,13 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.4.0 =
+
+* release date 2016.08.13
+* with a BIG THANK YOU to [Andy Fragen](https://github.com/afragen) who made the plugin fully Multisite compatible and therewith we have been able to finally close [this issue](https://github.com/senlin/so-clean-up-wp-seo/issues/4).
+* Andy also cleaned up some misc spacing and refactored part of the code for it to work smoother. People interested can see the full [PR](https://github.com/senlin/so-clean-up-wp-seo/pull/16).
+* tested with WP version 4.6
 
 = 2.3.0 =
 

@@ -385,13 +385,13 @@ class CUWS_Settings {
 
 			$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";
 
-			$sowpurl = 'https://so-wp.com';
+			$sowpurl = 'https://so-wp.com/plugins/';
 			$html .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP Plugins">SO WP Plugins</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
 
 			$html .= '</div>' . "\n"; // end .top
 
 			$html .= '<ul>' . "\n";
-			$html .= '<li><a href="https://senlinonline.com/" target="_blank" title="Senlin Online">' . esc_attr( __('Senlin Online', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+			$html .= '<li><a href="https://so-wp.com/" target="_blank" title="SO WP">' . esc_attr( __('SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://wpti.ps/" target="_blank" title="WP TIPS">' . esc_attr( __('WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
