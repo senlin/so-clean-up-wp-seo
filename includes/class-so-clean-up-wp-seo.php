@@ -118,8 +118,6 @@ class CUWS {
 
 		// @since v1.3.0
 		add_action( 'admin_bar_menu', array( $this, 'so_cuws_remove_adminbar_settings' ), 999 );
-		// @since 1.4.0
-		add_action( 'admin_init', array( $this, 'so_cuws_ignore_tour' ), 999 );
 		// @since 1.5.0
 		add_action( 'wp_dashboard_setup', array( $this, 'so_cuws_remove_dashboard_widget' ) );
 		// @since 2.0.0
@@ -169,17 +167,6 @@ class CUWS {
 			$wp_admin_bar->remove_node( 'wpseo-menu' );
 
 		}
-
-	}
-
-	/**
-	 * Replaces previous so_cuws_remove_about_tour() function that has become redundant from Yoast SEO 2.2.1 onwards
-	 *
-	 * @since v1.4.0
-	 */
-	public function so_cuws_ignore_tour() {
-
-		update_user_meta( get_current_user_id(), 'wpseo_ignore_tour', true );
 
 	}
 
