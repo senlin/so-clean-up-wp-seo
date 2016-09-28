@@ -116,8 +116,6 @@ class CUWS {
 
 		/*** PLUGIN FUNCTIONS ***/
 
-		// @since v1.3.0
-		add_action( 'admin_bar_menu', array( $this, 'so_cuws_remove_adminbar_settings' ), 999 );
 		// @since 1.5.0
 		add_action( 'wp_dashboard_setup', array( $this, 'so_cuws_remove_dashboard_widget' ) );
 		// @since 2.0.0
@@ -140,35 +138,10 @@ class CUWS {
 	 */
 
 	/**
-	 * Remove Settings submenu in admin bar
+	 * Since Yoast SEO 3.6 it is possible to disable the adminbar menu within Dashboard > Features, therefore this setting has become redundant
 	 *
-	 * inspired by [Lee Rickler](https://profiles.wordpress.org/lee-rickler/)
-	 *
-	 * @since v1.3.0
+	 * @since v2.5.0
 	 */
-	public function so_cuws_remove_adminbar_settings() {
-
-		global $wp_admin_bar;
-
-		if ( 'seo' == $this->options['remove_adminbar'] ) {
-
-			$wp_admin_bar->remove_node( 'wpseo-settings' );
-
-		}
-
-		if ( 'keyword' == $this->options['remove_adminbar'] ) {
-
-			$wp_admin_bar->remove_node( 'wpseo-kwresearch' );
-
-		}
-
-		if ( 'both' == $this->options['remove_adminbar'] ) {
-
-			$wp_admin_bar->remove_node( 'wpseo-menu' );
-
-		}
-
-	}
 
 	/**
 	 * Version 2.3 of Yoast SEO introduced a dashboard widget
@@ -388,7 +361,6 @@ class CUWS {
 		update_site_option( 'cuws_hide_content_keyword_score', 'both' );
 		update_site_option( 'cuws_hide_helpcenter', 'ad' );
 		update_site_option( 'cuws_hide_admin_columns', array( 'seoscore', 'title', 'metadescr' ) );
-		update_site_option( 'cuws_remove_adminbar', 'seo' );
 		update_site_option( 'cuws_remove_dbwidget', 'on' );
 	} // End _set_defaults ()
 
@@ -412,7 +384,6 @@ class CUWS {
 			'hide_content_keyword_score',
 			'hide_helpcenter',
 			'hide_admin_columns',
-			'remove_adminbar',
 			'remove_dbwidget',
 		);
 

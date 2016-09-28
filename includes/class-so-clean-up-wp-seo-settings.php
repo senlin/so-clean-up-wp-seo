@@ -95,7 +95,6 @@ class CUWS_Settings {
 			'hide_content_keyword_score',
 			'hide_helpcenter',
 			'hide_admin_columns',
-			'remove_adminbar',
 			'remove_dbwidget',
 		);
 
@@ -245,14 +244,6 @@ class CUWS_Settings {
 					'default'		=> array( 'seoscore', 'title', 'metadescr'  )
 				),
 				array(
-					'id' 			=> 'remove_adminbar',
-					'label'			=> __( 'SEO menu admin bar', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'The adminbar contains an SEO menu with 2 options; select here what to remove.', 'so-clean-up-wp-seo' ),
-					'type'			=> 'radio',
-					'options'		=> array( 'seo' => __( 'SEO Settings', 'so-clean-up-wp-seo' ), 'keyword' => __( 'Keyword Research', 'so-clean-up-wp-seo' ), 'both' => __( 'Both', 'so-clean-up-wp-seo' ), 'none' => __( 'None', 'so-clean-up-wp-seo' ) ),
-					'default'		=> 'seo'
-				),
-				array(
 					'id' 			=> 'remove_dbwidget',
 					'label'			=> __( 'Dashboard widget', 'so-clean-up-wp-seo' ),
 					'description'	=> __( 'Remove the Yoast SEO widget from the WordPress Dashboard.', 'so-clean-up-wp-seo' ),
@@ -339,8 +330,6 @@ class CUWS_Settings {
 			$html .= '<p>' . esc_attr( __( 'With version 2.0.0 we have added this settings page, so you can adjust things here and there to your liking.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
 
 			$html .= '<p>' . esc_attr( __( 'The default setting, when you activate the plugin, is that almost all boxes have been ticked; why else would you install our plugin?', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
-
-			$html .= '<p>' . esc_attr( __( 'The intro tour pop up balloon is set to "seen" by default and there is no setting to show it as you can find it in the Yoast SEO Settings.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
 
 			$html .= '<p>' . esc_attr( __( 'If you ever want to remove the SO Hide SEO Bloat plugin, then you can rest assured that it cleans up after itself:', 'so-clean-up-wp-seo' ) ) . '<br />' . esc_attr( __( 'upon deletion it removes all options automatically.', 'so-clean-up-wp-seo' ) ) . '</p>' .  "\n";
 
