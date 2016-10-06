@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2016.08.13
+###### Last updated on 2016.10.06
 ###### requires at least WordPress 4.3
-###### tested up to WordPress 4.6
+###### tested up to WordPress 4.6.1
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend; now with Settings Page!
@@ -84,6 +84,8 @@ We welcome your contributions very much! PR's will be considered and of course b
 * Donate link: http://so-wp.com/donations
 
 ## Connect with us through
+
+[Website](https://bohanintl.com)
 
 [Website](https://so-wp.com)
 
