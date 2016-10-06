@@ -1,10 +1,10 @@
 === SO Hide SEO Bloat ===
 Contributors: senlin
 Donate link: https://so-wp.com/donations
-Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, tour, traffic light, dashboard widget  
+Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget  
 Requires at least: 4.3
-Tested up to: 4.6
-Stable tag: 2.4.0
+Tested up to: 4.6.1
+Stable tag: 2.5.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -35,9 +35,8 @@ The default settings of the current release are as follows:
 * hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
-* remove SEO Settings sub menu of SEO menu in admin bar; additional option is to remove the Keyword Research sub menu
+* hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin)
 * remove the Yoast SEO widget from the WordPress Dashboard
-* the tour is set to seen (there is no setting for this as the tour can be seen at any moment by going to the General settings of the Yoast SEO plugin)
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -95,15 +94,6 @@ If you have and the plugin still doesn't do anything, then please open a [suppor
 Great question!
 Indeed the SO Hide SEO Bloat plugin writes its settings to the database. The included `uninstall.php` file removes all the plugin-related entries from the database once you remove the plugin via the WordPress Plugins page (not on deactivation).
 
-= You have only a handful ratings/reviews; why should I install this plugin? =
-
-Yes, you are correct and many people say that it is important for a plugin to have a good rating.
-Fortunately there are already quite a few people that have downloaded the plugin, installed it, activated it and keep it activated, as you can see from the Active Installs in the sidebar. There must be something good that the plugin does then, right?
-
-So if you decide to install it and you're happy about the plugin, then please help the next person (and me) by [leaving a 5-star review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). 
-
-Thank you very much!
-
 = I have an issue with this plugin, where can I get support? =
 
 Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/issues)
@@ -117,6 +107,13 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.5.0 =
+
+* release date 2016.10.06
+* remove tour setting (redundant since v3.6 of Yoast SEO)
+* remove adminbar setting (redundant since v3.6 of Yoast SEO)
+* add new setting that hides the red star behind the "Go Premium" submenu that was added in v3.6 of Yoast SEO (it is probably necessary to save the settings page for this change to take effect). Thanks to Jake Jackson for reporting [this issue](https://github.com/senlin/so-clean-up-wp-seo/issues/19).
 
 = 2.4.0 =
 
@@ -269,6 +266,10 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 * Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php)
 
 == Upgrade Notice ==
+
+= 2.5.0 =
+
+* To hide the red star behind the new "Go Premium" submenu, it is probably necessary to save the settings page for this change to take effect
 
 = 2.0.0 =
 

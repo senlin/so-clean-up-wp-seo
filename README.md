@@ -34,9 +34,8 @@ The default settings of the current release are as follows:
 * hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
-* remove SEO Settings sub menu of SEO menu in admin bar; additional option is to remove the Keyword Research sub menu
+* hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin)
 * remove the Yoast SEO widget from the WordPress Dashboard
-* the tour is set to seen (there is no setting for this as the tour can be seen at any moment by going to the General settings of the Yoast SEO plugin)
 
 If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
 Alternatively you are welcome to make a [donation](https://so-wp.com/donations/). Thanks!
@@ -65,15 +64,6 @@ If you have and the plugin still doesn't do anything, then please open a [suppor
 
 Great question!
 Indeed the SO Hide SEO Bloat plugin writes its settings to the database. The included `uninstall.php` file removes all the plugin-related entries from the database once you remove the plugin via the WordPress Plugins page (not on deactivation).
-
-### You have only a handful ratings/reviews; why should I install this plugin?
-
-Yes, you are correct and many people say that it is important for a plugin to have a good rating.
-Fortunately there are already quite a few people that have downloaded the plugin, installed it, activated it and keep it activated, as you can see from the Active Installs in the sidebar. There must be something good that the plugin does then, right?
-
-So if you decide to install it and you're happy about the plugin, then please help the next person (and me) by [leaving a 5-star review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). 
-
-Thank you very much!
 
 ### I have an issue with this plugin, where can I get support?
 
@@ -105,6 +95,13 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 2.5.0 (2016.10.06)
+
+* release date 2016.10.06
+* remove tour setting (redundant since v3.6 of Yoast SEO)
+* remove adminbar setting (redundant since v3.6 of Yoast SEO)
+* add new setting that hides the red star behind the "Go Premium" submenu that was added in v3.6 of Yoast SEO (it is probably necessary to save the settings page for this change to take effect). Thanks to Jake Jackson for reporting [this issue](https://github.com/senlin/so-clean-up-wp-seo/issues/19).
 
 ### 2.4.0 (2016.08.13)
 
