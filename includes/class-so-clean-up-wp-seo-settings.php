@@ -92,6 +92,7 @@ class CUWS_Settings {
 			'hide_wpseoanalysis',
 			'hide_trafficlight',
 			'hide_issue_counter',
+			'hide_gopremium_star',
 			'hide_content_keyword_score',
 			'hide_helpcenter',
 			'hide_admin_columns',
@@ -216,6 +217,13 @@ class CUWS_Settings {
 					'id' 			=> 'hide_issue_counter',
 					'label'			=> __( 'Issue Counter', 'so-clean-up-wp-seo' ),
 					'description'	=> __( 'Hide issue counter from adminbar and sidebar.', 'so-clean-up-wp-seo' ),
+					'type'			=> 'checkbox',
+					'default'		=> 'on'
+				),
+				array(
+					'id' 			=> 'hide_gopremium_star',
+					'label'			=> __( 'Go Premium', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'The Yoast SEO plugin comes with a "Go Premium" sub menu with a red star (since Yoast SEO 3.6). This setting hides the red star.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
 				),
@@ -380,10 +388,11 @@ class CUWS_Settings {
 			$html .= '</div>' . "\n"; // end .top
 
 			$html .= '<ul>' . "\n";
-			$html .= '<li><a href="https://so-wp.com/" target="_blank" title="SO WP">' . esc_attr( __('SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-			$html .= '<li><a href="https://wpti.ps/" target="_blank" title="WP TIPS">' . esc_attr( __('WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+			$html .= '<li><a href="https://bohanintl.com/" target="_blank" title="BHI Consulting">' . esc_attr( __('BHI Consulting', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+			$html .= '<li><a href="https://so-wp.com/" target="_blank" title="SO WP">' . esc_attr( __('SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+			$html .= '<li><a href="https://wpti.ps/" target="_blank" title="WP TIPS">' . esc_attr( __('WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '</ul>' . "\n";
 

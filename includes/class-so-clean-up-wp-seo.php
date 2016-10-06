@@ -96,7 +96,7 @@ class CUWS {
 	 *
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.3.0' ) {
+	public function __construct ( $file = '', $version = '2.5.0' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
@@ -199,6 +199,11 @@ class CUWS {
 			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .update-plugins .plugin-count{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar
 		}
 
+		// hide red star "Go Premium" submenu
+		if ( ! empty( $this->options['hide_gopremium_star'] ) ) {
+			echo '#adminmenu .wpseo-premium-indicator{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
+		}
+
 		// content analysis
 		if ( ! empty( $this->options['hide_wpseoanalysis'] ) ) {
 			echo '.wpseoanalysis{display:none;}.wpseo-score-icon{display:none!important;}'; // @since v2.0.0 hide_wpseoanalysis; @modified v2.3.0 to remove the colored ball from the metabox tab too.
@@ -294,7 +299,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '2.4.0' ) {
+	public static function instance( $file = '', $version = '2.5.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -357,6 +362,7 @@ class CUWS {
 		update_site_option( 'cuws_hide_addkw_button', 'on' );
 		update_site_option( 'cuws_hide_trafficlight', 'on' );
 		update_site_option( 'cuws_hide_issue_counter', 'on' );
+		update_site_option( 'cuws_hide_gopremium_star', 'on' );
 		update_site_option( 'cuws_hide_wpseoanalysis', 'on' );
 		update_site_option( 'cuws_hide_content_keyword_score', 'both' );
 		update_site_option( 'cuws_hide_helpcenter', 'ad' );
@@ -381,6 +387,7 @@ class CUWS {
 			'hide_trafficlight',
 			'hide_wpseoanalysis',
 			'hide_issue_counter',
+			'hide_gopremium_star',
 			'hide_content_keyword_score',
 			'hide_helpcenter',
 			'hide_admin_columns',
