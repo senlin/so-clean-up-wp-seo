@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2016.10.06
+###### Last updated on 2016.10.09
 ###### requires at least WordPress 4.3
 ###### tested up to WordPress 4.6.1
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -97,6 +97,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 2.5.1
+
+* release date 2016.10.09
+* add rule to hide additional star tab of Yoast SEO metabox
 
 ### 2.5.0 (2016.10.06)
 

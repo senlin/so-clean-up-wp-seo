@@ -96,7 +96,7 @@ class CUWS {
 	 *
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.5.0' ) {
+	public function __construct ( $file = '', $version = '2.5.1' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
@@ -252,7 +252,7 @@ class CUWS {
 
 		// help center
 		if ( 'ad' == $this->options['hide_helpcenter'] ) {
-			echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
+			echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text,.wpseo-metabox-sidebar li:last-child{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
 		}
 		if ( 'helpcenter' == $this->options['hide_helpcenter'] ) {
 			echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
@@ -299,7 +299,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '2.5.0' ) {
+	public static function instance( $file = '', $version = '2.5.1' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}

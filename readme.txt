@@ -108,6 +108,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Changelog ==
 
+= 2.5.1 =
+
+* release date 2016.10.09
+* add rule to hide additional star tab of Yoast SEO metabox
+
 = 2.5.0 =
 
 * release date 2016.10.06

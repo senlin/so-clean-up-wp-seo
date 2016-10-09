@@ -223,7 +223,7 @@ class CUWS_Settings {
 				array(
 					'id' 			=> 'hide_gopremium_star',
 					'label'			=> __( 'Go Premium', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'The Yoast SEO plugin comes with a "Go Premium" sub menu with a red star (since Yoast SEO 3.6). This setting hides the red star.', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hides red star of "Go Premium" submenu.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
 				),
@@ -240,7 +240,7 @@ class CUWS_Settings {
 					'label'			=> __( 'Help center', 'so-clean-up-wp-seo' ),
 					'description'	=> __( 'The Yoast SEO plugin comes with a help center (since Yoast SEO 3.2) that shows introduction videos and (of course) an ad for the premium version of the plugin; select here what to hide (if anything).', 'so-clean-up-wp-seo' ),
 					'type'			=> 'radio',
-					'options'		=> array( 'ad' => __( 'Only hide ad for premium version', 'so-clean-up-wp-seo' ), 'helpcenter' => __( 'Hide the entire help center', 'so-clean-up-wp-seo' ), 'none' => __( 'None', 'so-clean-up-wp-seo' ) ),
+					'options'		=> array( 'ad' => __( 'Only hide ad for premium version (also hides star tab introduced in Yoast SEO 3.6)', 'so-clean-up-wp-seo' ), 'helpcenter' => __( 'Hide the entire help center', 'so-clean-up-wp-seo' ), 'none' => __( 'None', 'so-clean-up-wp-seo' ) ),
 					'default'		=> 'ad'
 				),
 				array(
