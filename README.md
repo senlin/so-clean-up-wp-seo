@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2016.10.09
+###### Last updated on 2016.10.11
 ###### requires at least WordPress 4.3
 ###### tested up to WordPress 4.6.1
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -34,7 +34,7 @@ The default settings of the current release are as follows:
 * hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
-* hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin)
+* hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
 * remove the Yoast SEO widget from the WordPress Dashboard
 
 If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
@@ -81,7 +81,7 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Donations
 
-* Donate link: http://so-wp.com/donations
+* Donate link: http://so-wp.com/plugins/donations
 
 ## Connect with us through
 
@@ -97,6 +97,12 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+
+### 2.5.2
+
+* release date 2016.10.11 (triggered by release of Yoast SEO 3.7)
+* once again hide red premium star, this time from the opposite side of the metabox on the Edit Post/Page screen
 
 ### 2.5.1
 

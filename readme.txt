@@ -1,18 +1,18 @@
 === SO Hide SEO Bloat ===
 Contributors: senlin
-Donate link: https://so-wp.com/donations
-Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget  
+Donate link: https://so-wp.com/plugins/donations
+Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium 
 Requires at least: 4.3
 Tested up to: 4.6.1
-Stable tag: 2.5.1
+Stable tag: 2.5.2
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
-Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend; now with Settings Page!
+Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress backend.
 
 == Description ==
 
-Almost anyone who uses the Yoast SEO plugin will agree that it is a great SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
+Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
 The purpose of the SO Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -35,7 +35,7 @@ The default settings of the current release are as follows:
 * hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
-* hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin)
+* hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
 * remove the Yoast SEO widget from the WordPress Dashboard
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
@@ -45,7 +45,7 @@ We support this plugin exclusively through [Github](https://github.com/senlin/so
 Thanks for your understanding and cooperation.
 
 If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
-Alternatively you are welcome to make a [donation](https://so-wp.com/donations/). Thanks!
+Alternatively you are welcome to make a [donation](https://so-wp.com/plugins/donations/). Thanks!
 
 
 == Installation ==
@@ -107,6 +107,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.5.2 = 
+
+* release date 2016.10.11 (triggered by release of Yoast SEO 3.7)
+* once again hide red premium star, this time from the opposite side of the metabox on the Edit Post/Page screen
 
 = 2.5.1 =
 

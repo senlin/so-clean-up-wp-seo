@@ -96,7 +96,7 @@ class CUWS {
 	 *
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.5.1' ) {
+	public function __construct ( $file = '', $version = '2.5.2' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
@@ -201,7 +201,7 @@ class CUWS {
 
 		// hide red star "Go Premium" submenu
 		if ( ! empty( $this->options['hide_gopremium_star'] ) ) {
-			echo '#adminmenu .wpseo-premium-indicator{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
+			echo '#adminmenu .wpseo-premium-indicator,.wpseo-metabox-buy-premium{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
 		}
 
 		// content analysis
@@ -252,7 +252,7 @@ class CUWS {
 
 		// help center
 		if ( 'ad' == $this->options['hide_helpcenter'] ) {
-			echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text,.wpseo-metabox-sidebar li:last-child{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
+			echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
 		}
 		if ( 'helpcenter' == $this->options['hide_helpcenter'] ) {
 			echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
