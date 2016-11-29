@@ -96,7 +96,7 @@ class CUWS {
 	 *
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.5.2' ) {
+	public function __construct ( $file = '', $version = '2.5.3' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
@@ -201,7 +201,7 @@ class CUWS {
 
 		// hide red star "Go Premium" submenu
 		if ( ! empty( $this->options['hide_gopremium_star'] ) ) {
-			echo '#adminmenu .wpseo-premium-indicator,.wpseo-metabox-buy-premium{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
+			echo '#adminmenu .wpseo-premium-indicator,.wpseo-metabox-buy-premium,#wp-admin-bar-wpseo-licenses{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
 		}
 
 		// content analysis
@@ -258,6 +258,11 @@ class CUWS {
 			echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
 		}
 
+		// hide upsell notice in Yoast SEO Dashboard
+		if ( ! empty( $this->options['hide_upsell_notice'] ) ) {
+			echo '#wpseo-upsell-notice{display:none;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard
+		}
+
 		echo '</style>';
 	}
 
@@ -299,7 +304,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '2.5.1' ) {
+	public static function instance( $file = '', $version = '2.5.3' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -368,6 +373,7 @@ class CUWS {
 		update_site_option( 'cuws_hide_helpcenter', 'ad' );
 		update_site_option( 'cuws_hide_admin_columns', array( 'seoscore', 'title', 'metadescr' ) );
 		update_site_option( 'cuws_remove_dbwidget', 'on' );
+		update_site_option( 'cuws_hide_upsell_notice', 'on' );
 	} // End _set_defaults ()
 
 	/**
@@ -392,6 +398,7 @@ class CUWS {
 			'hide_helpcenter',
 			'hide_admin_columns',
 			'remove_dbwidget',
+			'hide_upsell_notice',
 		);
 
 		foreach ( $options as $option ) {

@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: https://so-wp.com/plugins/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium 
 Requires at least: 4.3
-Tested up to: 4.6.1
-Stable tag: 2.5.2
+Tested up to: 4.7
+Stable tag: 2.5.3
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -36,6 +36,7 @@ The default settings of the current release are as follows:
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
 * hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
+* hide the Upsell Notice that shows in the Yoast SEO Dashboard
 * remove the Yoast SEO widget from the WordPress Dashboard
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
@@ -107,6 +108,13 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.5.3 = 
+
+* release date 2016.11.29 (triggered by release of Yoast SEO 3.9)
+* hide "Go Premium" text from adminbar dropdown
+* hide dismissed notices and warnings in Yoast SEO Dashboard
+* new setting: globally hide upsell notice in Yoast SEO Dashboard
 
 = 2.5.2 = 
 

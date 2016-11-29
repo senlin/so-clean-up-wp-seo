@@ -97,6 +97,7 @@ class CUWS_Settings {
 			'hide_helpcenter',
 			'hide_admin_columns',
 			'remove_dbwidget',
+			'hide_upsell_notice',
 		);
 
 		if ( $this->parent->_token . '_settings' === $_POST['option_page'] && 'update' === $_POST['action'] ) {
@@ -250,6 +251,13 @@ class CUWS_Settings {
 					'type'			=> 'checkbox_multi',
 					'options'		=> array( 'all' => __( 'Hide all columns', 'so-clean-up-wp-seo' ), 'seoscore' => __( 'Hide SEO score column', 'so-clean-up-wp-seo' ), 'title' => __( 'Hide title column', 'so-clean-up-wp-seo' ), 'metadescr' => __( 'Hide meta description column', 'so-clean-up-wp-seo' ), 'focuskw' => __( 'Hide focus keyword column', 'so-clean-up-wp-seo' ), 'none' => __( 'Show all columns', 'so-clean-up-wp-seo' ) ),
 					'default'		=> array( 'seoscore', 'title', 'metadescr'  )
+				),
+				array(
+					'id' 			=> 'hide_upsell_notice',
+					'label'			=> __( 'Upsell Notice', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide the Upsell Notice that shows in the Yoast SEO Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the Notice globally.', 'so-clean-up-wp-seo' ),
+					'type'			=> 'checkbox',
+					'default'		=> 'on'
 				),
 				array(
 					'id' 			=> 'remove_dbwidget',

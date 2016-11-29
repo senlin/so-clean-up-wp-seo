@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2016.10.11
+###### Last updated on 2016.11.29
 ###### requires at least WordPress 4.3
-###### tested up to WordPress 4.6.1
+###### tested up to WordPress 4.7
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend; now with Settings Page!
@@ -35,10 +35,11 @@ The default settings of the current release are as follows:
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
 * hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
+* hide the Upsell Notice that shows in the Yoast SEO Dashboard
 * remove the Yoast SEO widget from the WordPress Dashboard
 
 If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
-Alternatively you are welcome to make a [donation](https://so-wp.com/donations/). Thanks!
+Alternatively you are welcome to make a [donation](https://so-wp.com/plugins/donations/). Thanks!
 
 ## Frequently Asked Questions
 
@@ -72,7 +73,7 @@ Please open an issue here on [Github](https://github.com/senlin/so-clean-up-wp-s
 ## Contributions
 
 We welcome your contributions very much! PR's will be considered and of course bug reports and feature requests can also be seen as contributions!
-**If you're interested in becoming involved, please [let us know](http://so-wp.com/info-contact/) or simply send a PR with your proposed improvement.** 
+**If you're interested in becoming involved, please [let us know](https://so-wp.com/info-contact/) or simply send a PR with your proposed improvement.** 
 
 ## License
 
@@ -98,6 +99,13 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Changelog
 
+
+### 2.5.3 
+
+* release date 2016.11.29 (triggered by release of Yoast SEO 3.9)
+* hide "Go Premium" text from adminbar dropdown
+* hide dismissed notices and warnings in Yoast SEO Dashboard
+* new setting: globally hide upsell notice in Yoast SEO Dashboard
 
 ### 2.5.2
 
