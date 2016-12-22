@@ -181,7 +181,7 @@ class CUWS {
 
 		// robots nag
 		if ( ! empty( $this->options['hide_robots_nag'] ) ) {
-			echo '#wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag
+			echo '#yoast-alerts-dismissed, #yoast-warnings-dismissed, #wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag; @modified v2.5.4 to add styling via the options and not globally.
 		}
 
 		// image warning nag

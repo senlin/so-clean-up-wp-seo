@@ -57,6 +57,3 @@
     float: left;
     width: 50%;
 }
-#yoast-alerts-dismissed, #yoast-warnings-dismissed {
-    display: none;
-}

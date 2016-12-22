@@ -189,7 +189,7 @@ class CUWS_Settings {
 				array(
 					'id' 			=> 'hide_robots_nag',
 					'label'			=> __( 'Robots nag', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide robots nag that shows a warning in the advanced tab of Yoast SEO UI in edit Post/Page screen.', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide robots nag that shows a warning in the Dashboard as well as in the advanced tab of Yoast SEO UI in edit Post/Page screen.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
 				),
