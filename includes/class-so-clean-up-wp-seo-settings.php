@@ -210,7 +210,7 @@ class CUWS_Settings {
 				array(
 					'id' 			=> 'hide_wpseoanalysis',
 					'label'			=> __( 'Content analysis', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide content analysis that adds colored balls to the edit Post/Page screens', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide content analysis that adds colored balls to the edit Post/Page screens as well as Readability tab that  contains the analysis.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
 				),
@@ -255,7 +255,7 @@ class CUWS_Settings {
 				array(
 					'id' 			=> 'hide_upsell_notice',
 					'label'			=> __( 'Upsell Notice', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide the Upsell Notice that shows in the Yoast SEO Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the Notice globally.', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide the Notifications box with Upsell Notice that shows in the Yoast SEO Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the Notice globally.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
 				),

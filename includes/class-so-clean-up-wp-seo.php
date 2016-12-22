@@ -206,7 +206,7 @@ class CUWS {
 
 		// content analysis
 		if ( ! empty( $this->options['hide_wpseoanalysis'] ) ) {
-			echo '.wpseoanalysis{display:none;}.wpseo-score-icon{display:none!important;}'; // @since v2.0.0 hide_wpseoanalysis; @modified v2.3.0 to remove the colored ball from the metabox tab too.
+			echo '.wpseo-meta-section.active .wpseo-metabox-tabs .wpseo_generic_tab,#pageanalysis,.wpseoanalysis{display:none;}.wpseo-score-icon{display:none!important;}'; // @since v2.0.0 hide_wpseoanalysis; @modified v2.3.0 to remove the colored ball from the metabox tab too; @modified v2.5.4 to remove the content analysis too from the post/page metabox; @since v2.5.4 remove Readability tab from metabox as it only contains the content analysis.
 		}
 
 		// keyword/content score
@@ -260,7 +260,7 @@ class CUWS {
 
 		// hide upsell notice in Yoast SEO Dashboard
 		if ( ! empty( $this->options['hide_upsell_notice'] ) ) {
-			echo '#wpseo-upsell-notice{display:none;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard
+			echo '#dashboard.wpseotab.active > .wrap.yoast-alerts > .yoast-container__warning{display:none;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard; @modified v2.5.4 improved to remove entire Notification box in the main Dashboard.
 		}
 
 		echo '</style>';
