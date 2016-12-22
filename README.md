@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2016.11.29
+###### Last updated on 2016.12.22
 ###### requires at least WordPress 4.3
 ###### tested up to WordPress 4.7
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -46,6 +46,10 @@ Alternatively you are welcome to make a [donation](https://so-wp.com/plugins/don
 ### Where is the settings page?
 
 The link to the page has been added to the Yoast SEO menu and of course there is also a link to it from the Plugins page.
+
+### I have updated the plugin and a new setting has been added, but I still can see that particular item.
+
+That indeed can happen when we add a new setting. The plugin's settings then need to be re-saved. So all you need to do is go to the Settings page of the SO Hide SEO Bloat plugin and save them. Then all should be good.
 
 ### Can I use SO Hide SEO Bloat on Multisite?
 
@@ -99,6 +103,13 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Changelog
 
+
+### 2.5.4 
+
+* release date 2016.12.22 (triggered by release of Yoast SEO 4.0)
+* 
+* 
+* 
 
 ### 2.5.3 
 
