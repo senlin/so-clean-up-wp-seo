@@ -116,6 +116,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 = 2.5.4 = 
 
+* Happy Holidays!
 * release date 2016.12.22 (triggered by release of Yoast SEO 4.0)
 * fix: change robots nag hiding via settings instead of globally
 * improvement: content analysis - hide readability tab
