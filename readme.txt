@@ -31,12 +31,13 @@ The default settings of the current release are as follows:
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
 * hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
 * hide content/seoscore in publish/update box on edit Post/Page
+* hide readability tab and content analysis metabox item
 * hide the issue counter (added to v3.3 of Yoast SEO plugin)
 * hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
 * hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
-* hide the Upsell Notice that shows in the Yoast SEO Dashboard
+* hide the Upsell Notice &amp; Notification box that show in the Yoast SEO Dashboard
 * remove the Yoast SEO widget from the WordPress Dashboard
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
@@ -116,9 +117,10 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 = 2.5.4 = 
 
 * release date 2016.12.22 (triggered by release of Yoast SEO 4.0)
-* 
-* 
-* 
+* fix: change robots nag hiding via settings instead of globally
+* improvement: content analysis - hide readability tab
+* improvement: upsell notice: hide entire notifications box
+* add FAQ
 
 = 2.5.3 = 
 
