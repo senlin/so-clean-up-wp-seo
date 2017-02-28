@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2016.12.22
-###### requires at least WordPress 4.3
-###### tested up to WordPress 4.7
+###### Last updated on 2017.2.28
+###### requires at least WordPress 4.7.2
+###### tested up to WordPress 4.7.3
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend; now with Settings Page!
@@ -35,6 +35,7 @@ The default settings of the current release are as follows:
 * hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
+* hide the email support of the help center as it is a premium-only feature and therefore an "ad in disguise" (added to v4.4 of Yoast SEO plugin)
 * hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
 * hide the Upsell Notice &amp; Notification box that show in the Yoast SEO Dashboard
 * remove the Yoast SEO widget from the WordPress Dashboard
@@ -104,6 +105,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Changelog
 
+
+### 2.5.5 
+
+* release date 2017.2.28 (triggered by release of Yoast SEO 4.4)
+* hide the email support of the help center as it is a premium-only feature and therefore an "ad in disguise"
 
 ### 2.5.4 
 
