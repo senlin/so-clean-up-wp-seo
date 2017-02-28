@@ -2,8 +2,8 @@
 Contributors: senlin
 Donate link: https://so-wp.com/plugins/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium 
-Requires at least: 4.3
-Tested up to: 4.7
+Requires at least: 4.7.2
+Tested up to: 4.7.3
 Stable tag: 2.5.5
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
