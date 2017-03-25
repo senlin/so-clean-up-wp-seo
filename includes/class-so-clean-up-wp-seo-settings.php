@@ -182,13 +182,6 @@ class CUWS_Settings {
 					'default'		=> 'on'
 				),
 				array(
-					'id' 			=> 'hide_about_nag',
-					'label'			=> __( 'About nag', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide about nag that shows on every update of the plugin.', 'so-clean-up-wp-seo' ),
-					'type'			=> 'checkbox',
-					'default'		=> 'on'
-				),
-				array(
 					'id' 			=> 'hide_tagline_nag',
 					'label'			=> __( 'Tagline nag', 'so-clean-up-wp-seo' ),
 					'description'	=> __( 'Tagline nag that shows a "Problem" in the Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the "Problem" globally.', 'so-clean-up-wp-seo' ),
