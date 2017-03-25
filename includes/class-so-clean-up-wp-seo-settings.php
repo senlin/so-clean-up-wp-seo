@@ -86,7 +86,10 @@ class CUWS_Settings {
 		$options = array(
 			'hide_ads',
 			'hide_about_nag',
+			'hide_tagline_nag',
 			'hide_robots_nag',
+			'hide_upsell_notice',
+			'hide_dashboard_problems_notifications',
 			'hide_imgwarning_nag',
 			'hide_addkw_button',
 			'hide_wpseoanalysis',
@@ -96,8 +99,7 @@ class CUWS_Settings {
 			'hide_content_keyword_score',
 			'hide_helpcenter',
 			'hide_admin_columns',
-			'remove_dbwidget',
-			'hide_upsell_notice',
+			'remove_dbwidget'
 		);
 
 		if ( $this->parent->_token . '_settings' === $_POST['option_page'] && 'update' === $_POST['action'] ) {
@@ -187,11 +189,33 @@ class CUWS_Settings {
 					'default'		=> 'on'
 				),
 				array(
-					'id' 			=> 'hide_robots_nag',
-					'label'			=> __( 'Robots nag', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide robots nag that shows a warning in the Dashboard as well as in the advanced tab of Yoast SEO UI in edit Post/Page screen.', 'so-clean-up-wp-seo' ),
+					'id' 			=> 'hide_tagline_nag',
+					'label'			=> __( 'Tagline nag', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Tagline nag that shows a "Problem" in the Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the "Problem" globally.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
+				),
+				array(
+					'id' 			=> 'hide_robots_nag',
+					'label'			=> __( 'Robots nag', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide robots nag that shows a "Problem" in the Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the "Problem" globally.', 'so-clean-up-wp-seo' ),
+					'type'			=> 'checkbox',
+					'default'		=> 'on'
+				),
+				array(
+					'id' 			=> 'hide_upsell_notice',
+					'label'			=> __( 'Upsell Notice', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide the Upsell Notice in the Notifications box that shows in the Yoast SEO Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the Notice globally.', 'so-clean-up-wp-seo' ),
+					'type'			=> 'checkbox',
+					'default'		=> 'on'
+				),
+				array(
+					'id' 			=> 'hide_dashboard_problems_notifications',
+					'label'			=> __( 'Problems/Notifications', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide Problems/Notifications boxes from Yoast Dashboard. Although they can be easily dismissed on a per user basis, this setting hides the box(es) globally.', 'so-clean-up-wp-seo' ),
+					'type'			=> 'radio',
+					'options'		=> array( 'both' => __( 'Hide both Problems/Notifications boxes', 'so-clean-up-wp-seo' ), 'problems' => __( 'Only hide Problems box', 'so-clean-up-wp-seo' ), 'notifications' => __( 'Only hide Notifications box', 'so-clean-up-wp-seo' ), 'none' => __( 'None', 'so-clean-up-wp-seo' ) ),
+					'default'		=> 'none'
 				),
 				array(
 					'id' 			=> 'hide_imgwarning_nag',
@@ -230,10 +254,10 @@ class CUWS_Settings {
 				),
 				array(
 					'id' 			=> 'hide_content_keyword_score',
-					'label'			=> __( 'Content/Keyword Score', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide Content/Keyword Score (previously traffic light) in publish/update box on edit Post/Page.', 'so-clean-up-wp-seo' ),
+					'label'			=> __( 'Content (Readability) / Keyword (SEO) Score', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide Content (Readability)/Keyword (SEO) Score in publish/update box on edit Post/Page.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'radio',
-					'options'		=> array( 'both' => __( 'Hide both Keyword Score and Content Score', 'so-clean-up-wp-seo' ), 'keyword_score' => __( 'Only hide Keyword Score', 'so-clean-up-wp-seo' ), 'content_score' => __( 'Only hide Content Score', 'so-clean-up-wp-seo' ), 'none' => __( 'None', 'so-clean-up-wp-seo' ) ),
+					'options'		=> array( 'both' => __( 'Hide both Content (Readability) and Keyword (SEO) Score', 'so-clean-up-wp-seo' ), 'keyword_score' => __( 'Only hide Keyword (SEO) Score', 'so-clean-up-wp-seo' ), 'content_score' => __( 'Only hide Content (Readability) Score', 'so-clean-up-wp-seo' ), 'none' => __( 'None', 'so-clean-up-wp-seo' ) ),
 					'default'		=> 'both'
 				),
 				array(
@@ -247,17 +271,10 @@ class CUWS_Settings {
 				array(
 					'id' 			=> 'hide_admin_columns',
 					'label'			=> __( 'Admin columns', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'The Yoast SEO plugin adds 4 admin columns on the Posts/Pages screen and the SEO Score admin column to taxonomies (since Yoast SEO 3.1), choose here which ones to hide (possible to select multiple, ticking minimum one box is <strong>required</strong>).', 'so-clean-up-wp-seo' ),
-					'type'			=> 'checkbox_multi',
-					'options'		=> array( 'all' => __( 'Hide all columns', 'so-clean-up-wp-seo' ), 'seoscore' => __( 'Hide SEO score column', 'so-clean-up-wp-seo' ), 'title' => __( 'Hide title column', 'so-clean-up-wp-seo' ), 'metadescr' => __( 'Hide meta description column', 'so-clean-up-wp-seo' ), 'focuskw' => __( 'Hide focus keyword column', 'so-clean-up-wp-seo' ), 'none' => __( 'Show all columns', 'so-clean-up-wp-seo' ) ),
-					'default'		=> array( 'seoscore', 'title', 'metadescr'  )
-				),
-				array(
-					'id' 			=> 'hide_upsell_notice',
-					'label'			=> __( 'Upsell Notice', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide the Notifications box with Upsell Notice that shows in the Yoast SEO Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the Notice globally.', 'so-clean-up-wp-seo' ),
-					'type'			=> 'checkbox',
-					'default'		=> 'on'
+					'description'	=> __( 'The Yoast SEO plugin adds 2 admin columns on the Posts/Pages screen and to taxonomies, choose here which ones to hide (possible to select multiple, ticking minimum one box is <strong>required</strong>).', 'so-clean-up-wp-seo' ),
+					'type'			=> 'radio',
+					'options'		=> array( 'both' => __( 'Hide both', 'so-clean-up-wp-seo' ), 'seoscore' => __( 'Hide SEO score column', 'so-clean-up-wp-seo' ), 'readability' => __( 'Hide Readability score column', 'so-clean-up-wp-seo' ), 'none' => __( 'Show both columns', 'so-clean-up-wp-seo' ) ),
+					'default'		=> 'both'
 				),
 				array(
 					'id' 			=> 'remove_dbwidget',
@@ -400,7 +417,6 @@ class CUWS_Settings {
 			$html .= '<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://so-wp.com/" target="_blank" title="SO WP">' . esc_attr( __('SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-			$html .= '<li><a href="https://wpti.ps/" target="_blank" title="WP TIPS">' . esc_attr( __('WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 			$html .= '</ul>' . "\n";
 

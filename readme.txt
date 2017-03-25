@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: https://so-wp.com/plugins/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium 
 Requires at least: 4.7.2
-Tested up to: 4.7.3
-Stable tag: 2.5.5
+Tested up to: 4.8
+Stable tag: 2.6.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -26,19 +26,17 @@ It is a good idea to have a look at the Settings page if only to see what you ca
 The default settings of the current release are as follows:
 
 * hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin
-* hide about nag that shows on every update of the plugin
 * hide warning in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
+* hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
 * hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
-* hide content/seoscore in publish/update box on edit Post/Page
+* hide content (readability) / keyword (seo) score in publish/update box on edit Post/Page
 * hide readability tab and content analysis metabox item
 * hide the issue counter (added to v3.3 of Yoast SEO plugin)
-* hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
-* hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
+* hide the SEO Score and Readability admin columns on the Posts/Pages/Taxonomies screens
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
 * hide the email support of the help center as it is a premium-only feature and therefore an "ad in disguise" (added to v4.4 of Yoast SEO plugin)
 * hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
-* hide the Upsell Notice &amp; Notification box that show in the Yoast SEO Dashboard
 * remove the Yoast SEO widget from the WordPress Dashboard
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
@@ -114,6 +112,19 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.6.0 = 
+
+* release date 2017.3.24
+* add option to hide Readability column on Posts/Pages screens
+* update hide email support (see 2.5.5), all tabs have a different class, so need more CSS rules to hide them
+* update robots nag
+* reintroduce the setting to hide the tagline nag, which was removed in 2.1.1
+* modify hide add keyword button in edit Post/Page screens to give remaining tab enough width to show entire text "Enter your focus keyword"
+* clarify text Content (Readability)/Keyword (SEO) Score
+* edit setting admin columns from 4 to 2 (SEO score and Readability score) and make it radio button option instead of checkboxes; thanks to [Curtis](https://github.com/soaro77) for [bringing it to our attention](https://github.com/senlin/so-clean-up-wp-seo/issues/23)
+* remove hide about nag as it no longer is a site-wide nag
+* update readme.txt
 
 = 2.5.5 = 
 
@@ -304,6 +315,10 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 * Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php)
 
 == Upgrade Notice ==
+
+= 2.6.0 =
+
+* As some settings have changed, it is probably necessary to save the settings page for these changes to take effect
 
 = 2.5.0 =
 

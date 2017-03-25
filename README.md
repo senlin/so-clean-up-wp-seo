@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2017.2.28
+###### Last updated on 2017.3.24
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 4.7.3
+###### tested up to WordPress 4.8
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend; now with Settings Page!
@@ -25,19 +25,17 @@ It is a good idea to have a look at the Settings page if only to see what you ca
 The default settings of the current release are as follows:
 
 * hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin
-* hide about nag that shows on every update of the plugin
 * hide warning in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
+* hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
 * hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
-* hide content/seoscore in publish/update box on edit Post/Page
+* hide content (readability) / keyword (seo) score in publish/update box on edit Post/Page
 * hide readability tab and content analysis metabox item
 * hide the issue counter (added to v3.3 of Yoast SEO plugin)
-* hide the SEO Score, Title and Meta description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
-* hide the SEO Score admin column on taxonomies (added to v3.1 of Yoast SEO plugin)
+* hide the SEO Score and Readability admin columns on the Posts/Pages/Taxonomies screens
 * hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
 * hide the email support of the help center as it is a premium-only feature and therefore an "ad in disguise" (added to v4.4 of Yoast SEO plugin)
 * hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
-* hide the Upsell Notice &amp; Notification box that show in the Yoast SEO Dashboard
 * remove the Yoast SEO widget from the WordPress Dashboard
 
 If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
@@ -92,9 +90,9 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Connect with us through
 
-[Website](https://bohanintl.com)
+[BHI Consulting](https://bohanintl.com)
 
-[Website](https://so-wp.com)
+[SO WP](https://so-wp.com)
 
 [Github](https://github.com/senlin) 
 
@@ -105,6 +103,18 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Changelog
 
+### 2.6.0 
+
+* release date 2017.3.24
+* add option to hide Readability column on Posts/Pages screens
+* update hide email support (see 2.5.5), all tabs have a different class, so need more CSS rules to hide them
+* update robots nag
+* reintroduce the setting to hide the tagline nag, which was removed in 2.1.1
+* modify hide add keyword button in edit Post/Page screens to give remaining tab enough width to show entire text "Enter your focus keyword"
+* clarify text Content (Readability)/Keyword (SEO) Score
+* edit setting admin columns from 4 to 2 (SEO score and Readability score) and make it radio button option instead of checkboxes; thanks to [Curtis](https://github.com/soaro77) for [bringing it to our attention](https://github.com/senlin/so-clean-up-wp-seo/issues/23)
+* remove hide about nag as it no longer is a site-wide nag
+* update readme.txt
 
 ### 2.5.5 
 
@@ -272,6 +282,14 @@ We welcome your contributions very much! PR's will be considered and of course b
 * Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php)
 
 ## Update Notice
+
+### 2.6.0
+
+* As some settings have changed, it is probably necessary to save the settings page for these changes to take effect
+
+### 2.5.0
+
+* To hide the red star behind the new "Go Premium" submenu, it is probably necessary to save the settings page for this change to take effect
 
 ### 2.0.0
 
