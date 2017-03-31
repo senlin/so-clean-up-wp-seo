@@ -96,7 +96,7 @@ class CUWS {
 	 *
 	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.6.0' ) {
+	public function __construct ( $file = '', $version = '2.6.1' ) {
 		$this->_version = $version;
 		$this->_token = 'cuws';
 
@@ -174,11 +174,6 @@ class CUWS {
 			echo '#sidebar-container.wpseo_content_cell{visibility:hidden;}'; // @since v1.0.0
 		}
 
-		// about nag
-		if ( ! empty( $this->options['hide_about_nag'] ) ) {
-			echo '#wpseo-dismiss-about{display:none;}'; // @since v1.4.0 hide updated nag (introduced with Yoast SEO version 2.2.1)
-		}
-
 		// tagline nag
 		if ( ! empty( $this->options['hide_tagline_nag'] ) ) {
 			echo '#wpseo-dismiss-tagline-notice{display:none;}'; // @since v2.6.0 hide tagline nag
@@ -246,17 +241,30 @@ class CUWS {
 		// @modified 2.0.2 add empty array as default to avoid warnings form subsequent in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
 		// @modified 2.1 simplyfy the CSS rules and add the rule to hide the seo-score column on taxonomies (added to v3.1 of Yoast SEO plugin)
 		// @modified 2.6.0 only 2 columns left change from checkboxes to radio
-
-		if ( 'both' == $this->options['hide_admin_columns'] ) {
-			echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-score-readability,.column-wpseo_score_readability{display:none;}';
+		// @modified 2.6.1 revert radio to checkboxes and removing the options for focus keyword, title and meta-description
+		
+		// all columns
+		if ( in_array( 'all', $this->options['hide_admincolumns'] ) ) {
+			echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-score-readability,.column-wpseo_score_readability,.column-wpseo-title,.column-wpseo-metadesc,.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
-
-		if ( 'seoscore' == $this->options['hide_admin_columns'] ) {
-			echo '.column-wpseo-score,.column-wpseo_score{display:none;}';
+		// seo score column
+		if ( in_array( 'seoscore', $this->options['hide_admincolumns'] ) ) {
+			echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
-
-		if ( 'readability' == $this->options['hide_admin_columns'] ) {
-			echo '.column-wpseo-score-readability,.column-wpseo_score_readability{display:none;}';
+		if ( in_array( 'readability', $this->options['hide_admincolumns'] ) ) {
+			echo '.column-wpseo-score-readability,.column-wpseo_score_readability{display:none;}'; // @since v2.6.0 remove added readibility column
+		}
+		// title column
+		if ( in_array( 'title', $this->options['hide_admincolumns'] ) ) {
+			echo '.column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
+		}
+		// meta description column
+		if ( in_array( 'metadescr', $this->options['hide_admincolumns'] ) ) {
+			echo '.column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
+		}
+		// focus keyword column
+		if ( in_array( 'focuskw', $this->options['hide_admincolumns'] ) ) {
+			echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
 
 		// help center
@@ -308,7 +316,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '2.6.0' ) {
+	public static function instance( $file = '', $version = '2.6.1' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -365,7 +373,6 @@ class CUWS {
 	 */
 	private function _set_defaults() {
 		update_site_option( 'cuws_hide_ads', 'on' );
-		update_site_option( 'cuws_hide_about_nag', 'on' );
 		update_site_option( 'cuws_hide_tagline_nag', 'on' );
 		update_site_option( 'cuws_hide_robots_nag', 'on' );
 		update_site_option( 'cuws_hide_upsell_notice', 'on' );
@@ -378,7 +385,7 @@ class CUWS {
 		update_site_option( 'cuws_hide_wpseoanalysis', 'on' );
 		update_site_option( 'cuws_hide_content_keyword_score', 'both' );
 		update_site_option( 'cuws_hide_helpcenter', 'ad' );
-		update_site_option( 'cuws_hide_admin_columns', 'both' );
+		update_site_option( 'hide_admincolumns', array( 'seoscore', 'readibility', 'title', 'metadescr' ) );
 		update_site_option( 'cuws_remove_dbwidget', 'on' );
 	} // End _set_defaults ()
 
@@ -392,7 +399,6 @@ class CUWS {
 		$settings = array();
 		$options  = array(
 			'hide_ads',
-			'hide_about_nag',
 			'hide_tagline_nag',
 			'hide_robots_nag',
 			'hide_upsell_notice',
@@ -405,7 +411,7 @@ class CUWS {
 			'hide_gopremium_star',
 			'hide_content_keyword_score',
 			'hide_helpcenter',
-			'hide_admin_columns',
+			'hide_admincolumns',
 			'remove_dbwidget',
 		);
 

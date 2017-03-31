@@ -4,7 +4,7 @@ Donate link: https://so-wp.com/plugins/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium 
 Requires at least: 4.7.2
 Tested up to: 4.8
-Stable tag: 2.6.0
+Stable tag: 2.6.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -19,25 +19,7 @@ The purpose of the SO Hide SEO Bloat plugin, a free addon for the Yoast SEO plug
 Since v2.0.0 we have a Settings page! With v2.1.0 we have less options on the Settings page, due to the 3.1 version release of the Yoast SEO plugin. It seems that team Yoast has finally seen the light as they have "_temporarily disabled all non-vital notifications_". Their changelog says that they are trying to come up with a "more user-friendly way" of dealing with these nags, basically admitting that they have been harassing their user-base. 
 Either way we welcome this development! Who knows? Perhaps in the future this plugin becomes completely redundant? ;) 
 
-With the settings page is that you can fine-tune what is hidden or removed to your liking. By default most of the bloat that the Yoast SEO plugin generates is hidden or removed, just like before when there were no settings yet.
-
 It is a good idea to have a look at the Settings page if only to see what you can fine-tune. The link to the page has been added to the Yoast SEO menu and of course there is also a link to it from the Plugins page.
-
-The default settings of the current release are as follows:
-
-* hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin
-* hide warning in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
-* hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
-* hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
-* hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
-* hide content (readability) / keyword (seo) score in publish/update box on edit Post/Page
-* hide readability tab and content analysis metabox item
-* hide the issue counter (added to v3.3 of Yoast SEO plugin)
-* hide the SEO Score and Readability admin columns on the Posts/Pages/Taxonomies screens
-* hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
-* hide the email support of the help center as it is a premium-only feature and therefore an "ad in disguise" (added to v4.4 of Yoast SEO plugin)
-* hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
-* remove the Yoast SEO widget from the WordPress Dashboard
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -49,26 +31,24 @@ If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](htt
 Alternatively you are welcome to make a [donation](https://so-wp.com/plugins/donations/). Thanks!
 
 
-== Installation ==
+== Other Notes ==
 
-= WordPress =
+The default settings of the current release are as follows:
 
-Search for "SO Hide SEO Bloat" and install with the **Plugins > Add New** back-end page.
-
- &hellip; OR &hellip;
-
-Follow these steps:
-
- 1. Download zip file.
-
- 2. Upload the zip file via the Plugins > Add New > Upload page &hellip; OR &hellip; unpack and upload with your favourite FTP client to the /plugins/ folder.
-
- 3. Activate the plugin on the Plugins page.
- 
- 4. Visit the Settings page.
-
-Done!
-
+* hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin
+* hide warning in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
+* hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
+* hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
+* hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
+* hide content (readability) / keyword (seo) score in publish/update box on edit Post/Page
+* hide readability tab and content analysis metabox item
+* hide the issue counter (added to v3.3 of Yoast SEO plugin)
+* hide the SEO Score, Readability, Title and Meta Description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
+* hide the SEO Score and Readability admin columns on taxonomies (added to v3.1 of Yoast SEO plugin)
+* hide the ad for the premium version in the help center or hide the whole help center (added to v3.2 of Yoast SEO plugin)
+* hide the email support of the help center as it is a premium-only feature and therefore an "ad in disguise" (added to v4.4 of Yoast SEO plugin)
+* hide the red star behind the "Go Premium" submenu text (added to v3.6 of Yoast plugin and changed again with v3.7)
+* remove the Yoast SEO widget from the WordPress Dashboard
 
 == Frequently Asked Questions ==
 
@@ -112,6 +92,13 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 2.6.1 = 
+
+* release date 2017.3.31
+* revert admin columns settings that were changed in v2.6.0 (last week): checkboxes return to select multiple options, title, meta description and focus keyword can be selected again for "removal" and additional checkbox for readability column
+* remove [forgotten about nag setting](https://wordpress.org/support/topic/i-have-updated-to-2-6-0-but-still-see-setting-for-about-nag/)
+* update readme.txt
 
 = 2.6.0 = 
 

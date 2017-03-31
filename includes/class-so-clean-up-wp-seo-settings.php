@@ -85,7 +85,6 @@ class CUWS_Settings {
 	public function update_network_setting() {
 		$options = array(
 			'hide_ads',
-			'hide_about_nag',
 			'hide_tagline_nag',
 			'hide_robots_nag',
 			'hide_upsell_notice',
@@ -98,7 +97,7 @@ class CUWS_Settings {
 			'hide_gopremium_star',
 			'hide_content_keyword_score',
 			'hide_helpcenter',
-			'hide_admin_columns',
+			'hide_admincolumns',
 			'remove_dbwidget'
 		);
 
@@ -227,7 +226,7 @@ class CUWS_Settings {
 				array(
 					'id' 			=> 'hide_wpseoanalysis',
 					'label'			=> __( 'Content analysis', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'Hide content analysis that adds colored balls to the edit Post/Page screens as well as Readability tab that  contains the analysis.', 'so-clean-up-wp-seo' ),
+					'description'	=> __( 'Hide content analysis that adds colored balls to the edit Post/Page screens as well as Readability tab that contains the analysis.', 'so-clean-up-wp-seo' ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
 				),
@@ -262,12 +261,12 @@ class CUWS_Settings {
 					'default'		=> 'ad'
 				),
 				array(
-					'id' 			=> 'hide_admin_columns',
+					'id' 			=> 'hide_admincolumns',
 					'label'			=> __( 'Admin columns', 'so-clean-up-wp-seo' ),
-					'description'	=> __( 'The Yoast SEO plugin adds 2 admin columns on the Posts/Pages screen and to taxonomies, choose here which ones to hide (possible to select multiple, ticking minimum one box is <strong>required</strong>).', 'so-clean-up-wp-seo' ),
-					'type'			=> 'radio',
-					'options'		=> array( 'both' => __( 'Hide both', 'so-clean-up-wp-seo' ), 'seoscore' => __( 'Hide SEO score column', 'so-clean-up-wp-seo' ), 'readability' => __( 'Hide Readability score column', 'so-clean-up-wp-seo' ), 'none' => __( 'Show both columns', 'so-clean-up-wp-seo' ) ),
-					'default'		=> 'both'
+					'description'	=> __( 'The Yoast SEO plugin adds 5(!) admin columns on the Posts/Pages screen and the SEO Score?Readability admin columns to taxonomies (since Yoast SEO 3.1), choose here which ones to hide. It is possible to select multiple columns to hide and <strong>ticking minimum one box is required</strong>.<br> Although they can be easily hidden on a per user basis, this setting hides the column(s) globally.', 'so-clean-up-wp-seo' ),
+					'type'			=> 'checkbox_multi',
+					'options'		=> array( 'all' => __( 'Hide all columns', 'so-clean-up-wp-seo' ), 'seoscore' => __( 'Hide SEO score column', 'so-clean-up-wp-seo' ), 'readability' => __( 'Hide Readability score column', 'so-clean-up-wp-seo' ), 'title' => __( 'Hide title column', 'so-clean-up-wp-seo' ), 'metadescr' => __( 'Hide meta description column', 'so-clean-up-wp-seo' ), 'focuskw' => __( 'Hide focus keyword column', 'so-clean-up-wp-seo' ), 'none' => __( 'Show all columns', 'so-clean-up-wp-seo' ) ),
+					'default'		=> array( 'seoscore', 'readability', 'title', 'metadescr'  )
 				),
 				array(
 					'id' 			=> 'remove_dbwidget',
