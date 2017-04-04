@@ -1,7 +1,12 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
+/**
+ * Class CUWS
+ */
 class CUWS {
 
 	/**
@@ -93,16 +98,14 @@ class CUWS {
 	 *
 	 * @param string $file
 	 * @param string $version Version number.
-	 *
-	 * @return  void
 	 */
-	public function __construct ( $file = '', $version = '2.6.1' ) {
+	public function __construct( $file = '', $version = '2.6.1' ) {
 		$this->_version = $version;
-		$this->_token = 'cuws';
+		$this->_token   = 'cuws';
 
 		// Load plugin environment variables
-		$this->file = $file;
-		$this->dir = dirname( $this->file );
+		$this->file       = $file;
+		$this->dir        = dirname( $this->file );
 		$this->assets_dir = trailingslashit( $this->dir ) . 'css';
 		$this->assets_url = esc_url( trailingslashit( plugins_url( '/css/', $this->file ) ) );
 
@@ -145,7 +148,8 @@ class CUWS {
 	 */
 
 	/**
-	 * Since Yoast SEO 3.6 it is possible to disable the adminbar menu within Dashboard > Features, therefore this setting has become redundant
+	 * Since Yoast SEO 3.6 it is possible to disable the adminbar menu within Dashboard > Features, therefore this
+	 * setting has become redundant
 	 *
 	 * @since v2.5.0
 	 */
@@ -169,9 +173,9 @@ class CUWS {
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
 	 * @since    v2.0.0
-	 * @modified v2.1.0 remove options for nags that have been temporarily disabled in v3.1 of Yoast SEO plugin
+	 * @modified v2.1.0 remove options for nags that have been temporarily
+	 * disabled in v3.1 of Yoast SEO plugin
 	 */
-	// CSS needed to hide the various options ticked with checkboxes
 	public function so_cuws_hide_visibility_css() {
 
 		echo '<style media="screen" id="so-hide-seo-bloat" type="text/css">';
@@ -243,13 +247,18 @@ class CUWS {
 			echo '.yoast-seo-score.content-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
 		}
 
-		// admin columns
-		// @since v2.0.0 remove seo columns one by one
-		// @modified 2.0.2 add empty array as default to avoid warnings form subsequent in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
-		// @modified 2.1 simplyfy the CSS rules and add the rule to hide the seo-score column on taxonomies (added to v3.1 of Yoast SEO plugin)
-		// @modified 2.6.0 only 2 columns left change from checkboxes to radio
-		// @modified 2.6.1 revert radio to checkboxes and removing the options for focus keyword, title and meta-description
-		
+		/*
+		 * admin columns
+		 * @since v2.0.0 remove seo columns one by one
+		 * @modified 2.0.2 add empty array as default to avoid warnings form subsequent
+		 *  in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
+		 * @modified 2.1 simplify the CSS rules and add the rule to hide the seo-score
+		 *  column on taxonomies (added to v3.1 of Yoast SEO plugin)
+		 * @modified 2.6.0 only 2 columns left change from checkboxes to radio
+		 * @modified 2.6.1 revert radio to checkboxes and removing the options
+		 *  for focus keyword, title and meta-description
+		 */
+
 		// all columns
 		if ( ! is_array( $this->options['hide_admincolumns'] ) ) {
 			$this->options['hide_admincolumns'] = array( 'none' );
@@ -261,6 +270,7 @@ class CUWS {
 		if ( in_array( 'seoscore', $this->options['hide_admincolumns'] ) ) {
 			echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
+		// readability column
 		if ( in_array( 'readability', $this->options['hide_admincolumns'] ) ) {
 			echo '.column-wpseo-score-readability,.column-wpseo_score_readability{display:none;}'; // @since v2.6.0 remove added readibility column
 		}
@@ -296,7 +306,7 @@ class CUWS {
 	 * @since   v2.0.0
 	 * @return  void
 	 */
-	public function admin_enqueue_styles ( $hook = '' ) {
+	public function admin_enqueue_styles( $hook = '' ) {
 		wp_register_style( $this->_token . '-admin', esc_url( $this->assets_url ) . 'admin.css', array(), $this->_version );
 		wp_enqueue_style( $this->_token . '-admin' );
 	} // End admin_enqueue_styles ()
@@ -307,8 +317,6 @@ class CUWS {
 	 * @since v1.0.0
 	 */
 	function i18n() {
-
-		/* Load the translation of the plugin. */
 		load_plugin_textdomain( 'so-clean-up-wp-seo', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 	}
 
@@ -339,7 +347,7 @@ class CUWS {
 	 *
 	 * @since v2.0.0
 	 */
-	public function __clone () {
+	public function __clone() {
 		_doing_it_wrong( __FUNCTION__, __( 'No Access' ), $this->_version );
 	} // End __clone ()
 
@@ -348,7 +356,7 @@ class CUWS {
 	 *
 	 * @since v2.0.0
 	 */
-	public function __wakeup () {
+	public function __wakeup() {
 		_doing_it_wrong( __FUNCTION__, __( 'No Access' ), $this->_version );
 	} // End __wakeup ()
 
@@ -359,7 +367,7 @@ class CUWS {
 	 * @since   v2.0.0
 	 * @return  void
 	 */
-	public function install () {
+	public function install() {
 		$this->_log_version_number();
 		$this->_set_defaults();
 	} // End install ()

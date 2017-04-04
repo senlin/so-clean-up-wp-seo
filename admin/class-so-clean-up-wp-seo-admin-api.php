@@ -4,6 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Class CUWS_Admin_API
+ */
 class CUWS_Admin_API {
 
 	/**
@@ -13,7 +16,7 @@ class CUWS_Admin_API {
 	 * @param object|bool $post WP_Post
 	 * @param  boolean    $echo Whether to echo the field HTML or return it
 	 *
-	 * @return void|string
+	 * @return string
 	 * @source  : //github.com/hlashbrooke/WordPress-Plugin-Template/
 	 * @since   v2.0.0
 	 */
@@ -43,7 +46,6 @@ class CUWS_Admin_API {
 		$data        = '';
 		$option_name = $field['id'];
 		if ( $post ) {
-
 			// Get saved field data
 			$option = get_post_meta( $post->ID, $field['id'], true );
 
@@ -51,9 +53,7 @@ class CUWS_Admin_API {
 			if ( isset( $option ) ) {
 				$data = $option;
 			}
-
 		} else {
-
 			// Get saved option
 			$option = $options[ $option_name ];
 
@@ -61,7 +61,6 @@ class CUWS_Admin_API {
 			if ( isset( $option ) ) {
 				$data = $option;
 			}
-
 		}
 
 		// Show default data if no option saved and default is supplied
@@ -133,7 +132,6 @@ class CUWS_Admin_API {
 		}
 
 		echo $html;
-
 	}
 
 }
