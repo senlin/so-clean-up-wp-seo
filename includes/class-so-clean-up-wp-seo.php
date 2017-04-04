@@ -136,7 +136,9 @@ class CUWS {
 
 		// Make sure options have been populated if messed up from new settings
 		// Simpler than requiring deactivation/activation of plugin.
-		if ( ! $this->options ) {
+		if ( ! $this->options ||
+		     version_compare( $version, '3.0.0', '<' )
+		) {
 			$this->install();
 			$this->options = get_site_option( $this->_token . '_settings' );
 		}
