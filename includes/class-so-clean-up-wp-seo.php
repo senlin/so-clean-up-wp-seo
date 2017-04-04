@@ -212,14 +212,13 @@ class CUWS {
 		}
 
 		// Problems/Notification boxes
-		if ( 'both' == $this->options['hide_dashboard_problems_notifications'] ) {
-			echo '.yoast-container yoast-container__alert,.yoast-container yoast-container__warning{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
-		}
-		if ( 'problems' == $this->options['hide_dashboard_problems_notifications'] ) {
-			echo '.yoast-container yoast-container__alert{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
-		}
-		if ( 'notifications' == $this->options['hide_dashboard_problems_notifications'] ) {
-			echo '.yoast-container yoast-container__warning{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
+		if ( ! empty( $this->options['hide_dashboard_problems_notifications'] ) ) {
+			if ( 'problems' == $this->options['hide_dashboard_problems_notifications'] ) {
+				echo '.yoast-container yoast-container__alert{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
+			}
+			if ( 'notifications' == $this->options['hide_dashboard_problems_notifications'] ) {
+				echo '.yoast-container yoast-container__warning{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
+			}
 		}
 
 		// image warning nag
@@ -248,14 +247,13 @@ class CUWS {
 		}
 
 		// keyword/content score
-		if ( 'both' == $this->options['hide_content_keyword_score'] ) {
-			echo '.yoast-seo-score.content-score,.yoast-seo-score.keyword-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
-		}
-		if ( 'keyword_score' == $this->options['hide_content_keyword_score'] ) {
-			echo '.yoast-seo-score.keyword-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
-		}
-		if ( 'content_score' == $this->options['hide_content_keyword_score'] ) {
-			echo '.yoast-seo-score.content-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
+		if ( ! empty( $this->options['hide_content_keyword_score'] ) ) {
+			if ( 'keyword_score' == $this->options['hide_content_keyword_score'] ) {
+				echo '.yoast-seo-score.keyword-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
+			}
+			if ( 'content_score' == $this->options['hide_content_keyword_score'] ) {
+				echo '.yoast-seo-score.content-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
+			}
 		}
 
 		/*
@@ -272,38 +270,36 @@ class CUWS {
 
 		// all columns
 		if ( ! is_array( $this->options['hide_admincolumns'] ) ) {
-			$this->options['hide_admincolumns'] = array( 'none' );
-		}
-		if ( in_array( 'all', $this->options['hide_admincolumns'] ) ) {
-			echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-score-readability,.column-wpseo_score_readability,.column-wpseo-title,.column-wpseo-metadesc,.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
-		}
-		// seo score column
-		if ( in_array( 'seoscore', $this->options['hide_admincolumns'] ) ) {
-			echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
-		}
-		// readability column
-		if ( in_array( 'readability', $this->options['hide_admincolumns'] ) ) {
-			echo '.column-wpseo-score-readability,.column-wpseo_score_readability{display:none;}'; // @since v2.6.0 remove added readibility column
-		}
-		// title column
-		if ( in_array( 'title', $this->options['hide_admincolumns'] ) ) {
-			echo '.column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
-		}
-		// meta description column
-		if ( in_array( 'metadescr', $this->options['hide_admincolumns'] ) ) {
-			echo '.column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
-		}
-		// focus keyword column
-		if ( in_array( 'focuskw', $this->options['hide_admincolumns'] ) ) {
-			echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			// seo score column
+			if ( in_array( 'seoscore', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			}
+			// readability column
+			if ( in_array( 'readability', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-score-readability,.column-wpseo_score_readability{display:none;}'; // @since v2.6.0 remove added readibility column
+			}
+			// title column
+			if ( in_array( 'title', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			}
+			// meta description column
+			if ( in_array( 'metadescr', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			}
+			// focus keyword column
+			if ( in_array( 'focuskw', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			}
 		}
 
 		// help center
-		if ( 'ad' == $this->options['hide_helpcenter'] ) {
-			echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text,#tab-link-dashboard_dashboard__contact-support,#tab-link-dashboard_general__contact-support,#tab-link-dashboard_features__contact-support,#tab-link-dashboard_knowledge-graph__contact-support,#tab-link-dashboard_webmaster-tools__contact-support,#tab-link-dashboard_security__contact-support,#tab-link-metabox_metabox__contact-support{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely; @modified v2.5.5 hide email support/ad as it is a premium only feature; @modified v2.6.0 different tabs gave different classes
-		}
-		if ( 'helpcenter' == $this->options['hide_helpcenter'] ) {
-			echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
+		if ( ! empty( $this->options['hide_helpcenter'] ) ) {
+			if ( 'ad' == $this->options['hide_helpcenter'] ) {
+				echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text,#tab-link-dashboard_dashboard__contact-support,#tab-link-dashboard_general__contact-support,#tab-link-dashboard_features__contact-support,#tab-link-dashboard_knowledge-graph__contact-support,#tab-link-dashboard_webmaster-tools__contact-support,#tab-link-dashboard_security__contact-support,#tab-link-metabox_metabox__contact-support{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely; @modified v2.5.5 hide email support/ad as it is a premium only feature; @modified v2.6.0 different tabs gave different classes
+			}
+			if ( 'helpcenter' == $this->options['hide_helpcenter'] ) {
+				echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
+			}
 		}
 
 		echo '</style>';
@@ -406,20 +402,27 @@ class CUWS {
 			'hide_tagline_nag'                      => 'on',
 			'hide_robots_nag'                       => 'on',
 			'hide_upsell_notice'                    => 'on',
-			'hide_dashboard_problems_notifications' => 'none',
+			'hide_dashboard_problems_notifications' => array(
+				'problems',
+				'notifications',
+			),
 			'hide_imgwarning_nag'                   => 'on',
 			'hide_addkw_button'                     => 'on',
 			'hide_trafficlight'                     => 'on',
 			'hide_wpseoanalysis'                    => 'on',
 			'hide_issue_counter'                    => 'on',
 			'hide_gopremium_star'                   => 'on',
-			'hide_content_keyword_score'            => 'both',
-			'hide_helpcenter'                       => 'ad',
+			'hide_content_keyword_score'            => array(
+				'keyword_score',
+				'content_score',
+			),
+			'hide_helpcenter'                       => array( 'ad' ),
 			'hide_admincolumns'                     => array(
 				'seoscore',
 				'readability',
 				'title',
 				'metadescr',
+				'focuskw',
 			),
 			'remove_dbwidget'                       => 'on',
 			'remove_adminbar'                       => 'on',

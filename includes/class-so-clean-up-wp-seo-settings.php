@@ -90,8 +90,14 @@ class CUWS_Settings {
 	 * @since  2.x
 	 */
 	public function update_settings() {
-		$cuws         = CUWS::instance();
-		$options_list = array_keys( $cuws->get_defaults() );
+		$cuws          = CUWS::instance();
+		$options_list  = array_keys( $cuws->get_defaults() );
+		$multi_options = array(
+			'hide_admincolumns',
+			'hide_content_keyword_score',
+			'hide_dashboard_problems_notifications',
+			'hide_helpcenter',
+		);
 
 		if ( $this->parent->_token . '_settings' === $_POST['option_page'] &&
 		     'update' === $_POST['action']
@@ -99,8 +105,8 @@ class CUWS_Settings {
 			foreach ( $options_list as $option ) {
 				if ( ! isset( $_POST[ $this->parent->_token . '_' . $option ] ) ) {
 					$_POST[ $this->parent->_token . '_' . $option ] = null;
-					if ( 'hide_admincolumns' === $option ) {
-						$_POST[ $this->parent->_token . '_' . $option ] = array( 'none' );
+					if ( in_array( $option, $multi_options ) ) {
+						$_POST[ $this->parent->_token . '_' . $option ] = array();
 					}
 				}
 				$options[ $option ] = $_POST[ $this->parent->_token . '_' . $option ];
