@@ -293,7 +293,7 @@ class CUWS_Settings {
 				array(
 					'id'          => 'remove_adminbar',
 					'label'       => __( 'SEO menu admin bar', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Remove the admin bar Yoast SEO menu.', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove the admin bar Yoast SEO menu. Although it can be easily dismissed on a per user basis, this setting hides the admin bar Yoast SEO menu globally.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => 'on',
 				),
