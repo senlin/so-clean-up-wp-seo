@@ -100,7 +100,7 @@ class CUWS_Settings {
 				if ( ! isset( $_POST[ $this->parent->_token . '_' . $option ] ) ) {
 					$_POST[ $this->parent->_token . '_' . $option ] = null;
 					if ( 'hide_admincolumns' === $option ) {
-						$_POST[ $this->parent->_token . '_' . $option ] = array( 'all' );
+						$_POST[ $this->parent->_token . '_' . $option ] = array( 'none' );
 					}
 				}
 				$options[ $option ] = $_POST[ $this->parent->_token . '_' . $option ];
