@@ -125,12 +125,13 @@ class CUWS_Settings {
 	 * @return void
 	 * @since   v2.0.0
 	 */
-	public function add_menu_item () {
+	public function add_menu_item() {
+		$capability = is_multisite() ? 'manage_network' : 'manage_options';
 		add_submenu_page(
 			'wpseo_dashboard',
 			__( 'SO Hide SEO Bloat Settings', 'so-clean-up-wp-seo' ),
 			__( 'Hide Bloat', 'so-clean-up-wp-seo' ),
-			'manage_options',
+			$capability,
 			$this->parent->_token . '_settings',
 			array( $this, 'settings_page' )
 		);
