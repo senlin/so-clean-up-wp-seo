@@ -291,6 +291,13 @@ class CUWS_Settings {
 					'default'     => array( 'seoscore', 'readability', 'title', 'metadescr' ),
 				),
 				array(
+					'id'          => 'remove_adminbar',
+					'label'       => __( 'SEO menu admin bar', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove the admin bar Yoast SEO menu.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => 'on',
+				),
+				array(
 					'id'          => 'remove_dbwidget',
 					'label'       => __( 'Dashboard widget', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Remove the Yoast SEO widget from the WordPress Dashboard.', 'so-clean-up-wp-seo' ),

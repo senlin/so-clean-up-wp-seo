@@ -119,6 +119,8 @@ class CUWS {
 
 		/*** PLUGIN FUNCTIONS ***/
 
+		// @since v1.3.0
+		add_action( 'admin_bar_menu', array( $this, 'so_cuws_remove_adminbar_settings' ), 999 );
 		// @since 1.5.0
 		add_action( 'wp_dashboard_setup', array( $this, 'so_cuws_remove_dashboard_widget' ) );
 		// @since 2.0.0
@@ -142,17 +144,26 @@ class CUWS {
 	} // End __construct ()
 
 	/**
-	 * Cleanup functions depending on each checkbox returned value in admin
+	 * Remove Settings submenu in admin bar
+	 * Since Yoast SEO 3.6 it is possible to disable the adminbar menu within
+	 * Dashboard > Features but only in individual sites, not network admin
 	 *
-	 * @since    v2.0.0
-	 */
-
-	/**
-	 * Since Yoast SEO 3.6 it is possible to disable the adminbar menu within Dashboard > Features, therefore this
-	 * setting has become redundant
+	 * inspired by [Lee Rickler](https://profiles.wordpress.org/lee-rickler/)
 	 *
-	 * @since v2.5.0
+	 * @since v1.3.0
 	 */
+	public function so_cuws_remove_adminbar_settings() {
+		if ( empty( $this->options['remove_adminbar'] ) ) {
+			return;
+		}
+		global $wp_admin_bar;
+		$nodes = array_keys( $wp_admin_bar->get_nodes() );
+		foreach ( $nodes as $node ) {
+			if ( false !== strpos( $node, 'wpseo' ) ) {
+				$wp_admin_bar->remove_node( $node );
+			}
+		}
+	}
 
 	/**
 	 * Version 2.3 of Yoast SEO introduced a dashboard widget
@@ -411,6 +422,7 @@ class CUWS {
 				'metadescr',
 			),
 			'remove_dbwidget'                       => 'on',
+			'remove_adminbar'                       => 'on',
 		);
 
 		return $defaults;
