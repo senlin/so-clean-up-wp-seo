@@ -417,7 +417,7 @@ class CUWS {
 			'hide_helpcenter'                       => 'ad',
 			'hide_admincolumns'                     => array(
 				'seoscore',
-				'readibility',
+				'readability',
 				'title',
 				'metadescr',
 			),
