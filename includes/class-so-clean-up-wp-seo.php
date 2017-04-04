@@ -127,7 +127,14 @@ class CUWS {
 			$this->admin = new CUWS_Admin_API();
 		}
 
-		$this->options = $this->get_settings_as_array();
+		$this->options = get_site_option( $this->_token . '_settings' );
+
+		// Make sure options have been populated if messed up from new settings
+		// Simpler than requiring deactivation/activation of plugin.
+		if ( ! $this->options ) {
+			$this->install();
+			$this->options = get_site_option( $this->_token . '_settings' );
+		}
 
 	} // End __construct ()
 
@@ -244,6 +251,9 @@ class CUWS {
 		// @modified 2.6.1 revert radio to checkboxes and removing the options for focus keyword, title and meta-description
 		
 		// all columns
+		if ( ! is_array( $this->options['hide_admincolumns'] ) ) {
+			$this->options['hide_admincolumns'] = array( 'none' );
+		}
 		if ( in_array( 'all', $this->options['hide_admincolumns'] ) ) {
 			echo '.column-wpseo-score,.column-wpseo_score,.column-wpseo-score-readability,.column-wpseo_score_readability,.column-wpseo-title,.column-wpseo-metadesc,.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
 		}
@@ -366,61 +376,47 @@ class CUWS {
 	} // End _log_version_number ()
 
 	/**
+	 * Array containing the default values.
+	 * Use `array_keys()` to return the key names.
+	 *
+	 * @return array
+	 */
+	public function get_defaults() {
+		$defaults = array(
+			'hide_ads'                              => 'on',
+			'hide_tagline_nag'                      => 'on',
+			'hide_robots_nag'                       => 'on',
+			'hide_upsell_notice'                    => 'on',
+			'hide_dashboard_problems_notifications' => 'none',
+			'hide_imgwarning_nag'                   => 'on',
+			'hide_addkw_button'                     => 'on',
+			'hide_trafficlight'                     => 'on',
+			'hide_wpseoanalysis'                    => 'on',
+			'hide_issue_counter'                    => 'on',
+			'hide_gopremium_star'                   => 'on',
+			'hide_content_keyword_score'            => 'both',
+			'hide_helpcenter'                       => 'ad',
+			'hide_admincolumns'                     => array(
+				'seoscore',
+				'readibility',
+				'title',
+				'metadescr',
+			),
+			'remove_dbwidget'                       => 'on',
+		);
+
+		return $defaults;
+	}
+
+	/**
 	 * Set default values on activation.
 	 *
 	 * @access private
 	 * @return void
 	 */
 	private function _set_defaults() {
-		update_site_option( 'cuws_hide_ads', 'on' );
-		update_site_option( 'cuws_hide_tagline_nag', 'on' );
-		update_site_option( 'cuws_hide_robots_nag', 'on' );
-		update_site_option( 'cuws_hide_upsell_notice', 'on' );
-		update_site_option( 'hide_dashboard_problems_notifications', 'none' );
-		update_site_option( 'cuws_hide_imgwarning_nag', 'on' );
-		update_site_option( 'cuws_hide_addkw_button', 'on' );
-		update_site_option( 'cuws_hide_trafficlight', 'on' );
-		update_site_option( 'cuws_hide_issue_counter', 'on' );
-		update_site_option( 'cuws_hide_gopremium_star', 'on' );
-		update_site_option( 'cuws_hide_wpseoanalysis', 'on' );
-		update_site_option( 'cuws_hide_content_keyword_score', 'both' );
-		update_site_option( 'cuws_hide_helpcenter', 'ad' );
-		update_site_option( 'hide_admincolumns', array( 'seoscore', 'readibility', 'title', 'metadescr' ) );
-		update_site_option( 'cuws_remove_dbwidget', 'on' );
+		$defaults = $this->get_defaults();
+		update_site_option( $this->_token . '_settings', $defaults );
 	} // End _set_defaults ()
-
-	/**
-	 * Get plugin settings as an array.
-	 *
-	 * @access public
-	 * @return array
-	 */
-	public function get_settings_as_array() {
-		$settings = array();
-		$options  = array(
-			'hide_ads',
-			'hide_tagline_nag',
-			'hide_robots_nag',
-			'hide_upsell_notice',
-			'hide_dashboard_problems_notifications',
-			'hide_imgwarning_nag',
-			'hide_addkw_button',
-			'hide_trafficlight',
-			'hide_wpseoanalysis',
-			'hide_issue_counter',
-			'hide_gopremium_star',
-			'hide_content_keyword_score',
-			'hide_helpcenter',
-			'hide_admincolumns',
-			'remove_dbwidget',
-		);
-
-		foreach ( $options as $option ) {
-			$settings[ $option ] = get_site_option( $this->_token . '_' . $option );
-		}
-		$settings['version'] = $this->_version;
-
-		return $settings;
-	}
 
 }

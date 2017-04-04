@@ -71,43 +71,34 @@ class CUWS_Settings {
 		// Save setting in Multisite
 		add_action( 'network_admin_edit_' . $this->parent->_token . '_settings', array(
 			$this,
-			'update_network_setting',
+			'update_settings',
 		) );
 
 	}
 
 	/**
-	 * Save settings when on multisite network admin.
+	 * Save settings when on single-site or multisite network admin.
 	 *
 	 * @access public
 	 * @since  2.x
 	 */
-	public function update_network_setting() {
-		$options = array(
-			'hide_ads',
-			'hide_tagline_nag',
-			'hide_robots_nag',
-			'hide_upsell_notice',
-			'hide_dashboard_problems_notifications',
-			'hide_imgwarning_nag',
-			'hide_addkw_button',
-			'hide_wpseoanalysis',
-			'hide_trafficlight',
-			'hide_issue_counter',
-			'hide_gopremium_star',
-			'hide_content_keyword_score',
-			'hide_helpcenter',
-			'hide_admincolumns',
-			'remove_dbwidget'
-		);
+	public function update_settings() {
+		$cuws         = CUWS::instance();
+		$options_list = array_keys( $cuws->get_defaults() );
 
-		if ( $this->parent->_token . '_settings' === $_POST['option_page'] && 'update' === $_POST['action'] ) {
-			foreach ( $options as $option ) {
+		if ( $this->parent->_token . '_settings' === $_POST['option_page'] &&
+		     'update' === $_POST['action']
+		) {
+			foreach ( $options_list as $option ) {
 				if ( ! isset( $_POST[ $this->parent->_token . '_' . $option ] ) ) {
-					$_POST[ $this->parent->_token . '_' . $option ] = '';
+					$_POST[ $this->parent->_token . '_' . $option ] = null;
+					if ( 'hide_admincolumns' === $option ) {
+						$_POST[ $this->parent->_token . '_' . $option ] = array( 'all' );
+					}
 				}
-				update_site_option( $this->parent->_token . '_' . $option, $_POST[ $this->parent->_token . '_' . $option ] );
+				$options[ $option ] = $_POST[ $this->parent->_token . '_' . $option ];
 			}
+			update_site_option( $this->parent->_token . '_settings', $options );
 
 			$location = add_query_arg(
 				array( 'page' => $this->parent->_token . '_settings', ),
@@ -306,20 +297,12 @@ class CUWS_Settings {
 
 				if ( $current_section && $current_section != $section ) continue;
 
+				register_setting( $this->parent->_token . '_settings', 'settings' );
+
 				// Add section to page
 				add_settings_section( $section, $data['title'], array( $this, 'settings_section' ), $this->parent->_token . '_settings' );
 
 				foreach ( $data['fields'] as $field ) {
-
-					// Validation callback for field
-					$validation = '';
-					if ( isset( $field['callback'] ) ) {
-						$validation = $field['callback'];
-					}
-
-					// Register field
-					$option_name = $this->base . $field['id'];
-					register_setting( $this->parent->_token . '_settings', $option_name, $validation );
 
 					// Add field to page
 					add_settings_field( $field['id'], $field['label'], array( $this->parent->admin, 'display_field' ), $this->parent->_token . '_settings', $section, array( 'field' => $field, 'prefix' => $this->base ) );
@@ -327,6 +310,9 @@ class CUWS_Settings {
 
 				if ( ! $current_section ) break;
 			}
+		}
+		if ( isset( $_POST['action'] ) && 'update' === $_POST['action'] ) {
+			$this->update_settings();
 		}
 	}
 

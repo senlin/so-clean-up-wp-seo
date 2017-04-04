@@ -20,7 +20,8 @@ class CUWS_Admin_API {
 	public function display_field( $data = array(), $post = false, $echo = true ) {
 
 		// Get plugin settings
-		$options = CUWS::instance()->get_settings_as_array();
+		$cuws    = CUWS::instance();
+		$options = get_site_option( $cuws->_token . '_settings' );
 
 		// Get field info
 		//$field = isset( $data['field'] ) ? $data['field'] : $data;
@@ -83,6 +84,9 @@ class CUWS_Admin_API {
 				break;
 
 			case 'checkbox_multi':
+				if ( empty( $data ) ) {
+					$data = array();
+				}
 				foreach ( $field['options'] as $k => $v ) {
 					$checked = false;
 					if ( in_array( $k, $data ) ) {
