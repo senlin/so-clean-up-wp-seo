@@ -271,7 +271,7 @@ class CUWS {
 		 */
 
 		// all columns
-		if ( ! is_array( $this->options['hide_admincolumns'] ) ) {
+		if ( ! empty( $this->options['hide_admincolumns'] ) ) {
 			// seo score column
 			if ( in_array( 'seoscore', $this->options['hide_admincolumns'] ) ) {
 				echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
