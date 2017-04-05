@@ -215,10 +215,10 @@ class CUWS {
 
 		// Problems/Notification boxes
 		if ( ! empty( $this->options['hide_dashboard_problems_notifications'] ) ) {
-			if ( 'problems' == $this->options['hide_dashboard_problems_notifications'] ) {
+			if ( in_array( 'problems', $this->options['hide_dashboard_problems_notifications'] ) ) {
 				echo '.yoast-container yoast-container__alert{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
 			}
-			if ( 'notifications' == $this->options['hide_dashboard_problems_notifications'] ) {
+			if ( in_array( 'notifications', $this->options['hide_dashboard_problems_notifications'] ) ) {
 				echo '.yoast-container yoast-container__warning{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
 			}
 		}
@@ -250,10 +250,10 @@ class CUWS {
 
 		// keyword/content score
 		if ( ! empty( $this->options['hide_content_keyword_score'] ) ) {
-			if ( 'keyword_score' == $this->options['hide_content_keyword_score'] ) {
+			if ( in_array( 'keyword_score', $this->options['hide_content_keyword_score'] ) ) {
 				echo '.yoast-seo-score.keyword-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
 			}
-			if ( 'content_score' == $this->options['hide_content_keyword_score'] ) {
+			if ( in_array( 'content_score', $this->options['hide_content_keyword_score'] ) ) {
 				echo '.yoast-seo-score.content-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
 			}
 		}
@@ -296,10 +296,10 @@ class CUWS {
 
 		// help center
 		if ( ! empty( $this->options['hide_helpcenter'] ) ) {
-			if ( 'ad' == $this->options['hide_helpcenter'] ) {
+			if ( in_array( 'ad', $this->options['hide_helpcenter'] ) ) {
 				echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text,#tab-link-dashboard_dashboard__contact-support,#tab-link-dashboard_general__contact-support,#tab-link-dashboard_features__contact-support,#tab-link-dashboard_knowledge-graph__contact-support,#tab-link-dashboard_webmaster-tools__contact-support,#tab-link-dashboard_security__contact-support,#tab-link-metabox_metabox__contact-support{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely; @modified v2.5.5 hide email support/ad as it is a premium only feature; @modified v2.6.0 different tabs gave different classes
 			}
-			if ( 'helpcenter' == $this->options['hide_helpcenter'] ) {
+			if ( in_array( 'helpcenter', $this->options['hide_helpcenter'] ) ) {
 				echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
 			}
 		}
