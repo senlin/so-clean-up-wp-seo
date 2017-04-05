@@ -139,8 +139,8 @@ class CUWS {
 		if ( ! $this->options ||
 		     version_compare( $version, '3.0.0', '<' )
 		) {
-			$this->install();
-			$this->options = get_site_option( $this->_token . '_settings' );
+			//$this->install();
+			//$this->options = get_site_option( $this->_token . '_settings' );
 		}
 
 	} // End __construct ()
