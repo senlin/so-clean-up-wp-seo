@@ -214,10 +214,10 @@ class CUWS {
 		// Problems/Notification boxes
 		if ( ! empty( $this->options['hide_dashboard_problems_notifications'] ) ) {
 			if ( in_array( 'problems', $this->options['hide_dashboard_problems_notifications'] ) ) {
-				echo '.yoast-container yoast-container__alert{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
+				echo '.yoast-container.yoast-container__alert{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
 			}
 			if ( in_array( 'notifications', $this->options['hide_dashboard_problems_notifications'] ) ) {
-				echo '.yoast-container yoast-container__warning{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
+				echo '.yoast-container.yoast-container__warning{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
 			}
 		}
 
@@ -404,7 +404,7 @@ class CUWS {
 			'hide_upsell_notice'                    => 'on',
 			'hide_dashboard_problems_notifications' => array(
 				'problems',
-				'notifications',
+				'notifications'
 			),
 			'hide_imgwarning_nag'                   => 'on',
 			'hide_addkw_button'                     => 'on',
@@ -414,15 +414,16 @@ class CUWS {
 			'hide_gopremium_star'                   => 'on',
 			'hide_content_keyword_score'            => array(
 				'keyword_score',
-				'content_score',
+				'content_score'
 			),
-			'hide_helpcenter'                       => array( 'ad' ),
+			'hide_helpcenter'                       => array(
+				'ad'
+			),
 			'hide_admincolumns'                     => array(
 				'seoscore',
 				'readability',
 				'title',
-				'metadescr',
-				'focuskw',
+				'metadescr'
 			),
 			'remove_dbwidget'                       => 'on',
 			'remove_adminbar'                       => 'on',
