@@ -90,8 +90,14 @@ class CUWS_Settings {
 	 * @since  2.x
 	 */
 	public function update_settings() {
-		$cuws         = CUWS::instance();
-		$options_list = array_keys( $cuws->get_defaults() );
+		$cuws          = CUWS::instance();
+		$options_list  = array_keys( $cuws->get_defaults() );
+		$multi_options = array(
+			'hide_admincolumns',
+			'hide_content_keyword_score',
+			'hide_dashboard_problems_notifications',
+			'hide_helpcenter',
+		);
 
 		if ( $this->parent->_token . '_settings' === $_POST['option_page'] &&
 		     'update' === $_POST['action']
@@ -99,8 +105,8 @@ class CUWS_Settings {
 			foreach ( $options_list as $option ) {
 				if ( ! isset( $_POST[ $this->parent->_token . '_' . $option ] ) ) {
 					$_POST[ $this->parent->_token . '_' . $option ] = null;
-					if ( 'hide_admincolumns' === $option ) {
-						$_POST[ $this->parent->_token . '_' . $option ] = array( 'none' );
+					if ( in_array( $option, $multi_options ) ) {
+						$_POST[ $this->parent->_token . '_' . $option ] = array();
 					}
 				}
 				$options[ $option ] = $_POST[ $this->parent->_token . '_' . $option ];
@@ -168,6 +174,8 @@ class CUWS_Settings {
 	 *           non-vital notifications)
 	 */
 	private function settings_fields() {
+		$cuws    = CUWS::instance();
+		$options = $cuws->get_defaults();
 
 		$settings['standard'] = array(
 			'title'  => __( 'Without further ado: Hide the bloat', 'so-clean-up-wp-seo' ),
@@ -178,131 +186,124 @@ class CUWS_Settings {
 					'label'       => __( 'Sidebar Ads', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['hide_ads'],
 				),
 				array(
 					'id'          => 'hide_tagline_nag',
 					'label'       => __( 'Tagline nag', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Tagline nag that shows a "Problem" in the Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the "Problem" globally.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['hide_tagline_nag'],
 				),
 				array(
 					'id'          => 'hide_robots_nag',
 					'label'       => __( 'Robots nag', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide robots nag that shows a "Problem" in the Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the "Problem" globally.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['hide_robots_nag'],
 				),
 				array(
 					'id'          => 'hide_upsell_notice',
 					'label'       => __( 'Upsell Notice', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the Upsell Notice in the Notifications box that shows in the Yoast SEO Dashboard. Although it can be easily dismissed on a per user basis, this setting hides the Notice globally.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['hide_upsell_notice'],
 				),
 				array(
 					'id'          => 'hide_dashboard_problems_notifications',
 					'label'       => __( 'Problems/Notifications', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide Problems/Notifications boxes from Yoast Dashboard. Although they can be easily dismissed on a per user basis, this setting hides the box(es) globally.', 'so-clean-up-wp-seo' ),
-					'type'        => 'radio',
+					'type'        => 'checkbox_multi',
 					'options'     => array(
-						'both'          => __( 'Hide both Problems/Notifications boxes', 'so-clean-up-wp-seo' ),
-						'problems'      => __( 'Only hide Problems box', 'so-clean-up-wp-seo' ),
-						'notifications' => __( 'Only hide Notifications box', 'so-clean-up-wp-seo' ),
-						'none'          => __( 'None', 'so-clean-up-wp-seo' ),
+						'problems'      => __( 'Hide Problems box', 'so-clean-up-wp-seo' ),
+						'notifications' => __( 'Hide Notifications box', 'so-clean-up-wp-seo' ),
 					),
-					'default'     => 'none',
+					'default'     => $options['hide_dashboard_problems_notifications'],
 				),
 				array(
 					'id'          => 'hide_imgwarning_nag',
 					'label'       => __( 'Featured image nag', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['hide_imgwarning_nag'],
 				),
 				array(
 					'id'          => 'hide_addkw_button',
 					'label'       => __( 'Add keyword button', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['hide_addkw_button'],
 				),
 				array(
 					'id'          => 'hide_wpseoanalysis',
 					'label'       => __( 'Content analysis', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide content analysis that adds colored balls to the edit Post/Page screens as well as Readability tab that contains the analysis.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['hide_wpseoanalysis'],
 				),
 				array(
 					'id'          => 'hide_issue_counter',
 					'label'       => __( 'Issue Counter', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide issue counter from adminbar and sidebar.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['hide_issue_counter'],
 				),
 				array(
 					'id'          => 'hide_gopremium_star',
 					'label'       => __( 'Go Premium', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hides red star of "Go Premium" submenu as well as of metabox in edit Post/Page screens.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['hide_gopremium_star'],
 				),
 				array(
 					'id'          => 'hide_content_keyword_score',
 					'label'       => __( 'Content (Readability) / Keyword (SEO) Score', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide Content (Readability)/Keyword (SEO) Score in publish/update box on edit Post/Page.', 'so-clean-up-wp-seo' ),
-					'type'        => 'radio',
+					'type'        => 'checkbox_multi',
 					'options'     => array(
-						'both'          => __( 'Hide both Content (Readability) and Keyword (SEO) Score', 'so-clean-up-wp-seo' ),
-						'keyword_score' => __( 'Only hide Keyword (SEO) Score', 'so-clean-up-wp-seo' ),
-						'content_score' => __( 'Only hide Content (Readability) Score', 'so-clean-up-wp-seo' ),
-						'none'          => __( 'None', 'so-clean-up-wp-seo' ),
+						'keyword_score' => __( 'Hide Keyword (SEO) Score', 'so-clean-up-wp-seo' ),
+						'content_score' => __( 'Hide Content (Readability) Score', 'so-clean-up-wp-seo' ),
 					),
-					'default'     => 'both',
+					'default'     => $options['hide_content_keyword_score'],
 				),
 				array(
 					'id'          => 'hide_helpcenter',
 					'label'       => __( 'Help center', 'so-clean-up-wp-seo' ),
 					'description' => __( 'The Yoast SEO plugin comes with a help center (since Yoast SEO 3.2) that shows introduction videos and (of course) an ad for the premium version of the plugin; select here what to hide (if anything).', 'so-clean-up-wp-seo' ),
-					'type'        => 'radio',
+					'type'        => 'checkbox_multi',
 					'options'     => array(
-						'ad'         => __( 'Only hide ad for premium version', 'so-clean-up-wp-seo' ),
+						'ad'         => __( 'Hide ad for premium version', 'so-clean-up-wp-seo' ),
 						'helpcenter' => __( 'Hide the entire help center', 'so-clean-up-wp-seo' ),
-						'none'       => __( 'None', 'so-clean-up-wp-seo' ),
 					),
-					'default'     => 'ad',
+					'default'     => $options['hide_helpcenter'],
 				),
 				array(
 					'id'          => 'hide_admincolumns',
 					'label'       => __( 'Admin columns', 'so-clean-up-wp-seo' ),
-					'description' => __( 'The Yoast SEO plugin adds 5(!) admin columns on the Posts/Pages screen and the SEO Score?Readability admin columns to taxonomies (since Yoast SEO 3.1), choose here which ones to hide. It is possible to select multiple columns to hide and <strong>ticking minimum one box is required</strong>.<br> Although they can be easily hidden on a per user basis, this setting hides the column(s) globally.', 'so-clean-up-wp-seo' ),
+					'description' => __( 'The Yoast SEO plugin adds 5(!) admin columns on the Posts/Pages screen and the SEO Score and Readability admin columns to taxonomies (since Yoast SEO 3.1). Multiple selections are allowed.<br> Although they can be easily hidden on a per user basis, this setting hides the column(s) globally.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox_multi',
 					'options'     => array(
-						'all'         => __( 'Hide all columns', 'so-clean-up-wp-seo' ),
 						'seoscore'    => __( 'Hide SEO score column', 'so-clean-up-wp-seo' ),
 						'readability' => __( 'Hide Readability score column', 'so-clean-up-wp-seo' ),
 						'title'       => __( 'Hide title column', 'so-clean-up-wp-seo' ),
 						'metadescr'   => __( 'Hide meta description column', 'so-clean-up-wp-seo' ),
 						'focuskw'     => __( 'Hide focus keyword column', 'so-clean-up-wp-seo' ),
-						'none'        => __( 'Show all columns', 'so-clean-up-wp-seo' ),
 					),
-					'default'     => array( 'seoscore', 'readability', 'title', 'metadescr' ),
+					'default'     => $options['hide_admincolumns'],
 				),
 				array(
 					'id'          => 'remove_adminbar',
 					'label'       => __( 'SEO menu admin bar', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Remove the admin bar Yoast SEO menu. Although it can be easily dismissed on a per user basis, this setting hides the admin bar Yoast SEO menu globally.', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove the admin bar Yoast SEO menu.<br> Although it can be easily dismissed on a per user basis, this setting hides the admin bar Yoast SEO menu globally.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['remove_adminbar'],
 				),
 				array(
 					'id'          => 'remove_dbwidget',
 					'label'       => __( 'Dashboard widget', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Remove the Yoast SEO widget from the WordPress Dashboard.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => 'on',
+					'default'     => $options['remove_dbwidget'],
 				),
 			),
 		);
