@@ -12,7 +12,7 @@
  * Text Domain: 		so-clean-up-wp-seo
  * Network:     		true
  * GitHub Plugin URI:	https://github.com/senlin/so-clean-up-wp-seo
- * GitHub Branch:		master
+ * GitHub Branch:		develop
  */
 
 // don't load the plugin file directly
