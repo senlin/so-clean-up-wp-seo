@@ -13,8 +13,13 @@
     padding-left: 40px !important;
     padding-top: 2px !important;
 }
-#cuws_settings.wrap > p {
+#cuws_settings.wrap > p,
+#cuws_settings.wrap > ol {
 	font-size: 16px;
+}
+
+#cuws_settings.wrap .form-table tr {
+    border-bottom: 1px solid rgba(66, 66, 66, 0.1);
 }
 #cuws_settings.wrap > form span.description {
 	font-size: 14px;
