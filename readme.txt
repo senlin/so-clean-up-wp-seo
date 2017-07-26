@@ -12,6 +12,8 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress b
 
 == Description ==
 
+<strong>New in 3.1.0: globally hide the premium upsell admin block that was added to Yoast SEO 5.1</strong>
+
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
 The purpose of the SO Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
