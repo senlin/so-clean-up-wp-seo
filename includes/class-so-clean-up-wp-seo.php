@@ -351,11 +351,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-<<<<<<< HEAD
 	public static function instance( $file = '', $version = '3.2.0' ) {
-=======
-	public static function instance( $file = '', $version = '3.1.0' ) {
->>>>>>> origin/develop
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -416,10 +412,7 @@ class CUWS {
 			'hide_tagline_nag'                      => 'on',
 			'hide_robots_nag'                       => 'on',
 			'hide_upsell_notice'                    => 'on',
-<<<<<<< HEAD
 			'hide_upsell_metabox_socialtab'			=> 'on',
-=======
->>>>>>> origin/develop
 			'hide_upsell_admin_block'				=> 'on',
 			'hide_dashboard_problems_notifications' => array(
 				'problems',
