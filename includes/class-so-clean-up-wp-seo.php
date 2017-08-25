@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.0.0' ) {
+	public function __construct( $file = '', $version = '3.2.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -211,6 +211,16 @@ class CUWS {
 			echo '#yoast-warnings #wpseo-upsell-notice{display:none;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard; @modified v2.5.4 improved to remove entire Notification box in the main Dashboard; @modified v2.6.0 only hide this notice.
 		}
 
+		// hide upsell notice on social tab in Yoast Post/Page metabox
+		if ( ! empty( $this->options['hide_upsell_metabox_socialtab'] ) ) {
+			echo '.wpseo-metabox-tabs-div .yoast-notice-go-premium{display:none}'; // @since v3.2.0
+		}
+
+		// hide premium upsell admin block
+		if ( ! empty( $this->options['hide_upsell_admin_block'] ) ) {
+			echo '.yoast_premium_upsell_admin_block{display:none}'; // @since v3.1.0
+		}
+
 		// Problems/Notification boxes
 		if ( ! empty( $this->options['hide_dashboard_problems_notifications'] ) ) {
 			if ( in_array( 'problems', $this->options['hide_dashboard_problems_notifications'] ) ) {
@@ -295,7 +305,7 @@ class CUWS {
 		// help center
 		if ( ! empty( $this->options['hide_helpcenter'] ) ) {
 			if ( in_array( 'ad', $this->options['hide_helpcenter'] ) ) {
-				echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text,.wpseo-tab-video__panel.wpseo-tab-video__panel--text,#tab-link-dashboard_dashboard__contact-support,#tab-link-dashboard_general__contact-support,#tab-link-dashboard_features__contact-support,#tab-link-dashboard_knowledge-graph__contact-support,#tab-link-dashboard_webmaster-tools__contact-support,#tab-link-dashboard_security__contact-support,#tab-link-metabox_metabox__contact-support{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely; @modified v2.5.5 hide email support/ad as it is a premium only feature; @modified v2.6.0 different tabs gave different classes
+				echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text,#tab-link-dashboard_dashboard__contact-support,#tab-link-dashboard_general__contact-support,#tab-link-dashboard_features__contact-support,#tab-link-dashboard_knowledge-graph__contact-support,#tab-link-dashboard_webmaster-tools__contact-support,#tab-link-dashboard_security__contact-support,#tab-link-metabox_metabox__contact-support{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely; @modified v2.5.5 hide email support/ad as it is a premium only feature; @modified v2.6.0 different tabs gave different classes
 			}
 			if ( in_array( 'helpcenter', $this->options['hide_helpcenter'] ) ) {
 				echo '.wpseo-tab-video-container{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely
@@ -341,7 +351,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.0.0' ) {
+	public static function instance( $file = '', $version = '3.2.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -402,6 +412,8 @@ class CUWS {
 			'hide_tagline_nag'                      => 'on',
 			'hide_robots_nag'                       => 'on',
 			'hide_upsell_notice'                    => 'on',
+			'hide_upsell_metabox_socialtab'			=> 'on',
+			'hide_upsell_admin_block'				=> 'on',
 			'hide_dashboard_problems_notifications' => array(
 				'problems',
 				'notifications'

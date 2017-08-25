@@ -1,16 +1,18 @@
 === SO Hide SEO Bloat ===
 Contributors: senlin, afragen
 Donate link: https://so-wp.com/plugins/donations
-Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium 
+Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
-Tested up to: 4.8
-Stable tag: 3.0.0
+Tested up to: 4.8.1
+Stable tag: 3.2.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
-Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress backend.
+Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress backend. **New in v3.1.0:** globally hide the premium upsell admin block that was added to Yoast SEO 5.1
 
 == Description ==
+
+**New in v3.2.0: hide Upsell Notice in social tab of Yoast Post/Page metabox**
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
@@ -26,6 +28,8 @@ The **Default Settings** of the current release are as follows:
 * hide the tagline nag showing as a Problem in the Yoast SEO Dashboard
 * hide the robots nag showing as a Problem in the Yoast SEO Dashboard and in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
 * hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
+* hide the Upsell Notice in social tab of Yoast Post/Page metabox
+* hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
 * hide Problems box from Yoast SEO Dashboard
 * hide Notifications box from Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
@@ -33,7 +37,7 @@ The **Default Settings** of the current release are as follows:
 * hide content analysis that adds colored balls to the edit Post/Page screens as well as Readability tab that contains the analysis
 * hide issue counter from adminbar and sidebar
 * hides red star of "Go Premium" submenu as well as of metabox in edit Post/Page screens
-* hide Keyword (SEO) Score 
+* hide Keyword (SEO) Score
 * hide Content (Readability) Score
 * hide ad for premium version in help center
 * hide the SEO Score, Readability, Title and Meta Description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
@@ -67,11 +71,11 @@ For version 2.4.0 [Andy Fragen](https://github.com/afragen) has refactored that 
 
 = The name of the plugin is confusing, it hides bloat of which SEO plugin? =
 
-Yes, you are right, the name is a bit vague (see Changelog v1.8.0). On the other hand there is only one SEO plugin that adds a lot of bloat to the WordPress Dashboard and that is the Yoast SEO plugin. 
+Yes, you are right, the name is a bit vague (see Changelog v1.8.0). On the other hand there is only one SEO plugin that adds a lot of bloat to the WordPress Dashboard and that is the Yoast SEO plugin.
 
 = The plugin doesn't do anything! =
 
-Do you have the Yoast SEO plugin installed? It hides the bloat from that plugin only. 
+Do you have the Yoast SEO plugin installed? It hides the bloat from that plugin only.
 If you have and the plugin still doesn't do anything, then please open a [support ticket](https://github.com/senlin/so-clean-up-wp-seo/issues).
 
 = With a settings page comes additional entries in the database; what happens on uninstall? =
@@ -93,7 +97,18 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Changelog ==
 
-= 3.0.0 = 
+= 3.2.0 =
+
+* release date 2017.8.25
+* hide Upsell Notice in social tab of Yoast Post/Page metabox
+* styling adjustments settings page
+
+= 3.1.0 =
+
+* release date 2017.7.25
+* hide the Premium Upsell Admin Block that was introduced in version 5.1 (of Yoast SEO) and shows in the entire Yoast SEO backend
+
+= 3.0.0 =
 
 * release date 2017.4.6
 * IMPORTANT: as this is a major release, most likely you will need to save the settings again; apologies for any inconvenience.
@@ -114,14 +129,14 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 * update screenshot-1
 * update readme.txt
 
-= 2.6.1 = 
+= 2.6.1 =
 
 * release date 2017.3.31
 * revert admin columns settings that were changed in v2.6.0 (last week): checkboxes return to select multiple options, title, meta description and focus keyword can be selected again for "removal" and additional checkbox for readability column
 * remove [forgotten about nag setting](https://wordpress.org/support/topic/i-have-updated-to-2-6-0-but-still-see-setting-for-about-nag/)
 * update readme.txt
 
-= 2.6.0 = 
+= 2.6.0 =
 
 * release date 2017.3.24
 * add option to hide Readability column on Posts/Pages screens
@@ -134,12 +149,12 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 * remove hide about nag as it no longer is a site-wide nag
 * update readme.txt
 
-= 2.5.5 = 
+= 2.5.5 =
 
 * release date 2017.2.28 (triggered by release of Yoast SEO 4.4)
 * hide the email support of the help center as it is a premium-only feature and therefore an "ad in disguise"
 
-= 2.5.4 = 
+= 2.5.4 =
 
 * Happy Holidays!
 * release date 2016.12.22 (triggered by release of Yoast SEO 4.0)
@@ -148,14 +163,14 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 * improvement: upsell notice: hide entire notifications box
 * add FAQ
 
-= 2.5.3 = 
+= 2.5.3 =
 
 * release date 2016.11.29 (triggered by release of Yoast SEO 3.9)
 * hide "Go Premium" text from adminbar dropdown
 * hide dismissed notices and warnings in Yoast SEO Dashboard
 * new setting: globally hide upsell notice in Yoast SEO Dashboard
 
-= 2.5.2 = 
+= 2.5.2 =
 
 * release date 2016.10.11 (triggered by release of Yoast SEO 3.7)
 * once again hide red premium star, this time from the opposite side of the metabox on the Edit Post/Page screen
@@ -243,7 +258,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 = 1.7.3 =
 
 * release date 2015.11.19
-* version 3.0 of Yoast SEO has introduced a cool new UI for the Edit screens. This also shows a + icon and when clicking that, you'll have a big fat ad in your face. This is a premium feature and the only function of the + icon therefore is to irritate you with an ad. We have therefore made it invisible. 
+* version 3.0 of Yoast SEO has introduced a cool new UI for the Edit screens. This also shows a + icon and when clicking that, you'll have a big fat ad in your face. This is a premium feature and the only function of the + icon therefore is to irritate you with an ad. We have therefore made it invisible.
 * tested up to WP 4.4
 * adjust readme files
 
@@ -275,7 +290,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 * release date 2015.07.22
 * remove overview dashboard widget that was introduced in Yoast SEO 2.3
-* change plugin name to reflect the name-change of the plugin it cleans up for ([WordPress SEO became Yoast SEO](https://yoast.com/yoast-seo-2-3/)) 
+* change plugin name to reflect the name-change of the plugin it cleans up for ([WordPress SEO became Yoast SEO](https://yoast.com/yoast-seo-2-3/))
 
 = 1.4.0 =
 
@@ -291,14 +306,14 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 = 1.3.2 =
 
 * release date 2015.05.14
-* Fix issue that WP SEO columns were still showing on Edit Posts/Pages pages 
+* Fix issue that WP SEO columns were still showing on Edit Posts/Pages pages
 
 = 1.3.1 =
 
 * release date 2015.05.01
 * Added styling to remove Tour Intro and button to start tour
 * Added screenshots
-* Removed redundant dashboard widget function 
+* Removed redundant dashboard widget function
 
 = 1.3.0 =
 
@@ -314,7 +329,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 = 1.1.0 =
 
 * release date 2015.04.27
-* Release version 
+* Release version
 * banner image (in assets folder) by [Leigh Kendell](https://unsplash.com/leighkendell)
 
 = 1.0.0 =

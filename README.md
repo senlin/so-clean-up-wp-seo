@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2017.4.6
-###### Development version 3.0.0
+###### Last updated on 2017.8.25
+###### Development version 3.2.0
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 4.8
+###### tested up to WordPress 4.8.1
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -32,6 +32,8 @@ The default settings of the current release are as follows:
 * hide the tagline nag showing as a Problem in the Yoast SEO Dashboard
 * hide the robots nag showing as a Problem in the Yoast SEO Dashboard and in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
 * hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
+* hide the Upsell Notice in social tab of Yoast Post/Page metabox
+* hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
 * hide Problems box from Yoast SEO Dashboard
 * hide Notifications box from Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
@@ -108,6 +110,17 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.2.0
+
+* release date 2017.8.25
+* hide Upsell Notice in social tab of Yoast Post/Page metabox
+* styling adjustments settings page
+
+### 3.1.0
+
+* release date 2017.7.25
+* hide the Premium Upsell Admin Block that was introduced in version 5.1 (of Yoast SEO) and shows in the entire Yoast SEO backend
 
 ### 3.0.0
 
