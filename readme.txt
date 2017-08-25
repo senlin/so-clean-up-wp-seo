@@ -8,7 +8,7 @@ Stable tag: 3.2.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
-Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress backend. **New in v3.1.0:** globally hide the premium upsell admin block that was added to Yoast SEO 5.1
+Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress backend.
 
 == Description ==
 

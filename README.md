@@ -98,7 +98,7 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Connect with us through
 
-[BHI Consulting](https://bohanintl.com)
+[BHI Consulting for Websites](https://bohanintl.com)
 
 [SO WP](https://so-wp.com)
 
