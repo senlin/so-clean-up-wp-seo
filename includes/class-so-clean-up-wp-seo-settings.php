@@ -210,6 +210,13 @@ class CUWS_Settings {
 					'default'     => $options['hide_upsell_notice'],
 				),
 				array(
+					'id'          => 'hide_upsell_metabox_socialtab',
+					'label'       => __( '<span style="color:green;font-weight:700">NEW</span>: Upsell Notice social tab Yoast Post/Page metabox', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Upsell Notice in the social tab of the Yoast Post/Page metabox', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_upsell_metabox_socialtab'],
+				),
+				array(
 					'id'          => 'hide_upsell_admin_block',
 					'label'       => __( 'Premium Upsell Admin Block', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend.', 'so-clean-up-wp-seo' ),
@@ -461,7 +468,7 @@ class CUWS_Settings {
 		$html .= '</div>' . "\n"; // end .top
 
 		$html .= '<ul>' . "\n";
-		$html .= '<li><a href="https://bohanintl.com/" target="_blank" title="BHI Consulting">' . esc_attr( __( 'BHI Consulting', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+		$html .= '<li><a href="https://bohanintl.com/" target="_blank" title="BHI Consulting for Websites">' . esc_attr( __( 'BHI Consulting for Websites', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://so-wp.com/" target="_blank" title="SO WP">' . esc_attr( __( 'SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";

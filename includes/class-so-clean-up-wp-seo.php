@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.0.0' ) {
+	public function __construct( $file = '', $version = '3.2.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -209,6 +209,11 @@ class CUWS {
 		// hide upsell notice in Yoast SEO Dashboard
 		if ( ! empty( $this->options['hide_upsell_notice'] ) ) {
 			echo '#yoast-warnings #wpseo-upsell-notice{display:none;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard; @modified v2.5.4 improved to remove entire Notification box in the main Dashboard; @modified v2.6.0 only hide this notice.
+		}
+
+		// hide upsell notice on social tab in Yoast Post/Page metabox
+		if ( ! empty( $this->options['hide_upsell_metabox_socialtab'] ) ) {
+			echo '.wpseo-metabox-tabs-div .yoast-notice-go-premium{display:none}'; // @since v3.2.0
 		}
 
 		// hide premium upsell admin block
@@ -346,7 +351,11 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
+<<<<<<< HEAD
+	public static function instance( $file = '', $version = '3.2.0' ) {
+=======
 	public static function instance( $file = '', $version = '3.1.0' ) {
+>>>>>>> origin/develop
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -407,6 +416,10 @@ class CUWS {
 			'hide_tagline_nag'                      => 'on',
 			'hide_robots_nag'                       => 'on',
 			'hide_upsell_notice'                    => 'on',
+<<<<<<< HEAD
+			'hide_upsell_metabox_socialtab'			=> 'on',
+=======
+>>>>>>> origin/develop
 			'hide_upsell_admin_block'				=> 'on',
 			'hide_dashboard_problems_notifications' => array(
 				'problems',

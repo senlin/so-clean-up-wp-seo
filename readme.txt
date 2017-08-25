@@ -3,14 +3,16 @@ Contributors: senlin, afragen
 Donate link: https://so-wp.com/plugins/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
-Tested up to: 4.8
-Stable tag: 3.1.0
+Tested up to: 4.8.1
+Stable tag: 3.2.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
 Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress backend.
 
 == Description ==
+
+**New in v3.2.0: hide Upsell Notice in social tab of Yoast Post/Page metabox**
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
@@ -26,7 +28,8 @@ The **Default Settings** of the current release are as follows:
 * hide the tagline nag showing as a Problem in the Yoast SEO Dashboard
 * hide the robots nag showing as a Problem in the Yoast SEO Dashboard and in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
 * hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
-* hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend.
+* hide the Upsell Notice in social tab of Yoast Post/Page metabox
+* hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
 * hide Problems box from Yoast SEO Dashboard
 * hide Notifications box from Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
@@ -93,6 +96,12 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.2.0 =
+
+* release date 2017.8.25
+* hide Upsell Notice in social tab of Yoast Post/Page metabox
+* styling adjustments settings page
 
 = 3.1.0 =
 

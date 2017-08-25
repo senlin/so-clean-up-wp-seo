@@ -21,6 +21,10 @@
 #cuws_settings.wrap .form-table tr {
     border-bottom: 1px solid rgba(66, 66, 66, 0.1);
 }
+#cuws_settings .form-table th {
+    font-weight: 400;
+    width: 300px;
+}
 #cuws_settings.wrap > form span.description {
 	font-size: 14px;
 }
