@@ -211,7 +211,7 @@ class CUWS_Settings {
 				),
 				array(
 					'id'          => 'hide_upsell_metabox_socialtab',
-					'label'       => __( '<span style="color:green;font-weight:700">NEW</span>: Upsell Notice social tab Yoast Post/Page metabox', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'Upsell Notice social tab Yoast Post/Page metabox', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the Upsell Notice in the social tab of the Yoast Post/Page metabox', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_upsell_metabox_socialtab'],
@@ -257,7 +257,7 @@ class CUWS_Settings {
 				),
 				array(
 					'id'          => 'hide_issue_counter',
-					'label'       => __( 'Issue Counter', 'so-clean-up-wp-seo' ),
+					'label'       => __( '<span style="color:green;font-weight:700">MODIFIED</span>: Issue Counter', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide issue counter from adminbar and sidebar.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_issue_counter'],
