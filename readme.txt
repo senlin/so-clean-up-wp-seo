@@ -4,7 +4,7 @@ Donate link: https://so-wp.com/plugins/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
 Tested up to: 4.8.1
-Stable tag: 3.2.0
+Stable tag: 3.2.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -12,7 +12,7 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress b
 
 == Description ==
 
-**New in v3.2.0: hide Upsell Notice in social tab of Yoast Post/Page metabox**
+**Modified in v3.2.1: remove orange background that shows again on issue counter of sidebar**
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
@@ -96,6 +96,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.2.1 =
+
+* release date 2017.9.25
+* modified issue counter of sidebar which was showing orange background again
 
 = 3.2.0 =
 

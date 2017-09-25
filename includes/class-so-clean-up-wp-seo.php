@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.2.0' ) {
+	public function __construct( $file = '', $version = '3.2.1' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -243,7 +243,7 @@ class CUWS {
 
 		// hide issue counter
 		if ( ! empty( $this->options['hide_issue_counter'] ) ) {
-			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .update-plugins .plugin-count{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar
+			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .update-plugins .plugin-count,#adminmenu .update-plugins{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar; @modified v3.2.1 to remove orange background that shows again
 		}
 
 		// hide red star "Go Premium" submenu
@@ -351,7 +351,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.2.0' ) {
+	public static function instance( $file = '', $version = '3.2.1' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
