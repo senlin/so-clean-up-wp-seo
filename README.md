@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2017.8.25
-###### Development version 3.2.0
+###### Last updated on 2017.9.25
+###### Development version 3.2.1
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 4.8.1
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -94,7 +94,7 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Donations
 
-* Donate link: http://so-wp.com/plugins/donations
+* Donate link: https://so-wp.com/plugins/donations
 
 ## Connect with us through
 
@@ -110,6 +110,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.2.1
+
+* release date 2017.9.25
+* modified issue counter of sidebar which was showing orange background again
 
 ### 3.2.0
 
