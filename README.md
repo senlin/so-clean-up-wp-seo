@@ -1,11 +1,11 @@
-# SO Hide SEO Bloat
+# Hide SEO Bloat
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on 2017.9.25
-###### Development version 3.2.1
+###### Last updated on October 10, 2017
+###### Development version 3.3.0
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 4.8.1
+###### tested up to WordPress 4.9-beta1
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -15,14 +15,14 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress 
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a great SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
-The purpose of the SO Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
+The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
 Since version 3.0.0 we have _simplified_ the settings page. The radio buttons with all/none choices are replaced with checkboxes for everything. Ticking the box means hiding (or removing) that particular "feature".
 
 It is a good idea to have a look at the Settings page if only to see what you can fine-tune. The link to the page has been added to the Yoast SEO menu and of course there is also a link to it from the Plugins page.
 
-If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
-Alternatively you are welcome to make a [donation](https://so-wp.com/plugins/donations/). Thanks!
+If you like the Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
+Alternatively you are welcome to make a [donation](https://so-wp.com/donations). Thanks!
 
 ## Default Settings current release
 
@@ -57,9 +57,9 @@ The link to the page has been added to the Yoast SEO menu and of course there is
 
 ### I have updated the plugin and a new setting has been added, but I still can see that particular item.
 
-That indeed can happen when we add a new setting. The plugin's settings then need to be re-saved. So all you need to do is go to the Settings page of the SO Hide SEO Bloat plugin and save them. Then all should be good.
+That indeed can happen when we add a new setting. The plugin's settings then need to be re-saved. So all you need to do is go to the Settings page of the Hide SEO Bloat plugin and save them. Then all should be good.
 
-### Can I use SO Hide SEO Bloat on Multisite?
+### Can I use Hide SEO Bloat on Multisite?
 
 Yes, you can.
 For version 2.4.0 [Andy Fragen](https://github.com/afragen) has refactored that part of the plugin to make it fully Multisite compatible. The Settings screen only shows in Network Admin as we don't think it makes sense that individual sites override the Network Settings.
@@ -76,7 +76,7 @@ If you have and the plugin still doesn't do anything, then please open a [suppor
 ### With a settings page comes additional entries in the database; what happens on uninstall?
 
 Great question!
-Indeed the SO Hide SEO Bloat plugin writes its settings to the database. The included `uninstall.php` file removes all the plugin-related entries from the database once you remove the plugin via the WordPress Plugins page (not on deactivation).
+Indeed the Hide SEO Bloat plugin writes its settings to the database. The included `uninstall.php` file removes all the plugin-related entries from the database once you remove the plugin via the WordPress Plugins page (not on deactivation).
 
 ### I have an issue with this plugin, where can I get support?
 
@@ -85,7 +85,7 @@ Please open an issue here on [Github](https://github.com/senlin/so-clean-up-wp-s
 ## Contributions
 
 We welcome your contributions very much! PR's will be considered and of course bug reports and feature requests can also be seen as contributions!
-**If you're interested in becoming involved, please [let us know](https://so-wp.com/info-contact/) or simply send a PR with your proposed improvement.** 
+**If you're interested in becoming involved, please [let us know](https://so-wp.com/contact) or simply send a PR with your proposed improvement.** 
 
 ## License
 
@@ -94,13 +94,15 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Donations
 
-* Donate link: https://so-wp.com/plugins/donations
+* Donate link: https://so-wp.com/donations
 
 ## Connect with us through
 
 [BHI Consulting for Websites](https://bohanintl.com)
 
 [SO WP](https://so-wp.com)
+
+[WP Tips](https://bohanintl.com/wptips/)
 
 [Github](https://github.com/senlin) 
 
@@ -111,25 +113,31 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Changelog
 
+### 3.3.0
+
+* release date October 10, 2017
+* adjust the settings of Help Center that received overhaul in Yoast SEO 5.6
+* updated links due to renewal of SO WP website
+
 ### 3.2.1
 
-* release date 2017.9.25
+* release date September 25, 2017
 * modified issue counter of sidebar which was showing orange background again
 
 ### 3.2.0
 
-* release date 2017.8.25
+* release date August 25, 2017
 * hide Upsell Notice in social tab of Yoast Post/Page metabox
 * styling adjustments settings page
 
 ### 3.1.0
 
-* release date 2017.7.25
+* release date July 25, 2017
 * hide the Premium Upsell Admin Block that was introduced in version 5.1 (of Yoast SEO) and shows in the entire Yoast SEO backend
 
 ### 3.0.0
 
-* release date 2017.4.6
+* release date April 6, 2017
 * IMPORTANT: as this is a major release, most likely you will need to save the settings again; apologies for any inconvenience.
 * another massive rewrite by [Andy Fragen](https://github.com/afragen); big thank you Andy who now also has become an _official_ contributor to the plugin!
 	* rewrite of settings to single array, making it the same for single site and multisite installs

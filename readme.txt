@@ -1,10 +1,10 @@
-=== SO Hide SEO Bloat ===
+=== Hide SEO Bloat ===
 Contributors: senlin, afragen
-Donate link: https://so-wp.com/plugins/donations
+Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
-Tested up to: 4.8.1
-Stable tag: 3.2.1
+Tested up to: 4.9
+Stable tag: 3.3.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -12,7 +12,7 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress b
 
 == Description ==
 
-**Modified in v3.2.1: remove orange background that shows again on issue counter of sidebar**
+**Modified in v3.3.0: release to adjust the settings of Help Center that received overhaul in Yoast SEO 5.6**
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
@@ -39,7 +39,7 @@ The **Default Settings** of the current release are as follows:
 * hides red star of "Go Premium" submenu as well as of metabox in edit Post/Page screens
 * hide Keyword (SEO) Score
 * hide Content (Readability) Score
-* hide ad for premium version in help center
+* hide ads for premium version and premium course in help center
 * hide the SEO Score, Readability, Title and Meta Description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score and Readability admin columns on taxonomies
 * remove the Yoast SEO admin bar menu
@@ -47,12 +47,10 @@ The **Default Settings** of the current release are as follows:
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
-**PLEASE DO NOT POST YOUR ISSUES VIA THE WORDPRESS FORUMS**
-
 Thanks for your understanding and cooperation.
 
-If you like the SO Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
-Alternatively you are welcome to make a [donation](https://so-wp.com/plugins/donations/). Thanks!
+If you like the Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
+Alternatively you are welcome to make a [donation](https://so-wp.com/donations). Thanks!
 
 == Frequently Asked Questions ==
 
@@ -62,9 +60,9 @@ The link to the page has been added to the Yoast SEO menu and of course there is
 
 = I have updated the plugin and a new setting has been added, but I still can see that particular item. =
 
-That indeed can happen when we add a new setting. The plugin's settings then need to be re-saved. So all you need to do is go to the Settings page of the SO Hide SEO Bloat plugin and save them. Then all should be good.
+That indeed can happen when we add a new setting. The plugin's settings then need to be re-saved. So all you need to do is go to the Settings page of the Hide SEO Bloat plugin and save them. Then all should be good.
 
-= Can I use SO Hide SEO Bloat on Multisite? =
+= Can I use Hide SEO Bloat on Multisite? =
 
 Yes, you can.
 For version 2.4.0 [Andy Fragen](https://github.com/afragen) has refactored that part of the plugin to make it fully Multisite compatible. The Settings screen only shows in Network Admin as we don't think it makes sense that individual sites override the Network Settings.
@@ -81,7 +79,7 @@ If you have and the plugin still doesn't do anything, then please open a [suppor
 = With a settings page comes additional entries in the database; what happens on uninstall? =
 
 Great question!
-Indeed the SO Hide SEO Bloat plugin writes its settings to the database. The included `uninstall.php` file removes all the plugin-related entries from the database once you remove the plugin via the WordPress Plugins page (not on deactivation).
+Indeed the Hide SEO Bloat plugin writes its settings to the database. The included `uninstall.php` file removes all the plugin-related entries from the database once you remove the plugin via the WordPress Plugins page (not on deactivation).
 
 = I have an issue with this plugin, where can I get support? =
 
@@ -97,25 +95,31 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Changelog ==
 
+= 3.3.0 =
+
+* release date October 10, 2017
+* adjust the settings of Help Center that received overhaul in Yoast SEO 5.6
+* updated links due to renewal of SO WP website
+
 = 3.2.1 =
 
-* release date 2017.9.25
+* release date September 25, 2017
 * modified issue counter of sidebar which was showing orange background again
 
 = 3.2.0 =
 
-* release date 2017.8.25
+* release date August 25, 2017
 * hide Upsell Notice in social tab of Yoast Post/Page metabox
 * styling adjustments settings page
 
 = 3.1.0 =
 
-* release date 2017.7.25
+* release date July 25, 2017
 * hide the Premium Upsell Admin Block that was introduced in version 5.1 (of Yoast SEO) and shows in the entire Yoast SEO backend
 
 = 3.0.0 =
 
-* release date 2017.4.6
+* release date April 6, 2017
 * IMPORTANT: as this is a major release, most likely you will need to save the settings again; apologies for any inconvenience.
 * another massive rewrite by [Andy Fragen](https://github.com/afragen); big thank you Andy who now also has become an _official_ contributor to the plugin!
 	* rewrite of settings to single array, making it the same for single site and multisite installs

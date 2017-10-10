@@ -413,13 +413,13 @@ class CUWS_Settings {
 
 		// Build page HTML
 		$html = '<div class="wrap" id="' . $this->parent->_token . '_settings">' . "\n";
-		$html .= '<h2>' . esc_attr( __( 'SO Hide SEO Bloat Settings', 'so-clean-up-wp-seo' ) ) . '</h2>' . "\n";
+		$html .= '<h2>' . esc_attr( __( 'Hide SEO Bloat Settings', 'so-clean-up-wp-seo' ) ) . '</h2>' . "\n";
 
 		$html .= '<p>' . esc_attr( __( 'On this settings page you can adjust things here and there to your liking.', 'so-clean-up-wp-seo' ) ) . '<br>' . esc_attr( __( 'Although some settings are for "features" that can easily be dismissed on a per user basis, hiding or removing them here, has two advantages:', 'so-clean-up-wp-seo' ) ) . '</p><ol><li>' . esc_attr( __( 'the settings here are global, for all users', 'so-clean-up-wp-seo' ) ) . '</li><li>' . esc_attr( __( 'these settings are centralised on one page, no need to keep dismissing stuff all over the site\'s backend', 'so-clean-up-wp-seo' ) ) . '</li></ol></p>' . "\n";
 
 		$html .= '<p>' . esc_attr( __( 'The default settings, when you activate the plugin, are that almost all boxes have been ticked; why else would you install our plugin?', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
 
-		$html .= '<p>' . esc_attr( __( 'If you ever want to remove the SO Hide SEO Bloat plugin, then you can rest assured that it cleans up after itself:', 'so-clean-up-wp-seo' ) ) . '<br />' . esc_attr( __( 'upon deletion it removes all options automatically.', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
+		$html .= '<p>' . esc_attr( __( 'If you ever want to remove the Hide SEO Bloat plugin, then you can rest assured that it cleans up after itself:', 'so-clean-up-wp-seo' ) ) . '<br />' . esc_attr( __( 'upon deletion it removes all options automatically.', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
 
 		//$action = is_network_admin() ? 'edit.php?action=' . $this->parent->_token . '_settings' : 'options.php';
 		if ( is_network_admin() ) {
@@ -463,7 +463,7 @@ class CUWS_Settings {
 		$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";
 
 		$sowpurl = 'https://so-wp.com/plugins/';
-		$html    .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP Plugins">SO WP Plugins</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
+		$html    .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP">SO WP</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
 
 		$html .= '</div>' . "\n"; // end .top
 
