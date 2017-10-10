@@ -257,7 +257,7 @@ class CUWS_Settings {
 				),
 				array(
 					'id'          => 'hide_issue_counter',
-					'label'       => __( '<span style="color:green;font-weight:700">MODIFIED</span>: Issue Counter', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'Issue Counter', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide issue counter from adminbar and sidebar.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_issue_counter'],
@@ -282,11 +282,11 @@ class CUWS_Settings {
 				),
 				array(
 					'id'          => 'hide_helpcenter',
-					'label'       => __( 'Help center', 'so-clean-up-wp-seo' ),
-					'description' => '<br>' . __( 'The Yoast SEO plugin comes with a help center (since Yoast SEO 3.2) that shows introduction videos and (of course) an ad for the premium version of the plugin; select here what to hide (if anything).', 'so-clean-up-wp-seo' ),
+					'label'       => __( '<span style="color:green;font-weight:700">MODIFIED</span>: Help center', 'so-clean-up-wp-seo' ),
+					'description' => '<br>' . __( 'The Yoast SEO plugin comes with a help center (since Yoast SEO 3.2) that shows introduction videos and (of course) ads for the premium version of the plugin and now (since Yoast SEO 5.6) also a paid-for course; select here what to hide (if anything).', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox_multi',
 					'options'     => array(
-						'ad'         => __( 'Hide ad for premium version', 'so-clean-up-wp-seo' ),
+						'ad'         => __( 'Hide the ads', 'so-clean-up-wp-seo' ),
 						'helpcenter' => __( 'Hide the entire help center', 'so-clean-up-wp-seo' ),
 					),
 					'default'     => $options['hide_helpcenter'],
