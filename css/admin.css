@@ -3,16 +3,6 @@
  * @since   v2.0.0
  */
 
-#cuws_settings.wrap > h2 {
-    background-image: url("../images/so-icon.png");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 32px auto;
-    display: block;
-    min-height: 32px;
-    padding-left: 40px !important;
-    padding-top: 2px !important;
-}
 #cuws_settings.wrap > p,
 #cuws_settings.wrap > ol {
 	font-size: 16px;
