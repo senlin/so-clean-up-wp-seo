@@ -52,6 +52,8 @@ Thanks for your understanding and cooperation.
 If you like the Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
 Alternatively you are welcome to make a [donation](https://so-wp.com/donations). Thanks!
 
+[Hide SEO Bloat](https://so-wp.com/plugin/hide-seo-bloat) by SO WP.
+
 == Frequently Asked Questions ==
 
 = Where is the settings page? =
