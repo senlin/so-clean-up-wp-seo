@@ -3,7 +3,7 @@
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
 ###### Last updated on October 25, 2017
-###### Development version 3.4.0
+###### Development version 3.4.1
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 4.9
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -112,6 +112,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.4.1
+
+* release date October 25, 2017
+* add `!important` to CSS rule to force it
 
 ### 3.4.0
 
