@@ -193,7 +193,7 @@ class CUWS {
 
 		// sidebar ads
 		if ( ! empty( $this->options['hide_ads'] ) ) {
-			echo '#sidebar-container.wpseo_content_cell{display:none;}'; // @since v1.0.0; @modified v3.4.0
+			echo '#sidebar-container.wpseo_content_cell{display:none!important;}'; // @since v1.0.0; @modified v3.4.0
 		}
 
 		// tagline nag
