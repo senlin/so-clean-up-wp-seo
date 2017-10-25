@@ -116,7 +116,7 @@ We welcome your contributions very much! PR's will be considered and of course b
 ### 3.4.1
 
 * release date October 25, 2017
-* add `!important` to CSS rule to force it
+* add `!important` to CSS rule to enforce it
 
 ### 3.4.0
 
