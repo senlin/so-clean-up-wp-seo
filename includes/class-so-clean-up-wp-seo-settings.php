@@ -142,7 +142,7 @@ class CUWS_Settings {
 		$capability = is_multisite() ? 'manage_network' : 'manage_options';
 		add_submenu_page(
 			'wpseo_dashboard',
-			__( 'SO Hide SEO Bloat Settings', 'so-clean-up-wp-seo' ),
+			__( 'Hide SEO Bloat Settings', 'so-clean-up-wp-seo' ),
 			__( 'Hide Bloat', 'so-clean-up-wp-seo' ),
 			$capability,
 			$this->parent->_token . '_settings',
@@ -183,7 +183,7 @@ class CUWS_Settings {
 			'fields' => array(
 				array(
 					'id'          => 'hide_ads',
-					'label'       => __( 'Sidebar Ads', 'so-clean-up-wp-seo' ),
+					'label'       => __( '<span style="color:green;font-weight:700">MODIFIED</span>: Sidebar Ads', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_ads'],
@@ -282,7 +282,7 @@ class CUWS_Settings {
 				),
 				array(
 					'id'          => 'hide_helpcenter',
-					'label'       => __( '<span style="color:green;font-weight:700">MODIFIED</span>: Help center', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'Help center', 'so-clean-up-wp-seo' ),
 					'description' => '<br>' . __( 'The Yoast SEO plugin comes with a help center (since Yoast SEO 3.2) that shows introduction videos and (of course) ads for the premium version of the plugin and now (since Yoast SEO 5.6) also a paid-for course; select here what to hide (if anything).', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox_multi',
 					'options'     => array(
@@ -462,7 +462,7 @@ class CUWS_Settings {
 
 		$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";
 
-		$sowpurl = 'https://so-wp.com/plugins/';
+		$sowpurl = 'https://so-wp.com';
 		$html    .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP">SO WP</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
 
 		$html .= '</div>' . "\n"; // end .top
@@ -470,7 +470,7 @@ class CUWS_Settings {
 		$html .= '<ul>' . "\n";
 		$html .= '<li><a href="https://bohanintl.com/" target="_blank" title="BHI Consulting for Websites">' . esc_attr( __( 'BHI Consulting for Websites', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-		$html .= '<li><a href="https://so-wp.com/" target="_blank" title="SO WP">' . esc_attr( __( 'SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+		$html .= '<li><a href="https://so-wp.com" target="_blank" title="SO WP">' . esc_attr( __( 'SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://bohanintl.com/wptips" title="Useful WordPress Tips for people who like to DIY">' . esc_attr( __( 'WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";

@@ -4,7 +4,7 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
 Tested up to: 4.9
-Stable tag: 3.3.0
+Stable tag: 3.4.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -12,11 +12,11 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress b
 
 == Description ==
 
-**Modified in v3.3.0: release to adjust the settings of Help Center that received overhaul in Yoast SEO 5.6**
+**Modified in v3.4.0: up until now we used `visibility: hidden` to hide the sidebar ads; to avoid a conflict with the width of the screen we changed to `display: none` instead.**
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
-The purpose of the SO Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
+The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
 Since version 3.0.0 we have _simplified_ the settings page. The radio buttons with all/none choices are replaced with checkboxes for everything. Ticking the box means hiding (or removing) that particular "feature".
 
@@ -51,6 +51,8 @@ Thanks for your understanding and cooperation.
 
 If you like the Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
 Alternatively you are welcome to make a [donation](https://so-wp.com/donations). Thanks!
+
+[Hide SEO Bloat](https://so-wp.com/plugin/hide-seo-bloat) by SO WP.
 
 == Frequently Asked Questions ==
 
@@ -94,6 +96,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.4.0 =
+
+* release date October 25, 2017
+* change hiding of sidebar ads from `visibility: hidden` to `display: none` to avoid conflict with screen width
 
 = 3.3.0 =
 

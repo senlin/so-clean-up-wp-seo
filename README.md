@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on October 10, 2017
-###### Development version 3.3.0
+###### Last updated on October 25, 2017
+###### Development version 3.4.0
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 4.9-beta1
+###### tested up to WordPress 4.9
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -112,6 +112,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.4.0
+
+* release date October 25, 2017
+* change hiding of sidebar ads from `visibility: hidden` to `display: none` to avoid conflict with screen width
 
 ### 3.3.0
 

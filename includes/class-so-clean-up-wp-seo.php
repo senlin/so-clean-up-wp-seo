@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.3.0' ) {
+	public function __construct( $file = '', $version = '3.4.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -193,7 +193,7 @@ class CUWS {
 
 		// sidebar ads
 		if ( ! empty( $this->options['hide_ads'] ) ) {
-			echo '#sidebar-container.wpseo_content_cell{visibility:hidden;}'; // @since v1.0.0
+			echo '#sidebar-container.wpseo_content_cell{display:none;}'; // @since v1.0.0; @modified v3.4.0
 		}
 
 		// tagline nag
@@ -351,7 +351,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.3.0' ) {
+	public static function instance( $file = '', $version = '3.4.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
