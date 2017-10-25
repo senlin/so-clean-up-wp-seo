@@ -4,7 +4,7 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
 Tested up to: 4.9
-Stable tag: 3.4.0
+Stable tag: 3.4.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -96,6 +96,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.4.1 =
+
+* release date October 25, 2017
+* add `!important` to CSS rule to enforce it
 
 = 3.4.0 =
 
