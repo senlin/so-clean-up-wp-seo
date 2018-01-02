@@ -4,15 +4,13 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
 Tested up to: 4.9
-Stable tag: 3.4.1
+Stable tag: 3.5.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
 Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress backend.
 
 == Description ==
-
-**Modified in v3.4.0: up until now we used `visibility: hidden` to hide the sidebar ads; to avoid a conflict with the width of the screen we changed to `display: none` instead.**
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
@@ -96,6 +94,13 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.5.0 =
+
+* release date January 2, 2018
+* fix issue #37
+* remove Github Branch in header info
+* change link to personal LI profile
 
 = 3.4.1 =
 

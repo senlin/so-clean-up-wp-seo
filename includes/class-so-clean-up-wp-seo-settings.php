@@ -90,6 +90,12 @@ class CUWS_Settings {
 	 * @since  2.x
 	 */
 	public function update_settings() {
+
+		// suggestion by @afragen to try and fix [issue #37](https://github.com/senlin/so-clean-up-wp-seo/issues/37)
+		if ( ! isset( $_POST['option_page'], $_POST['action'] ) ) {
+    			return;
+		}
+
 		$cuws          = CUWS::instance();
 		$options_list  = array_keys( $cuws->get_defaults() );
 		$multi_options = array(
@@ -183,7 +189,7 @@ class CUWS_Settings {
 			'fields' => array(
 				array(
 					'id'          => 'hide_ads',
-					'label'       => __( '<span style="color:green;font-weight:700">MODIFIED</span>: Sidebar Ads', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'Sidebar Ads', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_ads'],
@@ -469,7 +475,7 @@ class CUWS_Settings {
 
 		$html .= '<ul>' . "\n";
 		$html .= '<li><a href="https://bohanintl.com/" target="_blank" title="BHI Consulting for Websites">' . esc_attr( __( 'BHI Consulting for Websites', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-		$html .= '<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+		$html .= '<li><a href="https://www.linkedin.com/in/pieterbos83" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://so-wp.com" target="_blank" title="SO WP">' . esc_attr( __( 'SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://bohanintl.com/wptips" title="Useful WordPress Tips for people who like to DIY">' . esc_attr( __( 'WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
