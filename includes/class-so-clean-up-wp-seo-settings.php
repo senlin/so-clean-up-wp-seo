@@ -90,6 +90,12 @@ class CUWS_Settings {
 	 * @since  2.x
 	 */
 	public function update_settings() {
+		
+		// suggestion by @afragen to try and fix [issue #37](https://github.com/senlin/so-clean-up-wp-seo/issues/37)
+		if ( ! isset( $_POST['option_page'], $_POST['action'] ) ) {
+    			return;
+		}
+		
 		$cuws          = CUWS::instance();
 		$options_list  = array_keys( $cuws->get_defaults() );
 		$multi_options = array(
