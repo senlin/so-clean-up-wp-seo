@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on October 25, 2017
-###### Development version 3.4.1
+###### Last updated on January 2, 2018
+###### Development version 3.5.0
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 4.9
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -100,18 +100,25 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 [BHI Consulting for Websites](https://bohanintl.com)
 
-[SO WP](https://so-wp.com)
+[SO WP Plugins](https://so-wp.com)
 
 [WP Tips](https://bohanintl.com/wptips/)
 
 [Github](https://github.com/senlin) 
 
-[LinkedIn](https://www.linkedin.com/in/pietbos) 
+[LinkedIn](https://www.linkedin.com/in/pieterbos83) 
 
 [WordPress](https://profiles.wordpress.org/senlin/) 
 
 
 ## Changelog
+
+### 3.5.0
+
+* release date January 2, 2018
+* fix issue #37 
+* remove Github Branch in header info
+* change link to personal LI profile
 
 ### 3.4.1
 
