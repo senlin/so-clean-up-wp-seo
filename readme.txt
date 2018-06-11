@@ -344,7 +344,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 = 1.3.0 =
 
 * release date 2015.04.30
-* Added function to remove Yoast SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3)
+* Added function to remove Yoast SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on Google+ (no longer available)
 * put code actions/filters in order
 
 = 1.2.0 =

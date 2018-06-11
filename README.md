@@ -6,7 +6,7 @@
 ###### Development version 3.5.0
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 4.9
-###### Author: [Piet Bos](https://github.com/senlin)
+###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
 Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend; now with Settings Page!
@@ -342,7 +342,7 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ### 1.3 (2015.04.30)
 
-* Added function to remove Yoast SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on [Google+](https://plus.google.com/u/0/+PietBos/posts/AUfs8ZdwLP3)
+* Added function to remove Yoast SEO Settings from Admin Bar, inspired by comment of [Lee Rickler](https://profiles.wordpress.org/lee-rickler/) in discussion on Google+ (no longer available)
 * put code actions/filters in order
 
 ### 1.2 (2015.04.30)
