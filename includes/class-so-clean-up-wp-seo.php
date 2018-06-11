@@ -181,6 +181,21 @@ class CUWS {
 	}
 
 	/**
+	 * at some point Yoast SEO has introduced "Primary Category Feature"
+	 * This function removes this "feature"
+	 *
+	 * @since v3.6.0
+	 */
+	public function so_cuws_remove_primary_category_feature() {
+
+		if ( ! empty( $this->options['remove_primarycatfeat'] ) ) {
+
+			add_filter( 'wpseo_primary_term_taxonomies', '__return_empty_array' );
+
+		}
+	}
+
+	/**
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
 	 * @since    v2.0.0
@@ -213,7 +228,7 @@ class CUWS {
 
 		// hide upsell notice on social tab in Yoast Post/Page metabox
 		if ( ! empty( $this->options['hide_upsell_metabox_socialtab'] ) ) {
-			echo '.wpseo-metabox-tabs-div .yoast-notice-go-premium{display:none}'; // @since v3.2.0
+			echo '.notice.inline.yoast-notice.yoast-notice-go-premium{display:none}'; // @since v3.2.0; @modified v3.6.0
 		}
 
 		// hide premium upsell admin block
@@ -246,9 +261,19 @@ class CUWS {
 			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .update-plugins .plugin-count,#adminmenu .update-plugins{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar; @modified v3.2.1 to remove orange background that shows again
 		}
 
-		// hide red star "Go Premium" submenu
-		if ( ! empty( $this->options['hide_gopremium_star'] ) ) {
-			echo '#adminmenu .wpseo-premium-indicator,.wpseo-metabox-buy-premium,#wp-admin-bar-wpseo-licenses{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
+		// hide red star "Go Premium" submenu - @v3.6.0 REDUNDANT
+		//if ( ! empty( $this->options['hide_gopremium_star'] ) ) {
+			//echo '#adminmenu .wpseo-premium-indicator,.wpseo-metabox-buy-premium,#wp-admin-bar-wpseo-licenses{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
+		//}
+
+		// hide "Premium" submenu in its entirety
+		if ( ! empty( $this->options['hide_premium_submenu'] ) ) {
+			echo 'li#toplevel_page_wpseo_dashboard>ul>li:nth-child(7){display:none;}'; // @since v3.6.0 hide "Premium" submenu in its entirety
+		}
+
+		// hide Configuration Wizard on every screen in the Yoast admin
+		if ( ! empty( $this->options['hide_config_wizard'] ) ) {
+			echo '.yoast-alerts .yoast-container__configuration-wizard{display:none;}'; // @since v3.6.0 hide Configuration Wizard
 		}
 
 		// content analysis
@@ -437,6 +462,7 @@ class CUWS {
 				'title',
 				'metadescr'
 			),
+			'remove_primarycatfeat'					=> 'on',
 			'remove_dbwidget'                       => 'on',
 			'remove_adminbar'                       => 'on',
 		);

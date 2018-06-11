@@ -312,6 +312,13 @@ class CUWS_Settings {
 					'default'     => $options['hide_admincolumns'],
 				),
 				array(
+					'id'          => 'remove_primarycatfeat',
+					'label'       => __( 'Primary category', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove primary category feature.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['remove_primarycatfeat'],
+				),
+				array(
 					'id'          => 'remove_adminbar',
 					'label'       => __( 'SEO menu admin bar', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Remove the admin bar Yoast SEO menu.', 'so-clean-up-wp-seo' ),
