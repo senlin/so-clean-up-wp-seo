@@ -230,6 +230,20 @@ class CUWS_Settings {
 					'default'     => $options['hide_upsell_admin_block'],
 				),
 				array(
+					'id'          => 'hide_premium_submenu',
+					'label'       => __( 'Premium submenu', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hides the "Premium" submenu in its entirety.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_premium_submenu'],
+				),
+				array(
+					'id'          => 'hide_premium_metabox',
+					'label'       => __( 'Go Premium metabox', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hides "Go Premium" metabox in edit Post/Page screens.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_premium_metabox'],
+				),
+				array(
 					'id'          => 'hide_dashboard_problems_notifications',
 					'label'       => __( 'Problems/Notifications', 'so-clean-up-wp-seo' ),
 					'description' => '<br>' . __( 'Hide Problems/Notifications boxes from Yoast Dashboard.', 'so-clean-up-wp-seo' ),
@@ -267,13 +281,6 @@ class CUWS_Settings {
 					'description' => __( 'Hide issue counter from adminbar and sidebar.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_issue_counter'],
-				),
-				array(
-					'id'          => 'hide_gopremium_star',
-					'label'       => __( 'Go Premium', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hides red star of "Go Premium" submenu as well as of metabox in edit Post/Page screens.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_gopremium_star'],
 				),
 				array(
 					'id'          => 'hide_content_keyword_score',
