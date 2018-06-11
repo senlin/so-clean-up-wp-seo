@@ -2,14 +2,14 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on January 2, 2018
-###### Development version 3.5.0
+###### Last updated on June 11, 2018
+###### Development version 3.6.0
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 4.9
+###### tested up to WordPress 4.9.6
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
-Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend; now with Settings Page!
+Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress backend. See [changelog](https://wordpress.org/plugins/so-clean-up-wp-seo/#developers) for what's new in this release.
 
 ## Description
 
@@ -34,18 +34,21 @@ The default settings of the current release are as follows:
 * hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
 * hide the Upsell Notice in social tab of Yoast Post/Page metabox
 * hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
+* hides "Premium" submenu in its entirety
+* hides "Go Premium" metabox on edit Post/Page screens
 * hide Problems box from Yoast SEO Dashboard
 * hide Notifications box from Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
 * hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
 * hide content analysis that adds colored balls to the edit Post/Page screens as well as Readability tab that contains the analysis
 * hide issue counter from adminbar and sidebar
-* hides red star of "Go Premium" submenu as well as of metabox in edit Post/Page screens
 * hide Keyword (SEO) Score 
 * hide Content (Readability) Score
 * hide ad for premium version in help center
 * hide the SEO Score, Readability, Title and Meta Description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score and Readability admin columns on taxonomies
+* hide SEO Settings on individual profile page
+* remove primary category feature
 * remove the Yoast SEO admin bar menu
 * remove the Yoast SEO widget from the WordPress Dashboard
 
@@ -112,6 +115,17 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.6.0
+
+* release date June 11, 2018
+* address issues [#40](https://github.com/senlin/so-clean-up-wp-seo/issues/40)
+* NEW: remove primary category feature
+* NEW: hide SEO settings on individual profile page
+* remove option to hide red star for Premium submenu as there doesn't seem to be a red star anymore
+* NEW: hide Premium submenu in its entirety
+* NEW: hide "Go Premium" metabox on edit Post/Page screens
+* update hide help center ads
 
 ### 3.5.0
 
