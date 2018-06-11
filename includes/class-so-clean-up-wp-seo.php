@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.5.0' ) {
+	public function __construct( $file = '', $version = '3.6.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -181,6 +181,21 @@ class CUWS {
 	}
 
 	/**
+	 * at some point Yoast SEO has introduced "Primary Category Feature"
+	 * This function removes this "feature"
+	 *
+	 * @since v3.6.0
+	 */
+	public function so_cuws_remove_primary_category_feature() {
+
+		if ( ! empty( $this->options['remove_primarycatfeat'] ) ) {
+
+			add_filter( 'wpseo_primary_term_taxonomies', '__return_empty_array' );
+
+		}
+	}
+
+	/**
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
 	 * @since    v2.0.0
@@ -213,12 +228,27 @@ class CUWS {
 
 		// hide upsell notice on social tab in Yoast Post/Page metabox
 		if ( ! empty( $this->options['hide_upsell_metabox_socialtab'] ) ) {
-			echo '.wpseo-metabox-tabs-div .yoast-notice-go-premium{display:none}'; // @since v3.2.0
+			echo '.notice.inline.yoast-notice.yoast-notice-go-premium{display:none}'; // @since v3.2.0; @modified v3.6.0
 		}
 
 		// hide premium upsell admin block
 		if ( ! empty( $this->options['hide_upsell_admin_block'] ) ) {
 			echo '.yoast_premium_upsell_admin_block{display:none}'; // @since v3.1.0
+		}
+
+		// hide red star "Go Premium" submenu - @v3.6.0 REDUNDANT
+		//if ( ! empty( $this->options['hide_gopremium_star'] ) ) {
+			//echo '#adminmenu .wpseo-premium-indicator,.wpseo-metabox-buy-premium,#wp-admin-bar-wpseo-licenses{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
+		//}
+
+		// hide "Premium" submenu in its entirety
+		if ( ! empty( $this->options['hide_premium_submenu'] ) ) {
+			echo 'li#toplevel_page_wpseo_dashboard>ul>li:nth-child(7){display:none;}'; // @since v3.6.0 hide "Premium" submenu in its entirety
+		}
+
+		// hide "Go Premium" metabox on edit Post?page screens
+		if ( ! empty( $this->options['hide_premium_metabox'] ) ) {
+			echo '.wpseo-metabox-buy-premium{display:none;}'; // @since v3.6.0 hide "Go Premium" metabox on Edit Post/Page screens
 		}
 
 		// Problems/Notification boxes
@@ -246,9 +276,9 @@ class CUWS {
 			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .update-plugins .plugin-count,#adminmenu .update-plugins{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar; @modified v3.2.1 to remove orange background that shows again
 		}
 
-		// hide red star "Go Premium" submenu
-		if ( ! empty( $this->options['hide_gopremium_star'] ) ) {
-			echo '#adminmenu .wpseo-premium-indicator,.wpseo-metabox-buy-premium,#wp-admin-bar-wpseo-licenses{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
+		// hide Configuration Wizard on every screen in the Yoast admin
+		if ( ! empty( $this->options['hide_config_wizard'] ) ) {
+			echo '.yoast-alerts .yoast-container__configuration-wizard{display:none;}'; // @since v3.6.0 hide Configuration Wizard
 		}
 
 		// content analysis
@@ -305,11 +335,16 @@ class CUWS {
 		// help center
 		if ( ! empty( $this->options['hide_helpcenter'] ) ) {
 			if ( in_array( 'ad', $this->options['hide_helpcenter'] ) ) {
-				echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text,#tab-link-dashboard_dashboard__contact-support,#tab-link-dashboard_general__contact-support,#tab-link-dashboard_features__contact-support,#tab-link-dashboard_knowledge-graph__contact-support,#tab-link-dashboard_webmaster-tools__contact-support,#tab-link-dashboard_security__contact-support,#tab-link-metabox_metabox__contact-support,li#react-tabs-4,.iimhyI{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely; @modified v2.5.5 hide email support/ad as it is a premium only feature; @modified v2.6.0 different tabs gave different classes; @modified v3.3.0 due to Yoast 5.6 update this has all changed
+				echo '.wpseo-tab-video__panel.wpseo-tab-video__panel--text,#tab-link-dashboard_dashboard__contact-support,#tab-link-dashboard_general__contact-support,#tab-link-dashboard_features__contact-support,#tab-link-dashboard_knowledge-graph__contact-support,#tab-link-dashboard_webmaster-tools__contact-support,#tab-link-dashboard_security__contact-support,#tab-link-metabox_metabox__contact-support,li#react-tabs-4,.iimhyI,.yoast-video-tutorial__description.VideoTutorial__VideoDescription-dyZXgd.hQZgaX{display:none;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely; @modified v2.5.5 hide email support/ad as it is a premium only feature; @modified v2.6.0 different tabs gave different classes; @modified v3.3.0 due to Yoast 5.6 update this has all changed; @modified v3.6.0 due to more changes
 			}
 			if ( in_array( 'helpcenter', $this->options['hide_helpcenter'] ) ) {
 				echo '.yoast-help-center__button{display:none !important;}'; // @since v2.2.0 hide help center ad for premium version or help center entirely; @modified v3.3.0 due to Yoast 5.6 update this has all changed
 			}
+		}
+
+		// seo settings profile page
+		if ( ! empty( $this->options['hide_seo_settings_profile_page'] ) ) {
+			echo '.profile-php .yoast.yoast-settings{display:none;}'; // @since v3.6.0
 		}
 
 		echo '</style>';
@@ -351,7 +386,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.5.0' ) {
+	public static function instance( $file = '', $version = '3.6.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -414,6 +449,8 @@ class CUWS {
 			'hide_upsell_notice'                    => 'on',
 			'hide_upsell_metabox_socialtab'			=> 'on',
 			'hide_upsell_admin_block'				=> 'on',
+			'hide_premium_submenu'                  => 'on',
+			'hide_premium_metabox'					=> 'on',
 			'hide_dashboard_problems_notifications' => array(
 				'problems',
 				'notifications'
@@ -423,7 +460,6 @@ class CUWS {
 			'hide_trafficlight'                     => 'on',
 			'hide_wpseoanalysis'                    => 'on',
 			'hide_issue_counter'                    => 'on',
-			'hide_gopremium_star'                   => 'on',
 			'hide_content_keyword_score'            => array(
 				'keyword_score',
 				'content_score'
@@ -437,6 +473,8 @@ class CUWS {
 				'title',
 				'metadescr'
 			),
+			'hide_seo_settings_profile_page'		=> 'on',
+			'remove_primarycatfeat'					=> 'on',
 			'remove_dbwidget'                       => 'on',
 			'remove_adminbar'                       => 'on',
 		);

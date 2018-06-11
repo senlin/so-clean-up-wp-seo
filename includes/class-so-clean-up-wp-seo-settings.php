@@ -230,6 +230,20 @@ class CUWS_Settings {
 					'default'     => $options['hide_upsell_admin_block'],
 				),
 				array(
+					'id'          => 'hide_premium_submenu',
+					'label'       => __( 'Premium submenu', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hides the "Premium" submenu in its entirety.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_premium_submenu'],
+				),
+				array(
+					'id'          => 'hide_premium_metabox',
+					'label'       => __( 'Go Premium metabox', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hides "Go Premium" metabox in edit Post/Page screens.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_premium_metabox'],
+				),
+				array(
 					'id'          => 'hide_dashboard_problems_notifications',
 					'label'       => __( 'Problems/Notifications', 'so-clean-up-wp-seo' ),
 					'description' => '<br>' . __( 'Hide Problems/Notifications boxes from Yoast Dashboard.', 'so-clean-up-wp-seo' ),
@@ -269,13 +283,6 @@ class CUWS_Settings {
 					'default'     => $options['hide_issue_counter'],
 				),
 				array(
-					'id'          => 'hide_gopremium_star',
-					'label'       => __( 'Go Premium', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hides red star of "Go Premium" submenu as well as of metabox in edit Post/Page screens.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_gopremium_star'],
-				),
-				array(
 					'id'          => 'hide_content_keyword_score',
 					'label'       => __( 'Content (Readability) / Keyword (SEO) Score', 'so-clean-up-wp-seo' ),
 					'description' => '<br>' . __( 'Hide Content (Readability)/Keyword (SEO) Score in publish/update box on edit Post/Page.', 'so-clean-up-wp-seo' ),
@@ -310,6 +317,20 @@ class CUWS_Settings {
 						'focuskw'     => __( 'Hide focus keyword column', 'so-clean-up-wp-seo' ),
 					),
 					'default'     => $options['hide_admincolumns'],
+				),
+				array(
+					'id'          => 'hide_seo_settings_profile_page',
+					'label'       => __( 'Profile page', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide SEO Settings on individual profile page.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_seo_settings_profile_page'],
+				),
+				array(
+					'id'          => 'remove_primarycatfeat',
+					'label'       => __( 'Primary category', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove primary category feature.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['remove_primarycatfeat'],
 				),
 				array(
 					'id'          => 'remove_adminbar',
@@ -466,19 +487,19 @@ class CUWS_Settings {
 		$html .= '<div class="inside">' . "\n";
 		$html .= '<div class="top">' . "\n";
 
-		$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Piet Bos" width="80" height="80" />' . "\n";
+		$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Pieter Bos" width="80" height="80" />' . "\n";
 
 		$sowpurl = 'https://so-wp.com';
-		$html    .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP">SO WP</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
+		$html    .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Pieter Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP">SO WP</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
 
 		$html .= '</div>' . "\n"; // end .top
 
 		$html .= '<ul>' . "\n";
-		$html .= '<li><a href="https://bohanintl.com/" target="_blank" title="BHI Consulting for Websites">' . esc_attr( __( 'BHI Consulting for Websites', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+		$html .= '<li><a href="https://bohanintl.com" target="_blank" title="BHI Consulting for Websites">' . esc_attr( __( 'BHI Consulting for Websites', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://www.linkedin.com/in/pieterbos83" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://so-wp.com" target="_blank" title="SO WP">' . esc_attr( __( 'SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-		$html .= '<li><a href="https://bohanintl.com/wptips" title="Useful WordPress Tips for people who like to DIY">' . esc_attr( __( 'WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+		$html .= '<li><a href="https://bohanintl.com/wptips/" title="Useful WordPress Tips for people who like to DIY">' . esc_attr( __( 'WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '</ul>' . "\n";
 
