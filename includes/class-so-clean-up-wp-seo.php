@@ -337,6 +337,11 @@ class CUWS {
 			}
 		}
 
+		// seo settings profile page
+		if ( ! empty( $this->options['hide_seo_settings_profile_page'] ) ) {
+			echo '.profile-php .yoast.yoast-settings{display:none;}'; // @since v3.6.0
+		}
+
 		echo '</style>';
 	}
 
@@ -462,6 +467,7 @@ class CUWS {
 				'title',
 				'metadescr'
 			),
+			'hide_seo_settings_profile_page'		=> 'on',
 			'remove_primarycatfeat'					=> 'on',
 			'remove_dbwidget'                       => 'on',
 			'remove_adminbar'                       => 'on',

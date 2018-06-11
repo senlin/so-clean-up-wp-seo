@@ -312,6 +312,13 @@ class CUWS_Settings {
 					'default'     => $options['hide_admincolumns'],
 				),
 				array(
+					'id'          => 'hide_seo_settings_profile_page',
+					'label'       => __( 'Profile page', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide SEO Settings on individual profile page.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_seo_settings_profile_page'],
+				),
+				array(
 					'id'          => 'remove_primarycatfeat',
 					'label'       => __( 'Primary category', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Remove primary category feature.', 'so-clean-up-wp-seo' ),
