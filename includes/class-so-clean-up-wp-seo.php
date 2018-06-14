@@ -236,17 +236,12 @@ class CUWS {
 			echo '.yoast_premium_upsell_admin_block{display:none}'; // @since v3.1.0
 		}
 
-		// hide red star "Go Premium" submenu - @v3.6.0 REDUNDANT
-		//if ( ! empty( $this->options['hide_gopremium_star'] ) ) {
-			//echo '#adminmenu .wpseo-premium-indicator,.wpseo-metabox-buy-premium,#wp-admin-bar-wpseo-licenses{display:none;}'; // @since v2.5.0 hide star of "Go Premium" submenu
-		//}
-
 		// hide "Premium" submenu in its entirety
 		if ( ! empty( $this->options['hide_premium_submenu'] ) ) {
 			echo 'li#toplevel_page_wpseo_dashboard>ul>li:nth-child(7){display:none;}'; // @since v3.6.0 hide "Premium" submenu in its entirety
 		}
 
-		// hide "Go Premium" metabox on edit Post?page screens
+		// hide "Go Premium" metabox on edit Post/Page screens
 		if ( ! empty( $this->options['hide_premium_metabox'] ) ) {
 			echo '.wpseo-metabox-buy-premium{display:none;}'; // @since v3.6.0 hide "Go Premium" metabox on Edit Post/Page screens
 		}
