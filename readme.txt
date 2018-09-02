@@ -3,8 +3,8 @@ Contributors: senlin, afragen
 Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
-Tested up to: 4.9.6
-Stable tag: 3.6.0
+Tested up to: 4.9.8
+Stable tag: 3.7.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -16,7 +16,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
-Since version 3.0.0 we have _simplified_ the settings page. The radio buttons with all/none choices are replaced with checkboxes for everything. Ticking the box means hiding (or removing) that particular "feature".
+The Settings page of the plugin shows checkboxes for everything. Ticking the box means hiding (or removing) that particular "feature".
 
 It is a good idea to have a look at the Settings page if only to see what you can fine-tune. The link to the page has been added to the Yoast SEO menu and of course there is also a link to it from the Plugins page.
 
@@ -33,11 +33,8 @@ The **Default Settings** of the current release are as follows:
 * hide Problems box from Yoast SEO Dashboard
 * hide Notifications box from Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
-* hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
-* hide content analysis that adds colored balls to the edit Post/Page screens as well as Readability tab that contains the analysis
+* hide check Configuration wizard box that shows on top of most admin screens
 * hide issue counter from adminbar and sidebar
-* hide Keyword (SEO) Score
-* hide Content (Readability) Score
 * hide ad for premium version in help center
 * hide the SEO Score, Readability, Title and Meta Description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score and Readability admin columns on taxonomies
@@ -97,6 +94,14 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.7.0 =
+
+* release date September 2, 2018
+* add option to hide the check Configuration wizard box that shows on top of most admin screens
+* removed option to hide Post/Page content analysis incl. content/keyword score, because it can now be turned off in the Features tab of the General Settings of Yoast SEO
+* removed option to hide "add keyword box" (which is an ad for Premium), because it can now be turned off from within Yoast SEO Features tab
+* make flow of Setting page a little more clear
 
 = 3.6.0 =
 
@@ -378,6 +383,10 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 * Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php)
 
 == Upgrade Notice ==
+
+= 3.7.0 =
+
+* new option that hides "check configuration wizard"-box has been added, check settings of Hide SEO Bloat if you like it hidden
 
 = 2.6.0 =
 

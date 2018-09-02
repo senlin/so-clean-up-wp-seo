@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on June 11, 2018
-###### Development version 3.6.0
+###### Last updated on September 2, 2018
+###### Development version 3.7.0
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 4.9.6
+###### tested up to WordPress 4.9.8
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -13,11 +13,11 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress 
 
 ## Description
 
-Almost anyone who uses the Yoast SEO plugin will agree that it is a great SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
+Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
-Since version 3.0.0 we have _simplified_ the settings page. The radio buttons with all/none choices are replaced with checkboxes for everything. Ticking the box means hiding (or removing) that particular "feature".
+The Settings page of the plugin shows checkboxes for everything. Ticking the box means hiding (or removing) that particular "feature".
 
 It is a good idea to have a look at the Settings page if only to see what you can fine-tune. The link to the page has been added to the Yoast SEO menu and of course there is also a link to it from the Plugins page.
 
@@ -39,11 +39,8 @@ The default settings of the current release are as follows:
 * hide Problems box from Yoast SEO Dashboard
 * hide Notifications box from Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
-* hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version
-* hide content analysis that adds colored balls to the edit Post/Page screens as well as Readability tab that contains the analysis
+* hide check Configuration wizard box that shows on top of most admin screens
 * hide issue counter from adminbar and sidebar
-* hide Keyword (SEO) Score 
-* hide Content (Readability) Score
 * hide ad for premium version in help center
 * hide the SEO Score, Readability, Title and Meta Description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hide the SEO Score and Readability admin columns on taxonomies
@@ -115,6 +112,14 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.7.0
+
+* release date September 2, 2018
+* add option to hide the check Configuration wizard box that shows on top of most admin screens
+* removed option to hide Post/Page content analysis incl. content/keyword score, because it can now be turned off in the Features tab of the General Settings of Yoast SEO
+* removed option to hide "add keyword box" (which is an ad for Premium), because it can now be turned off from within Yoast SEO Features tab
+* make flow of Setting page a little more clear
 
 ### 3.6.0
 

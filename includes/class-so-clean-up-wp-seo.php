@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.6.0' ) {
+	public function __construct( $file = '', $version = '3.7.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -261,10 +261,7 @@ class CUWS {
 			echo '#yst_opengraph_image_warning{display:none;}#postimagediv.postbox{border:1px solid #e5e5e5!important;}'; // @since v1.7.0 hide yst opengraph image warning nag
 		}
 
-		// add keyword button
-		if ( ! empty( $this->options['hide_addkw_button'] ) ) {
-			echo '.wpseo-tab-add-keyword,.wpseo-add-keyword.button{display:none;}ul.wpseo-metabox-tabs li .wpseo-keyword{max-width:10rem;}'; // @since v1.7.3 hide add-keyword-button in UI which only serves ad in overlay; @modified v2.6.0 give text in remaining tab more space
-		}
+		// @since 3.7.0 add-keyword-button cannot be altered anymore from within our plugin remove setting
 
 		// hide issue counter
 		if ( ! empty( $this->options['hide_issue_counter'] ) ) {
@@ -276,20 +273,7 @@ class CUWS {
 			echo '.yoast-alerts .yoast-container__configuration-wizard{display:none;}'; // @since v3.6.0 hide Configuration Wizard
 		}
 
-		// content analysis
-		if ( ! empty( $this->options['hide_wpseoanalysis'] ) ) {
-			echo '.wpseo-meta-section.active .wpseo-metabox-tabs .wpseo_generic_tab,#pageanalysis,.wpseoanalysis{display:none;}.wpseo-score-icon{display:none!important;}'; // @since v2.0.0 hide_wpseoanalysis; @modified v2.3.0 to remove the colored ball from the metabox tab too; @modified v2.5.4 to remove the content analysis too from the post/page metabox; @since v2.5.4 remove Readability tab from metabox as it only contains the content analysis.
-		}
-
-		// keyword/content score
-		if ( ! empty( $this->options['hide_content_keyword_score'] ) ) {
-			if ( in_array( 'keyword_score', $this->options['hide_content_keyword_score'] ) ) {
-				echo '.yoast-seo-score.keyword-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
-			}
-			if ( in_array( 'content_score', $this->options['hide_content_keyword_score'] ) ) {
-				echo '.yoast-seo-score.content-score{display:none;}'; // @since v2.3.0 hide both Keyword and Content Score from edit Post/Page screens
-			}
-		}
+		// content analysis incl. keyword/content score can be turned off in the Features tab of the General Settings of Yoast SEO and has therefore become redundant in this plugin.
 
 		/*
 		 * admin columns
@@ -381,7 +365,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.6.0' ) {
+	public static function instance( $file = '', $version = '3.7.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -450,15 +434,9 @@ class CUWS {
 				'problems',
 				'notifications'
 			),
+			'hide_config_wizard'					=> 'on',
 			'hide_imgwarning_nag'                   => 'on',
-			'hide_addkw_button'                     => 'on',
-			'hide_trafficlight'                     => 'on',
-			'hide_wpseoanalysis'                    => 'on',
 			'hide_issue_counter'                    => 'on',
-			'hide_content_keyword_score'            => array(
-				'keyword_score',
-				'content_score'
-			),
 			'hide_helpcenter'                       => array(
 				'ad'
 			),
