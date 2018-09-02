@@ -100,7 +100,6 @@ class CUWS_Settings {
 		$options_list  = array_keys( $cuws->get_defaults() );
 		$multi_options = array(
 			'hide_admincolumns',
-			'hide_content_keyword_score',
 			'hide_dashboard_problems_notifications',
 			'hide_helpcenter',
 		);
@@ -196,24 +195,35 @@ class CUWS_Settings {
 				),
 				array(
 					'id'          => 'hide_tagline_nag',
-					'label'       => __( 'Tagline nag', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Tagline nag that shows a "Problem" in the Dashboard.', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'General > Dashboard tab > Problems box > <b>Tagline nag</b>', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide Tagline nag that shows in the Problem Box of the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_tagline_nag'],
 				),
 				array(
 					'id'          => 'hide_robots_nag',
-					'label'       => __( 'Robots nag', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide robots nag that shows a "Problem" in the Dashboard.', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'General > Dashboard tab > Problems box > <b>Robots nag</b>', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide robots nag that shows as a "Huge SEO issue" in the Problem Box of the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_robots_nag'],
 				),
 				array(
 					'id'          => 'hide_upsell_notice',
-					'label'       => __( 'Upsell Notice', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide the Upsell Notice in the Notifications box that shows in the Yoast SEO Dashboard.', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'General > Dashboard tab > Notifications box > <b>Upsell Notice</b>', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Upsell Notice in the Notifications box that shows in the Notifications Box of the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_upsell_notice'],
+				),
+				array(
+					'id'          => 'hide_dashboard_problems_notifications',
+					'label'       => __( 'General > Dashboard tab > <b>Problems/Notifications boxes</b>', 'so-clean-up-wp-seo' ),
+					'description' => '<br>' . __( 'Hide entire Problems/Notifications boxes from the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox_multi',
+					'options'     => array(
+						'problems'      => __( 'Hide entire Problems box', 'so-clean-up-wp-seo' ),
+						'notifications' => __( 'Hide entire Notifications box', 'so-clean-up-wp-seo' ),
+					),
+					'default'     => $options['hide_dashboard_problems_notifications'],
 				),
 				array(
 					'id'          => 'hide_upsell_metabox_socialtab',
@@ -244,15 +254,11 @@ class CUWS_Settings {
 					'default'     => $options['hide_premium_metabox'],
 				),
 				array(
-					'id'          => 'hide_dashboard_problems_notifications',
-					'label'       => __( 'Problems/Notifications', 'so-clean-up-wp-seo' ),
-					'description' => '<br>' . __( 'Hide Problems/Notifications boxes from Yoast Dashboard.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox_multi',
-					'options'     => array(
-						'problems'      => __( 'Hide Problems box', 'so-clean-up-wp-seo' ),
-						'notifications' => __( 'Hide Notifications box', 'so-clean-up-wp-seo' ),
-					),
-					'default'     => $options['hide_dashboard_problems_notifications'],
+					'id'          => 'hide_config_wizard',
+					'label'       => __( 'Hide Configuration Wizard check', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Configuration Wizard check that shows at the top of almost all Yoast SEO Settings screens.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_config_wizard'],
 				),
 				array(
 					'id'          => 'hide_imgwarning_nag',
@@ -262,36 +268,11 @@ class CUWS_Settings {
 					'default'     => $options['hide_imgwarning_nag'],
 				),
 				array(
-					'id'          => 'hide_addkw_button',
-					'label'       => __( 'Add keyword button', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide add keyword button that shows in edit Post/Page and only serves to show an ad for the premium version.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_addkw_button'],
-				),
-				array(
-					'id'          => 'hide_wpseoanalysis',
-					'label'       => __( 'Content analysis', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide content analysis that adds colored balls to the edit Post/Page screens as well as Readability tab that contains the analysis.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_wpseoanalysis'],
-				),
-				array(
 					'id'          => 'hide_issue_counter',
 					'label'       => __( 'Issue Counter', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide issue counter from adminbar and sidebar.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_issue_counter'],
-				),
-				array(
-					'id'          => 'hide_content_keyword_score',
-					'label'       => __( 'Content (Readability) / Keyword (SEO) Score', 'so-clean-up-wp-seo' ),
-					'description' => '<br>' . __( 'Hide Content (Readability)/Keyword (SEO) Score in publish/update box on edit Post/Page.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox_multi',
-					'options'     => array(
-						'keyword_score' => __( 'Hide Keyword (SEO) Score', 'so-clean-up-wp-seo' ),
-						'content_score' => __( 'Hide Content (Readability) Score', 'so-clean-up-wp-seo' ),
-					),
-					'default'     => $options['hide_content_keyword_score'],
 				),
 				array(
 					'id'          => 'hide_helpcenter',
