@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.7.2
 Requires PHP: 5.6
 Tested up to: 4.9.8
-Stable tag: 3.7.0
+Stable tag: 3.8.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -31,6 +31,7 @@ The **Default Settings** of the current release are as follows:
 * hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
 * hides "Premium" submenu in its entirety
 * hides "Go Premium" metabox on edit Post/Page screens
+* **NEW:** hides Post/Page/Taxonomy Deletion Premium Ad
 * hide Problems box from Yoast SEO Dashboard
 * hide Notifications box from Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
@@ -95,6 +96,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.8.0 =
+
+* release date September 20, 2018
+* add option to hide the Premium ad that shows after a Post, Page or Taxonomy is deleted (see [issue #44](https://github.com/senlin/so-clean-up-wp-seo/issues/44))
 
 = 3.7.0 =
 
@@ -384,6 +390,10 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 * Initial plugin [code snippet](https://github.com/senlin/Code-Snippets/blob/0ae24e6fc069efe26e52007c05c7375012ee688a/Functions/Admin-Dashboard/remove-yoast-crap.php)
 
 == Upgrade Notice ==
+
+= 3.8.0 =
+
+* new option that hides Post/Page/Taxonomy Deletion Premium Ad has been added, check settings of Hide SEO Bloat if you like it hidden
 
 = 3.7.0 =
 

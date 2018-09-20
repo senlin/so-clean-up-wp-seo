@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.7.0' ) {
+	public function __construct( $file = '', $version = '3.8.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -266,8 +266,6 @@ class CUWS {
 			echo '#yst_opengraph_image_warning{display:none;}#postimagediv.postbox{border:1px solid #e5e5e5!important;}'; // @since v1.7.0 hide yst opengraph image warning nag
 		}
 
-		// @since 3.7.0 add-keyword-button cannot be altered anymore from within our plugin remove setting
-
 		// hide issue counter
 		if ( ! empty( $this->options['hide_issue_counter'] ) ) {
 			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .update-plugins .plugin-count,#adminmenu .update-plugins{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar; @modified v3.2.1 to remove orange background that shows again
@@ -277,8 +275,6 @@ class CUWS {
 		if ( ! empty( $this->options['hide_config_wizard'] ) ) {
 			echo '.yoast-alerts .yoast-container__configuration-wizard{display:none;}'; // @since v3.6.0 hide Configuration Wizard
 		}
-
-		// content analysis incl. keyword/content score can be turned off in the Features tab of the General Settings of Yoast SEO and has therefore become redundant in this plugin.
 
 		/*
 		 * admin columns
@@ -370,7 +366,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.7.0' ) {
+	public static function instance( $file = '', $version = '3.8.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -435,7 +431,7 @@ class CUWS {
 			'hide_upsell_admin_block'				=> 'on',
 			'hide_premium_submenu'                  => 'on',
 			'hide_premium_metabox'					=> 'on',
-			'hide_post_deletion_premium_ad'			=> 'on';
+			'hide_post_deletion_premium_ad'			=> 'on',
 			'hide_dashboard_problems_notifications' => array(
 				'problems',
 				'notifications'
