@@ -254,6 +254,13 @@ class CUWS_Settings {
 					'default'     => $options['hide_premium_metabox'],
 				),
 				array(
+					'id'          => 'hide_post_deletion_premium_ad',
+					'label'       => __( 'Post/Page/Taxonomy Deletion Premium Ad', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hides Post Deletion Premium Ad in edit Post/Page/Taxonomy screens.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_post_deletion_premium_ad'],
+				),
+				array(
 					'id'          => 'hide_config_wizard',
 					'label'       => __( 'Hide Configuration Wizard check', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the Configuration Wizard check that shows at the top of almost all Yoast SEO Settings screens.', 'so-clean-up-wp-seo' ),
