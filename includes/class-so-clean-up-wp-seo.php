@@ -246,6 +246,11 @@ class CUWS {
 			echo '.wpseo-metabox-buy-premium{display:none;}'; // @since v3.6.0 hide "Go Premium" metabox on Edit Post/Page screens
 		}
 
+		// hide Post/Page/Taxonomy Deletion Premium Ad
+		if ( ! empty( $this->options['hide_post_deletion_premium_ad'] ) ) {
+			echo 'body.edit-php .yoast-alert.notice.notice-warning,body.edit-tags-php .yoast-alert.notice.notice-warning{display:none;}'; // @since v3.8.0
+		}
+
 		// Problems/Notification boxes
 		if ( ! empty( $this->options['hide_dashboard_problems_notifications'] ) ) {
 			if ( in_array( 'problems', $this->options['hide_dashboard_problems_notifications'] ) ) {
@@ -430,6 +435,7 @@ class CUWS {
 			'hide_upsell_admin_block'				=> 'on',
 			'hide_premium_submenu'                  => 'on',
 			'hide_premium_metabox'					=> 'on',
+			'hide_post_deletion_premium_ad'			=> 'on';
 			'hide_dashboard_problems_notifications' => array(
 				'problems',
 				'notifications'
