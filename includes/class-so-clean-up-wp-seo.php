@@ -465,6 +465,7 @@ class CUWS {
 	 * Add new default options if missing from saved options.
 	 *
 	 * @return array $options Plugin options.
+	 * @since 3.8.1
 	 */
 	private function _get_options() {
 		$options  = get_site_option( $this->_token . '_settings', array() );
