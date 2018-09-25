@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.7.2
 Requires PHP: 5.6
 Tested up to: 4.9.8
-Stable tag: 3.8.0
+Stable tag: 3.8.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -60,10 +60,6 @@ Alternatively you are welcome to make a [donation](https://so-wp.com/donations).
 
 The link to the page has been added to the Yoast SEO menu and of course there is also a link to it from the Plugins page.
 
-= I have updated the plugin and a new setting has been added, but I still can see that particular item. =
-
-That indeed can happen when we add a new setting. The plugin's settings then need to be re-saved. So all you need to do is go to the Settings page of the Hide SEO Bloat plugin and save them. Then all should be good.
-
 = Can I use Hide SEO Bloat on Multisite? =
 
 Yes, you can.
@@ -96,6 +92,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.8.1 =
+
+* release date September 25, 2018
+* refactor options to ensure that additional settings will have default values. Fixes [issue #44](https://github.com/senlin/so-clean-up-wp-seo/issues/44)
 
 = 3.8.0 =
 
