@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.8.1' ) {
+	public function __construct( $file = '', $version = '3.9.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -235,7 +235,7 @@ class CUWS {
 
 		// hide "Go Premium" metabox on edit Post/Page screens
 		if ( ! empty( $this->options['hide_premium_metabox'] ) ) {
-			echo '.wpseo-metabox-buy-premium{display:none;}'; // @since v3.6.0 hide "Go Premium" metabox on Edit Post/Page screens
+			echo '.wpseo-metabox-buy-premium,.AnalysisUpsell__Container-dJCCGN,.wpseo-metabox-root>div>div:last-child>.Collapsible__StyledContainerTopLevel-gViiFV:last-child{display:none;}'; // @since v3.6.0 hide "Go Premium" metabox on Edit Post/Page screens
 		}
 
 		// hide Post/Page/Taxonomy Deletion Premium Ad
@@ -261,6 +261,11 @@ class CUWS {
 		// hide issue counter
 		if ( ! empty( $this->options['hide_issue_counter'] ) ) {
 			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .update-plugins .plugin-count,#adminmenu .update-plugins{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar; @modified v3.2.1 to remove orange background that shows again
+		}
+
+		// hide new color features readability Post/Page metabox
+		if ( ! empty( $this->options['hide_readability_features'] ) ) {
+			echo 'progress,.yoast-svg-icon-seo-score-good,.yoast-svg-icon-seo-score-ok,.yoast-svg-icon-seo-score-bad,.yoast-svg-icon-seo-score-none{display:none!important;}'; //@since 3.9.0
 		}
 
 		// hide Configuration Wizard on every screen in the Yoast admin
@@ -358,7 +363,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.8.1' ) {
+	public static function instance( $file = '', $version = '3.9.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -431,6 +436,7 @@ class CUWS {
 			'hide_config_wizard'					=> 'on',
 			'hide_imgwarning_nag'                   => 'on',
 			'hide_issue_counter'                    => 'on',
+			'hide_readability_features'				=> 'on',
 			'hide_helpcenter'                       => array(
 				'ad'
 			),

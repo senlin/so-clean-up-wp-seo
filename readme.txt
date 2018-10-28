@@ -4,8 +4,8 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
 Requires PHP: 5.6
-Tested up to: 4.9.8
-Stable tag: 3.8.1
+Tested up to: 5.0
+Stable tag: 3.9.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -15,6 +15,8 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress b
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
+**Now also compatible with [ClassicPress 1.0.0](https://www.classicpress.net)**
+
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
 The Settings page of the plugin shows checkboxes for everything. Ticking the box means hiding (or removing) that particular "feature".
@@ -23,27 +25,28 @@ It is a good idea to have a look at the Settings page if only to see what you ca
 
 The **Default Settings** of the current release are as follows:
 
-* hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin
-* hide the tagline nag showing as a Problem in the Yoast SEO Dashboard
-* hide the robots nag showing as a Problem in the Yoast SEO Dashboard and in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
-* hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
-* hide the Upsell Notice in social tab of Yoast Post/Page metabox
-* hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
+* hides the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin
+* hides the tagline nag showing as a Problem in the Yoast SEO Dashboard
+* hides the robots nag showing as a Problem in the Yoast SEO Dashboard and in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
+* hides the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
+* hides the Upsell Notice in social tab of Yoast Post/Page metabox
+* hides the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
 * hides "Premium" submenu in its entirety
 * hides "Go Premium" metabox on edit Post/Page screens
-* **NEW:** hides Post/Page/Taxonomy Deletion Premium Ad
-* hide Problems box from Yoast SEO Dashboard
-* hide Notifications box from Yoast SEO Dashboard
-* hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
-* hide check Configuration wizard box that shows on top of most admin screens
-* hide issue counter from adminbar and sidebar
-* hide ad for premium version in help center
-* hide the SEO Score, Readability, Title and Meta Description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
-* hide the SEO Score and Readability admin columns on taxonomies
-* hide SEO Settings on individual profile page
-* remove primary category feature
-* remove the Yoast SEO admin bar menu
-* remove the Yoast SEO widget from the WordPress Dashboard
+* hides Post/Page/Taxonomy Deletion Premium Ad
+* hides Problems box from Yoast SEO Dashboard
+* hides Notifications box from Yoast SEO Dashboard
+* hides image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
+* hides check Configuration wizard box that shows on top of most admin screens
+* hides issue counter from adminbar and sidebar
+* **NEW:** hides new readability "features" of Post/Page metabox
+* hides ad for premium version in help center
+* hides the SEO Score, Readability, Title and Meta Description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
+* hides the SEO Score and Readability admin columns on taxonomies
+* hides SEO Settings on individual profile page
+* removes primary category feature
+* removes the Yoast SEO admin bar menu
+* removes the Yoast SEO widget from the WordPress Dashboard
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -92,6 +95,13 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.9.0 =
+
+* release date October 28, 2018
+* hide new readability "features" of Post/Page metabox incl. "Add related keyphrase" menu as it is nothing more than an ad for premium version
+* update hide Go Premium rules
+* compatible with ClassicPress 1.0.0
 
 = 3.8.1 =
 
