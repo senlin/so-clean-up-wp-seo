@@ -1,5 +1,5 @@
 ---
-name: ''
+name: template.md
 about: Template to be used to file bug reports as well as feature requests
 
 ---
