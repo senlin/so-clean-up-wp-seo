@@ -282,6 +282,13 @@ class CUWS_Settings {
 					'default'     => $options['hide_issue_counter'],
 				),
 				array(
+					'id'          => 'hide_readability_features',
+					'label'       => __( 'Readability "Features"', 'so-clean-up-wp-seo' ),
+					'description' => __( 'The Readability metabox on Posts/Pages has received some new "features" with growing color bars that indicate the "correct length" of titles and descriptions; this option hides these "features".', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_readability_features'],
+				),
+				array(
 					'id'          => 'hide_helpcenter',
 					'label'       => __( 'Help center', 'so-clean-up-wp-seo' ),
 					'description' => '<br>' . __( 'The Yoast SEO plugin comes with a help center (since Yoast SEO 3.2) that shows introduction videos and (of course) ads for the premium version of the plugin and now (since Yoast SEO 5.6) also a paid-for course; select here what to hide (if anything).', 'so-clean-up-wp-seo' ),
