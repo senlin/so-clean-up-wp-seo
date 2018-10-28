@@ -1,5 +1,5 @@
 ---
-name: ''
+name: bug-reports
 about: Template to be used to file bug reports as well as feature requests
 
 ---
