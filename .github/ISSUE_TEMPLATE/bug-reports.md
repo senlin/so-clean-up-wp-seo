@@ -1,6 +1,6 @@
 ---
 name: bug-reports
-about: Template to be used to file bug reports as well as feature requests
+about: Template to be used to file bug reports
 
 ---
 
@@ -13,15 +13,11 @@ We welcome issues and pull requests for bugs and improvements.
 ## Expected behavior
 <!--
 If you're describing a bug, tell us what should happen.
-
-If you're suggesting a change/improvement, tell us how it should work.
 -->
 
 ## Current behavior
 <!--
 If you're describing a bug, tell us what happens instead of the expected behavior.
-
-If suggesting a change/improvement, explain the difference from current behavior.
 -->
 
 ## Possible solution
