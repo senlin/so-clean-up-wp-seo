@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on September 25, 2018
-###### Development version 3.8.1
+###### Last updated on October 28, 2018
+###### Development version 3.9.0
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 4.9.8
+###### tested up to WordPress 5.0
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -14,6 +14,8 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress 
 ## Description
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
+
+**Now also compatible with [ClassicPress 1.0.0](https://www.classicpress.net)**
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -109,6 +111,13 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.9.0
+
+* release date October 28, 2018
+* hide new readability "features" of Post/Page metabox incl. "Add related keyphrase" menu as it is nothing more than an ad for premium version
+* update hide Go Premium rules
+* compatible with ClassicPress 1.0.0
 
 ### 3.8.1
 
