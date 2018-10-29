@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.9.0' ) {
+	public function __construct( $file = '', $version = '3.9.1' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -235,7 +235,7 @@ class CUWS {
 
 		// hide "Go Premium" metabox on edit Post/Page screens
 		if ( ! empty( $this->options['hide_premium_metabox'] ) ) {
-			echo '.wpseo-metabox-buy-premium,.AnalysisUpsell__Container-dJCCGN,.wpseo-metabox-root>div>div:last-child>.Collapsible__StyledContainerTopLevel-gViiFV:last-child{display:none;}'; // @since v3.6.0 hide "Go Premium" metabox on Edit Post/Page screens
+			echo '.wpseo-metabox-buy-premium,.AnalysisUpsell__Container-dJCCGN,.wpseo-metabox-root>div:last-child>div:last-child{display:none!important;}'; // @since v3.6.0 hide "Go Premium" metabox on Edit Post/Page screens
 		}
 
 		// hide Post/Page/Taxonomy Deletion Premium Ad
@@ -363,7 +363,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.9.0' ) {
+	public static function instance( $file = '', $version = '3.9.1' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
