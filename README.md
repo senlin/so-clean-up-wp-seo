@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on October 28, 2018
-###### Development version 3.9.0
+###### Last updated on October 29, 2018
+###### Development version 3.9.1
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 5.0
 ###### Author: [Pieter Bos](https://github.com/senlin)
@@ -111,6 +111,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.9.1
+
+* release date October 29, 2018
+* fix hiding "Add related keyphrase" in metabox as it only serves as an add for premium version
 
 ### 3.9.0
 
