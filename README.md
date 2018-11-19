@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on October 29, 2018
-###### Development version 3.9.1
+###### Last updated on November 19, 2018
+###### Development version 3.9.2
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 5.0
 ###### Author: [Pieter Bos](https://github.com/senlin)
@@ -38,7 +38,7 @@ The default settings of the current release are as follows:
 * hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
 * hides "Premium" submenu in its entirety
 * hides "Go Premium" metabox on edit Post/Page screens
-* **NEW:** hides Post/Page/Taxonomy Deletion Premium Ad
+* hides Post/Page/Taxonomy Deletion Premium Ad
 * hide Problems box from Yoast SEO Dashboard
 * hide Notifications box from Yoast SEO Dashboard
 * hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
@@ -111,6 +111,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.9.2
+
+* release date November 19, 2018
+* fix issue where Go Premium metabox option makes snippet preview box blank (https://wordpress.org/support/topic/go-premium-metabox-option-makes-snippet-preview-box-blank/); thanks for reporting @pxlar8
 
 ### 3.9.1
 

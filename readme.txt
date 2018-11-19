@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.7.2
 Requires PHP: 5.6
 Tested up to: 5.0
-Stable tag: 3.9.1
+Stable tag: 3.9.2
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -39,7 +39,7 @@ The **Default Settings** of the current release are as follows:
 * hides image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
 * hides check Configuration wizard box that shows on top of most admin screens
 * hides issue counter from adminbar and sidebar
-* **NEW:** hides new readability "features" of Post/Page metabox
+* hides new readability "features" of Post/Page metabox
 * hides ad for premium version in help center
 * hides the SEO Score, Readability, Title and Meta Description admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
 * hides the SEO Score and Readability admin columns on taxonomies
@@ -96,10 +96,15 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Changelog ==
 
+= 3.9.2 =
+
+* release date November 19, 2018
+* fix issue where Go Premium metabox option makes snippet preview box blank (https://wordpress.org/support/topic/go-premium-metabox-option-makes-snippet-preview-box-blank/); thanks for reporting @pxlar8
+
 = 3.9.1 =
 
 * release date October 29, 2018
-* fix hiding "Add related keyphrase" in metabox as it only serves as an add for premium version
+* fix hiding "Add related keyphrase" in metabox as it only serves as an ad for premium version
 
 = 3.9.0 =
 
