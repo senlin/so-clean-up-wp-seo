@@ -183,7 +183,7 @@ class CUWS {
 
 		if ( ! empty( $this->options['remove_courses'] ) ) {
 
-            remove_submenu_page( 'admin.php?page=wpseo_dashboard', 'admin.php?page=wpseo_courses' );
+			remove_submenu_page( 'admin.php?page=wpseo_dashboard', 'admin.php?page=wpseo_courses' );
 
 		}
 	}
@@ -466,7 +466,7 @@ class CUWS {
 			'remove_primarycatfeat'					=> 'on',
 			'remove_dbwidget'                       => 'on',
 			'remove_adminbar'                       => 'on',
-            'remove_courses'                        => 'on',
+			'remove_courses'                        => 'on',
 		);
 
 		return $defaults;
