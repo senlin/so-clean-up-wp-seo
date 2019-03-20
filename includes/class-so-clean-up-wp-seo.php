@@ -126,7 +126,7 @@ class CUWS {
 		// @since 2.0.0
 		add_action( 'admin_head', array( $this, 'so_cuws_hide_visibility_css' ) );
 		// @since 2.x.x
-        add_action( 'admin_menu', array( $this, 'so_cuws_remove_menu_item'), 999 );
+		add_action( 'admin_menu', array( $this, 'so_cuws_remove_menu_item'), 999 );
 
 		// Load API for generic admin functions
 		if ( is_admin() ) {
