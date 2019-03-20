@@ -125,7 +125,8 @@ class CUWS {
 		add_action( 'wp_dashboard_setup', array( $this, 'so_cuws_remove_dashboard_widget' ) );
 		// @since 2.0.0
 		add_action( 'admin_head', array( $this, 'so_cuws_hide_visibility_css' ) );
-
+		// @since 2.x.x
+        add_action( 'admin_menu', array( $this, 'so_cuws_remove_menu_item'), 999 );
 
 		// Load API for generic admin functions
 		if ( is_admin() ) {
@@ -168,6 +169,21 @@ class CUWS {
 		if ( ! empty( $this->options['remove_dbwidget'] ) ) {
 
 			remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'side' );
+
+		}
+	}
+
+	/**
+	 * Version 9.5 of Yoast SEO introduced a menu item
+	 * This function removes this menu item
+	 *
+	 * @since v2.x.x
+	 */
+	public function so_cuws_remove_menu_item() {
+
+		if ( ! empty( $this->options['remove_courses'] ) ) {
+
+            remove_submenu_page( 'admin.php?page=wpseo_dashboard', 'admin.php?page=wpseo_courses' );
 
 		}
 	}
@@ -450,6 +466,7 @@ class CUWS {
 			'remove_primarycatfeat'					=> 'on',
 			'remove_dbwidget'                       => 'on',
 			'remove_adminbar'                       => 'on',
+            'remove_courses'                        => 'on',
 		);
 
 		return $defaults;
