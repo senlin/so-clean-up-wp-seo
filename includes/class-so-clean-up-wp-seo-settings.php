@@ -341,6 +341,13 @@ class CUWS_Settings {
 					'type'        => 'checkbox',
 					'default'     => $options['remove_dbwidget'],
 				),
+				array(
+					'id'          => 'remove_courses',
+					'label'       => __( 'Courses', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove Yoast courses from the menu.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['remove_courses'],
+				),
 			),
 		);
 
