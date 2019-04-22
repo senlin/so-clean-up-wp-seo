@@ -4,8 +4,8 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
 Requires PHP: 5.6
-Tested up to: 5.0
-Stable tag: 3.9.2
+Tested up to: 5.1.1
+Stable tag: 3.10.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -15,7 +15,11 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress b
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
-**Now also compatible with [ClassicPress 1.0.0](https://www.classicpress.net)**
+**New in this version:**
+
+* remove Courses menu from sidebar
+* hide SEO Scores Dropdown Filters on the Edit Posts/Pages screen
+* hide Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -47,6 +51,9 @@ The **Default Settings** of the current release are as follows:
 * removes primary category feature
 * removes the Yoast SEO admin bar menu
 * removes the Yoast SEO widget from the WordPress Dashboard
+* removes Courses menu from sidebar
+* hides SEO Scores Dropdown Filters on the Edit Posts/Pages screen
+* hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -95,6 +102,12 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.10.0 =
+* release date April 22, 2019
+* add function that removes course sub menu, addresses [issue #54](https://github.com/senlin/so-clean-up-wp-seo/issues/54); thanks [Igor](https://github.com/artifex404)
+* hide SEO Scores dropdown filters as well as Readability Scores filter dropdown from edit Posts/Pages/CPTs; address [issue #43](https://github.com/senlin/so-clean-up-wp-seo/issues/43)
+* hide content/keyword score from Publish/Update Metabox on Edit Post/Page/CPT screen
 
 = 3.9.2 =
 

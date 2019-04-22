@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.9.2' ) {
+	public function __construct( $file = '', $version = '3.10.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -125,7 +125,7 @@ class CUWS {
 		add_action( 'wp_dashboard_setup', array( $this, 'so_cuws_remove_dashboard_widget' ) );
 		// @since 2.0.0
 		add_action( 'admin_head', array( $this, 'so_cuws_hide_visibility_css' ) );
-		// @since 2.x.x
+		// @since 3.10.0
 		add_action( 'admin_menu', array( $this, 'so_cuws_remove_menu_item'), 999 );
 
 		// Load API for generic admin functions
@@ -174,21 +174,6 @@ class CUWS {
 	}
 
 	/**
-	 * Version 9.5 of Yoast SEO introduced a menu item
-	 * This function removes this menu item
-	 *
-	 * @since v2.x.x
-	 */
-	public function so_cuws_remove_menu_item() {
-
-		if ( ! empty( $this->options['remove_courses'] ) ) {
-
-			remove_submenu_page( 'admin.php?page=wpseo_dashboard', 'admin.php?page=wpseo_courses' );
-
-		}
-	}
-
-	/**
 	 * at some point Yoast SEO has introduced "Primary Category Feature"
 	 * This function removes this "feature"
 	 *
@@ -199,6 +184,22 @@ class CUWS {
 		if ( ! empty( $this->options['remove_primarycatfeat'] ) ) {
 
 			add_filter( 'wpseo_primary_term_taxonomies', '__return_empty_array' );
+
+		}
+	}
+
+	/**
+	 * Version 9.5 of Yoast SEO introduced the Courses menu item in the sidebar
+	 * This function removes that menu item and in case this function does not work,
+	 * there is also a CSS rule that hides the menu-item
+	 *
+	 * @since v3.10.0
+	 */
+	public function so_cuws_remove_menu_item() {
+
+		if ( ! empty( $this->options['remove_courses'] ) ) {
+
+			remove_submenu_page( 'wpseo_dashboard', 'wpseo_courses' );
 
 		}
 	}
@@ -289,6 +290,10 @@ class CUWS {
 			echo '.yoast-alerts .yoast-container__configuration-wizard{display:none;}'; // @since v3.6.0 hide Configuration Wizard
 		}
 
+		// hide SEO scores dropdown filters on edit Post/Page screen
+		if ( ! empty( $this->options['hide_seo_scores_dropdown_filters'] ) ) {
+			echo '#wpseo-filter, #wpseo-readability-filter{display:none;}'; // @since v3.10.0 hide SEO scores dropdown filters
+		}
 		/*
 		 * admin columns
 		 * @since v2.0.0 remove seo columns one by one
@@ -340,6 +345,13 @@ class CUWS {
 			echo '.profile-php .yoast.yoast-settings{display:none;}'; // @since v3.6.0
 		}
 
+		// hide content/keyword score on Publish/Update Post metabox
+		if ( ! empty( $this->options['hide_content_keyword_score'] ) ) {
+			echo '#misc-publishing-actions #content-score, #misc-publishing-actions #keyword-score{display:none;}'; // @since v3.10.0 hide "Content / Keyword Score" from  Publish/Update metabox
+		}
+
+
+
 		echo '</style>';
 	}
 
@@ -379,7 +391,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.9.2' ) {
+	public static function instance( $file = '', $version = '3.10.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -436,13 +448,13 @@ class CUWS {
 	 */
 	public function get_defaults() {
 		$defaults = array(
-			'hide_ads'                              => 'on',
-			'hide_tagline_nag'                      => 'on',
-			'hide_robots_nag'                       => 'on',
-			'hide_upsell_notice'                    => 'on',
+			'hide_ads'                             => 'on',
+			'hide_tagline_nag'                     => 'on',
+			'hide_robots_nag'                      => 'on',
+			'hide_upsell_notice'                   => 'on',
 			'hide_upsell_metabox_socialtab'			=> 'on',
 			'hide_upsell_admin_block'				=> 'on',
-			'hide_premium_submenu'                  => 'on',
+			'hide_premium_submenu'					=> 'on',
 			'hide_premium_metabox'					=> 'on',
 			'hide_post_deletion_premium_ad'			=> 'on',
 			'hide_dashboard_problems_notifications' => array(
@@ -450,13 +462,14 @@ class CUWS {
 				'notifications'
 			),
 			'hide_config_wizard'					=> 'on',
-			'hide_imgwarning_nag'                   => 'on',
-			'hide_issue_counter'                    => 'on',
+			'hide_imgwarning_nag'					=> 'on',
+			'hide_issue_counter'                   => 'on',
 			'hide_readability_features'				=> 'on',
-			'hide_helpcenter'                       => array(
+			'hide_helpcenter'                      => array(
 				'ad'
 			),
-			'hide_admincolumns'                     => array(
+			'hide_seo_scores_dropdown_filters'		=> 'on',
+			'hide_admincolumns'                    => array(
 				'seoscore',
 				'readability',
 				'title',
@@ -464,9 +477,10 @@ class CUWS {
 			),
 			'hide_seo_settings_profile_page'		=> 'on',
 			'remove_primarycatfeat'					=> 'on',
-			'remove_dbwidget'                       => 'on',
-			'remove_adminbar'                       => 'on',
-			'remove_courses'                        => 'on',
+			'remove_dbwidget'                      => 'on',
+			'remove_adminbar'                      => 'on',
+			'remove_courses'                       => 'on',
+			'hide_content_keyword_score'			=> 'on',
 		);
 
 		return $defaults;

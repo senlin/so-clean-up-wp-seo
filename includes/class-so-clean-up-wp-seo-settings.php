@@ -300,6 +300,13 @@ class CUWS_Settings {
 					'default'     => $options['hide_helpcenter'],
 				),
 				array(
+					'id'          => 'hide_seo_scores_dropdown_filters',
+					'label'       => __( 'SEO Scores Dropdown Filters', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide SEO Scores Dropdown Filters on the Edit Posts/Pages screen', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_seo_scores_dropdown_filters'],
+				),
+				array(
 					'id'          => 'hide_admincolumns',
 					'label'       => __( 'Admin columns', 'so-clean-up-wp-seo' ),
 					'description' => '<br>' . __( 'The Yoast SEO plugin adds 5(!) admin columns on the Posts/Pages screen and the SEO Score and Readability admin columns to taxonomies (since Yoast SEO 3.1). Multiple selections are allowed.', 'so-clean-up-wp-seo' ),
@@ -344,9 +351,16 @@ class CUWS_Settings {
 				array(
 					'id'          => 'remove_courses',
 					'label'       => __( 'Courses', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Remove Yoast courses from the menu.', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove Yoast courses from the sidebar menu.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['remove_courses'],
+				),
+				array(
+					'id'          => 'hide_content_keyword_score',
+					'label'       => __( 'Keyword/Content Score', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_content_keyword_score'],
 				),
 			),
 		);

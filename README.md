@@ -2,10 +2,11 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on November 19, 2018
-###### Development version 3.9.2
+###### Last updated on April 22, 2019
+###### Development version 3.10.0
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 5.0
+###### tested up to WordPress 5.1.1
+###### tested up to ClassicPress 1.0.1
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -15,7 +16,11 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress 
 
 Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
 
-**Now also compatible with [ClassicPress 1.0.0](https://www.classicpress.net)**
+**New in this version:**
+
+* remove Courses menu from sidebar
+* hide SEO Scores Dropdown Filters on the Edit Posts/Pages screen
+* hide Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -51,6 +56,9 @@ The default settings of the current release are as follows:
 * remove primary category feature
 * remove the Yoast SEO admin bar menu
 * remove the Yoast SEO widget from the WordPress Dashboard
+* removes Courses menu from sidebar
+* hides SEO Scores Dropdown Filters on the Edit Posts/Pages screen
+* hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
 
 ## Frequently Asked Questions
 
@@ -111,6 +119,12 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.10.0
+* release date April 22, 2019
+* add function that removes course sub menu, addresses [issue #54](https://github.com/senlin/so-clean-up-wp-seo/issues/54); thanks [Igor](https://github.com/artifex404)
+* hide SEO Scores dropdown filters as well as Readability Scores filter dropdown from edit Posts/Pages/CPTs; address [issue #43](https://github.com/senlin/so-clean-up-wp-seo/issues/43)
+* hide content/keyword score from Publish/Update Metabox on Edit Post/Page/CPT screen
 
 ### 3.9.2
 
