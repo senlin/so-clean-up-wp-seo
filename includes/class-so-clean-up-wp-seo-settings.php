@@ -317,6 +317,7 @@ class CUWS_Settings {
 						'title'       => __( 'Hide title column', 'so-clean-up-wp-seo' ),
 						'metadescr'   => __( 'Hide meta description column', 'so-clean-up-wp-seo' ),
 						'focuskw'     => __( 'Hide focus keyword column', 'so-clean-up-wp-seo' ),
+						'outgoing_internal_links' => __( 'Hide outgoing internal links column', 'so-clean-up-wp-seo' ),
 					),
 					'default'     => $options['hide_admincolumns'],
 				),

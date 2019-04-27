@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.10.0' ) {
+	public function __construct( $file = '', $version = '3.10.1' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -304,6 +304,7 @@ class CUWS {
 		 * @modified 2.6.0 only 2 columns left change from checkboxes to radio
 		 * @modified 2.6.1 revert radio to checkboxes and removing the options
 		 *  for focus keyword, title and meta-description
+		 * @modified 3.10.1 add checkbox to hide outgoing internal links column
 		 */
 
 		// all columns
@@ -327,6 +328,10 @@ class CUWS {
 			// focus keyword column
 			if ( in_array( 'focuskw', $this->options['hide_admincolumns'] ) ) {
 				echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			}
+			// outgoing internal links column
+			if ( in_array( 'outgoing_internal_links', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-links{display:none;}'; // @since v3.10.1 add checkbox to hide outgoing internal links column
 			}
 		}
 
@@ -391,7 +396,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.10.0' ) {
+	public static function instance( $file = '', $version = '3.10.1' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -473,7 +478,8 @@ class CUWS {
 				'seoscore',
 				'readability',
 				'title',
-				'metadescr'
+				'metadescr',
+				'outgoing_internal_links'
 			),
 			'hide_seo_settings_profile_page'		=> 'on',
 			'remove_primarycatfeat'					=> 'on',
