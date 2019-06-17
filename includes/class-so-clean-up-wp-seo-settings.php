@@ -363,6 +363,13 @@ class CUWS_Settings {
 					'type'        => 'checkbox',
 					'default'     => $options['hide_content_keyword_score'],
 				),
+				array(
+					'id'          => 'remove_html_comments',
+					'label'       => __( 'Remove HTML Comments', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove the HTML Comments from the source code (frontend) of the site', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['remove_html_comments'],
+				),
 			),
 		);
 
