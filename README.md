@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
 
-###### Last updated on April 22, 2019
-###### Development version 3.10.1
+###### Last updated on June 17, 2019
+###### Development version 3.11.0
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 5.1.1
+###### tested up to WordPress 5.2.1
 ###### tested up to ClassicPress 1.0.1
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
@@ -18,7 +18,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* hide outgoing internal links columns on edit Posts/Pages/CPTs screens
+* remove HTML comments that show in source code (frontend)
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -57,6 +57,7 @@ The default settings of the current release are as follows:
 * removes Courses menu from sidebar
 * hides SEO Scores Dropdown Filters on the Edit Posts/Pages screen
 * hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
+* remove HTML comments that show in source code (frontend)
 
 ## Frequently Asked Questions
 
@@ -105,7 +106,7 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 [BHI Consulting for Websites](https://bohanintl.com)
 
-[SO WP Plugins](https://so-wp.com)
+[SO WP Plugins](https://so-wp.com/)
 
 [WP Tips](https://bohanintl.com/wptips/)
 
@@ -117,6 +118,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.11.0
+
+* release date April 27, 2019
+* remove HTML comments from source code (frontend)
 
 ### 3.10.1
 

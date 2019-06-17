@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.10.1' ) {
+	public function __construct( $file = '', $version = '3.11.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -127,6 +127,8 @@ class CUWS {
 		add_action( 'admin_head', array( $this, 'so_cuws_hide_visibility_css' ) );
 		// @since 3.10.0
 		add_action( 'admin_menu', array( $this, 'so_cuws_remove_menu_item'), 999 );
+		// @since 3.11.0
+		add_action( 'template_redirect', array( $this, 'so_cuws_remove_frontend_html_comments' ), 9999 );
 
 		// Load API for generic admin functions
 		if ( is_admin() ) {
@@ -203,6 +205,19 @@ class CUWS {
 
 		}
 	}
+
+	/**
+	 * Upon request by many the plugin now also removes the frontend HTML comments left by Yoast
+	 *
+	 * @since v3.11.0
+	 */
+	public function so_cuws_remove_frontend_html_comments() {
+
+		if ( ! empty( $this->options['remove_html_comments'] ) ) {
+
+			remove_action( 'wpseo_head', array( WPSEO_Frontend::get_instance(), 'debug_mark' ), 2 );
+		}
+    }
 
 	/**
 	 * CSS needed to hide the various options ticked with checkboxes
@@ -396,7 +411,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.10.1' ) {
+	public static function instance( $file = '', $version = '3.11.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -487,6 +502,7 @@ class CUWS {
 			'remove_adminbar'                      => 'on',
 			'remove_courses'                       => 'on',
 			'hide_content_keyword_score'			=> 'on',
+			'remove_html_comments'					=> 'on',
 		);
 
 		return $defaults;
