@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.11.0' ) {
+	public function __construct( $file = '', $version = '3.11.1' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -128,7 +128,7 @@ class CUWS {
 		// @since 3.10.0
 		add_action( 'admin_menu', array( $this, 'so_cuws_remove_menu_item'), 999 );
 		// @since 3.11.0
-		add_action( 'template_redirect', array( $this, 'so_cuws_remove_frontend_html_comments' ), 9999 );
+		add_action( 'plugins_loaded', array( $this, 'so_cuws_remove_frontend_html_comments' ), 999 );
 
 		// Load API for generic admin functions
 		if ( is_admin() ) {
@@ -208,14 +208,21 @@ class CUWS {
 
 	/**
 	 * Upon request by many the plugin now also removes the frontend HTML comments left by Yoast
+	 * improvements of v3.11.1 via [Robert Went](https://gist.github.com/robwent/f36e97fdd648a40775379a86bd97b332)
 	 *
 	 * @since v3.11.0
+	 * @modified v3.11.1
 	 */
 	public function so_cuws_remove_frontend_html_comments() {
 
 		if ( ! empty( $this->options['remove_html_comments'] ) ) {
 
-			remove_action( 'wpseo_head', array( WPSEO_Frontend::get_instance(), 'debug_mark' ), 2 );
+			if ( defined( 'WPSEO_VERSION' ) ) {
+				add_action( 'get_header', function () { ob_start( function ( $o ) {
+					return preg_replace( '/\n?<.*?Yoast SEO plugin.*?>/mi', '', $o ); } ); } );
+				add_action('wp_head',function (){ ob_end_flush(); }, 999);
+			}
+
 		}
     }
 
@@ -257,7 +264,7 @@ class CUWS {
 
 		// hide premium upsell admin block
 		if ( ! empty( $this->options['hide_upsell_admin_block'] ) ) {
-			echo '.yoast_premium_upsell_admin_block{display:none}'; // @since v3.1.0
+			echo '.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell{display:none}'; // @since v3.1.0; @modified v3.11.1
 		}
 
 		// hide "Premium" submenu in its entirety
@@ -411,7 +418,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.11.0' ) {
+	public static function instance( $file = '', $version = '3.11.1' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}

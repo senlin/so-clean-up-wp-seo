@@ -4,8 +4,8 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
 Requires at least: 4.7.2
 Requires PHP: 5.6
-Tested up to: 5.2.1
-Stable tag: 3.11.0
+Tested up to: 5.2.2
+Stable tag: 3.11.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* remove HTML comments that show in source code (frontend)
+* hide ad that promotes premium local seo services
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -52,8 +52,7 @@ The **Default Settings** of the current release are as follows:
 * removes Courses menu from sidebar
 * hides SEO Scores Dropdown Filters on the Edit Posts/Pages screen
 * hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
-* remove HTML comments that show in source code (frontend)
-
+* remove HTML comments that show in source code (frontend) upgraded for use with version 11 and above of Yoast SEO
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -103,9 +102,15 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Changelog ==
 
+= 3.11.1 =
+
+* release date July 27, 2019
+* refactor remove HTML comments from source code (frontend) with thanks to [Robert Went](https://www.robertwent.com/blog/remove-yoast-html-comments-in-version-11-0/)
+* hide upsell ad for local seo; addresses [issue #57](https://github.com/senlin/so-clean-up-wp-seo/issues/57)
+
 = 3.11.0 =
 
-* release date April 27, 2019
+* release date June 17, 2019
 * remove HTML comments from source code (frontend)
 
 = 3.10.1 =
