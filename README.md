@@ -1,11 +1,11 @@
 # Hide SEO Bloat
 
-[![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo)
+[![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![ClassicPress tested on version 1.0.1](https://img.shields.io/badge/ClassicPress-1.0.1-03768e.svg?style=flat-round)](https://www.classicpress.net)
 
-###### Last updated on June 17, 2019
-###### Development version 3.11.0
+###### Last updated on July 27, 2019
+###### Development version 3.11.1
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 5.2.1
+###### tested up to WordPress 5.2.2
 ###### tested up to ClassicPress 1.0.1
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
@@ -18,7 +18,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* remove HTML comments that show in source code (frontend)
+* hide ad that promotes premium local seo services 
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -57,7 +57,7 @@ The default settings of the current release are as follows:
 * removes Courses menu from sidebar
 * hides SEO Scores Dropdown Filters on the Edit Posts/Pages screen
 * hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
-* remove HTML comments that show in source code (frontend)
+* remove HTML comments that show in source code (frontend) upgraded for use with version 11 and above of Yoast SEO
 
 ## Frequently Asked Questions
 
@@ -119,9 +119,15 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Changelog
 
+### 3.11.1
+
+* release date July 27, 2019
+* refactor remove HTML comments from source code (frontend) with thanks to [Robert Went](https://www.robertwent.com/blog/remove-yoast-html-comments-in-version-11-0/)
+* hide upsell ad for local seo; addresses [issue #57](https://github.com/senlin/so-clean-up-wp-seo/issues/57) 
+
 ### 3.11.0
 
-* release date April 27, 2019
+* release date June 17, 2019
 * remove HTML comments from source code (frontend)
 
 ### 3.10.1
