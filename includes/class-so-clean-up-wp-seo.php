@@ -204,6 +204,10 @@ class CUWS {
 			remove_submenu_page( 'wpseo_dashboard', 'wpseo_courses' );
 
 		}
+
+		// Google has discontinued its Crawl Errors API so the Search Console page in Yoast is useless now; thanks [@Dibbyo456](https://github.com/senlin/so-clean-up-wp-seo/issues/69); @since v3.12.0
+		remove_submenu_page( 'wpseo_dashboard', 'wpseo_search_console' );
+
 	}
 
 	/**
@@ -269,7 +273,7 @@ class CUWS {
 
 		// hide "Premium" submenu in its entirety
 		if ( ! empty( $this->options['hide_premium_submenu'] ) ) {
-			echo 'li#toplevel_page_wpseo_dashboard>ul>li:nth-child(7){display:none;}'; // @since v3.6.0 hide "Premium" submenu in its entirety
+			echo 'li#toplevel_page_wpseo_dashboard>ul>li:nth-child(6){display:none;}'; // @since v3.6.0 hide "Premium" submenu in its entirety; @modified v3.12.0 decrease with 1, due to Search Console submenu being removed
 		}
 
 		// hide "Go Premium" metabox on edit Post/Page screens
