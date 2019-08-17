@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.7.2
 Requires PHP: 5.6
 Tested up to: 5.2.2
-Stable tag: 3.11.1
+Stable tag: 3.12.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* hide ad that promotes premium local seo services
+* remove Search Console submenu
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -53,6 +53,7 @@ The **Default Settings** of the current release are as follows:
 * hides SEO Scores Dropdown Filters on the Edit Posts/Pages screen
 * hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
 * remove HTML comments that show in source code (frontend) upgraded for use with version 11 and above of Yoast SEO
+* remove Search Console submenu
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -101,6 +102,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.12.0 =
+
+* release date August 17, 2019
+* remove Search Console submenu, redundant since Google has discontinued its Crawl Errors API; thanks [@Dibbyo456](https://github.com/senlin/so-clean-up-wp-seo/issues/69)
 
 = 3.11.1 =
 

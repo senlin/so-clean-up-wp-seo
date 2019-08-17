@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![ClassicPress tested on version 1.0.1](https://img.shields.io/badge/ClassicPress-1.0.1-03768e.svg?style=flat-round)](https://www.classicpress.net)
 
-###### Last updated on July 27, 2019
-###### Development version 3.11.1
+###### Last updated on August 17, 2019
+###### Development version 3.12.0
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 5.2.2
 ###### tested up to ClassicPress 1.0.1
@@ -18,7 +18,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* hide ad that promotes premium local seo services 
+* remove Search Console submenu 
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -58,6 +58,7 @@ The default settings of the current release are as follows:
 * hides SEO Scores Dropdown Filters on the Edit Posts/Pages screen
 * hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
 * remove HTML comments that show in source code (frontend) upgraded for use with version 11 and above of Yoast SEO
+* remove Search Console submenu
 
 ## Frequently Asked Questions
 
@@ -118,6 +119,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.12.0
+
+* release date August 17, 2019
+* remove Search Console submenu, redundant since Google has discontinued its Crawl Errors API; thanks [@Dibbyo456](https://github.com/senlin/so-clean-up-wp-seo/issues/69)
 
 ### 3.11.1
 
