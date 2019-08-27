@@ -129,6 +129,8 @@ class CUWS {
 		add_action( 'admin_menu', array( $this, 'so_cuws_remove_menu_item'), 999 );
 		// @since 3.11.0
 		add_action( 'plugins_loaded', array( $this, 'so_cuws_remove_frontend_html_comments' ), 999 );
+		// @since 3.13.0
+		add_action( 'admin_init', array( $this, 'so_cuws_remove_class_hook' ) );
 
 		// Load API for generic admin functions
 		if ( is_admin() ) {
@@ -229,6 +231,23 @@ class CUWS {
 
 		}
     }
+
+    /**
+	 * Remove warning notice when changing permalinks
+	 *
+	 * Removes the permalink notice action (see includes/remove-class.php)
+	 * Uses @remove_class_hook.
+	 *
+	 * @since	v3.13.0
+	 */
+	public function so_cuws_remove_class_hook() {
+
+		if ( ! empty( $this->options['remove_permalinks_warning'] ) ) {
+
+			remove_class_hook( 'admin_notices', 'WPSEO_Admin_Init', 'permalink_settings_notice' );
+
+		}
+	}
 
 	/**
 	 * CSS needed to hide the various options ticked with checkboxes
@@ -514,6 +533,7 @@ class CUWS {
 			'remove_courses'                       => 'on',
 			'hide_content_keyword_score'			=> 'on',
 			'remove_html_comments'					=> 'on',
+			'remove_permalinks_warning'				=> 'on',
 		);
 
 		return $defaults;

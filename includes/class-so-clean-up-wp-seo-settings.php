@@ -370,6 +370,13 @@ class CUWS_Settings {
 					'type'        => 'checkbox',
 					'default'     => $options['remove_html_comments'],
 				),
+				array(
+					'id'          => 'remove_permalinks_warning',
+					'label'       => __( 'Remove Permalinks Warning Notice', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove the notice that shows when changing permalinks informing the user that it is not a good idea', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['remove_permalinks_warning'],
+				),
 			),
 		);
 

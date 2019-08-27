@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 require_once( 'includes/class-so-clean-up-wp-seo.php' );
 require_once( 'includes/class-so-clean-up-wp-seo-settings.php' );
 
+// Load separate remove class function
+require_once( 'includes/remove-class.php' );
+
 // Load plugin libraries
 require_once( 'admin/class-so-clean-up-wp-seo-admin-api.php' );
 
