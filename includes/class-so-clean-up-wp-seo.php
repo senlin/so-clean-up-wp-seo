@@ -538,28 +538,28 @@ class CUWS {
 	 */
 	public function get_defaults() {
 		$defaults = array(
-			'hide_ads'								=> 'on',
-			'hide_tagline_nag'						=> 'on',
-			'hide_robots_nag'						=> 'on',
-			'hide_upsell_notice'					=> 'on',
+			'hide_ads'                             => 'on',
+			'hide_tagline_nag'                     => 'on',
+			'hide_robots_nag'                      => 'on',
+			'hide_upsell_notice'                   => 'on',
 			'hide_upsell_metabox_socialtab'			=> 'on',
 			'hide_upsell_admin_block'				=> 'on',
 			'hide_premium_submenu'					=> 'on',
 			'hide_premium_metabox'					=> 'on',
 			'hide_post_deletion_premium_ad'			=> 'on',
-			'hide_dashboard_problems_notifications'	=> array(
+			'hide_dashboard_problems_notifications' => array(
 				'problems',
 				'notifications'
 			),
 			'hide_config_wizard'					=> 'on',
 			'hide_imgwarning_nag'					=> 'on',
-			'hide_issue_counter'					=> 'on',
+			'hide_issue_counter'                   => 'on',
 			'hide_readability_features'				=> 'on',
-			'hide_helpcenter'						=> array(
+			'hide_helpcenter'                      => array(
 				'ad'
 			),
 			'hide_seo_scores_dropdown_filters'		=> 'on',
-			'hide_admincolumns'						=> array(
+			'hide_admincolumns'                    => array(
 				'seoscore',
 				'readability',
 				'title',
@@ -568,9 +568,9 @@ class CUWS {
 			),
 			'hide_seo_settings_profile_page'		=> 'on',
 			'remove_primarycatfeat'					=> 'on',
-			'remove_dbwidget'						=> 'on',
-			'remove_adminbar'						=> 'on',
-			'remove_courses'						=> 'on',
+			'remove_dbwidget'                      => 'on',
+			'remove_adminbar'                      => 'on',
+			'remove_courses'                       => 'on',
 			'hide_content_keyword_score'			=> 'on',
 			'remove_html_comments'					=> 'on',
 			'remove_permalinks_warning'				=> 'on',
