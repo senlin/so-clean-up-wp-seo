@@ -133,6 +133,9 @@ class CUWS {
 		add_action( 'admin_init', array( $this, 'so_cuws_remove_class_hook' ) );
 		// @since 3.13.0
 		add_action( 'admin_menu', array( $this, 'so_cuws_remove_admin_columns_init' ), 11 );
+		// @since 3.13.0
+		add_action( 'admin_init', array( $this, 'so_cuws_remove_seo_scores_dropdown_filters' ), 20 );
+
 
 		// Load API for generic admin functions
 		if ( is_admin() ) {
@@ -319,6 +322,21 @@ class CUWS {
 
 
 	/**
+	 * Remove (as opposed to hide) SEO/readability Scores dropdown filters on edit posts screens
+	 *
+	 * credits [Dibbyo456](https://github.com/Dibbyo456)
+	 */
+	public function so_cuws_remove_seo_scores_dropdown_filters() {
+		if ( ! empty( $this->options['hide_seo_scores_dropdown_filters'] ) ) {
+			global $wpseo_meta_columns ;
+			if ( $wpseo_meta_columns  ) {
+				remove_action( 'restrict_manage_posts', array( $wpseo_meta_columns , 'posts_filter_dropdown' ) );
+				remove_action( 'restrict_manage_posts', array( $wpseo_meta_columns , 'posts_filter_dropdown_readability' ) );
+			}
+		}
+	}
+
+	/**
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
 	 * @since    v2.0.0
@@ -404,11 +422,6 @@ class CUWS {
 			echo '.yoast-alerts .yoast-container__configuration-wizard{display:none;}'; // @since v3.6.0 hide Configuration Wizard
 		}
 
-		// hide SEO scores dropdown filters on edit Post/Page screen
-		if ( ! empty( $this->options['hide_seo_scores_dropdown_filters'] ) ) {
-			echo '#wpseo-filter, #wpseo-readability-filter{display:none;}'; // @since v3.10.0 hide SEO scores dropdown filters
-		}
-
 		// help center
 		if ( ! empty( $this->options['hide_helpcenter'] ) ) {
 			if ( in_array( 'ad', $this->options['hide_helpcenter'] ) ) {
@@ -428,8 +441,6 @@ class CUWS {
 		if ( ! empty( $this->options['hide_content_keyword_score'] ) ) {
 			echo '#misc-publishing-actions #content-score, #misc-publishing-actions #keyword-score{display:none;}'; // @since v3.10.0 hide "Content / Keyword Score" from  Publish/Update metabox
 		}
-
-
 
 		echo '</style>';
 	}
