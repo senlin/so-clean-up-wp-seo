@@ -131,6 +131,8 @@ class CUWS {
 		add_action( 'plugins_loaded', array( $this, 'so_cuws_remove_frontend_html_comments' ), 999 );
 		// @since 3.13.0
 		add_action( 'admin_init', array( $this, 'so_cuws_remove_class_hook' ) );
+		// @since 3.13.0
+		add_action( 'admin_menu', array( $this, 'so_cuws_remove_admin_columns_init' ), 11 );
 
 		// Load API for generic admin functions
 		if ( is_admin() ) {
@@ -249,6 +251,73 @@ class CUWS {
 		}
 	}
 
+	/*
+	 * Remove admin columns
+	 * @since v2.0.0 remove seo columns one by one
+	 * @modified 2.0.2 add empty array as default to avoid warnings form subsequent
+	 *  in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
+	 * @modified 2.1 simplify the CSS rules and add the rule to hide the seo-score
+	 *  column on taxonomies (added to v3.1 of Yoast SEO plugin)
+	 * @modified 2.6.0 only 2 columns left change from checkboxes to radio
+	 * @modified 2.6.1 revert radio to checkboxes and removing the options
+	 *  for focus keyword, title and meta-description
+	 * @modified 3.10.1 add checkbox to hide outgoing internal links column
+	 * @modified 3.13.0 recode the function to **remove** columns instead of hiding them - credits [Dibbyo456](https://github.com/Dibbyo456)
+	 */
+	public function so_cuws_remove_admin_columns_init() {
+
+		// post, page and custom post types
+		$all_post_types = array_merge( array( 'post', 'page' ), get_post_types( array( '_builtin' => false ) ) );
+
+		foreach( $all_post_types as $post_type ) {
+			add_filter( 'manage_edit-'. $post_type .'_columns', array( $this, 'so_cuws_remove_admin_columns' ), 10, 1  );
+		}
+
+	}
+
+	public function so_cuws_remove_admin_columns( $columns ) {
+
+		// if empty return columns right away.
+		if ( empty( $this->options['hide_admincolumns'] ) ) {
+			return $columns;
+		}
+
+		// seo score column
+		if ( in_array( 'seoscore', $this->options['hide_admincolumns'] ) ) {
+			unset( $columns['wpseo-score'] );
+		}
+
+		// readability column
+		if ( in_array( 'readability', $this->options['hide_admincolumns'] ) ) {
+			unset( $columns['wpseo-score-readability'] );
+		}
+
+		// title column
+		if ( in_array( 'title', $this->options['hide_admincolumns'] ) ) {
+			unset( $columns['wpseo-title'] );
+		}
+
+		// meta description column
+		if ( in_array( 'metadescr', $this->options['hide_admincolumns'] ) ) {
+			unset( $columns['wpseo-metadesc'] );
+		}
+
+		// focus keyword column
+		if ( in_array( 'focuskw', $this->options['hide_admincolumns'] ) ) {
+			unset( $columns['wpseo-focuskw'] );
+		}
+
+		// outgoing internal links column
+		if ( in_array( 'outgoing_internal_links', $this->options['hide_admincolumns'] ) ) {
+			unset( $columns['wpseo-links'] );
+			unset( $columns['wpseo-linked'] );
+		}
+
+		return $columns;
+
+	}
+
+
 	/**
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
@@ -338,46 +407,6 @@ class CUWS {
 		// hide SEO scores dropdown filters on edit Post/Page screen
 		if ( ! empty( $this->options['hide_seo_scores_dropdown_filters'] ) ) {
 			echo '#wpseo-filter, #wpseo-readability-filter{display:none;}'; // @since v3.10.0 hide SEO scores dropdown filters
-		}
-		/*
-		 * admin columns
-		 * @since v2.0.0 remove seo columns one by one
-		 * @modified 2.0.2 add empty array as default to avoid warnings form subsequent
-		 *  in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
-		 * @modified 2.1 simplify the CSS rules and add the rule to hide the seo-score
-		 *  column on taxonomies (added to v3.1 of Yoast SEO plugin)
-		 * @modified 2.6.0 only 2 columns left change from checkboxes to radio
-		 * @modified 2.6.1 revert radio to checkboxes and removing the options
-		 *  for focus keyword, title and meta-description
-		 * @modified 3.10.1 add checkbox to hide outgoing internal links column
-		 */
-
-		// all columns
-		if ( ! empty( $this->options['hide_admincolumns'] ) ) {
-			// seo score column
-			if ( in_array( 'seoscore', $this->options['hide_admincolumns'] ) ) {
-				echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
-			}
-			// readability column
-			if ( in_array( 'readability', $this->options['hide_admincolumns'] ) ) {
-				echo '.column-wpseo-score-readability,.column-wpseo_score_readability{display:none;}'; // @since v2.6.0 remove added readibility column
-			}
-			// title column
-			if ( in_array( 'title', $this->options['hide_admincolumns'] ) ) {
-				echo '.column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
-			}
-			// meta description column
-			if ( in_array( 'metadescr', $this->options['hide_admincolumns'] ) ) {
-				echo '.column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
-			}
-			// focus keyword column
-			if ( in_array( 'focuskw', $this->options['hide_admincolumns'] ) ) {
-				echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
-			}
-			// outgoing internal links column
-			if ( in_array( 'outgoing_internal_links', $this->options['hide_admincolumns'] ) ) {
-				echo '.column-wpseo-links{display:none;}'; // @since v3.10.1 add checkbox to hide outgoing internal links column
-			}
 		}
 
 		// help center
