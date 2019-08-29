@@ -118,6 +118,7 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 * recode hiding of the seo score/readability score filters into actually removing them, fixes [issue #65](https://github.com/senlin/so-clean-up-wp-seo/issues/65)
 * remove advanced accordion menu at bottom of SEO metabox for post- and custom post types, fixes [issue #67](https://github.com/senlin/so-clean-up-wp-seo/issues/67)
 
+Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibbyo456); many thanks Harry!
 
 = 3.12.0 =
 
