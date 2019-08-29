@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo.svg)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![ClassicPress tested on version 1.0.1](https://img.shields.io/badge/ClassicPress-1.0.1-03768e.svg?style=flat-round)](https://www.classicpress.net)
 
-###### Last updated on August 17, 2019
-###### Development version 3.12.0
+###### Last updated on August 29, 2019
+###### Development version 3.13.0
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 5.2.2
 ###### tested up to ClassicPress 1.0.1
@@ -18,7 +18,14 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* remove Search Console submenu 
+* remove notice on permalinks page that warns the user of the implications of changing them
+* recode hiding of the admin columns into actually removing them
+* recode hiding of the seo score/readability score filters into actually removing them
+* remove advanced accordion menu at bottom of SEO metabox for post- and custom post types
+
+Credits of all the above improvements go to [Harry - @Dibbyo456](https://github.com/Dibbyo456); many thanks Harry!
+
+<hr>
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -119,6 +126,15 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.13.0
+
+* release date August 29, 2019
+* remove notice on permalinks page that warns the user of the implications of changing them, fixes [issue #58](https://github.com/senlin/so-clean-up-wp-seo/issues/58)
+* recode hiding of the admin columns into actually removing them, fixes [issue #65](https://github.com/senlin/so-clean-up-wp-seo/issues/65)
+* recode hiding of the seo score/readability score filters into actually removing them, fixes [issue #65](https://github.com/senlin/so-clean-up-wp-seo/issues/65)
+* remove advanced accordion menu at bottom of SEO metabox for post- and custom post types, fixes [issue #67](https://github.com/senlin/so-clean-up-wp-seo/issues/67)
+
 
 ### 3.12.0
 
