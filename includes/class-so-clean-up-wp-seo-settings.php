@@ -309,7 +309,7 @@ class CUWS_Settings {
 				array(
 					'id'          => 'hide_admincolumns',
 					'label'       => __( 'Admin columns', 'so-clean-up-wp-seo' ),
-					'description' => '<br>' . __( 'The Yoast SEO plugin adds 5(!) admin columns on the Posts/Pages screen and the SEO Score and Readability admin columns to taxonomies (since Yoast SEO 3.1). Multiple selections are allowed.', 'so-clean-up-wp-seo' ),
+					'description' => '<br>' . __( 'The Yoast SEO plugin adds a whole bunch of admin columns on the Posts/Pages screen and the SEO Score and Readability admin columns to taxonomies (since Yoast SEO 3.1). Multiple selections are allowed.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox_multi',
 					'options'     => array(
 						'seoscore'    => __( 'Remove SEO score column', 'so-clean-up-wp-seo' ),
@@ -374,6 +374,13 @@ class CUWS_Settings {
 					'id'          => 'remove_permalinks_warning',
 					'label'       => __( 'Remove Permalinks Warning Notice', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Remove the notice that shows when changing permalinks informing the user that it is not a good idea', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['remove_permalinks_warning'],
+				),
+				array(
+					'id'          => 'remove_advanced',
+					'label'       => __( 'Remove Advanced accordion menu SEO metabox', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove the Advanced accordion menu which shows at the bottom of the SEO Metabox for Post- and custom post types', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['remove_permalinks_warning'],
 				),
