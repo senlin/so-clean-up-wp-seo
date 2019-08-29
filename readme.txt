@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.7.2
 Requires PHP: 5.6
 Tested up to: 5.2.2
-Stable tag: 3.12.0
+Stable tag: 3.13.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,14 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* remove Search Console submenu
+* remove notice on permalinks page that warns the user of the implications of changing them
+* recode hiding of the admin columns into actually removing them
+* recode hiding of the seo score/readability score filters into actually removing them
+* remove advanced accordion menu at bottom of SEO metabox for post- and custom post types
+
+Credits of all the above improvements go to [Harry - @Dibbyo456](https://github.com/Dibbyo456); many thanks Harry!
+
+<hr>
 
 The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
 
@@ -102,6 +109,15 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.13.0 =
+
+* release date August 29, 2019
+* remove notice on permalinks page that warns the user of the implications of changing them, fixes [issue #58](https://github.com/senlin/so-clean-up-wp-seo/issues/58)
+* recode hiding of the admin columns into actually removing them, fixes [issue #65](https://github.com/senlin/so-clean-up-wp-seo/issues/65)
+* recode hiding of the seo score/readability score filters into actually removing them, fixes [issue #65](https://github.com/senlin/so-clean-up-wp-seo/issues/65)
+* remove advanced accordion menu at bottom of SEO metabox for post- and custom post types, fixes [issue #67](https://github.com/senlin/so-clean-up-wp-seo/issues/67)
+
 
 = 3.12.0 =
 
