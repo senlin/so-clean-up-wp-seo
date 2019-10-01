@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.13.0' ) {
+	public function __construct( $file = '', $version = '3.13.1' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -427,7 +427,7 @@ class CUWS {
 		// Problems/Notification boxes
 		if ( ! empty( $this->options['hide_dashboard_problems_notifications'] ) ) {
 			if ( in_array( 'problems', $this->options['hide_dashboard_problems_notifications'] ) ) {
-				echo '.yoast-container.yoast-container__alert{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
+				echo '.yoast-container.yoast-container__error{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard; @modified v3.13.1
 			}
 			if ( in_array( 'notifications', $this->options['hide_dashboard_problems_notifications'] ) ) {
 				echo '.yoast-container.yoast-container__warning{display:none;}'; // @since v2.6.0 hide both Problems/Notifications boxes from Yoast SEO Dashboard
@@ -513,7 +513,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.13.0' ) {
+	public static function instance( $file = '', $version = '3.13.1' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}

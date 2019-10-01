@@ -1,11 +1,11 @@
 === Hide SEO Bloat ===
 Contributors: senlin, afragen
 Donate link: https://so-wp.com/donations
-Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, traffic light, dashboard widget, hide premium
+Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium, classicpress
 Requires at least: 4.7.2
 Requires PHP: 5.6
-Tested up to: 5.2.2
-Stable tag: 3.13.0
+Tested up to: 5.2.3
+Stable tag: 3.13.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,12 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* remove notice on permalinks page that warns the user of the implications of changing them
-* recode hiding of the admin columns into actually removing them
-* recode hiding of the seo score/readability score filters into actually removing them
-* remove advanced accordion menu at bottom of SEO metabox for post- and custom post types
-
-Credits of all the above improvements go to [Harry - @Dibbyo456](https://github.com/Dibbyo456); many thanks Harry!
+* adjust the hiding of the Problems box (General settings Yoast) which received new class name
 
 <hr>
 
@@ -82,6 +77,10 @@ The link to the page has been added to the Yoast SEO menu and of course there is
 Yes, you can.
 For version 2.4.0 [Andy Fragen](https://github.com/afragen) has refactored that part of the plugin to make it fully Multisite compatible. The Settings screen only shows in Network Admin as we don't think it makes sense that individual sites override the Network Settings.
 
+= Does Hide SEO Bloat work with ClassicPress? =
+
+Yes, the Hide SEO Bloat can also be used on sites that are running ClassicPress. Of course it is also necessary to have the Yoast SEO plugin installed.
+
 = The name of the plugin is confusing, it hides bloat of which SEO plugin? =
 
 Yes, you are right, the name is a bit vague (see Changelog v1.8.0). On the other hand there is only one SEO plugin that adds a lot of bloat to the WordPress Dashboard and that is the Yoast SEO plugin.
@@ -109,6 +108,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.13.1 =
+
+* release date October 1, 2019
+* adjust the hiding of the Problems box (General settings Yoast) which received new class name
 
 = 3.13.0 =
 

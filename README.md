@@ -2,11 +2,11 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![ClassicPress tested on version 1.0.1](https://img.shields.io/badge/ClassicPress-1.0.1-03768e?style=flat-round)](https://www.classicpress.net)
 
-###### Last updated on August 29, 2019
-###### Development version 3.13.0
+###### Last updated on October 1, 2019
+###### Development version 3.13.1
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 5.2.2
-###### tested up to ClassicPress 1.0.1
+###### tested up to WordPress 5.2.3
+###### tested up to ClassicPress 1.1.0
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -18,12 +18,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* remove notice on permalinks page that warns the user of the implications of changing them
-* recode hiding of the admin columns into actually removing them
-* recode hiding of the seo score/readability score filters into actually removing them
-* remove advanced accordion menu at bottom of SEO metabox for post- and custom post types
-
-Credits of all the above improvements go to [Harry - @Dibbyo456](https://github.com/Dibbyo456); many thanks Harry!
+* adjust the hiding of the Problems box (General settings Yoast) which received new class name
 
 <hr>
 
@@ -126,6 +121,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.13.1
+
+* release date October 1, 2019
+* adjust the hiding of the Problems box (General settings Yoast) which received new class name
 
 ### 3.13.0
 
