@@ -454,6 +454,47 @@ class CUWS {
 			echo '.yoast-alerts .yoast-container__configuration-wizard{display:none;}'; // @since v3.6.0 hide Configuration Wizard
 		}
 
+		/*
+		 * admin columns
+		 * @since v2.0.0 remove seo columns one by one
+		 * @modified 2.0.2 add empty array as default to avoid warnings form subsequent
+		 *  in_array checks - credits [Ronny Myhre Njaastad](https://github.com/ronnymn)
+		 * @modified 2.1 simplify the CSS rules and add the rule to hide the seo-score
+		 *  column on taxonomies (added to v3.1 of Yoast SEO plugin)
+		 * @modified 2.6.0 only 2 columns left change from checkboxes to radio
+		 * @modified 2.6.1 revert radio to checkboxes and removing the options
+		 *  for focus keyword, title and meta-description
+		 * @modified 3.10.1 add checkbox to hide outgoing internal links column
+		 * @modified 3.13.2 put CSS rules back to fix bug when using quick edit function (issue #75)
+		 */
+		// all columns
+		if ( ! empty( $this->options['hide_admincolumns'] ) ) {
+			// seo score column
+			if ( in_array( 'seoscore', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-score,.column-wpseo_score{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			}
+			// readability column
+			if ( in_array( 'readability', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-score-readability,.column-wpseo_score_readability{display:none;}'; // @since v2.6.0 remove added readibility column
+			}
+			// title column
+			if ( in_array( 'title', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-title{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			}
+			// meta description column
+			if ( in_array( 'metadescr', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-metadesc{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			}
+			// focus keyword column
+			if ( in_array( 'focuskw', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-focuskw{display:none;}'; // @since v2.0.0 remove seo columns one by one
+			}
+			// outgoing internal links column
+			if ( in_array( 'outgoing_internal_links', $this->options['hide_admincolumns'] ) ) {
+				echo '.column-wpseo-links{display:none;}'; // @since v3.10.1 add checkbox to hide outgoing internal links column
+			}
+		}
+
 		// help center
 		if ( ! empty( $this->options['hide_helpcenter'] ) ) {
 			if ( in_array( 'ad', $this->options['hide_helpcenter'] ) ) {
