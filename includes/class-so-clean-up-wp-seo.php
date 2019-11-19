@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.13.1' ) {
+	public function __construct( $file = '', $version = '3.13.2' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -406,7 +406,7 @@ class CUWS {
 
 		// hide premium upsell admin block
 		if ( ! empty( $this->options['hide_upsell_admin_block'] ) ) {
-			echo '.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell{display:none}'; // @since v3.1.0; @modified v3.11.1
+			echo '.yoast_premium_upsell,.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell{display:none}'; // @since v3.1.0; @modified v3.11.1; @modified v3.13.2
 		}
 
 		// hide "Premium" submenu in its entirety
@@ -554,7 +554,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.13.1' ) {
+	public static function instance( $file = '', $version = '3.13.2' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
