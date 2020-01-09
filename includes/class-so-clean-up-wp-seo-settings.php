@@ -525,7 +525,7 @@ class CUWS_Settings {
 		$html .= '<div class="inside">' . "\n";
 		$html .= '<div class="top">' . "\n";
 
-		$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pietbos-80x80.jpg' ) ) . '" alt="plugin author Pieter Bos" width="80" height="80" />' . "\n";
+		$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pieterbos.jpg' ) ) . '" alt="plugin author Pieter Bos" width="80" height="80" />' . "\n";
 
 		$sowpurl = 'https://so-wp.com';
 		$html    .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Pieter Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP">SO WP</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
