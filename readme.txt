@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.7.2
 Requires PHP: 5.6
 Tested up to: 5.3
-Stable tag: 3.13.2
+Stable tag: 3.13.3
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,8 +17,8 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* put CSS rules back to fix bug when using quick edit function (issue #75)
-* adjust CSS to fix bug (issue #76 - thanks for the fix [@allanrehhoff](https://github.com/allanrehhoff))
+* update help center classes
+* hide help beacon (issue #77 - thanks for the fix [@allanrehhoff](https://github.com/allanrehhoff))
 
 <hr>
 
@@ -57,6 +57,8 @@ The **Default Settings** of the current release are as follows:
 * hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
 * remove HTML comments that show in source code (frontend) upgraded for use with version 11 and above of Yoast SEO
 * remove Search Console submenu
+* hide help beacon
+
 
 We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -109,6 +111,12 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.13.3 =
+
+* release date January 9, 2020
+* update help center classes
+* hide help beacon (issue #77 - thanks for the fix [@allanrehhoff](https://github.com/allanrehhoff))
 
 = 3.13.2 =
 

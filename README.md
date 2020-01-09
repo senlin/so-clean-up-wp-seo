@@ -1,12 +1,12 @@
 # Hide SEO Bloat
 
-[![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![ClassicPress tested on version 1.1.0](https://img.shields.io/badge/ClassicPress-1.1.0-03768e?style=flat-round)](https://www.classicpress.net)
+[![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![ClassicPress tested on version 1.2.0](https://img.shields.io/badge/ClassicPress-1.2.0-03768e?style=flat-round)](https://www.classicpress.net)
 
-###### Last updated on November 19, 2019
-###### Development version 3.13.2
+###### Last updated on January 9, 2020
+###### Development version 3.13.3
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 5.3
-###### tested up to ClassicPress 1.1.0
+###### tested up to ClassicPress 1.2.0
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -18,8 +18,8 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* put CSS rules back to fix bug when using quick edit function (issue #75)
-* adjust CSS to fix bug (issue #76 - thanks for the fix [@allanrehhoff](https://github.com/allanrehhoff))
+* update help center classes
+* hide help beacon (issue #77 - thanks for the fix [@allanrehhoff](https://github.com/allanrehhoff))
 
 <hr>
 
@@ -62,6 +62,7 @@ The default settings of the current release are as follows:
 * hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
 * remove HTML comments that show in source code (frontend) upgraded for use with version 11 and above of Yoast SEO
 * remove Search Console submenu
+* hide help beacon
 
 ## Frequently Asked Questions
 
@@ -122,6 +123,12 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.13.3
+
+* release date January 9, 2020
+* update help center classes
+* hide help beacon (issue #77 - thanks for the fix [@allanrehhoff](https://github.com/allanrehhoff))
 
 ### 3.13.2
 
