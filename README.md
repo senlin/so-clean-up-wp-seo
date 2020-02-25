@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![ClassicPress tested on version 1.2.0](https://img.shields.io/badge/ClassicPress-1.2.0-03768e?style=flat-round)](https://www.classicpress.net)
 
-###### Last updated on February 5, 2020
-###### Development version 3.13.4
+###### Last updated on February 25, 2020
+###### Development version 3.13.5
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 5.3.2
 ###### tested up to ClassicPress 1.2.0
@@ -18,7 +18,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* hide additional keyphrase "option" from metabox as it is ad for premium too
+* fix issue where updates from other plugins are hidden in admin sidebar
 
 <hr>
 
@@ -122,6 +122,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.13.5
+
+* release date February 25, 2020
+* fix issue #81 where updates from other plugins are hidden in admin sidebar
 
 ### 3.13.4
 
