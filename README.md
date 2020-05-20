@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![ClassicPress tested on version 1.2.0](https://img.shields.io/badge/ClassicPress-1.2.0-03768e?style=flat-round)](https://www.classicpress.net)
 
-###### Last updated on March 7, 2020
-###### Development version 3.13.6
+###### Last updated on May 20, 2020
+###### Development version 3.14.0
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 5.4
 ###### tested up to ClassicPress 1.2.0
@@ -18,7 +18,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* previous hide readability features setting (our v3.9.0) was blocking the icons of SEO and Readability tab of Yoast metabox; now not anymore 
+* hide new notice that shows after deleting content (post, page, product, other CPT)
 
 <hr>
 
@@ -122,6 +122,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.14.0
+
+* release date May 20, 2020
+* hide new notice that shows after deleting content (post, page, product, other CPT), address issue #83, thanks [@Kagan Akbas](https://github.com/remaindeer)
 
 ### 3.13.6
 
