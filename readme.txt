@@ -4,8 +4,8 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium, classicpress
 Requires at least: 4.7.2
 Requires PHP: 5.6
-Tested up to: 5.3.2
-Stable tag: 3.13.5
+Tested up to: 5.4
+Stable tag: 3.14.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* fix issue where updates from other plugins are hidden in admin sidebar
+* hide new notice that shows after deleting content (post, page, product, other CPT)
 
 <hr>
 
@@ -110,6 +110,17 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.14.0 =
+
+* release date May 20, 2020
+* hide new notice that shows after deleting content (post, page, product, other CPT), address issue #83, thanks [@Kagan Akbas](https://github.com/remaindeer)
+
+= 3.13.6 =
+
+* release date March 7, 2019
+* previous hide readability features setting (our v3.9.0) was blocking the icons of SEO and Readability tab of Yoast metabox; now not anymore. Thanks for reporting [@koolpad](https://wordpress.org/support/topic/non-critical-seo-readability-icons-disappear/)
+* cleanup
 
 = 3.13.5 =
 

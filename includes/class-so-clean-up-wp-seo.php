@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.13.5' ) {
+	public function __construct( $file = '', $version = '3.14.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -200,19 +200,11 @@ class CUWS {
 	}
 
 	/**
-	 * Version 9.5 of Yoast SEO introduced the Courses menu item in the sidebar
-	 * This function removes that menu item and in case this function does not work,
-	 * there is also a CSS rule that hides the menu-item
+	 * Remove Search Console
 	 *
 	 * @since v3.10.0
 	 */
 	public function so_cuws_remove_menu_item() {
-
-		if ( ! empty( $this->options['remove_courses'] ) ) {
-
-			remove_submenu_page( 'wpseo_dashboard', 'wpseo_courses' );
-
-		}
 
 		// Google has discontinued its Crawl Errors API so the Search Console page in Yoast is useless now; thanks [@Dibbyo456](https://github.com/senlin/so-clean-up-wp-seo/issues/69); @since v3.12.0
 		remove_submenu_page( 'wpseo_dashboard', 'wpseo_search_console' );
@@ -396,12 +388,7 @@ class CUWS {
 
 		// hide upsell notice in Yoast SEO Dashboard
 		if ( ! empty( $this->options['hide_upsell_notice'] ) ) {
-			echo '#yoast-warnings #wpseo-upsell-notice,#yoast-additional-keyphrase-collapsible-metabox{display:none;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard; @modified v2.5.4 improved to remove entire Notification box in the main Dashboard; @modified v2.6.0 only hide this notice; @modified 3.13.4 hide additional keyphrase "option" from metabox as it is ad for premium too.
-		}
-
-		// hide upsell notice on social tab in Yoast Post/Page metabox
-		if ( ! empty( $this->options['hide_upsell_metabox_socialtab'] ) ) {
-			echo '.notice.inline.yoast-notice.yoast-notice-go-premium{display:none}'; // @since v3.2.0; @modified v3.6.0
+			echo '#yoast-warnings #wpseo-upsell-notice,#yoast-additional-keyphrase-collapsible-metabox,.wpseo-keyword-synonyms,.wpseo-multiple-keywords{display:none !important;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard; @modified v2.5.4 improved to remove entire Notification box in the main Dashboard; @modified v2.6.0 only hide this notice; @modified 3.13.4 hide additional keyphrase "option" from metabox as it is ad for premium too.
 		}
 
 		// hide premium upsell admin block
@@ -412,11 +399,6 @@ class CUWS {
 		// hide "Premium" submenu in its entirety
 		if ( ! empty( $this->options['hide_premium_submenu'] ) ) {
 			echo 'li#toplevel_page_wpseo_dashboard>ul>li:nth-child(6){display:none;}'; // @since v3.6.0 hide "Premium" submenu in its entirety; @modified v3.12.0 decrease with 1, due to Search Console submenu being removed
-		}
-
-		// hide "Go Premium" metabox on edit Post/Page screens
-		if ( ! empty( $this->options['hide_premium_metabox'] ) ) {
-			echo '.wpseo-metabox-buy-premium{display:none!important;}'; // @since v3.6.0 hide "Go Premium" metabox on Edit Post/Page screens
 		}
 
 		// hide Post/Page/Taxonomy Deletion Premium Ad
@@ -442,11 +424,6 @@ class CUWS {
 		// hide issue counter
 		if ( ! empty( $this->options['hide_issue_counter'] ) ) {
 			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .wp-menu-name .update-plugins{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar; @modified v3.2.1 to remove orange background that shows again; @modified v3.13.5 fix issue 81
-		}
-
-		// hide new color features readability Post/Page metabox
-		if ( ! empty( $this->options['hide_readability_features'] ) ) {
-			echo 'progress,.yoast-svg-icon-seo-score-good,.yoast-svg-icon-seo-score-ok,.yoast-svg-icon-seo-score-bad,.yoast-svg-icon-seo-score-none{display:none!important;}'; //@since 3.9.0
 		}
 
 		// hide Configuration Wizard on every screen in the Yoast admin
@@ -515,6 +492,11 @@ class CUWS {
 			echo '#misc-publishing-actions #content-score, #misc-publishing-actions #keyword-score{display:none;}'; // @since v3.10.0 hide "Content / Keyword Score" from  Publish/Update metabox
 		}
 
+		// hide Premium ad after deleting content (post, page, wc product, cpt)
+		if ( ! empty( $this->options['hide_ad_after_trashing_content'] ) ) {
+			echo 'body.edit-php .yoast-notification.notice.notice-warning.is-dismissible{display:none;}'; // @since v3.14.0
+		}
+
 		echo '</style>';
 	}
 
@@ -554,7 +536,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.13.5' ) {
+	public static function instance( $file = '', $version = '3.14.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -615,10 +597,8 @@ class CUWS {
 			'hide_tagline_nag'                     => 'on',
 			'hide_robots_nag'                      => 'on',
 			'hide_upsell_notice'                   => 'on',
-			'hide_upsell_metabox_socialtab'			=> 'on',
 			'hide_upsell_admin_block'				=> 'on',
 			'hide_premium_submenu'					=> 'on',
-			'hide_premium_metabox'					=> 'on',
 			'hide_post_deletion_premium_ad'			=> 'on',
 			'hide_dashboard_problems_notifications' => array(
 				'problems',
@@ -627,7 +607,6 @@ class CUWS {
 			'hide_config_wizard'					=> 'on',
 			'hide_imgwarning_nag'					=> 'on',
 			'hide_issue_counter'                   => 'on',
-			'hide_readability_features'				=> 'on',
 			'hide_helpcenter'                      => array(
 				'ad'
 			),
@@ -643,11 +622,11 @@ class CUWS {
 			'remove_primarycatfeat'					=> 'on',
 			'remove_dbwidget'                      => 'on',
 			'remove_adminbar'                      => 'on',
-			'remove_courses'                       => 'on',
 			'hide_content_keyword_score'			=> 'on',
 			'remove_html_comments'					=> 'on',
 			'remove_permalinks_warning'				=> 'on',
 			'remove_advanced'						=> 'on',
+			'hide_ad_after_trashing_content'		=> 'on'
 		);
 
 		return $defaults;

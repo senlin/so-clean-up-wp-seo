@@ -226,13 +226,6 @@ class CUWS_Settings {
 					'default'     => $options['hide_dashboard_problems_notifications'],
 				),
 				array(
-					'id'          => 'hide_upsell_metabox_socialtab',
-					'label'       => __( 'Upsell Notice social tab Yoast Post/Page metabox', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide the Upsell Notice in the social tab of the Yoast Post/Page metabox', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_upsell_metabox_socialtab'],
-				),
-				array(
 					'id'          => 'hide_upsell_admin_block',
 					'label'       => __( 'Premium Upsell Admin Block', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend.', 'so-clean-up-wp-seo' ),
@@ -245,13 +238,6 @@ class CUWS_Settings {
 					'description' => __( 'Hides the "Premium" submenu in its entirety.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_premium_submenu'],
-				),
-				array(
-					'id'          => 'hide_premium_metabox',
-					'label'       => __( 'Go Premium metabox', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hides "Go Premium" metabox in edit Post/Page screens.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_premium_metabox'],
 				),
 				array(
 					'id'          => 'hide_post_deletion_premium_ad',
@@ -280,13 +266,6 @@ class CUWS_Settings {
 					'description' => __( 'Hide issue counter from adminbar and sidebar.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_issue_counter'],
-				),
-				array(
-					'id'          => 'hide_readability_features',
-					'label'       => __( 'Readability "Features"', 'so-clean-up-wp-seo' ),
-					'description' => __( 'The Readability metabox on Posts/Pages has received some new "features" with growing color bars that indicate the "correct length" of titles and descriptions; this option hides these "features".', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_readability_features'],
 				),
 				array(
 					'id'          => 'hide_helpcenter',
@@ -350,13 +329,6 @@ class CUWS_Settings {
 					'default'     => $options['remove_dbwidget'],
 				),
 				array(
-					'id'          => 'remove_courses',
-					'label'       => __( 'Courses', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Remove Yoast courses from the sidebar menu.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['remove_courses'],
-				),
-				array(
 					'id'          => 'hide_content_keyword_score',
 					'label'       => __( 'Keyword/Content Score', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen.', 'so-clean-up-wp-seo' ),
@@ -383,6 +355,13 @@ class CUWS_Settings {
 					'description' => __( 'Remove the Advanced accordion menu which shows at the bottom of the SEO Metabox for Post- and custom post types', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['remove_permalinks_warning'],
+				),
+				array(
+					'id'          => 'hide_ad_after_trashing_content',
+					'label'       => __( 'Hide Ad after trashing content', 'so-clean-up-wp-seo' ),
+					'description' => __( 'When deleting content (Post, Page, Product and other Custom Post Type) a new notice appears on the edit screen that is an upsell ad for the premium version of Yoast SEO. This setting hides that notice', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_ad_after_trashing_content'],
 				),
 			),
 		);
