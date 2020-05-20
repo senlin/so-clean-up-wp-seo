@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.13.6' ) {
+	public function __construct( $file = '', $version = '3.14.0' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -492,6 +492,11 @@ class CUWS {
 			echo '#misc-publishing-actions #content-score, #misc-publishing-actions #keyword-score{display:none;}'; // @since v3.10.0 hide "Content / Keyword Score" from  Publish/Update metabox
 		}
 
+		// hide Premium ad after deleting content (post, page, wc product, cpt)
+		if ( ! empty( $this->options['hide_ad_after_trashing_content'] ) ) {
+			echo 'body.edit-php .yoast-notification.notice.notice-warning.is-dismissible{display:none;}'; // @since v3.14.0
+		}
+
 		echo '</style>';
 	}
 
@@ -531,7 +536,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.13.6' ) {
+	public static function instance( $file = '', $version = '3.14.0' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -621,6 +626,7 @@ class CUWS {
 			'remove_html_comments'					=> 'on',
 			'remove_permalinks_warning'				=> 'on',
 			'remove_advanced'						=> 'on',
+			'hide_ad_after_trashing_content'		=> 'on'
 		);
 
 		return $defaults;

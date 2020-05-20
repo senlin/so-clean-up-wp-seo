@@ -356,6 +356,13 @@ class CUWS_Settings {
 					'type'        => 'checkbox',
 					'default'     => $options['remove_permalinks_warning'],
 				),
+				array(
+					'id'          => 'hide_ad_after_trashing_content',
+					'label'       => __( 'Hide Ad after trashing content', 'so-clean-up-wp-seo' ),
+					'description' => __( 'When deleting content (Post, Page, Product and other Custom Post Type) a new notice appears on the edit screen that is an upsell ad for the premium version of Yoast SEO. This setting hides that notice', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_ad_after_trashing_content'],
+				),
 			),
 		);
 
