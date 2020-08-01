@@ -393,7 +393,7 @@ class CUWS {
 
 		// hide premium upsell admin block
 		if ( ! empty( $this->options['hide_upsell_admin_block'] ) ) {
-			echo '.yoast_premium_upsell,.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell{display:none}'; // @since v3.1.0; @modified v3.11.1; @modified v3.13.2
+			echo '.yoast_premium_upsell,.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell,div[class^="SocialUpsell__PremiumInfoText"]{display:none}'; // @since v3.1.0; @modified v3.11.1; @modified v3.13.2; @modified v3.14.1
 		}
 
 		// hide "Premium" submenu in its entirety
