@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.14.1' ) {
+	public function __construct( $file = '', $version = '3.14.2' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -489,12 +489,20 @@ class CUWS {
 
 		// hide content/keyword score on Publish/Update Post metabox
 		if ( ! empty( $this->options['hide_content_keyword_score'] ) ) {
-			echo '#misc-publishing-actions #content-score, #misc-publishing-actions #keyword-score{display:none;}'; // @since v3.10.0 hide "Content / Keyword Score" from  Publish/Update metabox
+			echo '
+				#misc-publishing-actions #content-score,
+				#misc-publishing-actions #keyword-score
+				{display:none;}
+			'; // @since v3.10.0 hide "Content / Keyword Score" from  Publish/Update metabox
 		}
 
 		// hide Premium ad after deleting content (post, page, wc product, cpt)
 		if ( ! empty( $this->options['hide_ad_after_trashing_content'] ) ) {
-			echo 'body.edit-php .yoast-notification.notice.notice-warning.is-dismissible{display:none;}'; // @since v3.14.0
+			echo '
+				body.edit-php .yoast-notification.notice.notice-warning.is-dismissible,
+				body[class*="taxonomy-"] .yoast-notification.notice.notice-warning.is-dismissible
+				{display:none;}
+			'; // @since v3.14.0; @modified v3.14.2
 		}
 
 		echo '</style>';
@@ -536,7 +544,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.14.1' ) {
+	public static function instance( $file = '', $version = '3.14.2' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}

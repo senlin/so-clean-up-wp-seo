@@ -3,7 +3,7 @@
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
 ###### Last updated on August 1, 2020
-###### Development version 3.14.1
+###### Development version 3.14.2
 ###### requires at least WordPress 4.7.2
 ###### tested up to WordPress 5.5
 ###### Author: [Pieter Bos](https://github.com/senlin)
@@ -121,6 +121,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.14.2
+
+* release date August 1, 2020
+* improved hiding notice (added to v3.14.0) that shows after content deletion as it also shows after deleting taxonomies (thanks @KoolPal)
 
 ### 3.14.1
 

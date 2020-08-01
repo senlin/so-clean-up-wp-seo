@@ -111,6 +111,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 
 == Changelog ==
 
+= 3.14.2 =
+
+* release date August 1, 2020
+* improved hiding notice (added to v3.14.0) that shows after content deletion as it also shows after deleting taxonomies (thanks @KoolPal)
+
 = 3.14.1 =
 
 * release date August 1, 2020
