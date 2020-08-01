@@ -1,12 +1,11 @@
 # Hide SEO Bloat
 
-[![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![ClassicPress tested on version 1.2.0](https://img.shields.io/badge/ClassicPress-1.2.0-03768e?style=flat-round)](https://www.classicpress.net)
+[![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on May 20, 2020
-###### Development version 3.14.0
+###### Last updated on August 1, 2020
+###### Development version 3.14.1
 ###### requires at least WordPress 4.7.2
-###### tested up to WordPress 5.4
-###### tested up to ClassicPress 1.2.0
+###### tested up to WordPress 5.5
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -18,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* hide new notice that shows after deleting content (post, page, product, other CPT)
+* hide premium upsell ad from social tab of Yoast SEO Metabox (thanks @allanrehhoff)
 
 <hr>
 
@@ -122,6 +121,12 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.14.1
+
+* release date August 1, 2020
+* hide premium upsell ad from social tab of Yoast SEO Metabox (thanks @allanrehhoff)
+* tested up to WP 5.5
 
 ### 3.14.0
 
