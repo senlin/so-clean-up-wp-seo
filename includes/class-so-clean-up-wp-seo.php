@@ -135,8 +135,6 @@ class CUWS {
 		add_action( 'admin_menu', array( $this, 'so_cuws_remove_admin_columns_init' ), 11 );
 		// @since 3.13.0
 		add_action( 'admin_init', array( $this, 'so_cuws_remove_seo_scores_dropdown_filters' ), 20 );
-		// @since 3.13.0
-		add_action( 'current_screen', array( $this, 'remove_advanced_menu_metabox' ) );
 
 
 		// Load API for generic admin functions
@@ -332,35 +330,6 @@ class CUWS {
 
 
 	/**
-	 * Remove Advanced accordion menu of SEO metabox on Post and Custom Post Type edit screens
-	 *
-	 * credits [Dibbyo456](https://github.com/Dibbyo456)
-	 */
-	public function remove_advanced_menu_metabox() {
-
-		if ( ! empty( $this->options['remove_advanced'] ) ) {
-
-			// create array of default post types.
-			// do not include page for now as the advanced menu can come in handy there
-			$default_post_types = array( 'post' );
-			// get the custom post types if available.
-			$custom_post_types = get_post_types( array( '_builtin' => false ) );
-			// merge them. no errors if no cpt found.
-			$all_post_types = array_merge( $default_post_types, $custom_post_types );
-
-			// if current edit screen belongs to post types, then change capability.
-			if ( in_array( get_current_screen()->id, $all_post_types ) ) {
-				add_filter( 'user_has_cap', 'wpseo_master_filter', 10, 3 );
-				function wpseo_master_filter( $allcaps, $cap, $args ) {
-					$allcaps['wpseo_manage_options'] = false;
-					return $allcaps;
-				}
-			}
-		}
-	}
-
-
-	/**
 	 * CSS needed to hide the various options ticked with checkboxes
 	 *
 	 * @since    v2.0.0
@@ -393,7 +362,7 @@ class CUWS {
 
 		// hide premium upsell admin block
 		if ( ! empty( $this->options['hide_upsell_admin_block'] ) ) {
-			echo '.yoast_premium_upsell,.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell,div[class^="SocialUpsell__PremiumInfoText"]{display:none}'; // @since v3.1.0; @modified v3.11.1; @modified v3.13.2; @modified v3.14.1
+			echo '.yoast_premium_upsell,.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell,div[class^="SocialUpsell__PremiumInfoText"],.fBWRwy{display:none}'; // @since v3.1.0; @modified v3.11.1; @modified v3.13.2; @modified v3.14.1; @modified to include SEO Analysis dropdown upsell v3.14.4
 		}
 
 		// hide "Premium" submenu in its entirety
@@ -633,7 +602,6 @@ class CUWS {
 			'hide_content_keyword_score'			=> 'on',
 			'remove_html_comments'					=> 'on',
 			'remove_permalinks_warning'				=> 'on',
-			'remove_advanced'						=> 'on',
 			'hide_ad_after_trashing_content'		=> 'on'
 		);
 

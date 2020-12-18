@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on August 11, 2020
-###### Development version 3.14.3
-###### requires at least WordPress 4.7.2
-###### tested up to WordPress 5.5
+###### Last updated on December 18, 2020
+###### Development version 3.14.4
+###### requires at least WordPress 4.9
+###### tested up to WordPress 5.6
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* fixed bug that occurred with some themes due to introduction of `is_object()` in WP 5.5. Thanks for the patch @andreiglingeanu!
+* hides ad for premium version on post type analysis dropdown
 
 <hr>
 
@@ -121,6 +121,12 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.14.4
+
+* release date December 18, 2020
+* hides ad for premium version on post type analysis dropdown
+* delete function added in 3.13.0 that removes advanced accordion menu at bottom of SEO metabox for post- and custom post types, since it no longer functions properly ([issue #67](https://github.com/senlin/so-clean-up-wp-seo/issues/67))
 
 ### 3.14.3
 
