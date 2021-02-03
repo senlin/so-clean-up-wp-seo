@@ -1,9 +1,9 @@
 # Hide SEO Bloat
 
-[![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
+[![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on December 18, 2020
-###### Development version 3.14.4
+###### Last updated on February 3, 2021
+###### Development version 3.14.5
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 5.6
 ###### Author: [Pieter Bos](https://github.com/senlin)
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* hides ad for premium version on post type analysis dropdown
+* fix React hide tabs conflict ([issue #94](https://github.com/senlin/so-clean-up-wp-seo/issues/94))
 
 <hr>
 
@@ -121,6 +121,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.14.5
+
+* release date February 3, 2021
+* fix React hide tabs conflict ([issue #94](https://github.com/senlin/so-clean-up-wp-seo/issues/94))
 
 ### 3.14.4
 
