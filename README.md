@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on February 3, 2021
-###### Development version 3.14.5
+###### Last updated on February 4, 2021
+###### Development version 3.14.6
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 5.6
 ###### Author: [Pieter Bos](https://github.com/senlin)
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* fix React hide tabs conflict ([issue #94](https://github.com/senlin/so-clean-up-wp-seo/issues/94))
+* add condition to use new-ish `wpseo_debug_markers` filter to remove frontend comments in a backward compatible way; fixes [issue #95](https://github.com/senlin/so-clean-up-wp-seo/issues/95)
 
 <hr>
 
@@ -121,6 +121,11 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.14.6
+
+* release date Fenruary 4, 2021
+* add condition to use new-ish `wpseo_debug_markers` filter to remove frontend comments in a backward compatible way; fixes [issue #95](https://github.com/senlin/so-clean-up-wp-seo/issues/95)
 
 ### 3.14.5
 

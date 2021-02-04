@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.6
-Stable tag: 3.14.5
+Stable tag: 3.14.6
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* fix React hide tabs conflict ([issue #94](https://github.com/senlin/so-clean-up-wp-seo/issues/94))
+* add condition to use new-ish `wpseo_debug_markers` filter to remove frontend comments in a backward compatible way; fixes [issue #95](https://github.com/senlin/so-clean-up-wp-seo/issues/95)
 
 <hr>
 
@@ -110,6 +110,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.14.6 =
+
+* release date February 4, 2021
+* add condition to use new-ish `wpseo_debug_markers` filter to remove frontend comments in a backward compatible way; fixes [issue #95](https://github.com/senlin/so-clean-up-wp-seo/issues/95)
 
 = 3.14.5 =
 

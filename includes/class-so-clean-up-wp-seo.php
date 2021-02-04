@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.14.5' ) {
+	public function __construct( $file = '', $version = '3.14.6' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -212,22 +212,37 @@ class CUWS {
 	/**
 	 * Upon request by many the plugin now also removes the frontend HTML comments left by Yoast
 	 * improvements of v3.11.1 via [Robert Went](https://gist.github.com/robwent/f36e97fdd648a40775379a86bd97b332)
+	 * v3.14.6: added conditional for new filter tip from [Emanuel-23](https://github.com/senlin/so-clean-up-wp-seo/issues/95)
 	 *
 	 * @since v3.11.0
 	 * @modified v3.11.1
+	 * @modified v3.14.6
 	 */
 	public function so_cuws_remove_frontend_html_comments() {
-
+	
 		if ( ! empty( $this->options['remove_html_comments'] ) ) {
-
+	
 			if ( defined( 'WPSEO_VERSION' ) ) {
-				add_action( 'get_header', function () { ob_start( function ( $o ) {
-					return preg_replace( '/\n?<.*?Yoast SEO plugin.*?>/mi', '', $o ); } ); } );
-				add_action('wp_head',function (){ ob_end_flush(); }, 999);
+				
+				$wpseo_version = constant( 'WPSEO_VERSION' );
+	
+				// the wpseo_debug_markers() filter was added in WP SEO version 14.1
+				if ( $wpseo_version < 14.1 ) {
+	
+					add_action( 'get_header', function () { ob_start( function ( $o ) {
+						return preg_replace( '/\n?<.*?Yoast SEO plugin.*?>/mi', '', $o ); } ); } );
+					add_action( 'wp_head',function (){ ob_end_flush(); }, 999 );
+	
+				} else {
+					
+					add_filter( 'wpseo_debug_markers', '__return_false' );
+				
+				}			
+				
 			}
-
+	
 		}
-    }
+	}
 
     /**
 	 * Remove warning notice when changing permalinks
@@ -513,7 +528,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.14.5' ) {
+	public static function instance( $file = '', $version = '3.14.6' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
