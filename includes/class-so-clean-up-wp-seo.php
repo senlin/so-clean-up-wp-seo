@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.14.5' ) {
+	public function __construct( $file = '', $version = '3.14.6' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -528,7 +528,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.14.5' ) {
+	public static function instance( $file = '', $version = '3.14.6' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
