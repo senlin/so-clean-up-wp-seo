@@ -227,7 +227,7 @@ class CUWS {
 				$wpseo_version = constant( 'WPSEO_VERSION' );
 	
 				// the wpseo_debug_markers() filter was added in WP SEO version 14.1
-				if ( $wpseo_version < 14.1 ) {
+				if ( version_compare ( $wpseo_version , '14.1', '<' ) ) {
 	
 					add_action( 'get_header', function () { ob_start( function ( $o ) {
 						return preg_replace( '/\n?<.*?Yoast SEO plugin.*?>/mi', '', $o ); } ); } );
