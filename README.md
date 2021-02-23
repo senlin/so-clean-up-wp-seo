@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on February 4, 2021
-###### Development version 3.14.6
+###### Last updated on February 23, 2021
+###### Development version 3.14.7
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 5.6
 ###### Author: [Pieter Bos](https://github.com/senlin)
@@ -122,9 +122,14 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Changelog
 
+### 3.14.7
+
+* release date February 23, 2021
+* use version_compare for wpseo_debug_markers() filter; see [this comment](https://github.com/senlin/so-clean-up-wp-seo/commit/441613bd83ee59882cfff4859b0b2c4f8fdb209a#r47454525)
+
 ### 3.14.6
 
-* release date Fenruary 4, 2021
+* release date February 4, 2021
 * add condition to use new-ish `wpseo_debug_markers` filter to remove frontend comments in a backward compatible way; fixes [issue #95](https://github.com/senlin/so-clean-up-wp-seo/issues/95)
 
 ### 3.14.5
