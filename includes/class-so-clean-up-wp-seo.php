@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.14.6' ) {
+	public function __construct( $file = '', $version = '3.14.7' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -227,7 +227,7 @@ class CUWS {
 				$wpseo_version = constant( 'WPSEO_VERSION' );
 	
 				// the wpseo_debug_markers() filter was added in WP SEO version 14.1
-				if ( $wpseo_version < 14.1 ) {
+				if ( version_compare ( $wpseo_version , '14.1', '<' ) ) {
 	
 					add_action( 'get_header', function () { ob_start( function ( $o ) {
 						return preg_replace( '/\n?<.*?Yoast SEO plugin.*?>/mi', '', $o ); } ); } );
@@ -528,7 +528,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.14.6' ) {
+	public static function instance( $file = '', $version = '3.14.7' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
