@@ -4,7 +4,7 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium, classicpress
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 5.6
+Tested up to: 5.7
 Stable tag: 3.14.7
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
