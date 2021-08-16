@@ -4,8 +4,8 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium, classicpress
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 5.7
-Stable tag: 3.14.7
+Tested up to: 5.8
+Stable tag: 3.14.8
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* add condition to use new-ish `wpseo_debug_markers` filter to remove frontend comments in a backward compatible way; fixes [issue #95](https://github.com/senlin/so-clean-up-wp-seo/issues/95)
+* * include hiding "Workouts" submenu; fixes [issue #102](https://github.com/senlin/so-clean-up-wp-seo/issues/102)
 
 <hr>
 
@@ -35,7 +35,7 @@ The **Default Settings** of the current release are as follows:
 * hides the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
 * hides the Upsell Notice in social tab of Yoast Post/Page metabox
 * hides the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
-* hides "Premium" submenu in its entirety
+* hides "Premium" and "Workouts" submenus
 * hides "Go Premium" metabox on edit Post/Page screens
 * hides Post/Page/Taxonomy Deletion Premium Ad
 * hides Problems box from Yoast SEO Dashboard
@@ -110,6 +110,12 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.14.8 =
+
+* release date August 16, 2021
+* include hiding "Workouts" submenu (https://github.com/senlin/so-clean-up-wp-seo/issues/102)
+* adjust admin CSS to not affect other plugins (https://wordpress.org/support/topic/css-affect-other-plugin/)
 
 = 3.14.7 =
 

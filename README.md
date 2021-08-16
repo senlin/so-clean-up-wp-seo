@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on March 8, 2021
-###### Development version 3.14.7
+###### Last updated on August 16, 2021
+###### Development version 3.14.8
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 5.7
+###### tested up to WordPress 5.8
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* add condition to use new-ish `wpseo_debug_markers` filter to remove frontend comments in a backward compatible way; fixes [issue #95](https://github.com/senlin/so-clean-up-wp-seo/issues/95)
+* include hiding "Workouts" submenu; fixes [issue #102](https://github.com/senlin/so-clean-up-wp-seo/issues/102)
 
 <hr>
 
@@ -40,7 +40,7 @@ The default settings of the current release are as follows:
 * hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
 * hide the Upsell Notice in social tab of Yoast Post/Page metabox
 * hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
-* hides "Premium" submenu in its entirety
+* hides "Premium" and "Workouts" submenus
 * hides "Go Premium" metabox on edit Post/Page screens
 * hides Post/Page/Taxonomy Deletion Premium Ad
 * hide Problems box from Yoast SEO Dashboard
@@ -121,6 +121,12 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 3.14.8
+
+* release date August 16, 2021
+* include hiding "Workouts" submenu (https://github.com/senlin/so-clean-up-wp-seo/issues/102)
+* adjust admin CSS to not affect other plugins (https://wordpress.org/support/topic/css-affect-other-plugin/)
 
 ### 3.14.7
 
