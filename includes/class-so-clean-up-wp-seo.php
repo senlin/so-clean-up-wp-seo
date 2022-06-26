@@ -597,6 +597,7 @@ class CUWS {
 			'hide_upsell_notice'                   => 'on',
 			'hide_upsell_admin_block'				=> 'on',
 			'hide_premium_submenu'					=> 'on',
+			'hide_crawl_settings'					=> 'on',
 			'hide_post_deletion_premium_ad'			=> 'on',
 			'hide_dashboard_problems_notifications' => array(
 				'problems',
