@@ -380,6 +380,11 @@ class CUWS {
 			echo '.yoast_premium_upsell,.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell,div[class^="SocialUpsell__PremiumInfoText"],.fBWRwy{display:none}'; // @since v3.1.0; @modified v3.11.1; @modified v3.13.2; @modified v3.14.1; @modified to include SEO Analysis dropdown upsell v3.14.4
 		}
 
+		// hide crawl settings tab
+		if ( ! empty( $this->options['hide_crawl_settings'] ) ) {
+			echo '#wpseo-tabs #crawl-settings-tab{display: none;}'; // @since v3.x.x
+		}
+
 		// hide "Premium" submenu in its entirety
 		// include hiding "Workouts" submenu in its entirety 
 		if ( ! empty( $this->options['hide_premium_submenu'] ) ) {
