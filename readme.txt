@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 6.1
-Stable tag: 3.14.10
+Stable tag: 3.14.11
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -110,6 +110,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.14.11 =
+
+* release date November 7, 2022
+* slight correction on hiding the submenu items of 3.14.10
 
 = 3.14.10 =
 
