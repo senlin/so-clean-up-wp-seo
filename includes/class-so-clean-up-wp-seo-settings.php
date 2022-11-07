@@ -509,7 +509,6 @@ class CUWS_Settings {
 		$html .= '<li><a href="https://www.linkedin.com/in/pieterbos83" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://so-wp.com" target="_blank" title="SO WP">' . esc_attr( __( 'SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-		$html .= '<li><a href="https://bohanintl.com/wptips/" title="Useful WordPress Tips for people who like to DIY">' . esc_attr( __( 'WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '</ul>' . "\n";
 

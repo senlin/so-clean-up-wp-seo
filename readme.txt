@@ -4,8 +4,8 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium, classicpress
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 5.8
-Stable tag: 3.14.8
+Tested up to: 6.1
+Stable tag: 3.14.9
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* * include hiding "Workouts" submenu; fixes [issue #102](https://github.com/senlin/so-clean-up-wp-seo/issues/102)
+* hide "Connect Yoast SEO with Zapier"-text in post publish sidebar 
 
 <hr>
 
@@ -110,6 +110,12 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.14.9 =
+
+* release date November 7, 2022
+* hide "Connect Yoast SEO with Zapier"-text in post publish sidebar
+* remove link to blog from plugin's settings page
 
 = 3.14.8 =
 

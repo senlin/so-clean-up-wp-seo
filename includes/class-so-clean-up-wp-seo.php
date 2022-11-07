@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.14.8' ) {
+	public function __construct( $file = '', $version = '3.14.9' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -476,9 +476,11 @@ class CUWS {
 		if ( ! empty( $this->options['hide_content_keyword_score'] ) ) {
 			echo '
 				#misc-publishing-actions #content-score,
-				#misc-publishing-actions #keyword-score
+				#misc-publishing-actions #keyword-score,
+				#misc-publishing-actions .yoast-zapier-text
 				{display:none;}
 			'; // @since v3.10.0 hide "Content / Keyword Score" from  Publish/Update metabox
+			// @since v3.14.9 hide "Connect Yoast SEO with Zapier" text from Publish/Update metabox
 		}
 
 		// hide Premium ad after deleting content (post, page, wc product, cpt)
@@ -529,7 +531,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.14.8' ) {
+	public static function instance( $file = '', $version = '3.14.9' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
