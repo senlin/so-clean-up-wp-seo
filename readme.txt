@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 6.1
-Stable tag: 3.14.9
+Stable tag: 3.14.10
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* hide "Connect Yoast SEO with Zapier"-text in post publish sidebar 
+* hide "Redirects"-submenu and hide "Crawl Settings"-tab
 
 <hr>
 
@@ -110,6 +110,11 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.14.10 =
+
+* release date November 7, 2022
+* hide ["Redirects"-submenu](https://github.com/senlin/so-clean-up-wp-seo/pull/103) and hide ["Crawl Settings"-tab](https://github.com/senlin/so-clean-up-wp-seo/pull/104), both courtesy of [Chris Johnson](https://github.com/workeffortwaste)
 
 = 3.14.9 =
 
