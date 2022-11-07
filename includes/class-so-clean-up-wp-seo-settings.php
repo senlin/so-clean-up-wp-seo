@@ -226,6 +226,13 @@ class CUWS_Settings {
 					'default'     => $options['hide_dashboard_problems_notifications'],
 				),
 				array(
+					'id'          => 'hide_crawl_settings',
+					'label'       => __( 'Crawl Settings Tab', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Crawl Settings tab.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_crawl_settings'],
+				),
+				array(
 					'id'          => 'hide_upsell_admin_block',
 					'label'       => __( 'Premium Upsell Admin Block', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend.', 'so-clean-up-wp-seo' ),
