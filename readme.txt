@@ -4,8 +4,8 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium, classicpress
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 5.6
-Stable tag: 3.14.6
+Tested up to: 6.1
+Stable tag: 3.14.11
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* add condition to use new-ish `wpseo_debug_markers` filter to remove frontend comments in a backward compatible way; fixes [issue #95](https://github.com/senlin/so-clean-up-wp-seo/issues/95)
+* hide "Redirects"-submenu and hide "Crawl Settings"-tab
 
 <hr>
 
@@ -35,7 +35,7 @@ The **Default Settings** of the current release are as follows:
 * hides the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
 * hides the Upsell Notice in social tab of Yoast Post/Page metabox
 * hides the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
-* hides "Premium" submenu in its entirety
+* hides "Premium" and "Workouts" submenus
 * hides "Go Premium" metabox on edit Post/Page screens
 * hides Post/Page/Taxonomy Deletion Premium Ad
 * hides Problems box from Yoast SEO Dashboard
@@ -110,6 +110,33 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.14.11 =
+
+* release date November 7, 2022
+* slight correction on hiding the submenu items of 3.14.10
+
+= 3.14.10 =
+
+* release date November 7, 2022
+* hide ["Redirects"-submenu](https://github.com/senlin/so-clean-up-wp-seo/pull/103) and hide ["Crawl Settings"-tab](https://github.com/senlin/so-clean-up-wp-seo/pull/104), both courtesy of [Chris Johnson](https://github.com/workeffortwaste)
+
+= 3.14.9 =
+
+* release date November 7, 2022
+* hide "Connect Yoast SEO with Zapier"-text in post publish sidebar
+* remove link to blog from plugin's settings page
+
+= 3.14.8 =
+
+* release date August 16, 2021
+* include hiding "Workouts" submenu (https://github.com/senlin/so-clean-up-wp-seo/issues/102)
+* adjust admin CSS to not affect other plugins (https://wordpress.org/support/topic/css-affect-other-plugin/)
+
+= 3.14.7 =
+
+* release date February 23, 2021
+* use version_compare for wpseo_debug_markers() filter; see [this comment](https://github.com/senlin/so-clean-up-wp-seo/commit/441613bd83ee59882cfff4859b0b2c4f8fdb209a#r47454525)
 
 = 3.14.6 =
 

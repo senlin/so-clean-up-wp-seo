@@ -226,6 +226,13 @@ class CUWS_Settings {
 					'default'     => $options['hide_dashboard_problems_notifications'],
 				),
 				array(
+					'id'          => 'hide_crawl_settings',
+					'label'       => __( 'Crawl Settings Tab', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Crawl Settings tab.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_crawl_settings'],
+				),
+				array(
 					'id'          => 'hide_upsell_admin_block',
 					'label'       => __( 'Premium Upsell Admin Block', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend.', 'so-clean-up-wp-seo' ),
@@ -234,8 +241,8 @@ class CUWS_Settings {
 				),
 				array(
 					'id'          => 'hide_premium_submenu',
-					'label'       => __( 'Premium submenu', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hides the "Premium" submenu in its entirety.', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'Premium submenus', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hides the "Premium", "Workouts" and "Redirects" submenus.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_premium_submenu'],
 				),
@@ -509,7 +516,6 @@ class CUWS_Settings {
 		$html .= '<li><a href="https://www.linkedin.com/in/pieterbos83" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://so-wp.com" target="_blank" title="SO WP">' . esc_attr( __( 'SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-		$html .= '<li><a href="https://bohanintl.com/wptips/" title="Useful WordPress Tips for people who like to DIY">' . esc_attr( __( 'WP Tips', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '</ul>' . "\n";
 

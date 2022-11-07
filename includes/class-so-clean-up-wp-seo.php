@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.14.7' ) {
+	public function __construct( $file = '', $version = '3.14.11' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -380,9 +380,15 @@ class CUWS {
 			echo '.yoast_premium_upsell,.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell,div[class^="SocialUpsell__PremiumInfoText"],.fBWRwy{display:none}'; // @since v3.1.0; @modified v3.11.1; @modified v3.13.2; @modified v3.14.1; @modified to include SEO Analysis dropdown upsell v3.14.4
 		}
 
+		// hide crawl settings tab
+		if ( ! empty( $this->options['hide_crawl_settings'] ) ) {
+			echo '#wpseo-tabs #crawl-settings-tab{display: none;}'; // @since v3.14.10
+		}
+
 		// hide "Premium" submenu in its entirety
+		// include hiding "Workouts" submenu in its entirety 
 		if ( ! empty( $this->options['hide_premium_submenu'] ) ) {
-			echo 'li#toplevel_page_wpseo_dashboard>ul>li:nth-child(6){display:none;}'; // @since v3.6.0 hide "Premium" submenu in its entirety; @modified v3.12.0 decrease with 1, due to Search Console submenu being removed
+			echo 'li#toplevel_page_wpseo_dashboard>ul>li:nth-child(7),li#toplevel_page_wpseo_dashboard>ul>li:nth-child(8),li#toplevel_page_wpseo_dashboard>ul>li:nth-child(9){display:none;}'; // @since v3.6.0 hide "Premium" submenu in its entirety; @modified v3.12.0 decrease with 1, due to Search Console submenu being removed; @since 3.14.8 include hiding "Workouts" submenu in its entirety @since 3.14.10 include hiding "Redirects" submenu in its entirety
 		}
 
 		// hide Post/Page/Taxonomy Deletion Premium Ad
@@ -475,9 +481,11 @@ class CUWS {
 		if ( ! empty( $this->options['hide_content_keyword_score'] ) ) {
 			echo '
 				#misc-publishing-actions #content-score,
-				#misc-publishing-actions #keyword-score
+				#misc-publishing-actions #keyword-score,
+				#misc-publishing-actions .yoast-zapier-text
 				{display:none;}
 			'; // @since v3.10.0 hide "Content / Keyword Score" from  Publish/Update metabox
+			// @since v3.14.9 hide "Connect Yoast SEO with Zapier" text from Publish/Update metabox
 		}
 
 		// hide Premium ad after deleting content (post, page, wc product, cpt)
@@ -528,7 +536,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.14.7' ) {
+	public static function instance( $file = '', $version = '3.14.11' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}
@@ -591,6 +599,7 @@ class CUWS {
 			'hide_upsell_notice'                   => 'on',
 			'hide_upsell_admin_block'				=> 'on',
 			'hide_premium_submenu'					=> 'on',
+			'hide_crawl_settings'					=> 'on',
 			'hide_post_deletion_premium_ad'			=> 'on',
 			'hide_dashboard_problems_notifications' => array(
 				'problems',
