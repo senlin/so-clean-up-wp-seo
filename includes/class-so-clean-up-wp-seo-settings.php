@@ -242,7 +242,7 @@ class CUWS_Settings {
 				array(
 					'id'          => 'hide_premium_submenu',
 					'label'       => __( 'Premium submenus', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hides the "Premium" and "Workouts submenus.', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hides the "Premium", "Workouts" and "Redirects" submenus.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_premium_submenu'],
 				),
