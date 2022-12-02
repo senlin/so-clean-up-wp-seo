@@ -99,7 +99,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '3.14.11' ) {
+	public function __construct( $file = '', $version = '3.14.12' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -372,7 +372,7 @@ class CUWS {
 
 		// hide upsell notice in Yoast SEO Dashboard
 		if ( ! empty( $this->options['hide_upsell_notice'] ) ) {
-			echo '#yoast-warnings #wpseo-upsell-notice,#yoast-additional-keyphrase-collapsible-metabox,.wpseo-keyword-synonyms,.wpseo-multiple-keywords{display:none !important;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard; @modified v2.5.4 improved to remove entire Notification box in the main Dashboard; @modified v2.6.0 only hide this notice; @modified 3.13.4 hide additional keyphrase "option" from metabox as it is ad for premium too.
+			echo '#yoast-warnings #wpseo-upsell-notice,#yoast-additional-keyphrase-collapsible-metabox,.wpseo-keyword-synonyms,.wpseo-multiple-keywords,.switch-container.premium-upsell,.yoast-settings-section-upsell,.yoast-settings-section-disabled{display:none !important;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard; @modified v2.5.4 improved to remove entire Notification box in the main Dashboard; @modified v2.6.0 only hide this notice; @modified 3.13.4 hide additional keyphrase "option" from metabox as it is ad for premium too; @modified 3.14.12 hide "Unlock with Premium" button and options.
 		}
 
 		// hide premium upsell admin block
@@ -536,7 +536,7 @@ class CUWS {
 	 *
 	 * @return CUWS $_instance
 	 */
-	public static function instance( $file = '', $version = '3.14.11' ) {
+	public static function instance( $file = '', $version = '3.14.12' ) {
 		if ( null === self::$_instance ) {
 			self::$_instance = new self( $file, $version );
 		}

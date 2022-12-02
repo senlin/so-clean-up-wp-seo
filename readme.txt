@@ -5,7 +5,7 @@ Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 6.1
-Stable tag: 3.14.11
+Stable tag: 3.14.12
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* hide "Redirects"-submenu and hide "Crawl Settings"-tab
+* hide "Unlock with Premium" buttons across Yoast dashboard
 
 <hr>
 
@@ -110,6 +110,12 @@ Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/is
 5. dashboard widget that is removed with the plugin activated
 
 == Changelog ==
+
+= 3.14.12 =
+
+* release date December 2, 2022
+* hide "Unlock with Premium" button and options in Yoast dashboard (Features tab)
+* hide "Social Settings" box and "Unlock with Premium" button in Yoast dashboard (Search Appearance, Content types and Taxonomies tabs)
 
 = 3.14.11 =
 
