@@ -478,14 +478,17 @@ class CUWS {
 		}
 
 		// hide content/keyword score on Publish/Update Post metabox
+		// hide Premium SEO Analysis button on Publish/Update Post metabox
 		if ( ! empty( $this->options['hide_content_keyword_score'] ) ) {
 			echo '
 				#misc-publishing-actions #content-score,
 				#misc-publishing-actions #keyword-score,
-				#misc-publishing-actions .yoast-zapier-text
+				#misc-publishing-actions .yoast-zapier-text,
+				button#yoast-premium-seo-analysis-metabox-modal-open-button
 				{display:none;}
 			'; // @since v3.10.0 hide "Content / Keyword Score" from  Publish/Update metabox
 			// @since v3.14.9 hide "Connect Yoast SEO with Zapier" text from Publish/Update metabox
+			// @since 3.14.13 hide Premium SEO Analysis button from Publish/Update Post metabox
 		}
 
 		// hide Premium ad after deleting content (post, page, wc product, cpt)
