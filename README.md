@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on December 2, 2022
-###### Development version 3.14.12
+###### Last updated on January 31, 2023
+###### Development version 3.14.13
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 6.1
 ###### Author: [Pieter Bos](https://github.com/senlin)
@@ -17,7 +17,8 @@ Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plu
 
 **New in this version:**
 
-* hide "Unlock with Premium" buttons across Yoast dashboard
+* fix issue where Hide SEO Bloat link to settings page was made invisible due to Yoast SEO switching around menu items in admin sidebar
+* hide Premium SEO Analysis button on Publish/Update Post metabox
 
 <hr>
 
@@ -120,12 +121,17 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Changelog
 
+### 3.14.13
+
+* release date January 31, 2023
+* fix issue where Hide SEO Bloat link to settings page was made invisible due to Yoast SEO switching around menu items in admin sidebar
+* hide Premium SEO Analysis button on Publish/Update Post metabox
+
 ### 3.14.12
 
 * release date December 2, 2022
 * hide "Unlock with Premium" button and options in Yoast dashboard (Features tab)
 * hide "Social Settings" box and "Unlock with Premium" button in Yoast dashboard (Search Appearance, Content types and Taxonomies tabs)
-
 
 ### 3.14.11
 
