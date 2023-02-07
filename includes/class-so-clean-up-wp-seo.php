@@ -183,21 +183,6 @@ class CUWS {
 	}
 
 	/**
-	 * at some point Yoast SEO has introduced "Primary Category Feature"
-	 * This function removes this "feature"
-	 *
-	 * @since v3.6.0
-	 */
-	public function so_cuws_remove_primary_category_feature() {
-
-		if ( ! empty( $this->options['remove_primarycatfeat'] ) ) {
-
-			add_filter( 'wpseo_primary_term_taxonomies', '__return_empty_array' );
-
-		}
-	}
-
-	/**
 	 * Remove Search Console
 	 *
 	 * @since v3.10.0
@@ -355,21 +340,6 @@ class CUWS {
 
 		echo '<style media="screen" id="so-hide-seo-bloat" type="text/css">';
 
-		// sidebar ads
-		if ( ! empty( $this->options['hide_ads'] ) ) {
-			echo '#sidebar-container.wpseo_content_cell{display:none!important;}'; // @since v1.0.0; @modified v3.4.1
-		}
-
-		// tagline nag
-		if ( ! empty( $this->options['hide_tagline_nag'] ) ) {
-			echo '#wpseo-dismiss-tagline-notice{display:none;}'; // @since v2.6.0 hide tagline nag
-		}
-
-		// robots nag
-		if ( ! empty( $this->options['hide_robots_nag'] ) ) {
-			echo '#wpseo-dismiss-blog-public-notice,#wpseo_advanced .error-message{display:none;}'; // @since v2.0.0 hide robots nag; @modified v2.5.4 to add styling via the options and not globally.
-		}
-
 		// hide upsell notice in Yoast SEO Dashboard
 		if ( ! empty( $this->options['hide_upsell_notice'] ) ) {
 			echo '#yoast-warnings #wpseo-upsell-notice,#yoast-additional-keyphrase-collapsible-metabox,.wpseo-keyword-synonyms,.wpseo-multiple-keywords,.switch-container.premium-upsell,.yoast-settings-section-upsell,.yoast-settings-section-disabled{display:none !important;}'; // @since v2.5.3 hide upsell notice in Yoast SEO Dashboard; @modified v2.5.4 improved to remove entire Notification box in the main Dashboard; @modified v2.6.0 only hide this notice; @modified 3.13.4 hide additional keyphrase "option" from metabox as it is ad for premium too; @modified 3.14.12 hide "Unlock with Premium" button and options.
@@ -380,20 +350,10 @@ class CUWS {
 			echo '.yoast_premium_upsell,.yoast_premium_upsell_admin_block,#wpseo-local-seo-upsell,div[class^="SocialUpsell__PremiumInfoText"],.fBWRwy{display:none}'; // @since v3.1.0; @modified v3.11.1; @modified v3.13.2; @modified v3.14.1; @modified to include SEO Analysis dropdown upsell v3.14.4
 		}
 
-		// hide crawl settings tab
-		if ( ! empty( $this->options['hide_crawl_settings'] ) ) {
-			echo '#wpseo-tabs #crawl-settings-tab{display: none;}'; // @since v3.14.10
-		}
-
 		// hide "Premium" submenu in its entirety
 		// include hiding "Workouts" submenu in its entirety 
 		if ( ! empty( $this->options['hide_premium_submenu'] ) ) {
 			echo 'li#toplevel_page_wpseo_dashboard>ul>li:nth-child(6),li#toplevel_page_wpseo_dashboard>ul>li:nth-child(7),li#toplevel_page_wpseo_dashboard>ul>li:nth-child(8){display:none;}'; // @since v3.6.0 hide "Premium" submenu in its entirety; @modified v3.12.0 decrease with 1, due to Search Console submenu being removed; @since 3.14.8 include hiding "Workouts" submenu in its entirety @since 3.14.10 include hiding "Redirects" submenu in its entirety; @since 3.14.13 Yoast SEO swapped menu items around
-		}
-
-		// hide Post/Page/Taxonomy Deletion Premium Ad
-		if ( ! empty( $this->options['hide_post_deletion_premium_ad'] ) ) {
-			echo 'body.edit-php .yoast-alert.notice.notice-warning,body.edit-tags-php .yoast-alert.notice.notice-warning{display:none;}'; // @since v3.8.0
 		}
 
 		// Problems/Notification boxes
@@ -414,11 +374,6 @@ class CUWS {
 		// hide issue counter
 		if ( ! empty( $this->options['hide_issue_counter'] ) ) {
 			echo '#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .wp-menu-name .update-plugins{display:none;}'; // @since v2.3.0 hide issue counter from adminbar and plugin menu sidebar; @modified v3.2.1 to remove orange background that shows again; @modified v3.13.5 fix issue 81
-		}
-
-		// hide Configuration Wizard on every screen in the Yoast admin
-		if ( ! empty( $this->options['hide_config_wizard'] ) ) {
-			echo '.yoast-alerts .yoast-container__configuration-wizard{display:none;}'; // @since v3.6.0 hide Configuration Wizard
 		}
 
 		/*
