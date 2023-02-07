@@ -187,6 +187,34 @@ class CUWS_Settings {
 			//'description'			=> __( 'description' ),
 			'fields' => array(
 				array(
+					'id'          => 'hide_ads',
+					'label'       => __( 'Sidebar Ads', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_ads'],
+				),
+				array(
+					'id'          => 'hide_tagline_nag',
+					'label'       => __( 'General > Dashboard tab > Problems box > <b>Tagline nag</b>', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide Tagline nag that shows in the Problem Box of the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_tagline_nag'],
+				),
+				array(
+					'id'          => 'hide_robots_nag',
+					'label'       => __( 'General > Dashboard tab > Problems box > <b>Robots nag</b>', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide robots nag that shows as a "Huge SEO issue" in the Problem Box of the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_robots_nag'],
+				),
+				array(
+					'id'          => 'hide_upsell_notice',
+					'label'       => __( 'General > Dashboard tab > Notifications box > <b>Upsell Notice</b>', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Upsell Notice in the Notifications box that shows in the Notifications Box of the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_upsell_notice'],
+				),
+				array(
 					'id'          => 'hide_dashboard_problems_notifications',
 					'label'       => __( 'General > Dashboard tab > <b>Problems/Notifications boxes</b>', 'so-clean-up-wp-seo' ),
 					'description' => '<br>' . __( 'Hide entire Problems/Notifications boxes from the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
@@ -196,6 +224,13 @@ class CUWS_Settings {
 						'notifications' => __( 'Hide entire Notifications box', 'so-clean-up-wp-seo' ),
 					),
 					'default'     => $options['hide_dashboard_problems_notifications'],
+				),
+				array(
+					'id'          => 'hide_crawl_settings',
+					'label'       => __( 'Crawl Settings Tab', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Crawl Settings tab.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_crawl_settings'],
 				),
 				array(
 					'id'          => 'hide_upsell_admin_block',
@@ -210,6 +245,20 @@ class CUWS_Settings {
 					'description' => __( 'Hides the "Premium", "Workouts" and "Redirects" submenus.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_premium_submenu'],
+				),
+				array(
+					'id'          => 'hide_post_deletion_premium_ad',
+					'label'       => __( 'Post/Page/Taxonomy Deletion Premium Ad', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hides Post Deletion Premium Ad in edit Post/Page/Taxonomy screens.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_post_deletion_premium_ad'],
+				),
+				array(
+					'id'          => 'hide_config_wizard',
+					'label'       => __( 'Hide Configuration Wizard check', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Configuration Wizard check that shows at the top of almost all Yoast SEO Settings screens.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['hide_config_wizard'],
 				),
 				array(
 					'id'          => 'hide_imgwarning_nag',
@@ -266,6 +315,13 @@ class CUWS_Settings {
 					'default'     => $options['hide_seo_settings_profile_page'],
 				),
 				array(
+					'id'          => 'remove_primarycatfeat',
+					'label'       => __( 'Primary category', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove primary category feature.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['remove_primarycatfeat'],
+				),
+				array(
 					'id'          => 'remove_adminbar',
 					'label'       => __( 'SEO menu admin bar', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Remove the admin bar Yoast SEO menu.', 'so-clean-up-wp-seo' ),
@@ -307,8 +363,6 @@ class CUWS_Settings {
 					'type'        => 'checkbox',
 					'default'     => $options['hide_ad_after_trashing_content'],
 				),
-				// New settings introduced for Yoast 20.x
-				
 			),
 		);
 
