@@ -70,7 +70,7 @@ class CUWS {
 	 * @access  public
 	 * @since   v2.0.0
 	 */
-	public $styles_dir;
+	public $assets_dir;
 
 	/**
 	 * The plugin assets URL.
@@ -79,7 +79,16 @@ class CUWS {
 	 * @access  public
 	 * @since   v2.0.0
 	 */
-	public $styles_url;
+	public $assets_url;
+
+	/**
+	 * The admin API instance.
+	 *
+	 * @var     object
+	 * @access  public
+	 * @since   v2.0.0
+	 */
+	public $admin = null;
 
 	/**
 	 * Holds an array of plugin options.
