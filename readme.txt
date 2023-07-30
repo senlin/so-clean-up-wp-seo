@@ -4,8 +4,8 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 6.1
-Stable tag: 4.0.0
+Tested up to: 6.3
+Stable tag: 4.0.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ Hides (sidebar) ads and premium version buttons of Yoast SEO from their settings
 
 <hr>
 
-The first version of the Hide SEO Bloat plugin was released in April 2015 and ever since team Yoast and I have been playing a game of cat and mouse. 
+The first version of the Hide SEO Bloat plugin was released in April 2015 and ever since team Yoast and I have been playing a game of cat and mouse.
 
 Since version 20.0 of Yoast SEO however, the Settings page has received a complete overhaul, which made the Hide SEO Bloat plugin almost obsolete!
 
@@ -70,6 +70,12 @@ Indeed the Hide SEO Bloat plugin writes its settings to the database. The includ
 Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/issues)
 
 == Changelog ==
+
+= 4.0.1 =
+
+* release date July 30, 2023
+* Fix PHP 8.2 deprecation notices ([PR #106](https://github.com/senlin/so-clean-up-wp-seo/pull/106)) (thanks Brandon)
+* compatible up to WP 6.3
 
 = 4.0.0 =
 

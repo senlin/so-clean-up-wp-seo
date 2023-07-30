@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on February 10, 2023
-###### Development version 4.0.0
+###### Last updated on July 30, 2023
+###### Development version 4.0.1
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 6.1
+###### tested up to WordPress 6.3
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -17,7 +17,7 @@ Hides (sidebar) ads and premium version buttons of Yoast SEO from their settings
 
 <hr>
 
-The first version of the Hide SEO Bloat plugin was released in April 2015 and ever since team Yoast and I have been playing a game of cat and mouse. 
+The first version of the Hide SEO Bloat plugin was released in April 2015 and ever since team Yoast and I have been playing a game of cat and mouse.
 
 Since version 20.0 of Yoast SEO however, the Settings page has received a complete overhaul, which made the Hide SEO Bloat plugin almost obsolete!
 
@@ -47,11 +47,11 @@ For version 2.4.0 [Andy Fragen](https://github.com/afragen) has refactored that 
 
 ### The name of the plugin is confusing, it hides bloat of which SEO plugin?
 
-Yes, you are right, the name is a bit vague (see Changelog v1.8.0). On the other hand there is only one SEO plugin that adds a lot of bloat to the WordPress Dashboard and that is the Yoast SEO plugin. 
+Yes, you are right, the name is a bit vague (see Changelog v1.8.0). On the other hand there is only one SEO plugin that adds a lot of bloat to the WordPress Dashboard and that is the Yoast SEO plugin.
 
 ### The plugin doesn't do anything!
 
-Do you have the Yoast SEO plugin installed? It hides the bloat from that plugin only. 
+Do you have the Yoast SEO plugin installed? It hides the bloat from that plugin only.
 If you have and the plugin still doesn't do anything, then please open a [support ticket](https://github.com/senlin/so-clean-up-wp-seo/issues).
 
 ### With a settings page comes additional entries in the database; what happens on uninstall?
@@ -66,7 +66,7 @@ Please open an issue here on [Github](https://github.com/senlin/so-clean-up-wp-s
 ## Contributions
 
 I welcome your contributions very much! PR's will be considered and of course bug reports and feature requests can also be seen as contributions!
-**If you're interested in becoming involved, please [let me know](https://so-wp.com/contact) or simply send a PR with your proposed improvement.** 
+**If you're interested in becoming involved, please [let me know](https://so-wp.com/contact) or simply send a PR with your proposed improvement.**
 
 ## License
 
@@ -83,21 +83,27 @@ I welcome your contributions very much! PR's will be considered and of course bu
 
 [SO WP Plugins](https://so-wp.com/)
 
-[Github](https://github.com/senlin) 
+[Github](https://github.com/senlin)
 
-[LinkedIn](https://www.linkedin.com/in/pieterbos83) 
+[LinkedIn](https://www.linkedin.com/in/pieterbos83)
 
-[WordPress](https://profiles.wordpress.org/senlin/) 
+[WordPress](https://profiles.wordpress.org/senlin/)
 
 
 ## Changelog
+
+### 4.0.1
+
+* release date July 30, 2023
+* Fix PHP 8.2 deprecation notices ([PR #106](https://github.com/senlin/so-clean-up-wp-seo/pull/106)) (thanks Brandon)
+* compatible up to WP 6.3
 
 ### 4.0.0
 
 * release date February 10, 2023
 * redo many styles that hide features, due to dashboard makeover release of Yoast SEO version 20.0
 * merge many settings (from 23 to 14)
-* new sections on the settings page with assistance of [ChatGPT](https://chat.openai.com/) 
+* new sections on the settings page with assistance of [ChatGPT](https://chat.openai.com/)
 * simplify register_settings() function with assistance of [ChatGPT](https://chat.openai.com/)
 
 ### 3.14.13
@@ -231,7 +237,7 @@ Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibb
 
 * release date July 27, 2019
 * refactor remove HTML comments from source code (frontend) with thanks to [Robert Went](https://www.robertwent.com/blog/remove-yoast-html-comments-in-version-11-0/)
-* hide upsell ad for local seo; addresses [issue #57](https://github.com/senlin/so-clean-up-wp-seo/issues/57) 
+* hide upsell ad for local seo; addresses [issue #57](https://github.com/senlin/so-clean-up-wp-seo/issues/57)
 
 ### 3.11.0
 
@@ -299,7 +305,7 @@ Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibb
 ### 3.5.0
 
 * release date January 2, 2018
-* fix issue #37 
+* fix issue #37
 * remove Github Branch in header info
 * change link to personal LI profile
 
@@ -363,7 +369,7 @@ Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibb
 * remove [forgotten about-nag setting](https://wordpress.org/support/topic/i-have-updated-to-2-6-0-but-still-see-setting-for-about-nag/)
 * update readme.txt
 
-### 2.6.0 
+### 2.6.0
 
 * release date 2017.3.24
 * add option to hide Readability column on Posts/Pages screens
@@ -376,12 +382,12 @@ Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibb
 * remove hide about nag as it no longer is a site-wide nag
 * update readme.txt
 
-### 2.5.5 
+### 2.5.5
 
 * release date 2017.2.28 (triggered by release of Yoast SEO 4.4)
 * hide the email support of the help center as it is a premium-only feature and therefore an "ad in disguise"
 
-### 2.5.4 
+### 2.5.4
 
 * release date 2016.12.22 (triggered by release of Yoast SEO 4.0)
 * fix: change robots nag hiding via settings instead of globally
@@ -389,7 +395,7 @@ Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibb
 * improvement: upsell notice: hide entire notifications box
 * add FAQ
 
-### 2.5.3 
+### 2.5.3
 
 * release date 2016.11.29 (triggered by release of Yoast SEO 3.9)
 * hide "Go Premium" text from adminbar dropdown
@@ -475,7 +481,7 @@ Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibb
 
 ### 1.7.3 (2015.11.19)
 
-* version 3.0 of Yoast SEO has introduced a cool new UI for the Edit screens. This also shows a + icon and when clicking that, you'll have a big fat ad in your face. This is a premium feature and the only function of the + icon therefore is to irritate you with an ad. We have therefore made it invisible. 
+* version 3.0 of Yoast SEO has introduced a cool new UI for the Edit screens. This also shows a + icon and when clicking that, you'll have a big fat ad in your face. This is a premium feature and the only function of the + icon therefore is to irritate you with an ad. We have therefore made it invisible.
 * tested up to WP 4.4
 * adjust readme files
 
@@ -502,7 +508,7 @@ Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibb
 ### 1.5 (2015.07.22)
 
 * remove overview dashboard widget that was introduced in Yoast SEO 2.3
-* change plugin name to reflect the name-change of the plugin it cleans up for ([WordPress SEO became Yoast SEO](https://yoast.com/yoast-seo-2-3/)) 
+* change plugin name to reflect the name-change of the plugin it cleans up for ([WordPress SEO became Yoast SEO](https://yoast.com/yoast-seo-2-3/))
 
 ### 1.4 (2015.06.17)
 
@@ -515,13 +521,13 @@ Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibb
 
 ### 1.3.2 (2015.05.14)
 
-* Fix issue that WP SEO columns were still showing on Edit Posts/Pages pages 
+* Fix issue that WP SEO columns were still showing on Edit Posts/Pages pages
 
 ### 1.3.1 (2015.05.01)
 
 * Added styling to remove Tour Intro and button to start tour
 * Added screenshots
-* Removed redundant dashboard widget function 
+* Removed redundant dashboard widget function
 
 ### 1.3 (2015.04.30)
 
@@ -534,7 +540,7 @@ Credits of all the above improvements go to [@Dibbyo456](https://github.com/Dibb
 
 ### 1.1 (2015.04.27)
 
-* Release version 
+* Release version
 * banner image (in assets folder) by [Leigh Kendell](https://unsplash.com/leighkendell)
 
 ### 1.0 (2015.04.24)

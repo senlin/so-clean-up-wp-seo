@@ -108,7 +108,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '4.0.0' ) {
+	public function __construct( $file = '', $version = '4.0.1' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
@@ -228,28 +228,28 @@ class CUWS {
 	 * @modified v3.14.6
 	 */
 	public function so_cuws_remove_frontend_html_comments() {
-	
+
 		if ( ! empty( $this->options['remove_html_comments'] ) ) {
-	
+
 			if ( defined( 'WPSEO_VERSION' ) ) {
-				
+
 				$wpseo_version = constant( 'WPSEO_VERSION' );
-	
+
 				// the wpseo_debug_markers() filter was added in WP SEO version 14.1
 				if ( version_compare ( $wpseo_version , '14.1', '<' ) ) {
-	
+
 					add_action( 'get_header', function () { ob_start( function ( $o ) {
 						return preg_replace( '/\n?<.*?Yoast SEO plugin.*?>/mi', '', $o ); } ); } );
 					add_action( 'wp_head',function (){ ob_end_flush(); }, 999 );
-	
+
 				} else {
-					
+
 					add_filter( 'wpseo_debug_markers', '__return_false' );
-				
-				}			
-				
+
+				}
+
 			}
-	
+
 		}
 	}
 
@@ -398,12 +398,12 @@ class CUWS {
 			a#link-crawl-optimization {
 				display:none !important;
 			}
-			
+
 			/* hide upsells */
 			.seo_page_wpseo_page_settings .yst-feature-upsell.yst-feature-upsell--card {
 				display:none;
 			}
-			
+
 			/* hide premium upsell admin block that shows throughout Yoast backend */
 			.yoast_premium_upsell,
 			.yoast_premium_upsell_admin_block,
@@ -411,7 +411,7 @@ class CUWS {
 			div[class^="SocialUpsell__PremiumInfoText"] {
 				display:none;
 			}
-			
+
 			/* hide upsell notice in Yoast SEO Dashboard */
 			#yoast-warnings #wpseo-upsell-notice,
 			#yoast-additional-keyphrase-collapsible-metabox,
@@ -421,7 +421,7 @@ class CUWS {
 			.yoast-settings-section-disabled{
 				display:none !important;
 			}
-			
+
 			/* hide help center */
 			div#yoast-helpscout-beacon,
 			.yoast-help-center__button {
@@ -439,7 +439,7 @@ class CUWS {
 				li#toplevel_page_wpseo_dashboard>ul>li:nth-child(8) {
 					display:none;
 				}
-				
+
 				/* hide issue counter */
 				#wpadminbar .yoast-issue-counter,#toplevel_page_wpseo_dashboard .wp-menu-name .update-plugins{
 					display:none;
@@ -513,7 +513,7 @@ class CUWS {
 				#wpseo-metabox-root button.wpseo-multiple-keywords,
 				button#yoast-additional-keyphrase-collapsible-metabox {
 					display: none;
-				}				
+				}
 			';
 		}
 
