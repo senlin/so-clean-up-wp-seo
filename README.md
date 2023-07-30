@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on November 7, 2022
-###### Development version 3.14.11
+###### Last updated on February 10, 2023
+###### Development version 4.0.0
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 6.1
 ###### Author: [Pieter Bos](https://github.com/senlin)
@@ -13,54 +13,26 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to your WordPress 
 
 ## Description
 
-Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
-
-**New in this version:**
-
-* hide "Redirects"-submenu and hide "Crawl Settings"-tab
+Hides (sidebar) ads and premium version buttons of Yoast SEO from their settings pages and your website's dashboard (and frontend).
 
 <hr>
 
-The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
+The first version of the Hide SEO Bloat plugin was released in April 2015 and ever since team Yoast and I have been playing a game of cat and mouse. 
 
-The Settings page of the plugin shows checkboxes for everything. Ticking the box means hiding (or removing) that particular "feature".
+Since version 20.0 of Yoast SEO however, the Settings page has received a complete overhaul, which made the Hide SEO Bloat plugin almost obsolete!
 
-It is a good idea to have a look at the Settings page if only to see what you can fine-tune. The link to the page has been added to the Yoast SEO menu and of course there is also a link to it from the Plugins page.
+Things have become much, much more trickier to remove/hide now and some things simply can no longer be hidden (believe me, I have tried).
+
+Why are there still people using Yoast SEO one might ask? There are so many great alternatives that come without screaming ads and hiding features behind a paywall!
+
+And the only reason that I have to keep Yoast SEO installed (on a sandbox that is) is because of the mere 10K installs where Hide SEO Bloat is running. Compare that with my popular [Classic Editor + plugin](https://wordpress.org/plugins/classic-editor-addon/), which has more than 30,000 active installs!
+
+For everyone to become much more productive and happier, my proposal therefore is to switch to any of the other SEO plugins, such as SEOPress, The SEO Framework, Rankmath, or any other one out there! Did you know that most SEO plugins come with easy one-click migration tools?
+
+<hr>
 
 If you like the Hide SEO Bloat plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-clean-up-wp-seo?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/so-clean-up-wp-seo) into your own language.
 Alternatively you are welcome to make a [donation](https://so-wp.com/donations). Thanks!
-
-## Default Settings current release
-
-The default settings of the current release are as follows:
-
-* hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin
-* hide the tagline nag showing as a Problem in the Yoast SEO Dashboard
-* hide the robots nag showing as a Problem in the Yoast SEO Dashboard and in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
-* hide the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
-* hide the Upsell Notice in social tab of Yoast Post/Page metabox
-* hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
-* hides "Premium" and "Workouts" submenus
-* hides "Go Premium" metabox on edit Post/Page screens
-* hides Post/Page/Taxonomy Deletion Premium Ad
-* hide Problems box from Yoast SEO Dashboard
-* hide Notifications box from Yoast SEO Dashboard
-* hide image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
-* hide check Configuration wizard box that shows on top of most admin screens
-* hide issue counter from adminbar and sidebar
-* hide ad for premium version in help center
-* hide the SEO Score, Readability, Title, Meta Description and Outgoing Internal Links admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
-* hide the SEO Score and Readability admin columns on taxonomies
-* hide SEO Settings on individual profile page
-* remove primary category feature
-* remove the Yoast SEO admin bar menu
-* remove the Yoast SEO widget from the WordPress Dashboard
-* removes Courses menu from sidebar
-* hides SEO Scores Dropdown Filters on the Edit Posts/Pages screen
-* hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
-* remove HTML comments that show in source code (frontend) upgraded for use with version 11 and above of Yoast SEO
-* remove Search Console submenu
-* hide help beacon
 
 ## Frequently Asked Questions
 
@@ -93,8 +65,8 @@ Please open an issue here on [Github](https://github.com/senlin/so-clean-up-wp-s
 
 ## Contributions
 
-We welcome your contributions very much! PR's will be considered and of course bug reports and feature requests can also be seen as contributions!
-**If you're interested in becoming involved, please [let us know](https://so-wp.com/contact) or simply send a PR with your proposed improvement.** 
+I welcome your contributions very much! PR's will be considered and of course bug reports and feature requests can also be seen as contributions!
+**If you're interested in becoming involved, please [let me know](https://so-wp.com/contact) or simply send a PR with your proposed improvement.** 
 
 ## License
 
@@ -107,7 +79,7 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 ## Connect with us through
 
-[BHI Localiztion for Websites](https://www.bhi-localization.com)
+[BHI Localization for Websites](https://www.bhi-localization.com)
 
 [SO WP Plugins](https://so-wp.com/)
 
@@ -119,6 +91,26 @@ We welcome your contributions very much! PR's will be considered and of course b
 
 
 ## Changelog
+
+### 4.0.0
+
+* release date February 10, 2023
+* redo many styles that hide features, due to dashboard makeover release of Yoast SEO version 20.0
+* merge many settings (from 23 to 14)
+* new sections on the settings page with assistance of [ChatGPT](https://chat.openai.com/) 
+* simplify register_settings() function with assistance of [ChatGPT](https://chat.openai.com/)
+
+### 3.14.13
+
+* release date January 31, 2023
+* fix issue where Hide SEO Bloat link to settings page was made invisible due to Yoast SEO switching around menu items in admin sidebar
+* hide Premium SEO Analysis button on Publish/Update Post metabox
+
+### 3.14.12
+
+* release date December 2, 2022
+* hide "Unlock with Premium" button and options in Yoast dashboard (Features tab)
+* hide "Social Settings" box and "Unlock with Premium" button in Yoast dashboard (Search Appearance, Content types and Taxonomies tabs)
 
 ### 3.14.11
 

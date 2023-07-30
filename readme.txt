@@ -1,11 +1,11 @@
 === Hide SEO Bloat ===
 Contributors: senlin, afragen
 Donate link: https://so-wp.com/donations
-Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium, classicpress
+Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 6.1
-Stable tag: 3.14.11
+Stable tag: 4.0.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -13,53 +13,25 @@ Free addon for the Yoast SEO plugin to hide the bloat it adds to the WordPress b
 
 == Description ==
 
-Almost anyone who uses the Yoast SEO plugin will agree that it is a good SEO plugin, but the developers are adding more and more unwanted things to the WordPress backend.
-
-**New in this version:**
-
-* hide "Redirects"-submenu and hide "Crawl Settings"-tab
+Hides (sidebar) ads and premium version buttons of Yoast SEO from their settings pages and your website's dashboard (and frontend).
 
 <hr>
 
-The purpose of the Hide SEO Bloat plugin, a free addon for the Yoast SEO plugin, is to clean up all those unwanted things.
+The first version of the Hide SEO Bloat plugin was released in April 2015 and ever since team Yoast and I have been playing a game of cat and mouse. 
 
-The Settings page of the plugin shows checkboxes for everything. Ticking the box means hiding (or removing) that particular "feature".
+Since version 20.0 of Yoast SEO however, the Settings page has received a complete overhaul, which made the Hide SEO Bloat plugin almost obsolete!
 
-It is a good idea to have a look at the Settings page if only to see what you can fine-tune. The link to the page has been added to the Yoast SEO menu and of course there is also a link to it from the Plugins page.
+Things have become much, much more trickier to remove/hide now and some things simply can no longer be hidden (believe me, I have tried).
 
-The **Default Settings** of the current release are as follows:
+Why are there still people using Yoast SEO one might ask? There are so many great alternatives that come without screaming ads and hiding features behind a paywall!
 
-* hides the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin
-* hides the tagline nag showing as a Problem in the Yoast SEO Dashboard
-* hides the robots nag showing as a Problem in the Yoast SEO Dashboard and in the advanced tab of Yoast SEO UI in edit Post/Page screen when your site is blocking access to robots
-* hides the Upsell Notice in the Notification box that shows in the Yoast SEO Dashboard
-* hides the Upsell Notice in social tab of Yoast Post/Page metabox
-* hides the Premium Upsell Admin Block that shows in the entire Yoast SEO backend
-* hides "Premium" and "Workouts" submenus
-* hides "Go Premium" metabox on edit Post/Page screens
-* hides Post/Page/Taxonomy Deletion Premium Ad
-* hides Problems box from Yoast SEO Dashboard
-* hides Notifications box from Yoast SEO Dashboard
-* hides image warning nag that shows in edit Post/Page screen when featured image is smaller than 200x200 pixels
-* hides check Configuration wizard box that shows on top of most admin screens
-* hides issue counter from adminbar and sidebar
-* hides new readability "features" of Post/Page metabox
-* hides ad for premium version in help center
-* hides the SEO Score, Readability, Title, Meta Description, Outgoing Internal Links admin columns on the Posts/Pages screens; Focus keyword column can be hidden too
-* hides the SEO Score and Readability admin columns on taxonomies
-* hides SEO Settings on individual profile page
-* removes primary category feature
-* removes the Yoast SEO admin bar menu
-* removes the Yoast SEO widget from the WordPress Dashboard
-* removes Courses menu from sidebar
-* hides SEO Scores Dropdown Filters on the Edit Posts/Pages screen
-* hides Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen
-* remove HTML comments that show in source code (frontend) upgraded for use with version 11 and above of Yoast SEO
-* remove Search Console submenu
-* hide help beacon
+And the only reason that I have to keep Yoast SEO installed (on a sandbox that is) is because of the mere 10K installs where Hide SEO Bloat is running. Compare that with my popular [Classic Editor + plugin](https://wordpress.org/plugins/classic-editor-addon/), which has more than 30,000 active installs!
 
+For everyone to become much more productive and happier, my proposal therefore is to switch to any of the other SEO plugins, such as SEOPress, The SEO Framework, Rankmath, or any other one out there! Did you know that most SEO plugins come with easy one-click migration tools?
 
-We support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
+<hr>
+
+I support this plugin exclusively through [Github](https://github.com/senlin/so-clean-up-wp-seo/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
 Thanks for your understanding and cooperation.
 
@@ -77,11 +49,7 @@ The link to the page has been added to the Yoast SEO menu and of course there is
 = Can I use Hide SEO Bloat on Multisite? =
 
 Yes, you can.
-For version 2.4.0 [Andy Fragen](https://github.com/afragen) has refactored that part of the plugin to make it fully Multisite compatible. The Settings screen only shows in Network Admin as we don't think it makes sense that individual sites override the Network Settings.
-
-= Does Hide SEO Bloat work with ClassicPress? =
-
-Yes, the Hide SEO Bloat can also be used on sites that are running ClassicPress. Of course it is also necessary to have the Yoast SEO plugin installed.
+For version 2.4.0 [Andy Fragen](https://github.com/afragen) has refactored that part of the plugin to make it fully Multisite compatible. The Settings screen only shows in Network Admin as it doesn't make sense that individual sites override the Network Settings.
 
 = The name of the plugin is confusing, it hides bloat of which SEO plugin? =
 
@@ -101,15 +69,27 @@ Indeed the Hide SEO Bloat plugin writes its settings to the database. The includ
 
 Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/issues)
 
-== Screenshots ==
-
-1. settings page with default settings
-2. typical nags that are hidden with the plugin activated
-3. bloat on edit Post/Page screen that is hidden with the plugin activated
-4. SEO menu in admin bar that is partly hidden with the plugin activated
-5. dashboard widget that is removed with the plugin activated
-
 == Changelog ==
+
+= 4.0.0 =
+
+* release date February 10, 2023
+* redo many styles that hide features, due to dashboard makeover release of Yoast SEO version 20.0
+* merge many settings (from 23 to 14)
+* new sections on the settings page with assistance of [ChatGPT](https://chat.openai.com/)
+* simplify register_settings() function with assistance of [ChatGPT](https://chat.openai.com/)
+
+= 3.14.13 =
+
+* release date January 31, 2023
+* fix issue where Hide SEO Bloat link to settings page was made invisible due to Yoast SEO switching around menu items in admin sidebar
+* hide Premium SEO Analysis button on Publish/Update Post metabox
+
+= 3.14.12 =
+
+* release date December 2, 2022
+* hide "Unlock with Premium" button and options in Yoast dashboard (Features tab)
+* hide "Social Settings" box and "Unlock with Premium" button in Yoast dashboard (Search Appearance, Content types and Taxonomies tabs)
 
 = 3.14.11 =
 

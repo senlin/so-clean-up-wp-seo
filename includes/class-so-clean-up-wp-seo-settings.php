@@ -175,48 +175,18 @@ class CUWS_Settings {
 	 *
 	 * @return array Fields to be displayed on settings page
 	 * @since    v2.0.0
-	 * @modified v2.1.0 simplyfy the options to reflect changes to v3.1 of Yoast SEO plugin (temporarily removing
-	 *           non-vital notifications)
 	 */
 	private function settings_fields() {
 		$cuws    = CUWS::instance();
 		$options = $cuws->get_defaults();
 
-		$settings['standard'] = array(
-			'title'  => __( 'Without further ado: Hide the bloat', 'so-clean-up-wp-seo' ),
+		$settings['section_1'] = array(
+			'title'  => __( 'Yoast SEO Settings pages', 'so-clean-up-wp-seo' ),
 			//'description'			=> __( 'description' ),
 			'fields' => array(
 				array(
-					'id'          => 'hide_ads',
-					'label'       => __( 'Sidebar Ads', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide the cartoon-style sidebar ads on almost all settings pages of the Yoast SEO plugin.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_ads'],
-				),
-				array(
-					'id'          => 'hide_tagline_nag',
-					'label'       => __( 'General > Dashboard tab > Problems box > <b>Tagline nag</b>', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide Tagline nag that shows in the Problem Box of the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_tagline_nag'],
-				),
-				array(
-					'id'          => 'hide_robots_nag',
-					'label'       => __( 'General > Dashboard tab > Problems box > <b>Robots nag</b>', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide robots nag that shows as a "Huge SEO issue" in the Problem Box of the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_robots_nag'],
-				),
-				array(
-					'id'          => 'hide_upsell_notice',
-					'label'       => __( 'General > Dashboard tab > Notifications box > <b>Upsell Notice</b>', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide the Upsell Notice in the Notifications box that shows in the Notifications Box of the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_upsell_notice'],
-				),
-				array(
 					'id'          => 'hide_dashboard_problems_notifications',
-					'label'       => __( 'General > Dashboard tab > <b>Problems/Notifications boxes</b>', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'General > Dashboard tab > Problems/Notifications boxes', 'so-clean-up-wp-seo' ),
 					'description' => '<br>' . __( 'Hide entire Problems/Notifications boxes from the Dashboard tab under General Settings.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox_multi',
 					'options'     => array(
@@ -226,39 +196,46 @@ class CUWS_Settings {
 					'default'     => $options['hide_dashboard_problems_notifications'],
 				),
 				array(
-					'id'          => 'hide_crawl_settings',
-					'label'       => __( 'Crawl Settings Tab', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide the Crawl Settings tab.', 'so-clean-up-wp-seo' ),
+					'id'          => 'hide_ads',
+					'label'       => __( 'Settings page > Yoast Premium', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide as many as possible ads, premium features or upsells from the Yoast Settings pages.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => $options['hide_crawl_settings'],
-				),
-				array(
-					'id'          => 'hide_upsell_admin_block',
-					'label'       => __( 'Premium Upsell Admin Block', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide the Premium Upsell Admin Block that shows in the entire Yoast SEO backend.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_upsell_admin_block'],
+					'default'     => $options['hide_ads'],
 				),
 				array(
 					'id'          => 'hide_premium_submenu',
-					'label'       => __( 'Premium submenus', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hides the "Premium", "Workouts" and "Redirects" submenus.', 'so-clean-up-wp-seo' ),
+					'label'       => __( 'Premium submenus and issue counter', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hides the "Premium", "Workouts" and "Redirects" submenus as well as the issue counter from the admin sidebar.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['hide_premium_submenu'],
 				),
+			)
+		);
+		
+		$settings['section_2'] = array(
+			'title'	=> __( 'Posts, Pages, Custom post type, Taxonomy pages', 'so-clean-up-wp-seo' ),
+			'fields' => array(
 				array(
-					'id'          => 'hide_post_deletion_premium_ad',
-					'label'       => __( 'Post/Page/Taxonomy Deletion Premium Ad', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hides Post Deletion Premium Ad in edit Post/Page/Taxonomy screens.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_post_deletion_premium_ad'],
+					'id'          => 'hide_admincolumns',
+					'label'       => __( 'Admin columns', 'so-clean-up-wp-seo' ),
+					'description' => '<br>' . __( 'There are so many admin columns added to Posts/Pages/taxonomies that it is impossible to see the things that matter, such as the Title. Multiple selections are allowed.', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox_multi',
+					'options'     => array(
+						'seoscore'    => __( 'Remove SEO score column', 'so-clean-up-wp-seo' ),
+						'readability' => __( 'Remove Readability score column', 'so-clean-up-wp-seo' ),
+						'title'       => __( 'Remove SEO title column', 'so-clean-up-wp-seo' ),
+						'metadescr'   => __( 'Remove Meta Desc. column', 'so-clean-up-wp-seo' ),
+						'focuskw'     => __( 'Remove keyphrase column', 'so-clean-up-wp-seo' ),
+						'outgoing_internal_links' => __( 'Remove outgoing/received internal links column', 'so-clean-up-wp-seo' ),
+					),
+					'default'     => $options['hide_admincolumns'],
 				),
 				array(
-					'id'          => 'hide_config_wizard',
-					'label'       => __( 'Hide Configuration Wizard check', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide the Configuration Wizard check that shows at the top of almost all Yoast SEO Settings screens.', 'so-clean-up-wp-seo' ),
+					'id'          => 'remove_seo_scores_dropdown_filters',
+					'label'       => __( 'SEO/Readability Scores Dropdown Filters', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove SEO Scores and Readability Scores Dropdown Filters on the Edit Posts/Pages screen', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => $options['hide_config_wizard'],
+					'default'     => $options['remove_seo_scores_dropdown_filters'],
 				),
 				array(
 					'id'          => 'hide_imgwarning_nag',
@@ -268,63 +245,36 @@ class CUWS_Settings {
 					'default'     => $options['hide_imgwarning_nag'],
 				),
 				array(
-					'id'          => 'hide_issue_counter',
-					'label'       => __( 'Issue Counter', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide issue counter from adminbar and sidebar.', 'so-clean-up-wp-seo' ),
+					'id'          => 'hide_content_keyword_score',
+					'label'       => __( 'Keyword/Content Score', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide the Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => $options['hide_issue_counter'],
+					'default'     => $options['hide_content_keyword_score'],
 				),
 				array(
-					'id'          => 'hide_helpcenter',
-					'label'       => __( 'Help center', 'so-clean-up-wp-seo' ),
-					'description' => '<br>' . __( 'The Yoast SEO plugin comes with a help center (since Yoast SEO 3.2) that shows introduction videos and (of course) ads for the premium version of the plugin and now (since Yoast SEO 5.6) also a paid-for course; select here what to hide (if anything).', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox_multi',
-					'options'     => array(
-						'ad'         => __( 'Hide the ads', 'so-clean-up-wp-seo' ),
-						'helpcenter' => __( 'Hide the entire help center', 'so-clean-up-wp-seo' ),
-					),
-					'default'     => $options['hide_helpcenter'],
-				),
-				array(
-					'id'          => 'hide_seo_scores_dropdown_filters',
-					'label'       => __( 'SEO Scores Dropdown Filters', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Remove SEO Scores Dropdown Filters on the Edit Posts/Pages screen', 'so-clean-up-wp-seo' ),
+					'id'          => 'hide_premium_features_yoast_metabox',
+					'label'       => __( 'Hide Premium features on new/edit post-type screens', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide Premium features in the Yoast SEO metabox when publishing or editing content.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => $options['hide_seo_scores_dropdown_filters'],
+					'default'     => $options['hide_premium_features_yoast_metabox'],
 				),
 				array(
-					'id'          => 'hide_admincolumns',
-					'label'       => __( 'Admin columns', 'so-clean-up-wp-seo' ),
-					'description' => '<br>' . __( 'The Yoast SEO plugin adds a whole bunch of admin columns on the Posts/Pages screen and the SEO Score and Readability admin columns to taxonomies (since Yoast SEO 3.1). Multiple selections are allowed.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox_multi',
-					'options'     => array(
-						'seoscore'    => __( 'Remove SEO score column', 'so-clean-up-wp-seo' ),
-						'readability' => __( 'Remove Readability score column', 'so-clean-up-wp-seo' ),
-						'title'       => __( 'Remove title column', 'so-clean-up-wp-seo' ),
-						'metadescr'   => __( 'Remove meta description column', 'so-clean-up-wp-seo' ),
-						'focuskw'     => __( 'Remove focus keyword column', 'so-clean-up-wp-seo' ),
-						'outgoing_internal_links' => __( 'Remove outgoing internal links column', 'so-clean-up-wp-seo' ),
-					),
-					'default'     => $options['hide_admincolumns'],
-				),
-				array(
-					'id'          => 'hide_seo_settings_profile_page',
-					'label'       => __( 'Profile page', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide SEO Settings on individual profile page.', 'so-clean-up-wp-seo' ),
+					'id'          => 'hide_ad_after_trashing_content',
+					'label'       => __( 'Hide Ad after trashing content', 'so-clean-up-wp-seo' ),
+					'description' => __( 'When deleting content (Post, Page, Product and other Custom Post Type) a new notice appears on the edit screen that is an upsell ad for the premium version of Yoast SEO. This setting hides that notice.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => $options['hide_seo_settings_profile_page'],
+					'default'     => $options['hide_ad_after_trashing_content'],
 				),
-				array(
-					'id'          => 'remove_primarycatfeat',
-					'label'       => __( 'Primary category', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Remove primary category feature.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['remove_primarycatfeat'],
-				),
+			)
+		);
+
+		$settings['section_3'] = array(
+			'title'	=> __( 'Miscellaneous', 'so-clean-up-wp-seo' ),
+			'fields' => array(
 				array(
 					'id'          => 'remove_adminbar',
 					'label'       => __( 'SEO menu admin bar', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Remove the admin bar Yoast SEO menu.', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove Yoast SEO icon and drop-down menu with more premium buttons from the admin bar.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
 					'default'     => $options['remove_adminbar'],
 				),
@@ -336,20 +286,6 @@ class CUWS_Settings {
 					'default'     => $options['remove_dbwidget'],
 				),
 				array(
-					'id'          => 'hide_content_keyword_score',
-					'label'       => __( 'Keyword/Content Score', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Hide the Keyword/Content Score from the Publish/Update Metabox on the Edit Post/Page/CPT screen.', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['hide_content_keyword_score'],
-				),
-				array(
-					'id'          => 'remove_html_comments',
-					'label'       => __( 'Remove HTML Comments', 'so-clean-up-wp-seo' ),
-					'description' => __( 'Remove the HTML Comments from the source code (frontend) of the site', 'so-clean-up-wp-seo' ),
-					'type'        => 'checkbox',
-					'default'     => $options['remove_html_comments'],
-				),
-				array(
 					'id'          => 'remove_permalinks_warning',
 					'label'       => __( 'Remove Permalinks Warning Notice', 'so-clean-up-wp-seo' ),
 					'description' => __( 'Remove the notice that shows when changing permalinks informing the user that it is not a good idea', 'so-clean-up-wp-seo' ),
@@ -357,11 +293,18 @@ class CUWS_Settings {
 					'default'     => $options['remove_permalinks_warning'],
 				),
 				array(
-					'id'          => 'hide_ad_after_trashing_content',
-					'label'       => __( 'Hide Ad after trashing content', 'so-clean-up-wp-seo' ),
-					'description' => __( 'When deleting content (Post, Page, Product and other Custom Post Type) a new notice appears on the edit screen that is an upsell ad for the premium version of Yoast SEO. This setting hides that notice', 'so-clean-up-wp-seo' ),
+					'id'          => 'hide_seo_settings_profile_page',
+					'label'       => __( 'Profile page', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Hide SEO Settings on individual profile page.', 'so-clean-up-wp-seo' ),
 					'type'        => 'checkbox',
-					'default'     => $options['hide_ad_after_trashing_content'],
+					'default'     => $options['hide_seo_settings_profile_page'],
+				),
+				array(
+					'id'          => 'remove_html_comments',
+					'label'       => __( 'Remove HTML Comments', 'so-clean-up-wp-seo' ),
+					'description' => __( 'Remove the HTML Comments from the source code (frontend) of the site', 'so-clean-up-wp-seo' ),
+					'type'        => 'checkbox',
+					'default'     => $options['remove_html_comments'],
 				),
 			),
 		);
@@ -372,70 +315,30 @@ class CUWS_Settings {
 	}
 
 	/**
-	 * Register plugin settings
-	 *
-	 * @return void
-	 * @since   v2.0.0
-	 */
+ 	* Register plugin settings
+ 	*
+ 	* @return void
+ 	* @since   v2.0.0
+ 	*/
 	public function register_settings() {
-		if ( is_array( $this->settings ) ) {
-
-			// Check posted/selected tab
-			$current_section = '';
-			if ( isset( $_POST['tab'] ) && $_POST['tab'] ) {
-				$current_section = $_POST['tab'];
-			} else {
-				if ( isset( $_GET['tab'] ) && $_GET['tab'] ) {
-					$current_section = $_GET['tab'];
-				}
-			}
-
-			foreach ( $this->settings as $section => $data ) {
-
-				if ( $current_section && $current_section != $section ) {
-					continue;
-				}
-
+		$settings = $this->settings_fields();
+	
+		if ( is_array( $settings ) ) {
+			foreach ( $settings as $section => $data ) {
 				register_setting( $this->parent->_token . '_settings', 'settings' );
-
-				// Add section to page
-				add_settings_section( $section,
-					$data['title'],
-					array(
-						$this,
-						'settings_section',
-					),
-					$this->parent->_token . '_settings'
-				);
-
+				add_settings_section( $section, $data['title'], array( $this, 'settings_section' ), $this->parent->_token . '_settings' );
+	
 				foreach ( $data['fields'] as $field ) {
-
-					// Add field to page
-					add_settings_field(
-						$field['id'],
-						$field['label'],
-						array(
-							$this->parent->admin,
-							'display_field',
-						),
-						$this->parent->_token . '_settings',
-						$section,
-						array(
-							'field'  => $field,
-							'prefix' => $this->base,
-						)
-					);
-				}
-
-				if ( ! $current_section ) {
-					break;
+					add_settings_field( $field['id'], $field['label'], array( $this->parent->admin, 'display_field' ), $this->parent->_token . '_settings', $section, array( 'field' => $field, 'prefix' => $this->base ) );
 				}
 			}
 		}
+	
 		if ( isset( $_POST['action'] ) && 'update' === $_POST['action'] ) {
 			$this->update_settings();
 		}
 	}
+
 
 	/**
 	 * @access public
@@ -461,9 +364,11 @@ class CUWS_Settings {
 
 		$html .= '<p>' . esc_attr( __( 'On this settings page you can adjust things here and there to your liking.', 'so-clean-up-wp-seo' ) ) . '<br>' . esc_attr( __( 'Although some settings are for "features" that can easily be dismissed on a per user basis, hiding or removing them here, has two advantages:', 'so-clean-up-wp-seo' ) ) . '</p><ol><li>' . esc_attr( __( 'the settings here are global, for all users', 'so-clean-up-wp-seo' ) ) . '</li><li>' . esc_attr( __( 'these settings are centralised on one page, no need to keep dismissing stuff all over the site\'s backend', 'so-clean-up-wp-seo' ) ) . '</li></ol></p>' . "\n";
 
-		$html .= '<p>' . esc_attr( __( 'The default settings, when you activate the plugin, are that almost all boxes have been ticked; why else would you install our plugin?', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
+		$html .= '<p>' . esc_attr( __( 'The default settings, when you activate the plugin, are that almost all boxes have been ticked; why else would you install this plugin?', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
 
 		$html .= '<p>' . esc_attr( __( 'If you ever want to remove the Hide SEO Bloat plugin, then you can rest assured that it cleans up after itself:', 'so-clean-up-wp-seo' ) ) . '<br />' . esc_attr( __( 'upon deletion it removes all options automatically.', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
+		
+		$html .= '<p><strong>' . esc_attr( __( 'Without further ado: Hide the bloat', 'so-clean-up-wp-seo' ) ) . '</strong></p><hr>' . "\n";
 
 		//$action = is_network_admin() ? 'edit.php?action=' . $this->parent->_token . '_settings' : 'options.php';
 		if ( is_network_admin() ) {
@@ -504,10 +409,10 @@ class CUWS_Settings {
 		$html .= '<div class="inside">' . "\n";
 		$html .= '<div class="top">' . "\n";
 
-		$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pieterbos.jpg' ) ) . '" alt="plugin author Pieter Bos" width="80" height="80" />' . "\n";
+		$html .= '<img class="author-image" src="' . esc_url( plugins_url( 'so-clean-up-wp-seo/images/pieterbos.jpeg' ) ) . '" alt="plugin author Pieter Bos" width="80" height="80" />' . "\n";
 
 		$sowpurl = 'https://so-wp.com';
-		$html    .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Pieter Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP">SO WP</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
+		$html    .= '<p>' . sprintf( wp_kses( __( 'Hi, my name is Pieter Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" target="_blank" title="SO WP">SO WP</a>. You can find out more information about me via the following links:', 'so-clean-up-wp-seo' ), array( 'a' => array( 'href' => array(), 'target' => array(), 'title' => array() ) ) ), esc_url( $sowpurl ) ) . '</p>' . "\n";
 
 		$html .= '</div>' . "\n"; // end .top
 
@@ -515,14 +420,24 @@ class CUWS_Settings {
 		$html .= '<li><a href="https://www.bhi-localization.com" target="_blank" title="BHI Localization for Websites">' . esc_attr( __( 'BHI Localization for Websites', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://www.linkedin.com/in/pieterbos83" target="_blank" title="LinkedIn profile">' . esc_attr( __( 'LinkedIn', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '<li><a href="https://so-wp.com" target="_blank" title="SO WP">' . esc_attr( __( 'SO WP', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-		$html .= '<li><a href="https://github.com/senlin" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
-		$html .= '<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+		$html .= '<li><a href="https://github.com/senlin" target="_blank" title="on Github">' . esc_attr( __( 'Github', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
+		$html .= '<li><a href="https://profiles.wordpress.org/senlin/" target="_blank" title="on WordPress.org">' . esc_attr( __( 'WordPress.org Profile', 'so-clean-up-wp-seo' ) ) . '</a></li>' . "\n";
 		$html .= '</ul>' . "\n";
 
 		$html .= '</div>' . "\n"; // end .inside
 
 		$html .= '</div>' . "\n"; // end .postbox
 
+		$html .= '<h3>' . esc_attr( __( 'Mission statement:', 'so-clean-up-wp-seo' ) ) . '</h3>' . "\n";
+		$html .= '<p>' . esc_attr( __( 'The first version of the Hide SEO Bloat plugin was released in April 2015 and ever since team Yoast and I have been playing a game of cat and mouse.', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
+		$html .= '<p>' . esc_attr( __( 'Since version 20.0 of Yoast SEO however, the Settings page has received a complete overhaul, which made the Hide SEO Bloat plugin almost obsolete!', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
+		$html .= '<p>' . esc_attr( __( 'Things have become much, much more trickier to remove/hide now and some things simply can no longer be hidden (believe me, I have tried).', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
+		$html .= '<p>' . esc_attr( __( 'Why are there still people using Yoast SEO one might ask? There are so many great alternatives that come without screaming ads and hiding features behind a paywall!', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
+		$ceaurl = 'https://wordpress.org/plugins/classic-editor-addon/';
+		$html .= '<p>' . sprintf( wp_kses( __( 'And the only reason that I have to keep Yoast SEO installed (on a sandbox that is) is because of the mere 10K installs where Hide SEO Bloat is running. Compare that with my popular <a href="%s" target="_blank" title="Classic Editor + plugin">Classic Editor + plugin</a>, which has more than 30,000 active installs!', 'so-clean-up-wp-seo' ), array( 'a' => array( 'href' => array(), 'target' => array(), 'title' => array() ) ) ), esc_url( $ceaurl ) ) . '</p>' . "\n";
+		$html .= '<p>' . esc_attr( __( 'For everyone to become much more productive and happier, my proposal therefore is to hang the Yoast SEO plugin from a tree and switch to SEOPress, The SEO Framework, Rankmath, or any other SEO plugin out there! Did you know that most SEO plugins come with easy one-click migration tools?', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
+		$html .= '<p>' . esc_attr( __( 'The goal is to bring the active installs of Hide SEO Bloat to zero, so I can finally quit this nonsense and focus on work that actually pays my bills!', 'so-clean-up-wp-seo' ) ) . '</p>' . "\n";
+		
 		$html .= '</div>' . "\n";
 
 		echo $html;
