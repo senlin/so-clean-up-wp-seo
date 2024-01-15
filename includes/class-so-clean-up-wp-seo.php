@@ -432,10 +432,11 @@ class CUWS {
 		// Yoast sidebar menu
 		if ( ! empty( $this->options['hide_premium_submenu'] ) ) {
 			echo '
-				/* hide "Premium", "Workouts" and "Redirects" submenus */
+				/* hide "Academy", "Premium", "Workouts" and "Redirects" submenus */
 				li#toplevel_page_wpseo_dashboard>ul>li:nth-child(6),
 				li#toplevel_page_wpseo_dashboard>ul>li:nth-child(7),
-				li#toplevel_page_wpseo_dashboard>ul>li:nth-child(8) {
+				li#toplevel_page_wpseo_dashboard>ul>li:nth-child(8),
+				li#toplevel_page_wpseo_dashboard>ul>li:nth-child(9) {
 					display:none;
 				}
 
