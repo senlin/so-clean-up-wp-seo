@@ -4,8 +4,8 @@ Donate link: https://so-wp.com/donations
 Tags: hide, seo, bloat, remove, ads, cartoon, wordpress seo addon, admin columns, nags, dashboard widget, hide premium
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 6.3
-Stable tag: 4.0.1
+Tested up to: 6.4
+Stable tag: 4.0.2
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -70,6 +70,12 @@ Indeed the Hide SEO Bloat plugin writes its settings to the database. The includ
 Please open an issue on [Github](https://github.com/senlin/so-clean-up-wp-seo/issues)
 
 == Changelog ==
+
+= 4.0.2 =
+
+* release date January 15, 2024
+* remove rule that hides crawl optimisation menu in Yoast SEO settings thanks for reporting [@melcarthus](https://wordpress.org/support/topic/non-bloatware-link-removed-by-plugin/)
+* hide premium Redirects submenu from left admin bar, which had become visible again after Yoast added the Academy submenu
 
 = 4.0.1 =
 

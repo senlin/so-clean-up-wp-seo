@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-clean-up-wp-seo)](https://wordpress.org/plugins/so-clean-up-wp-seo) [![WP compatibility](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/wp-badge.svg)](https://plugintests.com/plugins/wporg/so-clean-up-wp-seo/latest) [![PHP compatibility](https://plugintests.com/plugins/so-clean-up-wp-seo/php-badge.svg)](https://plugintests.com/plugins/so-clean-up-wp-seo/latest)
 
-###### Last updated on July 30, 2023
+###### Last updated on January 15, 2024
 ###### Development version 4.0.1
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 6.3
+###### tested up to WordPress 6.4
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### Contributor: [Andy Fragen](https://github.com/afragen)
 
@@ -91,6 +91,12 @@ I welcome your contributions very much! PR's will be considered and of course bu
 
 
 ## Changelog
+
+### 4.0.2
+
+* release date January 15, 2024
+* remove rule that hides crawl optimisation menu in Yoast SEO settings thanks for reporting [@melcarthus](https://wordpress.org/support/topic/non-bloatware-link-removed-by-plugin/)
+* hide premium Redirects submenu from left admin bar, which had become visible again after Yoast added the Academy submenu
 
 ### 4.0.1
 

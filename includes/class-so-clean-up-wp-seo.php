@@ -108,7 +108,7 @@ class CUWS {
 	 * @param string $file
 	 * @param string $version Version number.
 	 */
-	public function __construct( $file = '', $version = '4.0.1' ) {
+	public function __construct( $file = '', $version = '4.0.2' ) {
 		$this->_version = $version;
 		$this->_token   = 'cuws';
 
