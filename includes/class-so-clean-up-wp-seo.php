@@ -394,8 +394,7 @@ class CUWS {
 			/* hide premium features from settings page */
 			.seo_page_wpseo_page_settings div#card-wpseo-enable_link_suggestions,
 			.seo_page_wpseo_page_settings div#card-wpseo-enable_index_now,
-			.seo_page_wpseo_page_settings div#card-wpseo-enable_metabox_insights,
-			a#link-crawl-optimization {
+			.seo_page_wpseo_page_settings div#card-wpseo-enable_metabox_insights {
 				display:none !important;
 			}
 
